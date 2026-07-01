@@ -1,0 +1,523 @@
+/* Roles Page Styles */
+
+.roles-hero {
+    padding: 200px 0 60px;
+    background-color: #EDF2F6;
+}
+
+.roles-title {
+    font-family: 'Aeonik', sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 0;
+    letter-spacing: -1px;
+}
+
+.roles-image-section {
+    background-color: #F8FAFC;
+    overflow: hidden;
+}
+
+.roles-team-img-wrapper {
+    width: 100%;
+}
+
+.roles-team-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 600px;
+}
+
+.roles-content-section {
+    padding-bottom: 100px;
+    background-color: #EDF2F6;
+}
+
+.roles-white-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 80px 60px;
+    margin-top: -100px;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.join-us-header {
+    margin-bottom: 60px;
+}
+
+.join-us-title {
+    font-family: 'Aeonik', sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: #000;
+}
+
+.join-us-text p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.3;
+    margin-bottom: 24px;
+    max-width: 90%;
+}
+
+.join-us-text p:last-child {
+    margin-bottom: 0;
+}
+
+.job-card {
+    background: #0B3C5D;
+    border-radius: 16px;
+    padding: 40px 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.job-title {
+    font-family: 'Aeonik', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.job-description {
+    color: #ffffff;
+    font-family: "Aeonik";
+    font-size: 16.017px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.357px;
+    /* 133.333% */
+    letter-spacing: -0.32px;
+    padding-bottom: 40px;
+    width: 96%;
+}
+
+.job-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.job-meta {
+    font-size: 13px;
+    color: #ffffff;
+}
+
+.btn-apply {
+    display: inline-block;
+    padding: 8px 30px;
+    border: 1px solid #ffffff;
+    border-radius: 999px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-apply:hover {
+    background: #009BE0;
+    color: #fff;
+}
+
+@media (max-width: 991px) {
+    .roles-white-card {
+        padding: 40px 30px;
+        margin-top: -60px;
+    }
+
+    .join-us-title {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .roles-title {
+        font-size: 36px;
+    }
+
+    .roles-hero {
+        padding: 100px 0 40px;
+    }
+
+    .job-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
+
+/* Difference Section */
+.difference-section {
+    padding: 0px 0;
+    background-color: #EDF2F6;
+}
+
+.difference-heading {
+    font-family: 'Aeonik', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 60px;
+    line-height: 1.2;
+}
+
+.difference-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+}
+
+.diff-card {
+    background: #0B3C5D;
+    border-radius: 20px;
+    padding: 40px 30px;
+    flex: 0 0 calc(33.333% - 16px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.diff-card:hover {
+    transform: translateY(-5px);
+}
+
+.diff-icon {
+    width: 180px;
+    height: 130px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.diff-icon svg {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+.diff-title {
+    font-family: 'Aeonik', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.diff-text {
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+
+.diff-icon svg path {
+    stroke: white;
+}
+
+
+/* Learn More Section */
+.roles-learn-more {
+    padding: 80px 0 0px;
+    background-color: #EDF2F6;
+}
+
+.learn-more-card {
+    background: #0B3C5D;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.learn-more-content {
+    padding: 80px 60px;
+    padding-top: 30px;
+}
+
+.learn-more-title {
+    color: #ffffff;
+    font-family: "Aeonik";
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 38px;
+    /* 105.556% */
+    letter-spacing: -0.72px;
+    padding-bottom: 10px;
+}
+
+.learn-more-text {
+    color: #ffffff;
+    font-family: "Aeonik";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    /* 140% */
+    letter-spacing: -0.08px;
+    padding-bottom: 10px;
+}
+
+.btn-learn-more {
+    display: inline-block;
+    padding: 12px 36px;
+    border: 1.5px solid #ffffff;
+    border-radius: 999px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-learn-more:hover {
+    background: #009BE0;
+    color: #fff;
+}
+
+.learn-more-img-wrapper {
+    height: 100%;
+    min-height: 500px;
+}
+
+.learn-more-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 1199px) {
+    .diff-card {
+        flex: 0 0 calc(50% - 12px);
+    }
+}
+
+@media (max-width: 991px) {
+    .learn-more-content {
+        padding: 60px 40px;
+    }
+
+    .learn-more-img-wrapper {
+        min-height: 400px;
+    }
+}
+
+@media (max-width: 767px) {
+    .diff-card {
+        flex: 0 0 100%;
+    }
+
+    .difference-heading {
+        font-size: 28px;
+    }
+
+    .learn-more-title {
+        font-size: 28px;
+    }
+
+    .learn-more-content {
+        padding: 40px 30px;
+    }
+}
+
+/* Role Detail Styles */
+.role-detail-header {
+    margin-bottom: 40px;
+}
+
+.role-detail-title {
+    font-family: 'Aeonik', sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.role-detail-location {
+    font-size: 14px;
+    color: #444;
+    font-weight: 500;
+}
+
+.role-detail-body {
+    max-width: 90%;
+}
+
+.role-intro {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.role-section {
+    margin-bottom: 40px;
+}
+
+.role-section-title {
+    font-family: 'Aeonik', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.role-section p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.role-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.role-list li {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.role-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #000;
+}
+
+/* Application Form */
+.apply-form-wrapper {
+    background: #fff;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 40px;
+    margin-top: 60px;
+}
+
+.apply-form-title {
+    font-family: 'Aeonik', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.apply-form .form-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.apply-form .form-control,
+.apply-form .form-select {
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 13px;
+    color: #333;
+    background-color: #fff;
+}
+
+.apply-form .form-control:focus,
+.apply-form .form-select:focus {
+    border-color: #0095D6;
+    box-shadow: none;
+}
+
+.file-upload-wrapper {
+    position: relative;
+    width: fit-content;
+}
+
+.file-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.file-label {
+    display: block;
+    padding: 10px 20px;
+    background: #EDF2F6;
+    border-radius: 8px;
+    color: #444;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.file-label:hover {
+    background: #E2E8F0;
+}
+
+.btn-submit {
+    background: #0096d600;
+    color: #000000;
+    border: 1px solid black;
+    border-radius: 999px;
+    padding: 10px 40px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: #007bb1;
+    transform: translateY(-2px);
+    color: white;
+}
+
+@media (max-width: 991px) {
+    .role-detail-body {
+        max-width: 100%;
+    }
+
+    .apply-form-wrapper {
+        padding: 30px 20px;
+    }
+
+    .roles-learn-more {
+        padding: 80px 0 50px;
+    }
+
+    .roles-hero {
+        padding: 150px 0 40px;
+    }
+}
+
+.jobs-grid-wrapper .col-lg-4 {
+    padding-right: 5px;
+    padding-left: 5px;
+}

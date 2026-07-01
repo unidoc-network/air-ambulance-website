@@ -1,0 +1,110 @@
+{% extends 'website/layout/base.html' %}
+{% load static %}
+{% block title %}Vinod Nair | Leadership | Bluedot{% endblock %}
+{% block meta_description %}Meet Vinod Nair, Chief Executive Officer – Air Ambulance at Bluedot.{% endblock %}
+{% block content %}
+
+<style>
+        .leader-detail-sec {
+            background-color: #f2f5f8;
+            min-height: calc(100vh - 400px);
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+        }
+
+        .leader-detail-card {
+            text-align: center;
+            width: 100%;
+            padding-top: 120px;
+        }
+
+        .leader-detail-img {
+            width: 250px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            margin: auto;
+        }
+
+        .leader-detail-name {
+            font-size: 45px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: #000;
+            font-family: 'Aeonik';
+            padding-top: 20px;
+        }
+
+        .leader-detail-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #000;
+            margin-bottom: 40px;
+        }
+
+        .leader-detail-bio {
+            max-width: 730px;
+            margin: 0 auto;
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.2;
+            color: #153c5e;
+            font-weight: 400;
+            font-family: 'Aeonik';
+
+        }
+    </style>
+    <section class="leader-detail-sec">
+        <div class="container">
+            <div class="leader-detail-card">
+                <img src="{% static 'website/images/leader1.png' %}" alt="Vinod nair" class="leader-detail-img">
+                <h1 class="leader-detail-name en-content">Vinod nair</h1>
+                <h1 class="leader-detail-name ar-content">فينود ناير</h1>
+
+                <h5 class="leader-detail-title en-content">Chief Executive Officer - Air Ambulance</h5>
+                <h5 class="leader-detail-title ar-content">الرئيس التنفيذي – الإسعاف الجوي</h5>
+
+                <div class="leader-detail-bio en-content">
+                    <p>With over 12 years of experience across healthcare, aeromedical transport, and international
+                        medical assistance, Vinod Nair specializes in building and scaling healthcare mobility solutions
+                        while driving strategic expansion. His expertise spans pre-hospital care projects, air ambulance
+                        operations, aeromedical service management, commercial strategy, P&L management, business
+                        development.</p>
+
+                    <p>Passionate about connecting patients to quality care beyond geographical boundaries, Vinod has
+                        led strategic growth initiatives across multiple markets while championing quality, safety,
+                        innovation, and operational excellence in aeromedical services. He is also a regular speaker at
+                        industry forums, sharing insights on aeromedical evacuation, medical assistance, healthcare
+                        logistics, crisis response, and healthcare mobility. Vinod holds a Master of Public Health (MPH)
+                        in International Health Administration from University College Dublin, Ireland, an MBA from the
+                        Indian Institute of Health Management and Research (IIHMR), Jaipur, and has completed executive
+                        education in Corporate Finance from Harvard Business School. His focus remains on developing
+                        sustainable healthcare transportation ecosystems that improve accessibility, patient outcomes,
+                        and service delivery across regions.</p>
+                </div>
+                <div class="leader-detail-bio ar-content">
+                    <p>يمتلك فينود ناير خبرة واسعة تمتد لأكثر من ١٢ عاماً في مجالات الرعاية الصحية، والنقل الطبي الجوي،
+                        والمساعدة الطبية الدولية، ويتخصص في بناء وتطوير حلول تنقل المرضى والرعاية الصحية مع قيادة التوسع
+                        الاستراتيجي. وتشمل خبرته إدارة مشاريع الرعاية ما قبل المستشفى، وعمليات الإسعاف الجوي، وإدارة
+                        الخدمات الطبية الجوية، بالإضافة إلى الاستراتيجيات التجارية، وإدارة الأرباح والخسائر، وتطوير
+                        الأعمال.</p>
+
+                    <p>وانطلاقاً من شغفه بربط المرضى بخدمات رعاية صحية عالية الجودة تتجاوز الحدود الجغرافية، قاد فينود
+                        مبادرات نمو استراتيجي في أسواق متعددة، مع ترسيخ معايير الجودة، والسلامة، والابتكار، والتميز
+                        التشغيلي في الخدمات الطبية الجوية. كما أنه متحدث دائم في منتدى القطاع ومؤتمراته، حيث يشارك
+                        مرئياته وخبراته حول الإجلاء الطبي الجوي، والمساعدة الطبية، والخدمات اللوجستية للرعاية الصحية،
+                        والاستجابة للأزمات، وتنقل الرعاية الصحية. فينود حاصل على درجة الماجستير في الصحة العامة في إدارة
+                        الصحة الدولية من جامعة دبلن في أيرلندا، ودرجة الماجستير في إدارة الأعمال من المعهد الهندي لإدارة
+                        وبحوث الرعاية الصحية في جايبور، بالإضافة إلى إتمامه برنامج التعليم التنفيذي في التمويل المؤسسي
+                        من كلية هارفارد للأعمال. ويظل تركيزه منصباً على تطوير منظومات مستدامة لنقل الرعاية الصحية تسهم
+                        في تحسين فرص الوصول إلى الخدمات، وتعزيز نتائج علاج المرضى، ورفع كفاءة تقديم الخدمات عبر الأقاليم
+                        والمناطق المختلفة.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,103 @@
+<input type="hidden" id="url" name="url" value="{{request.path}}">
+<input type="hidden" id="page" name="page" value="{{page}}">
+
+<table class="table border-top table-bordered mb-0 table-hover">
+    <thead>
+        <tr>
+            <th style="width:50px;">SL NO</th>
+            <th>NAME</th>
+            <th>SERVICE</th>
+            <th>EMAIL</th>
+            <th>PHONE</th>
+            <th>SOURCE</th>
+            <th>MESSAGE</th>
+            <th>RECEIVED</th>
+            <th style="width:100px;">ACTION</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if datas %}
+            {% for item in datas %}
+            <tr>
+                <td>{{ forloop.counter0|add:datas.start_index }}</td>
+                <td>{{ item.name|default:"-" }}</td>
+                <td><span class="badge bg-primary text-white rounded-pill px-3">{{ item.service|default:"-" }}</span></td>
+                <td><a href="mailto:{{ item.email }}">{{ item.email|default:"-" }}</a></td>
+                <td>{{ item.phone|default:"-" }}</td>
+                <td><span class="badge bg-secondary text-white rounded-pill px-3">{{ item.country|default:"Website" }}</span></td>
+                <td>
+                    {% if item.message %}
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#msgModal{{ item.id }}" class="btn btn-view btn-icon" title="View Message">
+                        <i class="fe fe-file-text"></i>
+                    </a>
+                    <!-- Message Modal -->
+                    <div class="modal fade" id="msgModal{{ item.id }}" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Message from {{ item.name }}</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p><strong>Name:</strong> {{ item.name }}</p>
+                                    <p><strong>Service:</strong> {{ item.service|default:"-" }}</p>
+                                    <p><strong>Email:</strong> {{ item.email }}</p>
+                                    <p><strong>Phone:</strong> {{ item.phone }}</p>
+                                    <p><strong>Country/Source:</strong> {{ item.country|default:"Website" }}</p>
+                                    <hr>
+                                    <p>{{ item.message }}</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% else %}-{% endif %}
+                </td>
+                <td>{{ item.created_at|date:"d M Y, h:i A" }}</td>
+                <td>
+                    <a class="btn btn-delete btn-icon mb-1" href="javascript:void(0)" onclick="delete_contact({{ item.id }})">
+                        <i class="side-menu__icon fe fe-trash-2"></i>
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        {% else %}
+        <tr>
+            <td colspan="9" align="center" class="no-data py-4">No contact messages found.</td>
+        </tr>
+        {% endif %}
+    </tbody>
+</table>
+
+{% if datas.paginator.count %}
+<div class="card-body">
+    <span class="pagination-info">Showing {{ datas.start_index }}-{{ datas.end_index }} of {{ datas.paginator.count }}</span>
+    {% if datas.has_other_pages %}
+    <ul class="pagination pagination-modern mb-0">
+        {% if datas.has_previous %}
+        <li class="page-item page-prev">
+            <a class="page-link" href="?page={{ datas.previous_page_number }}&search={{ search }}&date_filter={{ date_filter }}">Prev</a>
+        </li>
+        {% else %}
+        <li class="page-item page-prev disabled"><span class="page-link">Prev</span></li>
+        {% endif %}
+        {% for i in datas.paginator.page_range %}
+        {% if datas.number == i %}
+        <li class="page-item active"><span class="page-link">{{ i }}</span></li>
+        {% else %}
+        <li class="page-item"><a class="page-link" href="?page={{ i }}&search={{ search }}&date_filter={{ date_filter }}">{{ i }}</a></li>
+        {% endif %}
+        {% endfor %}
+        {% if datas.has_next %}
+        <li class="page-item page-next">
+            <a class="page-link" href="?page={{ datas.next_page_number }}&search={{ search }}&date_filter={{ date_filter }}">Next</a>
+        </li>
+        {% else %}
+        <li class="page-item page-next disabled"><span class="page-link">Next</span></li>
+        {% endif %}
+    </ul>
+    {% endif %}
+</div>
+{% endif %}

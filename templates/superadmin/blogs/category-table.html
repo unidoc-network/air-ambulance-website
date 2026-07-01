@@ -1,0 +1,83 @@
+<input type="hidden" id="url" name="url" value="{{request.path}}">
+<input type="hidden" id="page" name="page" value="{{page}}">
+
+<table class="table border-top table-bordered mb-0 table-hover">
+    <thead>
+        <tr>
+            <th>Sl No</th>
+            <th>Name (English)</th>
+            <th>Name (Arabic)</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if datas %}
+            {% for data in datas %}
+            <tr>
+                <td>{{forloop.counter0|add:datas.start_index}}</td>
+                <td>{{data.name}}</td>
+                <td class="text-end" dir="rtl">{{data.name_ar}}</td>
+                <td>
+                    <div class="material-switch">
+                        <input id="catStatus{{data.id}}" name="catStatus" type="checkbox" {% if data.is_active %}checked onclick="statuschange({{data.id}},2)"{% else %}onclick="statuschange({{data.id}},1)" {% endif %}  />
+                        <label for="catStatus{{data.id}}" class="label-success"></label>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn-list">
+                        <a class="btn btn-edit btn-icon" href="javascript:void(0)" onclick="edit_modal('{{data.id}}', '{{data.name|escapejs}}', '{{data.name_ar|escapejs}}')">
+                            <i class="side-menu__icon fe fe-edit"></i>
+                        </a>
+                        <a class="btn btn-delete btn-icon" href="javascript:void(0)" onclick="delete_modal({{data.id}})">
+                            <i class="side-menu__icon fe fe-trash-2"></i>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td colspan="5" align="center" class="no-data">No Data</td>
+            </tr>
+        {% endif %}
+    </tbody>
+</table>
+
+{% if datas.paginator.count %}
+<div class="card-body">
+
+    <span class="pagination-info">Showing {{ datas.start_index }}-{{ datas.end_index }} of {{ datas.paginator.count }}</span>
+    {% if datas.has_other_pages %}
+    <ul class="pagination pagination-modern mb-0">
+        {% if datas.has_previous %}
+        <li class="page-item page-prev">
+            <a class="page-link" href="javascript:void(0)" onclick="return filter('{{ datas.previous_page_number }}');" tabindex="-1">Prev</a>
+        </li>
+        {% else %}
+        <li class="page-item page-prev disabled">
+            <span class="page-link" tabindex="-1">Prev</span>
+        </li>
+        {% endif %}
+
+        {% for i in datas.paginator.page_range %}
+            {% if datas.number == i %}
+            <li class="page-item active"><span class="page-link">{{ i }}</span></li>
+            {% else %}
+            <li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="return filter('{{ i }}');">{{i}}</a></li>
+            {% endif %}
+        {% endfor %}
+
+        {% if datas.has_next %}
+        <li class="page-item page-next">
+            <a class="page-link" href="javascript:void(0)" onclick="return filter('{{ datas.next_page_number }}');">Next</a>
+        </li>
+        {% else %}
+        <li class="page-item page-next disabled"><span class="page-link">Next</span></li>
+        {% endif %}
+    </ul>
+    {% endif %}
+</div>
+{% endif %}
+
+

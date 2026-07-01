@@ -1,0 +1,111 @@
+{% include 'superadmin/layout/header.html' %}
+
+<!--app-content open-->
+<div class="main-content app-content mt-0">
+    <div class="side-app">
+
+        <!-- CONTAINER -->
+        <div class="main-container container-fluid">
+
+            <!-- PAGE-HEADER -->
+            <div class="page-header">
+                <h1 class="page-title">Contact Messages</h1>
+                {% comment %} <div>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'superadmin:Dashboard' %}">Dashboard</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Contact Messages</li>
+                    </ol>
+                </div> {% endcomment %}
+            </div>
+            <!-- PAGE-HEADER END -->
+
+            <!-- ROW OPEN -->
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">All Contact Messages</h3>
+                        </div>
+                        <div class="card-body">
+                            <form onsubmit="return false;">
+                                <div class="row">
+                                    <div class="form-group col-lg-3 col-12">
+                                        <input type="text" id="searchTerm" name="search" value="{{ search }}" class="form-control" placeholder="Search by email or name..." onkeyup="filterContact(1)" style="height: 40px;">
+                                    </div>
+                                    <div class="form-group col-lg-3 col-12">
+                                        <select id="dateFilter" name="date_filter" class="form-control form-select" onchange="filterContact(1)" style="height: 40px;">
+                                            <option value="">ALL TIME</option>
+                                            <option value="today" {% if date_filter == 'today' %}selected{% endif %}>TODAY</option>
+                                            <option value="week" {% if date_filter == 'week' %}selected{% endif %}>THIS WEEK</option>
+                                            <option value="month" {% if date_filter == 'month' %}selected{% endif %}>THIS MONTH</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-lg-1 col-12">
+                                        <a class="btn btn-light" style="height: 40px; width: 40px; display: inline-flex; justify-content: center; align-items: center;" href="{{request.path}}" title="Reset"><i class="fe fe-rotate-cw"></i></a>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="table-responsive">
+                                {% include 'superadmin/contact/contact-table.html' %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ROW CLOSED -->
+
+        </div>
+        <!-- CONTAINER END -->
+    </div>
+</div>
+<!--app-content close-->
+
+<!-- Delete Confirmation Modal -->
+<div class="modal fade" id="modaldemo5" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-md modal-dialog-centered text-center" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button aria-label="Close" class="btn-close position-absolute" data-bs-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <i class="icon icon-close fs-70 text-danger lh-1 my-5 d-inline-block"></i>
+                <h4 class="text-danger">Are You Sure You Want To Delete?</h4>
+                <p class="mg-b-20 mg-x-20">This contact message will be permanently deleted.</p>
+                <input type="hidden" id="hid">
+                <a href="#" id="confirmDeleteBtn" class="sa-btn sa-btn-primary">Yes, Delete</a>
+                <button aria-label="Close" class="sa-btn sa-btn-cancel pd-x-25" data-bs-dismiss="modal">Cancel</button>
+            </div>
+            <div class="modal-footer"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+function delete_contact(id) {
+    document.getElementById('hid').value = id;
+    document.getElementById('confirmDeleteBtn').href = "{% url 'superadmin:ContactDelete' 0 %}".replace('/0', '/' + id);
+    var modal = new bootstrap.Modal(document.getElementById('modaldemo5'));
+    modal.show();
+}
+
+function filterContact(page) {
+    var search = $('#searchTerm').val();
+    var dateFilter = $('#dateFilter').val();
+    $.ajax({
+        url: "{% url 'superadmin:ContactList' %}",
+        type: 'GET',
+        data: {
+            'search': search,
+            'date_filter': dateFilter,
+            'page': page
+        },
+        success: function(response) {
+            if (response.status) {
+                $('.table-responsive').html(response.template);
+            }
+        }
+    });
+}
+</script>
+
+{% include 'superadmin/layout/footer.html' %}

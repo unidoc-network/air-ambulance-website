@@ -1,0 +1,105 @@
+{% include "superadmin/layout/header.html" %}
+
+<!--app-content open-->
+<div class="main-content app-content mt-0">
+    <div class="side-app">
+
+        <!-- CONTAINER -->
+        <div class="main-container container-fluid">
+
+            <!-- PAGE-HEADER -->
+            <div class="page-header">
+                <div>
+                    <h1 class="page-title">
+                        <i class="fas fa-th-large me-2" style="opacity:0.8;"></i>Dashboard
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Blue Dot</a></li>
+                        <li class="breadcrumb-item active">Dashboard</li>
+                    </ol>
+                </div>
+                <div>
+                    <a href="{% url 'website:home' %}" target="_blank" class="sa-btn" style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);color:#fff;font-size:13px;">
+                        <i class="fas fa-external-link-alt"></i>View Website
+                    </a>
+                </div>
+            </div>
+            <!-- PAGE-HEADER END -->
+
+            <!-- Welcome Band -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="card" style="border-left:4px solid #1D9ADD; border-radius:16px; padding:0; overflow:hidden;">
+                        <div class="card-body" style="padding:20px 28px; background:linear-gradient(135deg,#EBF5FB,#F0F8FE); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
+                            <div>
+                                <h4 style="font-weight:800;font-size:18px;color:#1A202C;margin:0 0 4px;">Good day, Admin! 👋</h4>
+                                <p style="font-size:13px;color:#718096;margin:0;">Here's an overview of your Blue Dot dashboard.</p>
+                            </div>
+                            <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                                <span style="background:rgba(29,154,221,0.1);color:#1D9ADD;border-radius:20px;padding:6px 14px;font-size:12px;font-weight:600;">
+                                    <i class="fas fa-circle" style="font-size:8px;margin-right:5px;"></i>System Online
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRIMARY STATS — With Spacing -->
+            <div class="row g-3 mb-4">
+
+                <!-- Categories -->
+                <div class="col-sm-6 col-md-6 col-xl-3">
+                    <a href="{% url 'superadmin:CategoryList' %}" class="dashstat-tile tile-info h-100" style="display:block;text-decoration:none;">
+                        <div class="tile-icon-wrap"><i class="fas fa-tags"></i></div>
+                        <div class="tile-count">{{ category_count }}</div>
+                        <div class="tile-label">Category</div>
+                    </a>
+                </div>
+
+                <!-- News & Stories -->
+                <div class="col-sm-6 col-md-6 col-xl-3">
+                    <a href="{% url 'superadmin:NewsList' %}" class="dashstat-tile tile-purple h-100" style="display:block;text-decoration:none;">
+                        <div class="tile-icon-wrap"><i class="fas fa-newspaper"></i></div>
+                        <div class="tile-count">{{ news_count }}</div>
+                        <div class="tile-label">News & Stories</div>
+                    </a>
+                </div>
+
+                <!-- Contact Messages -->
+                <div class="col-sm-6 col-md-6 col-xl-3">
+                    <a href="{% url 'superadmin:ContactList' %}" class="dashstat-tile tile-danger h-100" style="display:block;text-decoration:none;">
+                        <div class="tile-icon-wrap"><i class="fas fa-headset"></i></div>
+                        <div class="tile-count">{{ contact_count }}</div>
+                        <div class="tile-label">Contact Messages</div>
+                    </a>
+                </div>
+
+                <!-- Active Careers -->
+                <div class="col-sm-6 col-md-6 col-xl-3">
+                    <a href="{% url 'superadmin:CareerList' %}" class="dashstat-tile h-100" style="display:block;text-decoration:none; background: linear-gradient(135deg, #11998e, #38ef7d); color:#fff;">
+                        <div class="tile-icon-wrap"><i class="fas fa-briefcase"></i></div>
+                        <div class="tile-count">{{ career_count }}</div>
+                        <div class="tile-label">Active Careers</div>
+                    </a>
+                </div>
+
+                <!-- Job Applications -->
+                <div class="col-sm-6 col-md-6 col-xl-3">
+                    <a href="{% url 'superadmin:ApplicationList' %}" class="dashstat-tile h-100" style="display:block;text-decoration:none; background: linear-gradient(135deg, #F2994A, #F2C94C); color:#fff;">
+                        <div class="tile-icon-wrap"><i class="fas fa-user-tie"></i></div>
+                        <div class="tile-count">{{ application_count }}</div>
+                        <div class="tile-label">Job Applications</div>
+                    </a>
+                </div>
+
+
+            </div>
+
+        </div>
+        <!-- CONTAINER END -->
+    </div>
+</div>
+<!--app-content close-->
+
+{% include "superadmin/layout/footer.html" %}

@@ -1,0 +1,246 @@
+{% include 'superadmin/layout/header.html' %}
+
+<!--app-content open-->
+<div class="main-content app-content mt-0">
+    <div class="side-app">
+
+        <!-- CONTAINER -->
+        <div class="main-container container-fluid">
+
+            <!-- PAGE-HEADER -->
+            <div class="page-header">
+                <h1 class="page-title">Career Listings</h1>
+                <div>
+                    <a class="sa-btn sa-btn-module" href="{% url 'superadmin:CareerAdd' %}">
+                        <i class="side-menu__icon fe fe-plus-circle mx-1"></i>Add New Listing
+                    </a>
+                </div>
+            </div>
+            <!-- PAGE-HEADER END -->
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">List Of All Career Listings</h3>
+                        </div>
+                        <div class="card-body">
+                            <form onsubmit="return false;">
+                                <div class="row">
+                                    <div class="form-group col-lg-3 col-12">
+                                        <input type="text" class="form-control" id="searchCareer" style="height: 40px;" placeholder="Search Title or Location">
+                                    </div>
+                                    <div class="form-group col-lg-2 col-12">
+                                        <select class="form-control form-select" id="filterStatus" style="height: 40px;">
+                                            <option value="">ALL STATUS</option>
+                                            <option value="True" selected>ACTIVE</option>
+                                            <option value="False">INACTIVE</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-lg-1 col-12">
+                                        <a class="btn btn-light" style="height: 40px; width: 40px; display: inline-flex; justify-content: center; align-items: center;" href="{{request.path}}" title="Reset"><i class="fe fe-rotate-cw"></i></a>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="table-responsive">
+                                <table class="table border-top table-bordered mb-0 table-hover" id="careerTable">
+                                    <thead>
+                                        <tr>
+                                            <th class="wd-5p">SL NO</th>
+                                            <th>JOB TITLE</th>
+                                            <th>LOCATION</th>
+                                            <th>POSTED DATE</th>
+                                            <th>EN CONTENT</th>
+                                            <th>AR DATA</th>
+                                            <th>STATUS</th>
+                                            <th>ACTION</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="careerTableBody">
+                                        {% include 'superadmin/career/career-table.html' %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- CONTAINER END -->
+
+    </div>
+</div>
+<!--app-content close-->
+
+<!-- Delete Modal -->
+<div class="modal fade" id="modaldemo5" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-md modal-dialog-centered text-center" role="document">
+        <div class="modal-content ">
+            <div class="modal-body">
+                <button aria-label="Close" class="btn-close position-absolute" data-bs-dismiss="modal">
+                <span aria-hidden="true">&times;</span></button>
+                <i class="icon icon-close fs-70 text-danger lh-1 my-5 d-inline-block"></i>
+                <h4 class="text-danger">Are You Sure You Want To Delete?</h4>
+                <p class="mg-b-20 mg-x-20">Item Will be Deleted Permanently</p>
+                <input type="hidden" id="hid">
+                <button class="sa-btn sa-btn-primary" onclick="confirmDeleteCareer()">Yes</button>
+                <button aria-label="Close" class="sa-btn sa-btn-cancel pd-x-25" data-bs-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Details Modal (English) -->
+<div class="modal fade" id="careerDetailModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header border-bottom-0 pb-0">
+                <h5 class="modal-title font-weight-bold">Career Details (English)</h5>
+                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body pt-2" id="careerDetailContent">
+                <!-- Content will be loaded here -->
+                <div class="text-center py-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer border-top-0 pt-0">
+                <button class="sa-btn sa-btn-module btn-sm" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Arabic Data Modal -->
+<div class="modal fade" id="careerArModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header border-bottom-0 pb-0">
+                <h5 class="modal-title font-weight-bold">البيانات العربية</h5>
+                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body pt-2" id="careerArContent" dir="rtl">
+                <div class="text-center py-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer border-top-0 pt-0">
+                <button class="sa-btn sa-btn-module btn-sm" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'superadmin/layout/footer.html' %}
+
+<script>
+    $(document).ready(function() {
+        function fetchCareers() {
+            var search = $('#searchCareer').val();
+            var status = $('#filterStatus').val();
+            $.ajax({
+                url: "{% url 'superadmin:CareerList' %}",
+                type: 'GET',
+                data: { 
+                    'search': search,
+                    'status': status
+                },
+                success: function(response) {
+                    if (response.status) {
+                        $('#careerTableBody').html(response.template);
+                    }
+                }
+            });
+        }
+
+        $('#searchCareer').on('keyup', fetchCareers);
+        $('#filterStatus').on('change', fetchCareers);
+    });
+
+    function changeStatus(id) {
+        $.ajax({
+            url: "{% url 'superadmin:CareerStatus' %}",
+            type: 'POST',
+            data: {
+                'id': id,
+                'csrfmiddlewaretoken': '{{ csrf_token }}'
+            },
+            success: function(response) {
+                if (response.status) {
+                    location.reload();
+                }
+            }
+        });
+    }
+
+    function viewCareer(id) {
+        $('#careerDetailContent').html('<div class="text-center py-5"><div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div></div>');
+        $('#careerDetailModal').modal('show');
+        $.ajax({
+            url: "{% url 'superadmin:CareerDetail' %}",
+            type: 'GET',
+            data: { 'id': id },
+            success: function(response) {
+                if (response.status) {
+                    $('#careerDetailContent').html(response.template);
+                } else {
+                    $('#careerDetailContent').html('<div class="alert alert-danger">' + response.message + '</div>');
+                }
+            },
+            error: function() {
+                $('#careerDetailContent').html('<div class="alert alert-danger">An error occurred while fetching details.</div>');
+            }
+        });
+    }
+
+    function viewCareerArabic(id) {
+        $('#careerArContent').html('<div class="text-center py-5"><div class="spinner-border" style="color:#1a3d5c;" role="status"><span class="visually-hidden">Loading...</span></div></div>');
+        $('#careerArModal').modal('show');
+        $.ajax({
+            url: "{% url 'superadmin:CareerArabicDetail' %}",
+            type: 'GET',
+            data: { 'id': id },
+            success: function(response) {
+                if (response.status) {
+                    $('#careerArContent').html(response.template);
+                } else {
+                    $('#careerArContent').html('<p class="text-center text-muted">لا توجد بيانات عربية.</p>');
+                }
+            },
+            error: function() {
+                $('#careerArContent').html('<p class="text-center text-danger">حدث خطأ أثناء تحميل البيانات.</p>');
+            }
+        });
+    }
+
+    function deleteCareer(id) {
+        $('#hid').val(id);
+        $('#modaldemo5').modal('show');
+    }
+
+    function confirmDeleteCareer() {
+        var id = $('#hid').val();
+        $.ajax({
+            url: "{% url 'superadmin:CareerDelete' %}",
+            type: 'POST',
+            data: {
+                'id': id,
+                'csrfmiddlewaretoken': '{{ csrf_token }}'
+            },
+            success: function(response) {
+                if (response.status) {
+                    location.reload();
+                }
+            }
+        });
+    }
+</script>

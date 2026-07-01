@@ -1,0 +1,123 @@
+{% extends 'website/layout/base.html' %}
+{% load static %}
+{% block title %}Latest News & Insights | Blog | Bluedot{% endblock %}
+{% block meta_description %}Bluedot blog featuring air ambulance news, medical transfer insights, case studies and aviation healthcare updates.{% endblock %}
+{% block content %}
+
+<!-- ========== NEWS HERO SECTION ========== -->
+{% if featured %}
+<section class="news-hero-section">
+    <div class="news-hero-bg">
+        {% if featured.image %}
+        <img src="{{ featured.image.url }}" alt="{{ featured.title }}" class="news-hero-img">
+        {% else %}
+        <img src="{% static 'website/images/news-1.png' %}" alt="{{ featured.title }}" class="news-hero-img">
+        {% endif %}
+        <div class="news-hero-overlay"></div>
+    </div>
+    <div class="container h-100 position-relative z-1">
+        <div class="news-hero-content">
+            <p class="news-meta">
+                <span class="en-content">
+                    {% if featured.date %}Published on {{ featured.date|date:"d M Y" }}{% endif %}
+                    {% if featured.time_to_read %} &ndash; {{ featured.time_to_read }} read{% endif %}
+                </span>
+                <span class="ar-content">
+                    {% if featured.date %}نُشر بتاريخ {{ featured.date|date:"d M Y" }}{% endif %}
+                    {% if featured.time_to_read_ar %}&ndash; {{ featured.time_to_read_ar }}{% elif featured.time_to_read %}&ndash; {{ featured.time_to_read }} قراءة{% endif %}
+                </span>
+            </p>
+            <h1 class="news-title">
+                <span class="en-content">{{ featured.title }}</span>
+                <span class="ar-content">{{ featured.title_ar|default:featured.title }}</span>
+            </h1>
+            <a href="{% url 'website:blog_detail' slug=featured.slug %}" class="btn-read-article">
+                <span class="en-content">Read Article</span>
+                <span class="ar-content">قراءة المقال</span>
+            </a>
+        </div>
+    </div>
+</section>
+{% else %}
+<!-- Fallback hero if no posts -->
+<section class="news-hero-section">
+    <div class="news-hero-bg">
+        <img src="{% static 'website/images/news-1.png' %}" alt="Bluedot News" class="news-hero-img">
+        <div class="news-hero-overlay"></div>
+    </div>
+    <div class="container h-100 position-relative z-1">
+        <div class="news-hero-content">
+            <h1 class="news-title">Latest News &amp; Insights</h1>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- ========== NEWS & STORIES SECTION ========== -->
+<section class="news-section" id="news">
+    <div class="container">
+        <div class="news-header-top">
+            <div class="news-header-left">
+                <h2 class="news-heading">Latest news &amp; Stories</h2>
+                <p class="news-desc">
+                    Explore our stories of change, recent news, the work we do,<br>
+                    and ways to make an even greater impact together.
+                </p>
+            </div>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="news-filters">
+            <button class="news-filter-btn {% if active_category == 'all' %}active{% endif %}" data-category="all">All Categories</button>
+            {% for cat in categories %}
+            <button class="news-filter-btn {% if active_category == cat.slug %}active{% endif %}" data-category="{{ cat.slug }}">{{ cat.name }}</button>
+            {% endfor %}
+        </div>
+
+        <div id="news-grid-container">
+            {% include 'website/news/_news_grid.html' %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+{% block extra_scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterButtons = document.querySelectorAll('.news-filter-btn');
+        const gridContainer = document.getElementById('news-grid-container');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const category = this.getAttribute('data-category');
+
+                // Update active state
+                filterButtons.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                // Fetch filtered content via Ajax
+                const url = `{% url 'website:blogs' %}?category=${category}`;
+                
+                // Add a simple fade animation effect
+                gridContainer.style.opacity = 0.5;
+
+                fetch(url, {
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
+                    }
+                })
+                .then(response => response.text())
+                .then(html => {
+                    gridContainer.innerHTML = html;
+                    gridContainer.style.opacity = 1;
+                })
+                .catch(err => {
+                    console.error('Error fetching blogs:', err);
+                    gridContainer.style.opacity = 1;
+                });
+            });
+        });
+    });
+</script>
+{% endblock %}

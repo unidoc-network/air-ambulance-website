@@ -1,0 +1,144 @@
+{% include 'superadmin/layout/header.html' %}
+
+<!--app-content open-->
+<div class="main-content app-content mt-0">
+    <div class="side-app">
+
+        <!-- CONTAINER -->
+        <div class="main-container container-fluid">
+
+            <!-- PAGE-HEADER -->
+            <div class="page-header">
+                <h1 class="page-title">{% if data %}Edit{% else %}Add{% endif %} News &amp; Story</h1>
+                <div>
+                    <a class="sa-btn sa-btn-module" href="{% url 'superadmin:NewsList' %}">
+                        <i class="side-menu__icon fe fe-eye mx-1"></i>View All
+                    </a>
+                </div>
+            </div>
+            <!-- PAGE-HEADER END -->
+
+            <!-- FORM START -->
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="row">
+
+                    <!-- IMAGE UPLOADER -->
+                    <div class="col-xl-4 col-lg-5 col-md-12 col-12 mb-4">
+                        <div class="card h-100 mb-0">
+                            <div class="card-header border-bottom-0">
+                                <h3 class="card-title">Featured Image <span class="text-danger">*</span></h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-12 col-sm-12">
+                                        <input type="file" class="dropify" data-bs-height="260" name="image"
+                                            {% if not data %} required {% endif %}
+                                            accept=".jpg,.jpeg,.png"
+                                            data-default-file="{% if data and data.image %}{{data.image.url}}{% endif %}" />
+                                        <p class="text-muted mt-2 small">Recommend Size: 800 x 500 px</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- META DETAILS (date, category, time to read) -->
+                    <div class="col-xl-8 col-lg-7 col-md-12 col-12 mb-4">
+                        <div class="card h-100 mb-0">
+                            <div class="card-header border-bottom-0">
+                                <h3 class="card-title">Article Details</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+
+                                    <!-- English Title -->
+                                    <div class="form-group col-lg-6 col-12">
+                                        <label class="form-label">Title (English) <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" placeholder="Enter article title" name="title" required value="{{data.title}}">
+                                    </div>
+
+                                    <!-- Arabic Title -->
+                                    <div class="form-group col-lg-6 col-12">
+                                        <label class="form-label">العنوان (عربي) <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control text-end" placeholder="أدخل عنوان المقال" name="title_ar" required value="{{data.title_ar}}" dir="rtl">
+                                    </div>
+
+                                    <!-- Publish Date -->
+                                    <div class="form-group col-lg-6 col-12">
+                                        <label class="form-label">Publish Date <span class="text-danger">*</span></label>
+                                        <input type="date" class="form-control" name="date" required value="{{data.date|date:'Y-m-d'}}">
+                                    </div>
+
+                                    <!-- Category -->
+                                    <div class="form-group col-lg-6 col-12">
+                                        <label class="form-label">Category <span class="text-danger">*</span></label>
+                                        <select name="category" class="form-control form-select select2" required>
+                                            <option value="">Select Category</option>
+                                            {% for category in categories %}
+                                               <option value="{{category.id}}" {% if data and data.category and data.category.id == category.id %}selected{% endif %}>{{category.name}}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+
+                                    <!-- Time to Read (EN) - Optional -->
+                                    <div class="form-group col-lg-6 col-12">
+                                        <label class="form-label">Time to Read (English) <small class="text-muted">(optional, e.g. "5 min read")</small></label>
+                                        <input type="text" class="form-control" placeholder="e.g. 5 min read" name="time_to_read" value="{{data.time_to_read}}">
+                                    </div>
+
+                                    <!-- Time to Read (AR) - Optional -->
+                                    <div class="form-group col-lg-6 col-12">
+                                        <label class="form-label">وقت القراءة (عربي) <small class="text-muted">(اختياري)</small></label>
+                                        <input type="text" class="form-control text-end" placeholder="مثال: 5 دقائق قراءة" name="time_to_read_ar" value="{{data.time_to_read_ar}}" dir="rtl">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ENGLISH CONTENT -->
+                    <div class="col-12 mb-4">
+                        <div class="card mb-0">
+                            <div class="card-header border-bottom-0">
+                                <h3 class="card-title">Content (English) <span class="text-danger">*</span></h3>
+                            </div>
+                            <div class="card-body">
+                                <textarea id="summernote" name="content" required>{{data.content|safe}}</textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ARABIC CONTENT -->
+                    <div class="col-12 mb-4">
+                        <div class="card mb-0">
+                            <div class="card-header border-bottom-0">
+                                <h3 class="card-title">المحتوى (عربي) <span class="text-danger">*</span></h3>
+                            </div>
+                            <div class="card-body">
+                                <textarea id="summernote_ar" name="content_ar" required>{{data.content_ar|safe}}</textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ACTION BUTTONS -->
+                    <div class="col-12 mb-4">
+                        <button class="sa-btn sa-btn-primary" type="submit">
+                            <i class="fe fe-check-circle me-1"></i>Save Article
+                        </button>
+                        <a href="{% url 'superadmin:NewsList' %}" class="btn btn-light ms-2">Cancel</a>
+                    </div>
+
+                </div>
+            </form>
+            <!-- FORM END -->
+
+        </div>
+        <!-- CONTAINER END -->
+
+    </div>
+</div>
+<!--app-content close-->
+
+{% include 'superadmin/layout/footer.html' %}

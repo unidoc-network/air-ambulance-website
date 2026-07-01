@@ -1,0 +1,94 @@
+{% extends 'website/layout/base.html' %}
+{% load static %}
+{% block title %}Youstina Gerges | Leadership | Bluedot{% endblock %}
+{% block meta_description %}Meet Youstina Gerges Bkhiet, Head of Government Relations – MENA at Bluedot.{% endblock %}
+{% block content %}
+
+<style>
+        .leader-detail-sec {
+            background-color: #f2f5f8;
+            min-height: calc(100vh - 400px);
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+        }
+
+        .leader-detail-card {
+            text-align: center;
+            width: 100%;
+            padding-top: 120px;
+        }
+
+        .leader-detail-img {
+            width: 250px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            margin: auto;
+        }
+
+        .leader-detail-name {
+            font-size: 45px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: #000;
+            font-family: 'Aeonik';
+            padding-top: 20px;
+        }
+
+        .leader-detail-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #000;
+            margin-bottom: 40px;
+        }
+
+        .leader-detail-bio {
+            max-width: 730px;
+            margin: 0 auto;
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.2;
+            color: #153c5e;
+            font-weight: 400;
+            font-family: 'Aeonik';
+
+        }
+    </style>
+    <section class="leader-detail-sec">
+        <div class="container">
+            <div class="leader-detail-card">
+                <img src="{% static 'website/images/leader7.png' %}" alt="Youstina bkhiet" class="leader-detail-img">
+                <h1 class="leader-detail-name en-content">Youstina Gerges Bkhiet</h1>
+                <h1 class="leader-detail-name ar-content">يوستينا جرجس بخيت
+                </h1>
+
+                <h5 class="leader-detail-title en-content">Head of Government Relations – MENA</h5>
+                <h5 class="leader-detail-title ar-content">رئيسة العلاقات الحكومية – منطقة الشرق الأوسط وشمال أفريقيا
+                </h5>
+
+                <div class="leader-detail-bio en-content">
+                    <p>A government relations and healthcare affairs professional committed to strengthening
+                        collaboration between healthcare providers, regulators, and international stakeholders. With
+                        more than seven years of experience in medical assistance, patient transfers, and regulatory
+                        coordination, Youstina has successfully facilitated complex cross-border medical transportation
+                        projects across multiple jurisdictions. She continues to strengthen Bluedot's relationships with
+                        government authorities, embassies, airlines, and healthcare institutions throughout the MENA
+                        region, supporting seamless patient mobility and operational excellence.</p>
+                </div>
+
+                <div class="leader-detail-bio ar-content">
+                    <p>أخصائية متميزة في مجال العلاقات الحكومية وشؤون الرعاية الصحية، تلتزم بتعزيز سبل التعاون بين مقدمي
+                        خدمات الرعاية الصحية، والجهات التنظيمية، والأطراف المعنية على الصعيد الدولي. تمتلك يوستينا خبرة
+                        تمتد لأكثر من سبع سنوات في مجالات المساعدة الطبية، ونقل المرضى، والتنسيق التنظيمي، حيث نجحت في
+                        تسهيل مشاريع معقدة لنقل المرضى طبياً عبر الحدود وبما يشمل سلطات قضائية متعددة. وتواصل يوستينا
+                        توطيد علاقات شركة "بلودوت" (Bluedot) مع السلطات الحكومية، والسفارات، وشركات الطيران، ومؤسسات
+                        الرعاية الصحية في جميع أنحاء منطقة الشرق الأوسط وشمال أفريقيا، بما يدعم التنقل السلس للمرضى
+                        ويحقق التميز التشغيلي.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

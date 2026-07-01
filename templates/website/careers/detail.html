@@ -1,0 +1,162 @@
+{% extends 'website/layout/base.html' %}
+{% load static %}{% block title %}{{ career.title }} | Careers | Bluedot Air Ambulance{% endblock %}
+{% block meta_description %}Apply for {{ career.title }} at Bluedot Air Ambulance. Join our expert team in air medical transport and critical care.{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'website/css/roles.css' %}">
+
+<!-- ========== HERO SECTION START ========== -->
+    <section class="roles-hero">
+        <div class="container">
+            <h1 class="roles-title en-content">Roles at Bluedot</h1>
+            <h1 class="roles-title ar-content">الوظائف في بلودوت</h1>
+        </div>
+    </section>
+    <!-- ========== HERO SECTION END ========== -->
+
+    <!-- ========== IMAGE SECTION START ========== -->
+    <section class="roles-image-section">
+        <div class="container-fluid p-0">
+            <div class="roles-team-img-wrapper">
+                <img src="{% static 'website/images/roles-banner.png' %}" alt="Bluedot Team" class="roles-team-img">
+            </div>
+        </div>
+    </section>
+    <!-- ========== IMAGE SECTION END ========== -->
+
+    <!-- ========== CONTENT SECTION START ========== -->
+    <section class="roles-content-section">
+        <div class="container">
+            {% if messages %}
+            <div class="row mb-4">
+                <div class="col-12">
+                    {% for message in messages %}
+                    <div class="alert alert-{% if message.tags == 'error' %}danger{% else %}{{ message.tags }}{% endif %} alert-dismissible fade show" role="alert" style="border-radius:8px; padding: 15px 20px;">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            <div class="roles-white-card">
+                <div class="row">
+                    <!-- Left Sidebar Label -->
+                    <div class="col-lg-4">
+                        <h2 class="join-us-title en-content">Join Us</h2>
+                        <h2 class="join-us-title ar-content">انضم إلينا</h2>
+                    </div>
+
+                    <!-- Right Main Content -->
+                    <div class="col-lg-8">
+                        <div class="role-detail-header">
+                            <h2 class="role-detail-title">
+                                <span class="en-content">{{ career.title }}</span>
+                                <span class="ar-content">{{ career.title_ar|default:career.title }}</span>
+                            </h2>
+                            <p class="role-detail-location">
+                                <span class="en-content">{{ career.location }}{% if career.date %} / {{ career.date|date:"d M Y" }}{% endif %}</span>
+                                <span class="ar-content">{{ career.location_ar|default:career.location }}{% if career.date %} / {{ career.date|date:"d M Y" }}{% endif %}</span>
+                            </p>
+                        </div>
+
+                        <div class="role-detail-body">
+                            <div class="role-intro">
+                                <span class="en-content">{{ career.listing_description }}</span>
+                                <span class="ar-content">{{ career.listing_description_ar|default:career.listing_description }}</span>
+                            </div>
+
+                            <div class="role-section mt-4 en-content">
+                                {{ career.description|safe }}
+                            </div>
+                            <div class="role-section mt-4 ar-content" dir="rtl">
+                                {{ career.description_ar|default:career.description|safe }}
+                            </div>
+
+                            <!-- Application Form -->
+                            <div class="apply-form-wrapper">
+                                <h3 class="apply-form-title">
+                                    <span class="en-content">Apply here</span>
+                                    <span class="ar-content">التقديم هنا</span>
+                                </h3>
+                                <form method="POST" enctype="multipart/form-data" action="{% url 'website:career_detail' slug=career.slug %}" class="apply-form">
+                                    {% csrf_token %}
+                                    <div class="mb-4">
+                                        <label for="career_email" class="form-label">
+                                            <span class="en-content">Email Address</span>
+                                            <span class="ar-content">البريد الإلكتروني</span>
+                                        </label>
+                                        <input type="email" class="form-control" id="career_email" name="email" placeholder="john@gmail.com" required>
+                                    </div>
+                                     <div class="mb-4">
+                                        <button type="button" class="verify-email-btn" style="background-color: #009BE0; color: #FFF; border: none; padding: 10px 24px; border-radius: 24px; font-size: 14px; font-weight: 500; cursor: pointer; display: inline-block; font-family: 'Aeonik', sans-serif;">
+                                            <span class="en-content">Click here to verify your email</span>
+                                            <span class="ar-content">اضغط هنا للتحقق من بريدك الإلكتروني</span>
+                                        </button>
+                                    </div>
+                                    <div class="mb-4">
+                                        <div class="form-group">
+                                            <label for="oman-verify-code" class="form-label">
+                                                <span class="en-content">Verify Code</span>
+                                                <span class="ar-content">رمز التحقق</span>
+                                            </label>
+                                            <input type="text" class="form-control" id="oman-verify-code" name="verify_code" placeholder="enter code">
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="career_name" class="form-label">
+                                            <span class="en-content">Name</span>
+                                            <span class="ar-content">الاسم</span>
+                                        </label>
+                                        <input type="text" class="form-control" id="career_name" name="name" placeholder="ex. John" required>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="career_phone" class="form-label">
+                                            <span class="en-content">Phone Number</span>
+                                            <span class="ar-content">رقم الهاتف</span>
+                                        </label>
+                                        <input type="tel" class="form-control" id="career_phone" name="phone"
+                                               placeholder="Enter your phone number"
+                                               inputmode="numeric"
+                                               pattern="[0-9+\-\s\(\)]+"
+                                               oninput="this.value = this.value.replace(/[^0-9+\-\s\(\)]/g, '')"
+                                               required>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="career_location" class="form-label">
+                                            <span class="en-content">Location</span>
+                                            <span class="ar-content">الموقع</span>
+                                        </label>
+                                        <input type="text" class="form-control" id="career_location" name="location" placeholder="City, state, etc" required>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label d-block">
+                                            <span class="en-content">Resume (Required)</span>
+                                            <span class="ar-content">السيرة الذاتية (مطلوب)</span>
+                                        </label>
+                                        <div class="file-upload-wrapper">
+                                            <input type="file" id="resume" name="resume" class="file-input" required>
+                                            <label for="resume" class="file-label">
+                                                <span class="en-content">Attach resume/CV</span>
+                                                <span class="ar-content">إرفاق السيرة الذاتية</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="text-end">
+                                        <button type="submit" class="btn-submit">
+                                            <span class="en-content">Submit</span>
+                                            <span class="ar-content">إرسال</span>
+                                        </button>
+                                    </div>
+                                </form>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== CONTENT SECTION END ========== -->
+
+{% endblock %}
+{% block extra_scripts %}
+{% endblock %}

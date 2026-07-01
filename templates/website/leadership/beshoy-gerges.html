@@ -1,0 +1,98 @@
+{% extends 'website/layout/base.html' %}
+{% load static %}
+{% block title %}Beshoy Gerges | Leadership | Bluedot{% endblock %}
+{% block meta_description %}Meet Beshoy Gerges Bakhit, Business Head – Air Ambulance at Bluedot.{% endblock %}
+{% block content %}
+
+<style>
+        .leader-detail-sec {
+            background-color: #f2f5f8;
+            min-height: calc(100vh - 400px);
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+        }
+
+        .leader-detail-card {
+            text-align: center;
+            width: 100%;
+            padding-top: 120px;
+        }
+
+        .leader-detail-img {
+            width: 250px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            margin: auto;
+        }
+
+        .leader-detail-name {
+            font-size: 45px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: #000;
+            font-family: 'Aeonik';
+            padding-top: 20px;
+        }
+
+        .leader-detail-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #000;
+            margin-bottom: 40px;
+        }
+
+        .leader-detail-bio {
+            max-width: 730px;
+            margin: 0 auto;
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.2;
+            color: #153c5e;
+            font-weight: 400;
+            font-family: 'Aeonik';
+
+        }
+    </style>
+    <section class="leader-detail-sec">
+        <div class="container">
+            <div class="leader-detail-card">
+                <img src="{% static 'website/images/leader5.png' %}" alt="Beshoy gerges" class="leader-detail-img">
+                <h1 class="leader-detail-name en-content">Beshoy gerges</h1>
+                <h1 class="leader-detail-name ar-content">بيشوي جرجس بخيت
+                </h1>
+
+                <h5 class="leader-detail-title en-content">Business Head - Air Ambulance</h5>
+                <h5 class="leader-detail-title ar-content">رئيس قطاع الأعمال – الإسعاف الجوي
+                </h5>
+
+                <div class="leader-detail-bio en-content">
+                    <p>Beshoy Gerges is an air ambulance professional with more than six years of experience in
+                        aeromedical transportation, medical evacuations, and international patient transfers. As
+                        Business
+                        Head – Air Ambulance at Bluedot, he leads the development of strategic partnerships across
+                        hospitals, insurers, assistance companies, and aviation providers worldwide.
+                        His expertise spans air ambulance operations, global partner network development, and cross-
+                        border patient transfer solutions. Beshoy plays a key role in expanding Bluedot’s international
+                        air
+                        ambulance network and strengthening access to critical patient transportation services across
+                        global markets.
+                    </p>
+                </div>
+                <div class="leader-detail-bio ar-content">
+                    <p>بيشوي جرجس هو أخصائي في مجال الإسعاف الجوي، يمتلك خبرة تمتد لأكثر من ست سنوات في مجالات النقل
+                        الطبي الجوي، والإخلاء الطبي، ونقل المرضى على الصعيد الدولي. وبصفته رئيساً لقطاع الأعمال –
+                        الإسعاف الجوي في شركة "بلودوت" (Bluedot)، يتولى قيادة جهود تطوير الشراكات الاستراتيجية مع
+                        المستشفيات، وشركات التأمين، وشركات المساعدة، ومزودي خدمات الطيران في جميع أنحاء العالم. وتشمل
+                        خبرته عمليات الإسعاف الجوي، وتطوير شبكات الشركاء العالميين، وحلول نقل المرضى عبر الحدود. ويلعب
+                        بيشوي دوراً محورياً في توسيع شبكة الإسعاف الجوي الدولية لشركة "بلودوت"، وتعزيز فرص الوصول إلى
+                        خدمات نقل المرضى الحرجة عبر الأسواق العالمية.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

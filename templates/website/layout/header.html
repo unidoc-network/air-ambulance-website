@@ -1,0 +1,182 @@
+{% load static %}
+<!-- ========== HEADER START ========== -->
+    <header class="site-header{% if path != 'home' and path != 'about' %} site-header-light{% endif %}" id="siteHeader">
+        <div class="header-main">
+            <div class="container">
+                <div class="header-inner">
+                    <!-- Logo -->
+                    <a href="{% url 'website:home' %}" class="header-logo" id="headerLogo">
+                        {% if path == 'home' or path == 'about' %}
+                        <img src="{% static 'website/images/main-logo.png' %}" alt="Bluedot Logo">
+                        {% else %}
+                        <img src="{% static 'website/images/bl-logo.png' %}" alt="Bluedot Logo">
+                        {% endif %}
+                    </a>
+
+                    <!-- Right Side Actions -->
+                    <div class="header-actions">
+                        <a href="tel:+919745410000" class="header-btn en-content" id="btnGlobalAssistance">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M9.50246 4.25722C9.19873 3.4979 8.46332 3 7.64551 3H4.89474C3.8483 3 3 3.8481 3 4.89453C3 13.7892 10.2108 21 19.1055 21C20.1519 21 21 20.1516 21 19.1052L21.0005 16.354C21.0005 15.5361 20.5027 14.8009 19.7434 14.4971L17.1069 13.4429C16.4249 13.1701 15.6483 13.2929 15.0839 13.7632L14.4035 14.3307C13.6089 14.9929 12.4396 14.9402 11.7082 14.2088L9.79222 12.2911C9.06079 11.5596 9.00673 10.3913 9.66895 9.59668L10.2363 8.9163C10.7066 8.35195 10.8305 7.57516 10.5577 6.89309L9.50246 4.25722Z"
+                                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg> 24/7 Global Assistance
+                        </a>
+                        <a href="tel:+919745410000" class="header-btn ar-content">
+                            المساعدة العالمية على مدار 24/7
+                        </a>
+                        <a href="javascript:void(0)" class="header-btn trigger-enquiry en-content" id="btnEnquiry">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M5.59961 19.9203L7.12357 18.7012L7.13478 18.6926C7.45249 18.4384 7.61281 18.3101 7.79168 18.2188C7.95216 18.1368 8.12328 18.0771 8.2998 18.0408C8.49877 18 8.70603 18 9.12207 18H17.8031C18.921 18 19.4806 18 19.908 17.7822C20.2843 17.5905 20.5905 17.2842 20.7822 16.9079C21 16.4805 21 15.9215 21 14.8036V7.19691C21 6.07899 21 5.5192 20.7822 5.0918C20.5905 4.71547 20.2837 4.40973 19.9074 4.21799C19.4796 4 18.9203 4 17.8002 4H6.2002C5.08009 4 4.51962 4 4.0918 4.21799C3.71547 4.40973 3.40973 4.71547 3.21799 5.0918C3 5.51962 3 6.08009 3 7.2002V18.6712C3 19.7369 3 20.2696 3.21846 20.5433C3.40845 20.7813 3.69644 20.9198 4.00098 20.9195C4.35115 20.9191 4.76744 20.5861 5.59961 19.9203Z"
+                                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg> Make an Enquiry
+                        </a>
+                        <a href="javascript:void(0)" class="header-btn trigger-enquiry ar-content" id="btnEnquiry">
+                            تقديم استفسار
+                        </a>
+                        <div class="header-lang" id="langSelector">
+                            <span class="lang-current-label">EN</span>
+                            <i class="fas fa-chevron-down"></i>
+                            <div class="lang-dropdown">
+                                <span class="lang-option active" data-lang="en">
+                                    <span class="lang-flag">🇬🇧</span>
+                                    <span class="lang-name">EN</span>
+                                </span>
+                                <span class="lang-option" data-lang="ar">
+                                    <span class="lang-flag">🇸🇦</span>
+                                    <span class="lang-name">AR</span>
+                                </span>
+                            </div>
+                        </div>
+                        <button class="header-hamburger" id="headerHamburger" aria-label="Toggle menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="12" viewBox="0 0 48 12"
+                                fill="none">
+                                <path d="M0 0.75H47.3799" stroke="currentColor" stroke-width="1.5" />
+                                <path d="M0 10.917H47.3799" stroke="currentColor" stroke-width="1.5" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile / Fullscreen Nav -->
+        <div class="header-nav-overlay" id="headerNavOverlay"></div>
+        <nav class="header-nav" id="headerNav">
+            <div class="nav-drawer-header">
+                <div class="nav-drawer-actions">
+                    <a href="tel:+919745410000" class="nav-outline-btn en-content"> <svg
+                            xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M9.50246 4.25722C9.19873 3.4979 8.46332 3 7.64551 3H4.89474C3.8483 3 3 3.8481 3 4.89453C3 13.7892 10.2108 21 19.1055 21C20.1519 21 21 20.1516 21 19.1052L21.0005 16.354C21.0005 15.5361 20.5027 14.8009 19.7434 14.4971L17.1069 13.4429C16.4249 13.1701 15.6483 13.2929 15.0839 13.7632L14.4035 14.3307C13.6089 14.9929 12.4396 14.9402 11.7082 14.2088L9.79222 12.2911C9.06079 11.5596 9.00673 10.3913 9.66895 9.59668L10.2363 8.9163C10.7066 8.35195 10.8305 7.57516 10.5577 6.89309L9.50246 4.25722Z"
+                                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg> 24/7 Global Assistance</a>
+                    <a href="tel:+919745410000" class="nav-outline-btn ar-content">المساعدة العالمية على مدار 24/7</a>
+
+                    <a href="javascript:void(0)" class="nav-outline-btn trigger-enquiry en-content"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M5.59961 19.9203L7.12357 18.7012L7.13478 18.6926C7.45249 18.4384 7.61281 18.3101 7.79168 18.2188C7.95216 18.1368 8.12328 18.0771 8.2998 18.0408C8.49877 18 8.70603 18 9.12207 18H17.8031C18.921 18 19.4806 18 19.908 17.7822C20.2843 17.5905 20.5905 17.2842 20.7822 16.9079C21 16.4805 21 15.9215 21 14.8036V7.19691C21 6.07899 21 5.5192 20.7822 5.0918C20.5905 4.71547 20.2837 4.40973 19.9074 4.21799C19.4796 4 18.9203 4 17.8002 4H6.2002C5.08009 4 4.51962 4 4.0918 4.21799C3.71547 4.40973 3.40973 4.71547 3.21799 5.0918C3 5.51962 3 6.08009 3 7.2002V18.6712C3 19.7369 3 20.2696 3.21846 20.5433C3.40845 20.7813 3.69644 20.9198 4.00098 20.9195C4.35115 20.9191 4.76744 20.5861 5.59961 19.9203Z"
+                                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg> Make an Enquiry</a>
+                    <a href="javascript:void(0)" class="nav-outline-btn trigger-enquiry ar-content">تقديم استفسار</a>
+                    <div class="nav-lang">
+                        <span class="lang-current-label">EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                        <div class="lang-dropdown">
+                            <span class="lang-option active" data-lang="en">
+                                <span class="lang-flag">🇬🇧</span>
+                                <span class="lang-name">EN</span>
+                            </span>
+                            <span class="lang-option" data-lang="ar">
+                                <span class="lang-flag">🇸🇦</span>
+                                <span class="lang-name">AR</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <button class="nav-close-btn" id="navCloseBtn" aria-label="Close menu">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" class="close-icon">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="#000000" stroke-width="1" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="nav-drawer-content">
+                <div class="nav-menus-wrapper" id="navMenusWrapper">
+                    <!-- Main Menu -->
+                    <div class="nav-menu-main">
+                        <ul class="header-nav-links en-content">
+                            <li><a href="{% url 'website:about' %}">About Us</a></li>
+                            <li><a href="#services" class="has-submenu" data-target="servicesMenu">Services</a></li>
+                            <li><a href="{% url 'website:fleet_select' %}">Fleet</a></li>
+                            <li><a href="{% url 'website:blogs' %}">News &amp; Insights</a></li>
+                            <li><a href="{% url 'website:careers' %}">Careers</a></li>
+                            <li><a href="{% url 'website:contactus' %}">Contact</a></li>
+
+                        </ul>
+
+                        <ul class="header-nav-links ar-content">
+                            <li><a href="{% url 'website:about' %}">من نحن</a></li>
+                            <li><a href="#services" class="has-submenu" data-target="servicesMenu">خدماتنا</a></li>
+                            <li><a href="{% url 'website:fleet_select' %}">أسطولنا</a></li>
+                            <li><a href="{% url 'website:blogs' %}">آخر الأخبار</a></li>
+                            <li><a href="{% url 'website:careers' %}">وظائف</a></li>
+                            <li><a href="{% url 'website:contactus' %}">تواصل معنا</a></li>
+
+                        </ul>
+                    </div>
+
+                    <!-- Services Submenu -->
+                    <div class="nav-menu-sub" id="servicesMenu">
+                        <button class="nav-back-btn" id="navBackBtn">
+                            <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
+                                <path d="M40 12H2M2 12L12 22M2 12L12 2" stroke="#000000" stroke-width="1.5"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <ul class="header-nav-links ">
+                            <li class="en-content"><a href="{% url 'website:service_air_ambulance' %}">Air Ambulance</a></li>
+                            <li class="ar-content"><a href="{% url 'website:service_air_ambulance' %}">الإسعاف الجوي</a></li>
+                            <li class="en-content"><a href="{% url 'website:service_commercial' %}">Commercial Airline
+                                    Transfer</a></li>
+                            <li class="ar-content"><a href="{% url 'website:service_commercial' %}">نقل المرضى عبر الطيران
+                                    التجاري</a></li>
+
+                            <li class="en-content"><a href="{% url 'website:service_medical_escort' %}">Medical Escorts</a></li>
+                            <li class="ar-content"><a href="{% url 'website:service_medical_escort' %}">المرافقة الطبية</a></li>
+
+                            <li class="en-content"><a href="{% url 'website:service_helicopter' %}">Helicopter Air Ambulance</a>
+                            </li>
+                            <li class="ar-content"><a href="{% url 'website:service_helicopter' %}">الإسعاف الجوي بالمروحيات</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-drawer-footer en-content">
+                <a href="{% url 'website:careers' %}" class="nav-outline-btn">Join the Team</a>
+                <div class="nav-socials">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+            <div class="nav-drawer-footer ar-content">
+                <a href="{% url 'website:careers' %}" class="nav-outline-btn">انضم إلى الفريق</a>
+                <div class="nav-socials">
+                    <a href="#">لينكدإن</a>
+                    <a href="#">فيسبوك</a>
+                    <a href="#">إنستغرام</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- ========== HEADER END ========== -->

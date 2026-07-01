@@ -1,0 +1,1065 @@
+{% extends 'website/layout/base.html' %}
+{% load static %}{% block title %}24/7 Air Ambulance Services | Dubai, UAE, Abu Dhabi | Bluedot{% endblock %}
+{% block meta_description %}Bluedot provides 24/7 air ambulance and medical evacuation services across Dubai, the UAE, MENA, Asia and worldwide.{% endblock %}
+{% block content %}
+
+<!-- ========== HERO BANNER SLIDER SECTION ========== -->
+    <section class="hero-banner-slider" id="home">
+        <div class="swiper heroBannerSwiper">
+            <div class="swiper-wrapper">
+
+                <!-- Slide 1 -->
+                <div class="swiper-slide hero-slide" style="background-image: url('{% static 'website/images/aa.png' %}');">
+                    <div class="hero-slide-overlay"></div>
+                    <div class="hero-slide-content">
+                        <div class="container">
+                            <!-- English Content -->
+                            <h1 class="hero-title en-content">
+                                International Air Ambulance & Critical Care Transport
+                            </h1>
+                            <p class="hero-description en-content">
+                                When critical care needs to move across borders, <br> our medical and aviation teams
+                                coordinate every <br> detail with precision and care.
+
+                            </p>
+                            <div class="hero-buttons en-content">
+                                <a href="javascript:void(0)" class="btn-hero-secondary trigger-enquiry">
+                                    Make an Inquiry
+                                </a>
+                            </div>
+                            <!-- Arabic Content -->
+                            <h1 class="hero-title ar-content">
+                                الإسعاف الجوي الدولي ونقل الحالات الحرجة
+                            </h1>
+                            <p class="hero-description ar-content">
+                                عندما تتطلب الحالات الحرجة نقلاً دولياً، يتولى فريقنا الطبي والجوي تنسيق كل تفاصيل
+                                الرحلة بأعلى مستويات الدقة والرعاية.
+                            </p>
+                            <div class="hero-buttons ar-content">
+                                <a href="javascript:void(0)" class="btn-hero-secondary trigger-enquiry">
+                                    تقديم استفسار
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide hero-slide" style="background-image: url('{% static 'website/images/banner-2.png' %}');">
+                    <div class="hero-slide-overlay"></div>
+                    <div class="hero-slide-content">
+                        <div class="container">
+                            <!-- English Content -->
+                            <h1 class="hero-title en-content">
+                                Commercial Airline Stretcher Transfers Worldwide
+                            </h1>
+                            <p class="hero-description en-content">
+                                When patients are fit to fly commercially but still <br> require medical support, we
+                                coordinate every stage <br> of the journey with care and clinical oversight.
+                            </p>
+                            <div class="hero-buttons en-content">
+                                <a href="javascript:void(0)" class="btn-hero-secondary trigger-enquiry">
+                                    Make an Inquiry
+                                </a>
+                            </div>
+                            <!-- Arabic Content -->
+                            <h1 class="hero-title ar-content">
+                                خدمات نقل المرضى عبر نقالات الطيران التجاري
+                            </h1>
+                            <p class="hero-description ar-content">
+                                عندما تسمح الحالة الطبية بالسفر على الرحلات التجارية مع الحاجة إلى دعم طبي، نقوم بتنسيق
+                                الرحلة بالكامل بعناية وإشراف طبي متكامل.
+                            </p>
+                            <div class="hero-buttons ar-content">
+                                <a href="javascript:void(0)" class="btn-hero-secondary trigger-enquiry">
+                                    تقديم استفسار
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide hero-slide" style="background-image: url('{% static 'website/images/banner-3-n.png' %}');">
+                    <div class="hero-slide-overlay"></div>
+                    <div class="hero-slide-content">
+                        <div class="container">
+                            <!-- English Content -->
+                            <h1 class="hero-title en-content">
+                                International <br> Medical Escort <br>Services 24/7
+                            </h1>
+                            <p class="hero-description en-content">
+                                When patients need medical supervision while travelling, <br> our experienced escorts
+                                provide continuous care and <br>reassurance throughout the journey.
+
+                            </p>
+                            <div class="hero-buttons en-content">
+                                <a href="javascript:void(0)" class="btn-hero-secondary trigger-enquiry">
+                                    Make an Inquiry
+                                </a>
+                            </div>
+                            <!-- Arabic Content -->
+                            <h1 class="hero-title ar-content">
+                                خدمات المرافقة الطبية الدولية على مدار الساعة
+                            </h1>
+                            <p class="hero-description ar-content">
+                                عندما يحتاج المرضى إلى إشراف طبي أثناء السفر، يوفر فريق المرافقة الطبية لدينا الرعاية
+                                والمتابعة المستمرة طوال الرحلة.
+                            </p>
+                            <div class="hero-buttons ar-content">
+                                <a href="javascript:void(0)" class="btn-hero-secondary trigger-enquiry">
+                                    تقديم استفسار
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Pill Pagination -->
+            <div class="hero-banner-pagination swiper-pagination"></div>
+        </div>
+
+    </section>
+
+
+
+    <!-- ========== OUR SERVICES SLIDER SECTION ========== -->
+    <section class="services-slider-section" id="ourServices">
+        <div class="">
+            <div class="container">
+                <h2 class="services-slider-title en-content">Our Services</h2>
+                <h2 class="services-slider-title ar-content">خدماتنا</h2>
+
+            </div>
+
+            <div class="container-fluid">
+                <!-- Swiper -->
+                <div class="swiper servicesSwiper">
+                    <div class="swiper-wrapper">
+
+                        <!-- Slide 1: Air Ambulance -->
+                        <div class="swiper-slide">
+                            <div class="svc-card svc-card-1">
+                                <!-- Left: teal panel -->
+                                <div class="svc-card-left">
+                                    <img src="{% static 'website/images/svc1-vector.png' %}" alt="" class="svc-vector-bg" aria-hidden="true">
+                                    <div class="svc-card-text en-content">
+                                        <h3 class="svc-card-title">Air Ambulance</h3>
+                                        <p class="svc-card-desc">Built for critical moments where time and specialised
+                                            care
+                                            matter most, our air ambulance missions connect patients to advanced medical
+                                            support across borders.</p>
+                                        <a href="{% url 'website:service_air_ambulance' %}" class="svc-card-btn"><span>Learn More</span> <i
+                                                class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                    <div class="svc-card-text ar-content">
+                                        <h3 class="svc-card-title">الإسعاف الجوي</h3>
+                                        <p class="svc-card-desc">ننقل المرضى للحالات الحرجة بطائرات مجهزة طبياً مع تنسيق
+                                            متكامل يضمن رعاية آمنة وسريعة من نقطة الانطلاق وحتى الوصول.</p>
+                                        <a href="{% url 'website:service_air_ambulance' %}" class="svc-card-btn"><span>اقرأ المزيد</span> <i
+                                                class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                                <!-- Right: photo -->
+                                <div class="svc-card-right">
+                                    <img src="{% static 'website/images/s-1.png' %}" alt="Air Ambulance" class="svc-card-img">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2: Commercial Airline Transfer -->
+                        <div class="swiper-slide">
+                            <div class="svc-card svc-card-2">
+                                <div class="svc-card-left">
+                                    <img src="{% static 'website/images/svc2-vector.png' %}" alt="" class="svc-vector-bg" aria-hidden="true">
+                                    <div class="svc-card-text en-content">
+                                        <h3 class="svc-card-title">Commercial Airline Transfer</h3>
+                                        <p class="svc-card-desc">Designed for medically stable patients who still
+                                            require
+                                            assistance while travelling, with coordinated care throughout the journey.
+                                        </p>
+                                        <a href="{% url 'website:service_commercial' %}" class="svc-card-btn"><span>Learn
+                                                More</span> <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                    <div class="svc-card-text ar-content">
+                                        <h3 class="svc-card-title">نقل المرضى عبر الطيران التجاري</h3>
+                                        <p class="svc-card-desc">نوفر حلول نقل طبي عبر الرحلات التجارية للحالات التي
+                                            تحتاج
+                                            إلى متابعة ودعم طبي أثناء السفر لمسافات طويلة.</p>
+                                        <a href="{% url 'website:service_commercial' %}" class="svc-card-btn"><span>اقرأ
+                                                المزيد</span> <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="svc-card-right">
+                                    <img src="{% static 'website/images/s-2-n.png' %}" alt="Commercial Airline Transfer" class="svc-card-img">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3: Medical Escort -->
+                        <div class="swiper-slide ">
+                            <div class="svc-card svc-card-3">
+                                <div class="svc-card-left">
+                                    <img src="{% static 'website/images/svc3-vector.png' %}" alt="" class="svc-vector-bg" aria-hidden="true">
+                                    <div class="svc-card-text en-content">
+                                        <h3 class="svc-card-title">Medical Escort</h3>
+                                        <p class="svc-card-desc">Our medical escorts travel alongside patients
+                                            worldwide,
+                                            providing reassurance, monitoring, and continuous support every step of the
+                                            way.
+                                        </p>
+                                        <a href="{% url 'website:service_medical_escort' %}" class="svc-card-btn"><span>Learn
+                                                More</span>
+                                            <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                    <div class="svc-card-text ar-content">
+                                        <h3 class="svc-card-title">المرافقة الطبية</h3>
+                                        <p class="svc-card-desc">يرافق فريقنا الطبي المرضى خلال رحلاتهم الدولية لضمان
+                                            المتابعة المستمرة والرعاية الطبية طوال الرحلة.</p>
+                                        <a href="{% url 'website:service_medical_escort' %}" class="svc-card-btn"><span>اقرأ
+                                                المزيد</span>
+                                            <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="svc-card-right">
+                                    <img src="{% static 'website/images/s3-n.png' %}" alt="Medical Escort" class="svc-card-img">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide ">
+                            <div class="svc-card svc-card-4">
+                                <div class="svc-card-left ">
+                                    <img src="{% static 'website/images/svc4-vector.png' %}" alt="" class="svc-vector-bg" aria-hidden="true">
+                                    <div class="svc-card-text en-content">
+                                        <h3 class="svc-card-title">Helicopter <br>Air Ambulance</h3>
+                                        <p class="svc-card-desc">Created for urgent response situations where rapid
+                                            access
+                                            matters, connecting patients to hospitals and emergency care without delay.
+                                        </p>
+                                        <a href="{% url 'website:service_helicopter' %}" class="svc-card-btn"><span>Learn
+                                                More</span>
+                                            <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+
+                                <div class="svc-card-left ar-content">
+                                    <img src="{% static 'website/images/service-vector.png' %}" alt="" class="svc-vector-bg"
+                                        aria-hidden="true">
+                                    <div class="svc-card-text">
+                                        <h3 class="svc-card-title">الإسعاف الجوي بالمروحيات</h3>
+                                        <p class="svc-card-desc">خدمات إسعاف جوي سريعة للحالات الطارئة التي تتطلب الوصول
+                                            الفوري إلى المستشفيات والمراكز الطبية المتخصصة.</p>
+                                        <a href="{% url 'website:service_helicopter' %}" class="svc-card-btn"><span>اقرأ
+                                                المزيد</span>
+                                            <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="svc-card-right">
+                                    <img src="{% static 'website/images/ss4.png' %}" alt="Medical Escort" class="svc-card-img">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Navigation Arrows (below card, centered) -->
+                <div class="services-slider-nav">
+                    <button class="services-nav-btn services-prev" id="servicesPrev" aria-label="Previous slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 9 16" fill="none">
+                            <path d="M8 1L1 8L8 15" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button class="services-nav-btn services-next" id="servicesNext" aria-label="Next slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 9 16" fill="none">
+                            <path d="M1 1L8 8L1 15" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========== GLOBAL OPERATIONS SECTION ========== -->
+    <section class="global-ops-section" id="globalOps">
+        <div class="global-ops-bg">
+            <img src="{% static 'website/images/new-global.png' %}" alt="Earth from space" class="global-ops-bg-img">
+        </div>
+        <div class="global-ops-overlay"></div>
+        <div class="container global-ops-content">
+            <h2 class="global-ops-heading en-content">Global Operations<br>Coordinated 24/7</h2>
+            <h2 class="global-ops-heading ar-content">عمليات عالمية منسقة<br> على مدار الساعة</h2>
+
+            <div class="global-ops-stats ">
+                <div class="global-ops-stat">
+                    <span class="global-ops-number count-up" data-target="60" data-suffix="+">0+</span>
+                    <span class="global-ops-label en-content">Countries Served</span>
+                    <span class="global-ops-label ar-content">الدول التي نخدمها</span>
+                </div>
+                <div class="global-ops-stat">
+                    <span class="global-ops-number count-up" data-target="70" data-suffix="+">0+</span>
+                    <span class="global-ops-label en-content">Cities Covered</span>
+                    <span class="global-ops-label ar-content">المدن المشمولة بالخدمة</span>
+
+                </div>
+                <div class="global-ops-stat">
+                    <span class="global-ops-number count-up" data-target="5500" data-suffix="+">0+</span>
+                    <span class="global-ops-label en-content">World Wide Assists</span>
+                    <span class="global-ops-label ar-content">الحالات التي تم تنسيقها عالمياً</span>
+
+                </div>
+                <div class="global-ops-stat">
+                    <span class="global-ops-number count-up" data-target="32750" data-suffix="+"
+                        data-separator=",">0+</span>
+                    <span class="global-ops-label en-content">Flight Hours</span>
+                    <span class="global-ops-label ar-content">ساعات الطيران</span>
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+    <!-- ========== ACCREDITED SECTION ========== -->
+    <section class="accredited-section" id="accredited">
+        <div class="container">
+            <div class="swiper accreditedSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1: EURAMI -->
+                    <div class="swiper-slide">
+                        <div class="accredited-wrapper row g-0">
+                            <!-- Left: White Card with accent border -->
+                            <div class="col-md-6 accredited-left">
+                                <div class="accredited-left-inner">
+                                    <h2 class="accredited-heading en-content">Accredited for Excellence</h2>
+                                    <h2 class="accredited-heading ar-content">اعتمادات عالمية تعكس التميز</h2>
+
+                                    <p class="accredited-desc en-content">
+                                        Bluedot is accredited by the European Aeromedical
+                                        Institute (EURAMI), an independent organization that
+                                        evaluates air ambulance providers against recognized
+                                        international standards for medical oversight, flight
+                                        operations, safety management, and personnel
+                                        governance
+                                    </p>
+
+                                    <p class="accredited-desc ar-content">
+                                        نحن معتمدون من المعهد الأوروبي للإخلاء الطبي الجوي (EURAMI)، وهو جهة دولية
+                                        مستقلة تقيم مزودي
+                                        خدمات الإسعاف الجوي وفق معايير تشغيلية وطبية عالمية.
+                                    </p>
+                                    <a href="{% static 'website/images/certificate.png' %}" target="_blank"
+                                        class="accredited-btn en-content">Download
+                                        certificate</a>
+                                    <a href="{% static 'website/images/certificate.png' %}" target="_blank"
+                                        class="accredited-btn ar-content">تحميل
+                                        الشهادة</a>
+                                </div>
+                            </div>
+                            <!-- Right: Gray wall background + Certificate image -->
+                            <div class="col-md-6 accredited-right">
+                                <img src="{% static 'website/images/certificate.png' %}" alt="EURAMI Accredited Provider Certificate"
+                                    class="accredited-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: ITIJ -->
+                    <div class="swiper-slide">
+                        <div class="accredited-wrapper row g-0">
+                            <!-- Left: White Card with accent border -->
+                            <div class="col-md-6 accredited-left">
+                                <div class="accredited-left-inner">
+                                    <h2 class="accredited-heading en-content">ISO 9001:2015</h2>
+                                    <h2 class="accredited-heading ar-content">اعتمادات عالمية تعكس التميز</h2>
+
+                                    <p class="accredited-desc en-content">
+                                        We are certified to ISO 9001:2015, which means our processes are structured,
+                                        monitored, and continuously improved to ensure consistent service delivery.
+                                    </p>
+
+                                    <p class="accredited-desc ar-content">
+                                        نحن معتمدون من المعهد الأوروبي للإخلاء الطبي الجوي (EURAMI)، وهو جهة دولية
+                                        مستقلة تقيم مزودي
+                                        خدمات الإسعاف الجوي وفق معايير تشغيلية وطبية عالمية.
+                                    </p>
+                                    <a href="{% static 'website/images/certificate.png' %}" target="_blank"
+                                        class="accredited-btn en-content">Download
+                                        certificate</a>
+                                    <a href="{% static 'website/images/certificate.png' %}" target="_blank"
+                                        class="accredited-btn ar-content">تحميل
+                                        الشهادة</a>
+                                </div>
+                            </div>
+                            <!-- Right: Gray wall background + Certificate image -->
+                            <div class="col-md-6 accredited-right">
+                                <img src="{% static 'website/images/ac2.png' %}" alt="EURAMI Accredited Provider Certificate"
+                                    class="accredited-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="accredited-wrapper row g-0">
+                            <!-- Left: White Card with accent border -->
+                            <div class="col-md-6 accredited-left">
+                                <div class="accredited-left-inner">
+                                    <h2 class="accredited-heading en-content">ISO 45001:2018</h2>
+                                    <h2 class="accredited-heading ar-content">اعتمادات عالمية تعكس التميز</h2>
+
+                                    <p class="accredited-desc en-content">
+                                        We are certified to ISO 45001:2018, supporting how we manage safety across our
+                                        operations and maintain safe working environments for our teams.
+                                    </p>
+
+                                    <p class="accredited-desc ar-content">
+                                        نحن معتمدون من المعهد الأوروبي للإخلاء الطبي الجوي (EURAMI)، وهو جهة دولية
+                                        مستقلة تقيم مزودي
+                                        خدمات الإسعاف الجوي وفق معايير تشغيلية وطبية عالمية.
+                                    </p>
+                                    <a href="{% static 'website/images/certificate.png' %}" target="_blank"
+                                        class="accredited-btn en-content">Download
+                                        certificate</a>
+                                    <a href="{% static 'website/images/certificate.png' %}" target="_blank"
+                                        class="accredited-btn ar-content">تحميل
+                                        الشهادة</a>
+                                </div>
+                            </div>
+                            <!-- Right: Gray wall background + Certificate image -->
+                            <div class="col-md-6 accredited-right">
+                                <img src="{% static 'website/images/ac3.png' %}" alt="EURAMI Accredited Provider Certificate"
+                                    class="accredited-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="accredited-wrapper row g-0">
+                            <!-- Left: White Card with accent border -->
+                            <div class="col-md-6 accredited-left">
+                                <div class="accredited-left-inner">
+                                    <h2 class="accredited-heading en-content">Member of NBAA</h2>
+                                    <h2 class="accredited-heading ar-content">اعتمادات عالمية تعكس التميز</h2>
+
+                                    <p class="accredited-desc en-content">
+                                        We are a proud member of the National Business Aviation Association (NBAA),
+                                        aligning our operations with established best practices in aviation safety and
+                                        compliance.
+                                    </p>
+
+                                    <p class="accredited-desc ar-content">
+                                        نحن معتمدون من المعهد الأوروبي للإخلاء الطبي الجوي (EURAMI)، وهو جهة دولية
+                                        مستقلة تقيم مزودي
+                                        خدمات الإسعاف الجوي وفق معايير تشغيلية وطبية عالمية.
+                                    </p>
+                                    <a href="{% static 'website/images/certificate.png' %}" target="_blank"
+                                        class="accredited-btn en-content">Download
+                                        certificate</a>
+                                    <a href="{% static 'website/images/certificate.png' %}" target="_blank"
+                                        class="accredited-btn ar-content">تحميل
+                                        الشهادة</a>
+                                </div>
+                            </div>
+                            <!-- Right: Gray wall background + Certificate image -->
+                            <div class="col-md-6 accredited-right">
+                                <img src="{% static 'website/images/ac4.png' %}" alt="EURAMI Accredited Provider Certificate"
+                                    class="accredited-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="accredited-wrapper row g-0">
+                            <!-- Left: White Card with accent border -->
+                            <div class="col-md-6 accredited-left">
+                                <div class="accredited-left-inner">
+                                    <h2 class="accredited-heading en-content">Universal Medical Escort Network</h2>
+                                    <h2 class="accredited-heading ar-content">اعتمادات عالمية تعكس التميز</h2>
+
+                                    <p class="accredited-desc en-content">
+                                        We are part of the Universal Medical Escort Network, enabling us to coordinate
+                                        medical escort services globally through a network of trusted provider.
+                                    </p>
+
+                                    <p class="accredited-desc ar-content">
+                                        نحن معتمدون من المعهد الأوروبي للإخلاء الطبي الجوي (EURAMI)، وهو جهة دولية
+                                        مستقلة تقيم مزودي
+                                        خدمات الإسعاف الجوي وفق معايير تشغيلية وطبية عالمية.
+                                    </p>
+                                    <a href="{% static 'website/images/certificate.png' %}" target="_blank"
+                                        class="accredited-btn en-content">Download
+                                        certificate</a>
+                                    <a href="{% static 'website/images/certificate.png' %}" target="_blank"
+                                        class="accredited-btn ar-content">تحميل
+                                        الشهادة</a>
+                                </div>
+                            </div>
+                            <!-- Right: Gray wall background + Certificate image -->
+                            <div class="col-md-6 accredited-right">
+                                <img src="{% static 'website/images/ac5.png' %}" alt="EURAMI Accredited Provider Certificate"
+                                    class="accredited-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ========== Our partners SECTION ========== -->
+    <section class="certifications-section" id="certifications">
+        <div class="container">
+            <h2 class="certi-heading en-content">Our partners</h2>
+            <h2 class="certi-heading ar-content">شركاؤنا</h2>
+
+            <div class="swiper partnersSwiper">
+                <div class="swiper-wrapper align-items-center">
+                    <div class="swiper-slide certi-logo-item">
+                        <img src="{% static 'website/images/partners-1.png' %}" alt="ISO 9001:2015">
+                    </div>
+                    <div class="swiper-slide certi-logo-item">
+                        <img src="{% static 'website/images/partners-2.png' %}" alt="ISO 45001:2018">
+                    </div>
+                    <div class="swiper-slide certi-logo-item">
+                        <img src="{% static 'website/images/partners-3.png' %}" alt="Member of NBAA">
+                    </div>
+                    <div class="swiper-slide certi-logo-item">
+                        <img src="{% static 'website/images/partners4.png' %}" alt="Universal Medical Escort Network">
+                    </div>
+                    <div class="swiper-slide certi-logo-item">
+                        <img src="{% static 'website/images/partners5.png' %}" alt="EURAMI Accredited Provider">
+                    </div>
+                    <!-- Duplicated for continuous loop -->
+                    <div class="swiper-slide certi-logo-item">
+                        <img src="{% static 'website/images/partners-1.png' %}" alt="ISO 9001:2015">
+                    </div>
+                    <div class="swiper-slide certi-logo-item">
+                        <img src="{% static 'website/images/partners-2.png' %}" alt="ISO 45001:2018">
+                    </div>
+                    <div class="swiper-slide certi-logo-item">
+                        <img src="{% static 'website/images/partners-3.png' %}" alt="Member of NBAA">
+                    </div>
+                    <div class="swiper-slide certi-logo-item">
+                        <img src="{% static 'website/images/partners4.png' %}" alt="Universal Medical Escort Network">
+                    </div>
+                    <div class="swiper-slide certi-logo-item">
+                        <img src="{% static 'website/images/partners5.png' %}" alt="EURAMI Accredited Provider">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========== OUR FLEET SECTION ========== -->
+    <section class="fleet-section" id="fleet">
+        <div class="container">
+            <div class="fleet-header">
+                <h2 class="fleet-heading en-content">Our Fleet</h2>
+                <h2 class="fleet-heading ar-content">أسطولنا</h2>
+            </div>
+        </div>
+
+        <!-- Full-width Swiper -->
+        <div class="swiper fleetSwiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1: Bombardier Challenger 605 -->
+                <div class="swiper-slide">
+                    <div class="fleet-slide-card">
+                        <img src="{% static 'website/images/flee-new-1.png' %}" alt="Bombardier Challenger 605" class="fleet-slide-img">
+                        <div class="fleet-slide-overlay"></div>
+                        <div class="container fleet-slide-content-container">
+                            <div class="fleet-slide-content en-content">
+                                <span class="fleet-slide-brand">Bombardier</span>
+                                <h3 class="fleet-slide-model">Challenger 605</h3>
+                                <a href="{% url 'website:fleet_challenger605' %}" class="fleet-slide-btn">Explore</a>
+                            </div>
+                            <div class="fleet-slide-content ar-content">
+                                <span class="fleet-slide-brand">بومباردييه</span>
+                                <h3 class="fleet-slide-model">تشالنجر 605</h3>
+                                <a href="{% url 'website:fleet_challenger605' %}" class="fleet-slide-btn">استكشف</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="fleet-slide-card">
+                        <img src="{% static 'website/images/604-index.png' %}" alt="Bombardier Challenger 605" class="fleet-slide-img">
+                        <div class="fleet-slide-overlay"></div>
+                        <div class="container fleet-slide-content-container">
+                            <div class="fleet-slide-content en-content">
+                                <span class="fleet-slide-brand">Bombardier</span>
+                                <h3 class="fleet-slide-model">Challenger 604</h3>
+                                <a href="{% url 'website:fleet_challenger604' %}" class="fleet-slide-btn">Explore</a>
+                            </div>
+                            <div class="fleet-slide-content ar-content">
+                                <span class="fleet-slide-brand">بومباردييه</span>
+                                <h3 class="fleet-slide-model">تشالنجر 604</h3>
+                                <a href="{% url 'website:fleet_challenger604' %}" class="fleet-slide-btn">استكشف</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2: Beechcraft King Air C90 -->
+                <div class="swiper-slide">
+                    <div class="fleet-slide-card">
+                        <img src="{% static 'website/images/B200-index.png' %}" alt="Beechcraft King Air C90" class="fleet-slide-img">
+                        <div class="fleet-slide-overlay"></div>
+                        <div class="container fleet-slide-content-container">
+                            <div class="fleet-slide-content en-content">
+                                <span class="fleet-slide-brand">Beechcraft</span>
+                                <h3 class="fleet-slide-model">King Air B200</h3>
+                                <a href="{% url 'website:fleet_kingair_b200' %}" class="fleet-slide-btn">Explore</a>
+                            </div>
+                            <div class="fleet-slide-content ar-content">
+                                <span class="fleet-slide-brand">بيتشكرافت</span>
+                                <h3 class="fleet-slide-model">كينغ إير B200</h3>
+                                <a href="{% url 'website:fleet_kingair_b200' %}" class="fleet-slide-btn">استكشف</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="fleet-slide-card">
+                        <img src="{% static 'website/images/C90-index.png' %}" alt="Beechcraft King Air C90" class="fleet-slide-img">
+                        <div class="fleet-slide-overlay"></div>
+                        <div class="container fleet-slide-content-container">
+                            <div class="fleet-slide-content en-content">
+                                <span class="fleet-slide-brand">Beechcraft</span>
+                                <h3 class="fleet-slide-model">King Air C90</h3>
+                                <a href="{% url 'website:fleet_kingair_c90' %}" class="fleet-slide-btn">Explore</a>
+                            </div>
+                            <div class="fleet-slide-content ar-content">
+                                <span class="fleet-slide-brand">بيتشكرافت</span>
+                                <h3 class="fleet-slide-model">كينغ إير C90</h3>
+                                <a href="{% url 'website:fleet_kingair_c90' %}" class="fleet-slide-btn">استكشف</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Navigation Controls (aligned with the container) -->
+            <div class="container fleet-nav-container">
+                <div class="fleet-slider-nav">
+                    <button class="fleet-nav-btn fleet-prev" aria-label="Previous slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16" fill="none">
+                            <path d="M8 1L1 8L8 15" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button class="fleet-nav-btn fleet-next" aria-label="Next slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="9" height="16" viewBox="0 0 9 16" fill="none">
+                            <path d="M1 1L8 8L1 15" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SVG ClipPath for the curved look -->
+        <svg width="0" height="0" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+            <defs>
+                <clipPath id="fleetCurveClip" clipPathUnits="objectBoundingBox">
+                    <path d="M 0 0.03 Q 0.5 0.11 1 0.03 L 1 0.97 Q 0.5 0.89 0 0.97 Z" />
+                </clipPath>
+            </defs>
+        </svg>
+    </section>
+
+
+
+    <!-- ========== NEWS & STORIES SECTION ========== -->
+    <section class="news-section" id="news">
+        <div class="container">
+            <div class="news-header-top">
+                <h2 class="news-heading en-content">News &amp; Stories</h2>
+                <h2 class="news-heading ar-content">الأخبار والقصص</h2>
+            </div>
+
+            <!-- Filters Row -->
+            <div class="news-header-filters-row">
+                <div class="news-filters-left">
+                    <button class="news-filter-btn active" data-filter="all">
+                        <span class="en-content">All Categories</span>
+                        <span class="ar-content">كل الفئات</span>
+                    </button>
+                    {% for cat in categories %}
+                    <button class="news-filter-btn" data-filter="{{ cat.slug }}">
+                        <span class="en-content">{{ cat.name }}</span>
+                        <span class="ar-content">{{ cat.name_ar|default:cat.name }}</span>
+                    </button>
+                    {% endfor %}
+                </div>
+                <div class="news-filters-right res-none">
+                    <a href="{% url 'website:blogs' %}" class="news-main-btn en-content">View All</a>
+                    <a href="{% url 'website:blogs' %}" class="news-main-btn ar-content">عرض الكل</a>
+                </div>
+            </div>
+
+            <!-- News Grid -->
+            <div class="row g-4 news-cards-row">
+                {% for blog in blogs %}
+                <div class="col-lg-4 col-md-6 news-card-col" data-category="{{ blog.category.slug }} {% if 'mission' in blog.category.slug %}mission{% endif %}">
+                    <a href="{% url 'website:blog_detail' slug=blog.slug %}" class="news-card">
+                        <div class="news-card-img-wrapper">
+                            {% if blog.image %}
+                            <img src="{{ blog.image.url }}" alt="{{ blog.title }}" class="news-card-img">
+                            {% else %}
+                            <img src="{% static 'website/images/news1.png' %}" alt="{{ blog.title }}" class="news-card-img">
+                            {% endif %}
+                        </div>
+                        <div class="news-card-content">
+                            <img src="{% static 'website/images/news-vector.png' %}" class="news-vector-bg" alt="">
+                            <span class="news-badge">
+                                <span class="en-content">{{ blog.tag|default:blog.category.name }}</span>
+                                <span class="ar-content">{% if blog.category.name_ar %}{{ blog.category.name_ar }}{% else %}{{ blog.tag|default:blog.category.name }}{% endif %}</span>
+                            </span>
+                            <h3 class="news-card-title">
+                                <span class="en-content">{{ blog.title }}</span>
+                                <span class="ar-content">{{ blog.title_ar|default:blog.title }}</span>
+                            </h3>
+                            <p class="news-card-meta">
+                                <span class="en-content">{% if blog.date %}Published on {{ blog.date|date:"d M Y" }}{% endif %} {% if blog.time_to_read %}&ndash; {{ blog.time_to_read }} read{% endif %}</span>
+                                <span class="ar-content">{% if blog.date %}نُشر بتاريخ {{ blog.date|date:"d M Y" }}{% endif %} {% if blog.time_to_read_ar %}&ndash; {{ blog.time_to_read_ar }}{% elif blog.time_to_read %}&ndash; {{ blog.time_to_read }} قراءة{% endif %}</span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                {% empty %}
+                <div class="col-12 text-center py-5">
+                    <p style="color:#666;font-size:18px;">
+                        <span class="en-content">No articles found. Check back soon!</span>
+                        <span class="ar-content">لم يتم العثور على مقالات. تحقق مرة أخرى قريباً!</span>
+                    </p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ========== TESTIMONIALS SECTION ========== -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="testi-layout">
+                <!-- Left: Heading -->
+                <div class="testi-left">
+                    <h2 class="testi-heading en-content">What our<br>customers say</h2>
+                    <h2 class="testi-heading ar-content">تجارب من وثقوا<br>بخدماتنا</h2>
+
+                </div>
+
+                <!-- Right: Slider -->
+                <div class="testi-right">
+                    <div class="swiper testiSwiper">
+                        <div class="swiper-wrapper">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide">
+                                <div class="testi-slide-inner">
+                                    <div class="testi-quote-text">
+                                        <div class="testi-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="139" height="118"
+                                                viewBox="0 0 139 118" fill="none">
+                                                <path
+                                                    d="M57.7988 0.50293C38.8895 0.499059 19.9797 0.499059 1.07031 0.50293C0.876404 0.50293 0.698067 0.519179 0.501953 0.540039V62.7568C0.849168 65.1533 1.09539 67.5046 1.54883 69.8369C4.49056 84.9528 12.2084 97.0997 24.5879 106.235C34.3836 113.465 45.4474 117.182 57.6484 117.491H57.6494C57.943 117.499 58.2385 117.495 58.5371 117.485V98.9219C45.1171 98.338 34.2535 92.7423 26.375 81.7168C21.5876 75.0167 19.3315 67.4474 19.2021 59.0205L19.1943 58.5127H58.5469V0.542969C58.274 0.520702 58.0441 0.502946 57.7988 0.50293Z"
+                                                    stroke="#D1D7DC" />
+                                                <path
+                                                    d="M79.6829 0.574707C79.6675 0.695003 79.6575 0.795214 79.6575 0.908691L79.6477 8.41064C79.5957 25.9127 79.3785 43.4014 79.8108 60.8794C80.3047 80.8559 89.4737 96.4893 105.945 107.767C114.934 113.923 124.997 117.06 135.878 117.464L136.934 117.496C137.195 117.5 137.453 117.501 137.708 117.496V98.9038C124.85 98.3924 114.323 93.2095 106.443 82.9917C101.059 76.011 98.44 68.0192 98.3694 59.0708L98.3655 58.5669H137.683V0.574707H79.6829Z"
+                                                    stroke="#D1D7DC" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="testi-text en-content">Umm al houl power co. would like to thank
+                                                universal
+                                                air
+                                                ambulance for their professional service that was provided to our
+                                                employee
+                                                from qatar to chennai, everything was handled well, the transfers
+                                                service
+                                                were quick and well planned and the team was very supportive, they
+                                                provided
+                                                great health care and moral support for our employee.</p>
+
+                                            <p class="testi-text ar-content">"نتقدم بالشكر لفريق يونيفرسال للإسعاف الجوي
+                                                على الدعم الاحترافي الذي تم تقديمه خلال نقل أحد موظفينا من قطر إلى
+                                                تشيناي، حيث تم التعامل مع الرحلة بكفاءة عالية وتنظيم دقيق ورعاية
+                                                متكاملة."</p>
+                                            <div class="testi-stars">
+                                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                    class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                    class="fas fa-star"></i>
+                                            </div>
+                                            <span class="testi-author en-content">Raya Al Qahtani, Qatar</span>
+                                            <span class="testi-author ar-content">ريا القحطاني، قطر</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide">
+                                <div class="testi-slide-inner">
+                                    <div class="testi-quote-text">
+                                        <div class="testi-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="139" height="118"
+                                                viewBox="0 0 139 118" fill="none">
+                                                <path
+                                                    d="M57.7988 0.50293C38.8895 0.499059 19.9797 0.499059 1.07031 0.50293C0.876404 0.50293 0.698067 0.519179 0.501953 0.540039V62.7568C0.849168 65.1533 1.09539 67.5046 1.54883 69.8369C4.49056 84.9528 12.2084 97.0997 24.5879 106.235C34.3836 113.465 45.4474 117.182 57.6484 117.491H57.6494C57.943 117.499 58.2385 117.495 58.5371 117.485V98.9219C45.1171 98.338 34.2535 92.7423 26.375 81.7168C21.5876 75.0167 19.3315 67.4474 19.2021 59.0205L19.1943 58.5127H58.5469V0.542969C58.274 0.520702 58.0441 0.502946 57.7988 0.50293Z"
+                                                    stroke="#D1D7DC" />
+                                                <path
+                                                    d="M79.6829 0.574707C79.6675 0.695003 79.6575 0.795214 79.6575 0.908691L79.6477 8.41064C79.5957 25.9127 79.3785 43.4014 79.8108 60.8794C80.3047 80.8559 89.4737 96.4893 105.945 107.767C114.934 113.923 124.997 117.06 135.878 117.464L136.934 117.496C137.195 117.5 137.453 117.501 137.708 117.496V98.9038C124.85 98.3924 114.323 93.2095 106.443 82.9917C101.059 76.011 98.44 68.0192 98.3694 59.0708L98.3655 58.5669H137.683V0.574707H79.6829Z"
+                                                    stroke="#D1D7DC" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="testi-text en-content">From the initial approval process until the
+                                                patient
+                                                safely arrived in India, the team handled every medical and travel
+                                                arrangement seamlessly, including coordination with hospitals and
+                                                airlines.</p>
+                                            <p class="testi-text ar-content">"تمت إدارة جميع ترتيبات النقل الطبي والسفر
+                                                بسلاسة تامة منذ الموافقة الأولية وحتى وصول المريض إلى الهند بأمان، بما
+                                                في ذلك التنسيق مع المستشفيات وشركات الطيران."</p>
+                                            <div class="testi-stars">
+                                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                    class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                    class="fas fa-star"></i>
+                                            </div>
+                                            <span class="testi-author en-content">Rajani Jayan, India</span>
+                                            <span class="testi-author ar-content">رجاني جاين، الهند</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide">
+                                <div class="testi-slide-inner">
+                                    <div class="testi-quote-text">
+                                        <div class="testi-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="139" height="118"
+                                                viewBox="0 0 139 118" fill="none">
+                                                <path
+                                                    d="M57.7988 0.50293C38.8895 0.499059 19.9797 0.499059 1.07031 0.50293C0.876404 0.50293 0.698067 0.519179 0.501953 0.540039V62.7568C0.849168 65.1533 1.09539 67.5046 1.54883 69.8369C4.49056 84.9528 12.2084 97.0997 24.5879 106.235C34.3836 113.465 45.4474 117.182 57.6484 117.491H57.6494C57.943 117.499 58.2385 117.495 58.5371 117.485V98.9219C45.1171 98.338 34.2535 92.7423 26.375 81.7168C21.5876 75.0167 19.3315 67.4474 19.2021 59.0205L19.1943 58.5127H58.5469V0.542969C58.274 0.520702 58.0441 0.502946 57.7988 0.50293Z"
+                                                    stroke="#D1D7DC" />
+                                                <path
+                                                    d="M79.6829 0.574707C79.6675 0.695003 79.6575 0.795214 79.6575 0.908691L79.6477 8.41064C79.5957 25.9127 79.3785 43.4014 79.8108 60.8794C80.3047 80.8559 89.4737 96.4893 105.945 107.767C114.934 113.923 124.997 117.06 135.878 117.464L136.934 117.496C137.195 117.5 137.453 117.501 137.708 117.496V98.9038C124.85 98.3924 114.323 93.2095 106.443 82.9917C101.059 76.011 98.44 68.0192 98.3694 59.0708L98.3655 58.5669H137.683V0.574707H79.6829Z"
+                                                    stroke="#D1D7DC" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <p class="testi-text en-content">Thank you for everything you did for my
+                                                father. Your
+                                                medical team’s care, support, and coordination during such a critical
+                                                time made a meaningful difference to our family.</p>
+                                            <p class="testi-text ar-content">"شكراً لكم على كل ما قدمتموه لوالدي، فقد
+                                                كان لدعمكم الطبي واهتمامكم ومتابعتكم خلال هذه المرحلة الحرجة أثر كبير
+                                                على عائلتنا."</p>
+
+                                            <div class="testi-stars">
+                                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                    class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                    class="fas fa-star"></i>
+                                            </div>
+                                            <span class="testi-author en-content">Mr. Renold Jackson, USA</span>
+                                            <span class="testi-author ar-content">رينولد جاكسون - الولايات المتحدة
+                                                الأمريكية</span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <!-- Nav buttons below slider -->
+                    <div class="testi-nav-row">
+                        <button class="testi-nav-btn testi-prev" id="testiPrev" aria-label="Previous testimonial">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="testi-nav-btn testi-next" id="testiNext" aria-label="Next testimonial">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ========== OPERATIONAL INSIGHTS SECTION ========== -->
+    <section class="insights-section" id="insights">
+        <div class="container">
+            <h2 class="insights-heading en-content">Operational Insights</h2>
+            <h2 class="insights-heading  ar-content">رؤى من خلف العمليات</h2>
+
+            <div class="insights-grid">
+                <!-- Card 1 -->
+                <div class="insights-card"
+                    onclick="window.open('https://www.instagram.com/reel/DSUd3MsgVRQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==','_blank')">
+                    <div class="insights-thumb">
+                        <img src="{% static 'website/images/t1.jpeg' %}" alt="The Flying Doctor">
+                        <div class="insights-overlay">
+                            <div class="insights-play">
+                                <svg viewBox="0 0 68 48" width="68" height="48">
+                                    <path
+                                        d="M66.5 7.7c-.8-2.9-2.9-5-5.8-5.8C55.3 0 34 0 34 0S12.7 0 7.3 1.9C4.4 2.7 2.3 4.8 1.5 7.7 0 13.1 0 24 0 24s0 10.9 1.5 16.3c.8 2.9 2.9 5 5.8 5.8C12.7 48 34 48 34 48s21.3 0 26.7-1.9c2.9-.8 5-2.9 5.8-5.8C68 34.9 68 24 68 24s0-10.9-1.5-16.3z"
+                                        fill="#f00" />
+                                    <path d="M45 24 27 14v20" fill="#fff" />
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="insights-yt-icon">
+                            <svg viewBox="0 0 24 24" width="20" height="20">
+                                <path
+                                    d="M23 7s-.3-2-1.2-2.8c-1.1-1.2-2.4-1.2-3-1.3C16.2 2.8 12 2.8 12 2.8s-4.2 0-6.8.1c-.6.1-1.9.1-3 1.3C1.3 5 1 7 1 7S.8 9.2.8 11.5v2.1C.8 16 1 18 1 18s.3 2 1.2 2.8c1.1 1.2 2.6 1.2 3.3 1.2C7.6 22.1 12 22.1 12 22.1s4.2 0 6.8-.2c.6-.1 1.9-.1 3-1.3.9-.8 1.2-2.8 1.2-2.8s.2-2.2.2-4.5v-2.1C23.2 9.2 23 7 23 7zM9.7 15.5V8.4l8.1 3.6-8.1 3.5z"
+                                    fill="#fff" />
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="insights-info en-content">
+                        <span class="insights-num">#01</span>
+                        <h3 class="insights-title">The Flying <br> Doctor</h3>
+                    </div>
+                    <div class="insights-info ar-content">
+                        <span class="insights-num">٠١ #</span>
+                        <h3 class="insights-title">الطبيب الطائر</h3>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="insights-card"
+                    onclick="window.open('https://www.instagram.com/reel/DTS48rFgXNL/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==','_blank')">
+                    <div class="insights-thumb">
+                        <img src="{% static 'website/images/t1.jpeg' %}" alt="Airline Partnerships">
+                        <div class="insights-overlay">
+                            <div class="insights-play">
+                                <svg viewBox="0 0 68 48" width="68" height="48">
+                                    <path
+                                        d="M66.5 7.7c-.8-2.9-2.9-5-5.8-5.8C55.3 0 34 0 34 0S12.7 0 7.3 1.9C4.4 2.7 2.3 4.8 1.5 7.7 0 13.1 0 24 0 24s0 10.9 1.5 16.3c.8 2.9 2.9 5 5.8 5.8C12.7 48 34 48 34 48s21.3 0 26.7-1.9c2.9-.8 5-2.9 5.8-5.8C68 34.9 68 24 68 24s0-10.9-1.5-16.3z"
+                                        fill="#f00" />
+                                    <path d="M45 24 27 14v20" fill="#fff" />
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="insights-yt-icon">
+                            <svg viewBox="0 0 24 24" width="20" height="20">
+                                <path
+                                    d="M23 7s-.3-2-1.2-2.8c-1.1-1.2-2.4-1.2-3-1.3C16.2 2.8 12 2.8 12 2.8s-4.2 0-6.8.1c-.6.1-1.9.1-3 1.3C1.3 5 1 7 1 7S.8 9.2.8 11.5v2.1C.8 16 1 18 1 18s.3 2 1.2 2.8c1.1 1.2 2.6 1.2 3.3 1.2C7.6 22.1 12 22.1 12 22.1s4.2 0 6.8-.2c.6-.1 1.9-.1 3-1.3.9-.8 1.2-2.8 1.2-2.8s.2-2.2.2-4.5v-2.1C23.2 9.2 23 7 23 7zM9.7 15.5V8.4l8.1 3.6-8.1 3.5z"
+                                    fill="#fff" />
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="insights-info en-content">
+                        <span class="insights-num">#02</span>
+                        <h3 class="insights-title"> Planning and <br> Execution</h3>
+                    </div>
+                    <div class="insights-info ar-content">
+                        <span class="insights-num">٠٤ #</span>
+                        <h3 class="insights-title">شراكات الطيران الطبي</h3>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="insights-card"
+                    onclick="window.open('https://www.instagram.com/reel/DVflvbFAXn5/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==','_blank')">
+                    <div class="insights-thumb">
+                        <img src="{% static 'website/images/t22.jpg' %}" alt="The Flying Doctor">
+                        <div class="insights-overlay">
+                            <div class="insights-play">
+                                <svg viewBox="0 0 68 48" width="68" height="48">
+                                    <path
+                                        d="M66.5 7.7c-.8-2.9-2.9-5-5.8-5.8C55.3 0 34 0 34 0S12.7 0 7.3 1.9C4.4 2.7 2.3 4.8 1.5 7.7 0 13.1 0 24 0 24s0 10.9 1.5 16.3c.8 2.9 2.9 5 5.8 5.8C12.7 48 34 48 34 48s21.3 0 26.7-1.9c2.9-.8 5-2.9 5.8-5.8C68 34.9 68 24 68 24s0-10.9-1.5-16.3z"
+                                        fill="#f00" />
+                                    <path d="M45 24 27 14v20" fill="#fff" />
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="insights-yt-icon">
+                            <svg viewBox="0 0 24 24" width="20" height="20">
+                                <path
+                                    d="M23 7s-.3-2-1.2-2.8c-1.1-1.2-2.4-1.2-3-1.3C16.2 2.8 12 2.8 12 2.8s-4.2 0-6.8.1c-.6.1-1.9.1-3 1.3C1.3 5 1 7 1 7S.8 9.2.8 11.5v2.1C.8 16 1 18 1 18s.3 2 1.2 2.8c1.1 1.2 2.6 1.2 3.3 1.2C7.6 22.1 12 22.1 12 22.1s4.2 0 6.8-.2c.6-.1 1.9-.1 3-1.3.9-.8 1.2-2.8 1.2-2.8s.2-2.2.2-4.5v-2.1C23.2 9.2 23 7 23 7zM9.7 15.5V8.4l8.1 3.6-8.1 3.5z"
+                                    fill="#fff" />
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="insights-info en-content">
+                        <span class="insights-num">#03</span>
+                        <h3 class="insights-title">Airline <br> partnership</h3>
+                    </div>
+                    <div class="insights-info ar-content">
+                        <span class="insights-num">٠١ #</span>
+                        <h3 class="insights-title">الطبيب الطائر</h3>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="insights-card"
+                    onclick="window.open('https://www.instagram.com/reel/DSUd3MsgVRQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==','_blank')">
+                    <div class="insights-thumb">
+                        <img src="{% static 'website/images/t1.jpeg' %}" alt="The Flying Doctor">
+                        <div class="insights-overlay">
+                            <div class="insights-play">
+                                <svg viewBox="0 0 68 48" width="68" height="48">
+                                    <path
+                                        d="M66.5 7.7c-.8-2.9-2.9-5-5.8-5.8C55.3 0 34 0 34 0S12.7 0 7.3 1.9C4.4 2.7 2.3 4.8 1.5 7.7 0 13.1 0 24 0 24s0 10.9 1.5 16.3c.8 2.9 2.9 5 5.8 5.8C12.7 48 34 48 34 48s21.3 0 26.7-1.9c2.9-.8 5-2.9 5.8-5.8C68 34.9 68 24 68 24s0-10.9-1.5-16.3z"
+                                        fill="#f00" />
+                                    <path d="M45 24 27 14v20" fill="#fff" />
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="insights-yt-icon">
+                            <svg viewBox="0 0 24 24" width="20" height="20">
+                                <path
+                                    d="M23 7s-.3-2-1.2-2.8c-1.1-1.2-2.4-1.2-3-1.3C16.2 2.8 12 2.8 12 2.8s-4.2 0-6.8.1c-.6.1-1.9.1-3 1.3C1.3 5 1 7 1 7S.8 9.2.8 11.5v2.1C.8 16 1 18 1 18s.3 2 1.2 2.8c1.1 1.2 2.6 1.2 3.3 1.2C7.6 22.1 12 22.1 12 22.1s4.2 0 6.8-.2c.6-.1 1.9-.1 3-1.3.9-.8 1.2-2.8 1.2-2.8s.2-2.2.2-4.5v-2.1C23.2 9.2 23 7 23 7zM9.7 15.5V8.4l8.1 3.6-8.1 3.5z"
+                                    fill="#fff" />
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="insights-info en-content">
+                        <span class="insights-num">#04</span>
+                        <h3 class="insights-title">The Flying <br> Doctor</h3>
+                    </div>
+                    <div class="insights-info ar-content">
+                        <span class="insights-num">٠١ #</span>
+                        <h3 class="insights-title">الطبيب الطائر</h3>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+
+
+    <!-- ========== FOOTER ========== -->
+
+{% endblock %}
+{% block extra_scripts %}
+
+{% endblock %}
+

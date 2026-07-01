@@ -1,0 +1,306 @@
+{% extends 'website/layout/base.html' %}
+{% load static %}{% block title %}Careers | Join Bluedot Air Ambulance{% endblock %}
+{% block meta_description %}Explore career opportunities at Bluedot Air Ambulance across medical, aviation and operational teams.{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'website/css/roles.css' %}">
+
+<!-- ========== HERO SECTION START ========== -->
+    <section class="roles-hero">
+        <div class="container">
+            <h1 class="roles-title en-content">Roles at Bluedot</h1>
+            <h1 class="roles-title ar-content">الوظائف في بلودوت</h1>
+
+        </div>
+    </section>
+    <!-- ========== HERO SECTION END ========== -->
+
+    <!-- ========== IMAGE SECTION START ========== -->
+    <section class="roles-image-section">
+        <div class="container-fluid p-0">
+            <div class="roles-team-img-wrapper">
+                <img src="{% static 'website/images/roles-banner.png' %}" alt="Bluedot Team" class="roles-team-img">
+            </div>
+        </div>
+    </section>
+    <!-- ========== IMAGE SECTION END ========== -->
+
+    <!-- ========== CONTENT SECTION START ========== -->
+    <section class="roles-content-section">
+        <div class="container">
+            <div class="roles-white-card">
+                <div class="join-us-header">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <h2 class="join-us-title en-content">Join Us</h2>
+                            <h2 class="join-us-title ar-content">انضم إلى بلودوت</h2>
+
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="join-us-text en-content">
+                                <p>Whatever your role, business area or location, at Bluedot you'll get the chance to
+                                    make a difference for yourself, our business, and people with emergency healthcare
+                                    needs around the world.</p>
+                                <p>We offer opportunities across various levels, in teams ranging from Flight physician
+                                    and Control centre executive, to Operation manager and Case managment specialist.
+                                    Join us in helping millions of people with critical healthcare needs.</p>
+                            </div>
+
+                            <div class="join-us-text ar-content">
+                                <p>في بلودوت، كل دور يحمل تأثيراً حقيقياً، لأن عملنا يرتبط بمساندة المرضى وتأمين الرعاية
+                                    الطبية لهم في أكثر اللحظات حساسية حول العالم.</p>
+                                <p>نوفر فرصاً مهنية في مجالات متعددة تشمل الأطباء الجويين، وفرق مركز العمليات، وإدارة
+                                    المهام الطبية، وإدارة الحالات، ضمن بيئة عمل تعتمد على التنسيق والمسؤولية والعمل
+                                    الجماعي.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="jobs-grid-wrapper">
+                    <div class="row g-4">
+                        {% if careers %}
+                            {% for job in careers %}
+                            <div class="col-lg-4 col-md-6">
+                                <div class="job-card">
+                                    <h3 class="job-title">
+                                        <span class="en-content">{{ job.title }}</span>
+                                        <span class="ar-content">{{ job.title_ar|default:job.title }}</span>
+                                    </h3>
+                                    <p class="job-description">
+                                        <span class="en-content">{{ job.listing_description }}</span>
+                                        <span class="ar-content">{{ job.listing_description_ar|default:job.listing_description }}</span>
+                                    </p>
+                                    <div class="job-footer">
+                                        <span class="job-meta">
+                                            <span class="en-content">{{ job.location }}</span>
+                                            <span class="ar-content">{{ job.location_ar|default:job.location }}</span>
+                                            {% if job.date %}, {{ job.date|date:"d M Y" }}{% endif %}
+                                        </span>
+                                        <a href="{% url 'website:career_detail' slug=job.slug %}" class="btn-apply">
+                                            <span class="en-content">Apply</span>
+                                            <span class="ar-content">تقدم الآن</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        {% else %}
+                            <div class="col-12 text-center py-5">
+                                <p style="color:#666;font-size:18px;">
+                                    <span class="en-content">No open positions at the moment. Please check back later!</span>
+                                    <span class="ar-content">لا توجد وظائف شاغرة حالياً. تفقدنا مجدداً قريباً!</span>
+                                </p>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== DIFFERENCE SECTION START ========== -->
+    <section class="difference-section">
+        <div class="container">
+            <h2 class="difference-heading">What makes a difference<br>at Bluedot</h2>
+
+            <div class="difference-grid">
+                <!-- Card 1 -->
+                <div class="diff-card">
+                    <div class="diff-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="168" height="183" viewBox="0 0 168 183"
+                            fill="none">
+                            <path
+                                d="M26.5443 180.679L42.28 164.562C44.9541 161.823 48.6033 160.261 52.4277 160.22L108.419 159.599C110.377 159.576 112.259 158.818 113.683 157.477L164.25 109.885C166.319 107.938 165.77 104.521 163.199 103.322L158.91 101.318C153.482 98.781 147.094 99.4438 142.306 103.047L118.182 121.183"
+                                stroke="#0095D6" stroke-width="4.15071" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M2.07536 145.173L29.4254 119.503C29.4254 119.503 51.7358 100.313 76.446 119.023H97.1185C104.249 119.023 110.485 123.834 112.294 130.733L113.064 133.67C113.597 135.696 112.07 137.681 109.971 137.681L68.7629 137.734"
+                                stroke="#0095D6" stroke-width="4.15071" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M82.4682 21.778C83.8357 17.546 85.7479 13.992 88.5972 11.0361C96.3413 3.01392 105.754 0.210357 116.416 3.30723C127.081 6.4041 133.576 13.8092 135.717 24.753C137.096 31.8152 135.587 38.6184 133.047 45.2007C129.698 53.8819 124.472 61.4127 118.431 68.4025C108.176 80.272 96.2346 90.214 83.2567 98.9522C82.6358 99.3675 82.2168 99.3484 81.6149 98.9484C67.5323 89.5778 54.6496 78.8435 43.9572 65.6485C38.0606 58.3691 33.1506 50.5031 30.4879 41.422C28.5757 34.9007 27.711 28.2612 29.8823 21.6523C33.4629 10.7542 40.9861 4.10716 52.3603 2.47683C65.6007 0.579848 77.4705 8.04206 81.9996 20.6162C82.0987 20.8943 82.2244 21.1685 82.4682 21.7742V21.778Z"
+                                stroke="#0095D6" stroke-width="4.15071" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="diff-title">Work that matters</h3>
+                    <p class="diff-text">The work you do at Bluedot directly supports patients who depend on safe,
+                        timely medical transport.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="diff-card">
+                    <div class="diff-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="247" height="146" viewBox="0 0 247 146"
+                            fill="none">
+                            <path d="M34.1678 2.41101L58.9757 15.1728L26.5956 76.5914L2.41095 62.8117" stroke="#0095D6"
+                                stroke-width="4.82109" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M236.217 15.3687L208.492 18.4447L216.835 87.3729L244.343 83.1239" stroke="#0095D6"
+                                stroke-width="4.82109" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M78.4224 93.9473C81.6271 90.2149 81.1993 84.5913 77.4669 81.3866C73.7346 78.1819 68.1109 78.6097 64.9063 82.3421L53.7816 95.2985C50.5769 99.0309 51.0047 104.655 54.7371 107.859C58.4694 111.064 64.093 110.636 67.2977 106.904L78.4224 93.9473Z"
+                                stroke="#0095D6" stroke-width="4.82109" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M107.958 104.708L107.955 104.706C104.321 101.586 98.8467 102.002 95.727 105.636L84.2947 118.95C81.175 122.584 81.5914 128.058 85.2249 131.178L85.2277 131.181C88.8611 134.3 94.3357 133.884 97.4555 130.25L108.888 116.936C112.007 113.302 111.591 107.828 107.958 104.708Z"
+                                stroke="#0095D6" stroke-width="4.82109" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M119.658 131.023C122.599 127.598 122.207 122.438 118.783 119.498C115.359 116.558 110.199 116.952 107.258 120.376L99.9516 128.886C97.011 132.311 97.4029 137.471 100.827 140.411C104.251 143.351 109.411 142.958 112.351 139.533L119.658 131.023Z"
+                                stroke="#0095D6" stroke-width="4.82109" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M140.283 74.84L183.507 106.198C187.52 109.109 193.358 107.91 196.545 103.513C199.732 99.1205 199.064 93.197 195.048 90.2832L151.824 58.9247L137.067 47.5571L111.838 69.8312C111.185 70.4103 110.425 70.8566 109.599 71.1369C105.749 72.4499 95.0339 74.9801 97.5567 61.3996C99.1649 52.7319 104.067 42.2643 107.947 36.9199C111.241 32.3832 115.482 28.6211 120.373 25.8806L138.734 15.6011C142.083 13.7238 146.062 13.3217 149.714 14.5168C152.192 15.3245 155.21 16.7814 158.725 19.3043C169.701 27.1974 178.974 32.4902 186.037 32.0181C193.1 31.546 209.58 28.0162 209.58 28.0162"
+                                stroke="#0095D6" stroke-width="4.82109" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M125.934 86.7163L169.158 118.075C173.171 120.985 178.785 120.092 181.699 116.079C184.609 112.066 183.716 106.453 179.703 103.539"
+                                stroke="#0095D6" stroke-width="4.82109" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M146.644 126.082C150.657 128.992 158.709 132.076 162.921 126.067C166.196 121.553 165.595 115.533 161.582 112.623"
+                                stroke="#0095D6" stroke-width="4.82109" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M122.07 129.538L135.049 139.784C139.062 142.694 144.676 141.802 147.589 137.789C150.499 133.776 149.607 128.162 145.594 125.248L119.034 105.98"
+                                stroke="#0095D6" stroke-width="4.82109" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M95.6048 103.628C98.9077 99.7808 98.4668 93.9848 94.6201 90.6819C90.7733 87.3791 84.9774 87.8199 81.6745 91.6667L68.7117 106.764C65.4088 110.611 65.8497 116.407 69.6965 119.709C73.5432 123.012 79.3392 122.571 82.642 118.725L95.6048 103.628Z"
+                                stroke="#0095D6" stroke-width="4.82109" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M33.5583 65.0323L57.1786 90.4194" stroke="#0095D6" stroke-width="4.82109"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M56.0779 22.4242C56.0779 22.4242 63.9378 28.1338 86.0644 26.2195C107.741 24.3421 114.361 29.4911 114.361 29.4911"
+                                stroke="#0095D6" stroke-width="4.82109" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M215.166 79.4685L195.172 89.3976" stroke="#0095D6" stroke-width="4.82109"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="diff-title">Teams built on trust</h3>
+                    <p class="diff-text">You'll work alongside experienced professionals who rely on each other,
+                        communicate clearly, and take responsibility seriously.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="diff-card">
+                    <div class="diff-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="165" height="171" viewBox="0 0 165 171"
+                            fill="none">
+                            <path
+                                d="M17.2198 78.4651V68.0924C17.2198 31.8192 46.6285 2.41052 82.9017 2.41052C119.175 2.41052 148.584 31.8192 148.584 68.0924V79.7595"
+                                stroke="#0095D6" stroke-width="4.82109" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M30.6052 74.5957H34.4391V137.412H30.6052C15.0417 137.412 2.41052 124.777 2.41052 109.218V102.795C2.41052 87.2313 15.0461 74.6002 30.6052 74.6002V74.5957Z"
+                                stroke="#0095D6" stroke-width="4.82109" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M133.793 137.417H129.959V74.6H133.793C149.356 74.6 161.987 87.2356 161.987 102.795V109.217C161.987 124.781 149.352 137.412 133.793 137.412V137.417Z"
+                                stroke="#0095D6" stroke-width="4.82109" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M116.422 155.086H104.393C101.063 155.086 98.3635 157.786 98.3635 161.116V162.496C98.3635 165.826 101.063 168.525 104.393 168.525H116.422C119.752 168.525 122.452 165.826 122.452 162.496V161.116C122.452 157.786 119.752 155.086 116.422 155.086Z"
+                                stroke="#0095D6" stroke-width="4.82109" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M147.324 132.35V146.695C147.324 154.555 140.955 160.924 133.095 160.924H122.451"
+                                stroke="#0095D6" stroke-width="4.82109" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="diff-title">Support when it's needed</h3>
+                    <p class="diff-text">We understand the demands of air medical operations. Our teams are supported
+                        with clear processes, strong leadership, and realistic expectations.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="diff-card">
+                    <div class="diff-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="217" height="116" viewBox="0 0 217 116"
+                            fill="none">
+                            <path d="M57.6074 72.5547L2.41055 48.7913L110.147 2.41064L214.01 48.6391L157.787 73.8672"
+                                stroke="#0095D6" stroke-width="4.82109" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M108.089 112.755C135.492 112.755 157.706 107.172 157.706 100.284C157.706 93.3968 135.492 87.8135 108.089 87.8135C80.6856 87.8135 58.471 93.3968 58.471 100.284C58.471 107.172 80.6856 112.755 108.089 112.755Z"
+                                stroke="#0095D6" stroke-width="4.82109" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M58.471 100.284V60.0311C58.471 53.143 80.6849 47.5603 108.089 47.5603C135.493 47.5603 157.706 53.143 157.706 60.0311V101.71"
+                                stroke="#0095D6" stroke-width="4.82109" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="diff-title">Learning through experience</h3>
+                    <p class="diff-text">From complex transfers to international coordination, every role offers
+                        real-world learning and professional growth.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="diff-card">
+                    <div class="diff-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="141" height="172" viewBox="0 0 141 172"
+                            fill="none">
+                            <path d="M69.3714 40.7402V166.25" stroke="#0095D6" stroke-width="4.82109"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M70.0637 2.41064L48.7712 39.2925C39.3086 55.683 51.1385 76.1743 70.0637 76.1743C88.9922 76.1743 100.822 55.683 91.3562 39.2925L70.0637 2.41064Z"
+                                stroke="#0095D6" stroke-width="4.82109" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M137.846 91.1595L106.425 92.6732C92.4605 93.3462 84.459 108.883 92.0238 120.641C99.5886 132.398 117.046 131.558 123.445 119.127L137.846 91.1562V91.1595Z"
+                                stroke="#0095D6" stroke-width="4.82109" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M2.41052 91.1597L33.8322 92.6733C47.7962 93.3464 55.7978 108.883 48.2329 120.641C40.6681 132.399 23.2105 131.558 16.8113 119.127L2.41052 91.1597Z"
+                                stroke="#0095D6" stroke-width="4.82109" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M24.1498 107.044L69.4994 128.744L115.355 107.251" stroke="#0095D6"
+                                stroke-width="4.82109" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M14.7706 168.722H123.975" stroke="#0095D6" stroke-width="4.82109"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="diff-title">Room to grow</h3>
+                    <p class="diff-text">As Bluedot continues to expand globally, new roles, responsibilities, and
+                        opportunities grow with it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== DIFFERENCE SECTION END ========== -->
+
+    <!-- ========== LEARN MORE SECTION START ========== -->
+    <section class="roles-learn-more">
+        <div class="container">
+            <div class="learn-more-card">
+                <div class="row align-items-center g-0">
+                    <div class="col-lg-6">
+                        <div class="learn-more-content">
+                            <h2 class="learn-more-title">Learn more about us and <br> the work we do</h2>
+                            <p class="learn-more-text">With 9 years of experience in global air ambulance transport,
+                                Bluedot has supported patients, hospitals and partners across regions and borders. We're
+                                proud of our people and the responsibility they carry every day</p>
+                            <a href="{% url 'website:about' %}" class="btn-learn-more">Read how we do it</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="learn-more-img-wrapper">
+                            <img src="{% static 'website/images/rol.png' %}" alt="Medical team in action" class="learn-more-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========== LEARN MORE SECTION END ========== -->
+
+
+
+
+    <!-- ========== FOOTER START ========== -->
+
+{% endblock %}
+{% block extra_scripts %}
+
+
+
+{% endblock %}
+

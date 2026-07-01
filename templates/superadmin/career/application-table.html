@@ -1,0 +1,33 @@
+{% if applications %}
+    {% for data in applications %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td class="font-weight-bold">{{ data.name }}</td>
+        <td><span class="badge bg-primary text-white rounded-pill px-3">{{ data.career.title }}</span></td>
+        <td class="text-start">
+            <div class="small">
+                <i class="fe fe-mail me-1"></i>{{ data.email }}<br>
+                <i class="fe fe-phone me-1"></i>{{ data.phone }}
+            </div>
+        </td>
+        <td>{{ data.location }}</td>
+        <td>
+            {% if data.resume %}
+                <a href="{{ data.resume.url }}" class="btn btn-view btn-icon" target="_blank" title="View Resume">
+                    <i class="fe fe-download"></i>
+                </a>
+            {% else %}
+                <span class="text-muted small">No Resume</span>
+            {% endif %}
+        </td>
+        <td>{{ data.created_at|date:"d M Y" }}</td>
+        <td>
+            <a class="btn btn-delete btn-icon mb-1" href="javascript:void(0)" onclick="deleteApp('{{data.id}}')"><i class="side-menu__icon fe fe-trash" ></i></a>
+        </td>
+    </tr>
+    {% endfor %}
+{% else %}
+    <tr>
+        <td colspan="8" align="center" class="no-data py-4">No job applications found.</td>
+    </tr>
+{% endif %}

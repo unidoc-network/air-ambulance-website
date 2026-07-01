@@ -1,0 +1,135 @@
+{% extends 'website/layout/base.html' %}
+{% load static %}
+{% block title %}{{ post.title }} | Bluedot Air Ambulance{% endblock %}
+{% block meta_description %}{% if post.content %}{{ post.content|striptags|truncatechars:160 }}{% else %}Read the latest air ambulance news, insights and patient stories from Bluedot.{% endif %}{% endblock %}
+{% block content %}
+
+<section class="blog-detail pt-pb common-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="">
+                    <p>
+                        <span class="en-content">
+                            {% if post.date %}Published on {{ post.date|date:"d M Y" }}{% endif %}
+                            {% if post.time_to_read %}&ndash; {{ post.time_to_read }} read{% endif %}
+                        </span>
+                        <span class="ar-content">
+                            {% if post.date %}نُشر بتاريخ {{ post.date|date:"d M Y" }}{% endif %}
+                            {% if post.time_to_read_ar %}&ndash; {{ post.time_to_read_ar }}{% elif post.time_to_read %}&ndash; {{ post.time_to_read }} قراءة{% endif %}
+                        </span>
+                    </p>
+                    <h3>
+                        <span class="en-content">{{ post.title }}</span>
+                        <span class="ar-content">{{ post.title_ar|default:post.title }}</span>
+                    </h3>
+                    <div class="mt-4">
+                        {% if post.category %}
+                        <a href="{% url 'website:blogs' %}?category={{ post.category.slug }}">
+                            <span class="en-content">{{ post.category.name }}</span>
+                            <span class="ar-content">{{ post.category.name_ar|default:post.category.name }}</span>
+                        </a>
+                        {% else %}
+                        <a href="{% url 'website:blogs' %}">
+                            <span class="en-content">News</span>
+                            <span class="ar-content">أخبار</span>
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% if post.image %}
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 p-0">
+                <img src="{{ post.image.url }}" width="100%" alt="{{ post.title }}" style="max-height:600px;object-fit:cover;">
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<section class="common-padding blog-detail-content-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 m-auto">
+                <div class="blog-contant">
+                    <div class="en-content">
+                        {{ post.content|safe }}
+                    </div>
+                    <div class="ar-content">
+                        {{ post.content_ar|default:post.content|safe }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent News Slider -->
+            {% if recent %}
+            <div class="col-12">
+                <div class="related-blog-section">
+                    <h3 class="en-content">Recent news &amp; Stories</h3>
+                    <h3 class="ar-content">آخر الأخبار وقصص المهام</h3>
+                    <div>
+                        <div class="swiper related-blog">
+                            <div class="swiper-wrapper">
+                                {% for item in recent %}
+                                <div class="swiper-slide">
+                                    <a href="{% url 'website:blog_detail' slug=item.slug %}" class="blog-card" style="text-decoration:none;color:inherit;display:block;">
+                                        {% if item.image %}
+                                        <img src="{{ item.image.url }}" width="100%" alt="{{ item.title }}" style="object-fit:cover;height:220px;">
+                                        {% else %}
+                                        <img src="{% static 'website/images/blog1.png' %}" width="100%" alt="{{ item.title }}" style="object-fit:cover;height:220px;">
+                                        {% endif %}
+                                        <div class="blog-slider-content">
+                                            <h5>
+                                                <span class="en-content">{{ item.title }}</span>
+                                                <span class="ar-content">{{ item.title_ar|default:item.title }}</span>
+                                            </h5>
+                                            <p>
+                                                <span class="en-content">
+                                                    {% if item.date %}Published on {{ item.date|date:"d M Y" }}{% endif %}
+                                                    {% if item.time_to_read %}&ndash; {{ item.time_to_read }} read{% endif %}
+                                                </span>
+                                                <span class="ar-content">
+                                                    {% if item.date %}نُشر بتاريخ {{ item.date|date:"d M Y" }}{% endif %}
+                                                    {% if item.time_to_read_ar %}&ndash; {{ item.time_to_read_ar }}{% elif item.time_to_read %}&ndash; {{ item.time_to_read }} قراءة{% endif %}
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+{% block extra_scripts %}
+<script>
+    var swiper = new Swiper(".related-blog", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            640: { slidesPerView: 1, spaceBetween: 20 },
+            768: { slidesPerView: 2, spaceBetween: 40 },
+            1024: { slidesPerView: 3, spaceBetween: 20 },
+        },
+    });
+</script>
+{% endblock %}

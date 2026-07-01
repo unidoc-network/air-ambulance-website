@@ -1,0 +1,92 @@
+{% extends 'website/layout/base.html' %}
+{% load static %}
+{% block title %}Rajgopal Nair | Leadership | Bluedot{% endblock %}
+{% block meta_description %}Meet Rajgopal Nair, Director of Charters & Flight Operations at Bluedot.{% endblock %}
+{% block content %}
+
+<style>
+        .leader-detail-sec {
+            background-color: #f2f5f8;
+            min-height: calc(100vh - 400px);
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+        }
+
+        .leader-detail-card {
+            text-align: center;
+            width: 100%;
+            padding-top: 120px;
+        }
+
+        .leader-detail-img {
+            width: 250px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            margin: auto;
+        }
+
+        .leader-detail-name {
+            font-size: 45px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: #000;
+            font-family: 'Aeonik';
+            padding-top: 20px;
+        }
+
+        .leader-detail-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #000;
+            margin-bottom: 40px;
+        }
+
+        .leader-detail-bio {
+            max-width: 730px;
+            margin: 0 auto;
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.2;
+            color: #153c5e;
+            font-weight: 400;
+            font-family: 'Aeonik';
+
+        }
+    </style>
+    <section class="leader-detail-sec">
+        <div class="container">
+            <div class="leader-detail-card">
+                <img src="{% static 'website/images/leader4.png' %}" alt="Rajgopal nair" class="leader-detail-img">
+                <h1 class="leader-detail-name en-content">Rajgopal nair</h1>
+                <h1 class="leader-detail-name ar-content">راجغوبال ناير</h1>
+
+                <h5 class="leader-detail-title en-content">Director – Charters & Flight Operations</h5>
+                <h5 class="leader-detail-title ar-content">مدير الرحلات العارضة والعمليات الجوية</h5>
+
+                <div class="leader-detail-bio en-content">
+                    <p>An aviation professional with a passion for delivering safe, efficient, and time-critical
+                        aircraft operations. With over 34 years of experience across private aviation, commercial
+                        airlines, aircraft management, and charter operations, Rajgopal has successfully managed complex
+                        flight logistics and international aviation projects throughout his career. Having spent 15
+                        years overseeing Learjet charter operations and regulatory compliance, he now leads Bluedot's
+                        charter and flight operations division, ensuring seamless aircraft coordination and operational
+                        excellence across global medical transport missions.</p>
+                </div>
+                <div class="leader-detail-bio ar-content">
+                    <p>أخصائي متميز في مجال الطيران، يمتلك شغفاً راسخاً بتقديم عمليات طيران آمنة، وفعالة، وحاسمة من حيث
+                        الوقت. بفضل خبرته الواسعة التي تمتد لأكثر من 34 عاماً في قطاعات الطيران الخاص، والخطوط الجوية
+                        التجارية، وإدارة الطائرات، وعمليات الرحلات العارضة، نجح راجغوبال طوال مسيرته المهنية في إدارة
+                        العمليات اللوجستية المعقدة للرحلات الجوية ومشاريع الطيران الدولية. وبعد أن أمضى 15 عاماً في
+                        الإشراف على عمليات رحلات طائرات "ليرجيت" (Learjet) العارضة والامتثال التنظيمي، يتولى الآن قيادة
+                        قسم الرحلات العارضة والعمليات الجوية في شركة "بلودوت" (Bluedot)، مما يضمن التنسيق السلس للطائرات
+                        وتحقيق التميز التشغيلي عبر مهام النقل الطبي العالمي.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

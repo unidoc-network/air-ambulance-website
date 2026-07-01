@@ -1,0 +1,36 @@
+{% if careers %}
+    {% for data in careers %}
+    <tr>
+        <td>{{ forloop.counter0|add:careers.start_index }}</td>
+        <td class="font-weight-bold">{{ data.title }}</td>
+        <td>{{ data.location }}</td>
+        <td>{{ data.date|date:"d M Y" }}</td>
+        <!-- EN Content -->
+        <td>
+            <a class="btn btn-view btn-icon" href="javascript:void(0)" onclick="viewCareer('{{data.id}}')" title="View English Details">
+                <i class="fe fe-file-text"></i>
+            </a>
+        </td>
+        <!-- AR Data -->
+        <td>
+            <a class="btn btn-icon" style="background:#1a3d5c;color:#fff;border-radius:6px;width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;" href="javascript:void(0)" onclick="viewCareerArabic('{{data.id}}')" title="View Arabic Data">
+                ع
+            </a>
+        </td>
+        <td>
+            <div class="material-switch">
+                <input id="statusSwitchOptionSuccess{{data.id}}" name="someSwitchOption001" type="checkbox" {% if data.is_active %}checked{% endif %} onclick="changeStatus('{{data.id}}')" />
+                <label for="statusSwitchOptionSuccess{{data.id}}" class="label-success"></label>
+            </div>
+        </td>
+        <td>
+            <a class="btn btn-edit btn-icon mb-1" href="{% url 'superadmin:CareerUpdate' data.id %}"><i class="side-menu__icon fe fe-edit"></i></a>
+            <a class="btn btn-delete btn-icon mb-1" href="javascript:void(0)" onclick="deleteCareer('{{data.id}}')"><i class="side-menu__icon fe fe-trash-2" ></i></a>
+        </td>
+    </tr>
+    {% endfor %}
+{% else %}
+    <tr>
+        <td colspan="8" align="center" class="no-data py-4">No career listings found.</td>
+    </tr>
+{% endif %}

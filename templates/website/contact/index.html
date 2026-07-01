@@ -1,0 +1,201 @@
+{% extends 'website/layout/base.html' %}
+{% load static %}{% block title %}Contact Us For Air Ambulance Services | Bluedot{% endblock %}
+{% block meta_description %}Contact Bluedot for air ambulance booking, patient transfer enquiries and emergency medical evacuation support.{% endblock %}
+{% block content %}
+
+<!-- ========== CONTACT HERO START ========== -->
+    <section class="contact-hero">
+        <div class="contact-hero-bg">
+            <img src="{% static 'website/images/contact-new.png' %}" alt="Helicopter at Sunset">
+            <div class="contact-hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="contact-hero-content">
+                <span class="contact-subtitle">Contact Us</span>
+                <h1 class="contact-title">
+                    We’re here to help. Whether you need medical transport support, have a question about our services,
+                    or are exploring a partnership, our <br> team is ready to assist.
+                </h1>
+            </div>
+        </div>
+    </section>
+    <!-- ========== CONTACT HERO END ========== -->
+
+    <!-- ========== CONTACT FORM SECTION START ========== -->
+    <section class="contact-form-section">
+
+        <div class="container">
+            <div class="contact-form-wrapper">
+                <form action="{% url 'website:submit_enquiry' %}" method="POST" class="contact-main-form">
+                    {% csrf_token %}
+                    <input type="hidden" name="country" value="Website">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="ex: john" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="services">Choose Services</label>
+                                <div class="select-wrapper">
+                                    <select id="services" name="services" required>
+                                        <option value="" disabled selected>ex: Air Ambulance</option>
+                                        <option value="air-ambulance">Air Ambulance</option>
+                                        <option value="commercial-transfer">Commercial Airline Transfer</option>
+                                        <option value="medical-escorts">Medical Escorts</option>
+                                    </select>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="john@gmail.com" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"
+                                    required>
+                            </div>
+                        </div>
+                          <div class="col-12 mt-1 mb-2">
+                                <button type="button" class="verify-email-btn" style="background-color: #009BE0; color: #FFF; border: none; padding: 10px 24px; border-radius: 24px; font-size: 14px; font-weight: 500; cursor: pointer; display: inline-block; font-family: 'Aeonik', sans-serif;">
+                                    <span class="en-content">Click here to verify your email</span>
+                                    <span class="ar-content">اضغط هنا للتحقق من بريدك الإلكتروني</span>
+                                </button>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="oman-verify-code">
+                                        <span class="en-content">Verify Code</span>
+                                        <span class="ar-content">رمز التحقق</span>
+                                    </label>
+                                    <input type="text" id="oman-verify-code" name="verify_code" placeholder="enter code">
+                                </div>
+                            </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Enter your question here"
+                                    required></textarea>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-footer">
+                                <div class="consent-group">
+                                    <input type="checkbox" id="consent" name="consent" required>
+                                    <label for="consent">I consent to have this website store my submitted information
+                                        so they can respond to my inquiry.</label>
+                                </div>
+                                <button type="submit" class="btn-submit">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </section>
+    <!-- ========== CONTACT FORM SECTION END ========== -->
+
+    <!-- ========== OUR OFFICES START ========== -->
+    <section class="offices-section">
+
+        <div class="container">
+            <h2 class="offices-title">Our Offices</h2>
+        </div>
+        <div class="interactive-map-container">
+            <img src="{% static 'website/images/new-map.png' %}" alt="World Map with Office Locations" class="map-image">
+
+            <!-- Dammam Marker -->
+            <div class="map-marker" style="top: 45%; left: 20%;" onclick="toggleMarker(this)">
+                <div class="marker-pin">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="marker-label">Dammam</span>
+                </div>
+                <div class="marker-card">
+                    <h3>SAUDI ARABIA</h3>
+                    <p>Distinction Hub Building, 7250<br>King Fahd Rd, Al Oalya,<br>Office No. 11, First
+                        Floor,<br>Riyadh 12311, Saudi Arabia</p>
+                    <div class="marker-contact">
+                        <span><i class="fas fa-phone-alt"></i> +971 55 188 1441</span>
+                        <span><i class="far fa-envelope"></i> mail@bluedotassist.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dubai Marker -->
+            <div class="map-marker" style="top: 47%; left: 27%;" onclick="toggleMarker(this)">
+                <div class="marker-pin">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="marker-label">Dubai</span>
+                </div>
+                <div class="marker-card">
+                    <h3>UAE</h3>
+                    <p>Bluedot Air Ambulance<br>#304, A-Block<br>3rd Floor Centurion Star Building<br>Opp. Deira City
+                        Centre<br>P.O. Box - 31923, Dubai</p>
+                    <div class="marker-contact">
+                        <span><i class="fas fa-phone-alt"></i> +971 55 188 1441</span>
+                        <span><i class="far fa-envelope"></i> mail@bluedotassist.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ernakulam Marker -->
+            <div class="map-marker active" style="top: 62%; left: 47%;" onclick="toggleMarker(this)">
+                <div class="marker-pin">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="marker-label">Ernakulam</span>
+                </div>
+                <div class="marker-card">
+                    <h3>INDIA</h3>
+                    <p>2nd Floor, Naj Arcade<br>Near Muttom Metro Station<br>Opposite Metro Pillar No. 176
+                        R<br>Thaikkattukara P O, Muttom,<br>Aluva, Ernakulam, Kerala, India,<br>Pin: 683106</p>
+                    <div class="marker-contact">
+                        <span><i class="fas fa-phone-alt"></i> +91 974 541 0000</span>
+                        <span><i class="far fa-envelope"></i> mail@bluedotassist.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function toggleMarker(element) {
+                // Remove active class from all markers
+                document.querySelectorAll('.map-marker').forEach(marker => {
+                    if (marker !== element) {
+                        marker.classList.remove('active');
+                    }
+                });
+                // Toggle active class on clicked marker
+                element.classList.toggle('active');
+            }
+        </script>
+
+    </section>
+    <!-- ========== OUR OFFICES END ========== -->
+
+    <!-- ========== FOOTER ========== -->
+
+{% endblock %}
+{% block extra_scripts %}
+<script>
+            function toggleMarker(element) {
+                // Remove active class from all markers
+                document.querySelectorAll('.map-marker').forEach(marker => {
+                    if (marker !== element) {
+                        marker.classList.remove('active');
+                    }
+                });
+                // Toggle active class on clicked marker
+                element.classList.toggle('active');
+            }
+        </script>
+
+{% endblock %}
+

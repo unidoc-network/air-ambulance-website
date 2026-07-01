@@ -1,0 +1,398 @@
+{% load static %}
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <!-- META DATA -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'website/images/favicon.png' %}" />
+
+    <!-- TITLE -->
+    <title>Blue Dot | Dashboard</title>
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- BOOTSTRAP CSS -->
+    <link id="style" href="{% static 'superadmin/assets/plugins/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
+
+    <!-- STYLE CSS -->
+    <link href="{% static 'superadmin/assets/css/style.css' %}" rel="stylesheet" />
+    <link href="{% static 'superadmin/assets/css/dark-style.css' %}" rel="stylesheet" />
+    <link href="{% static 'superadmin/assets/css/transparent-style.css' %}" rel="stylesheet">
+    <link href="{% static 'superadmin/assets/css/skin-modes.css' %}" rel="stylesheet" />
+
+    <!-- ICON FONTS -->
+    <link href="{% static 'superadmin/assets/css/icons.css' %}" rel="stylesheet" />
+    <link href="{% static 'superadmin/assets/css/lightbox.min.css' %}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <!-- COLOR SKIN CSS -->
+    <link id="theme" rel="stylesheet" type="text/css" media="all" href="{% static 'superadmin/assets/colors/color1.css' %}" />
+
+    <!-- BLUE DOT CUSTOM THEME -->
+    <link href="{% static 'superadmin/assets/css/style-custom.css' %}" rel="stylesheet" />
+
+    <style>
+        /* ── Blue Dot Superadmin Core Overrides ── */
+        :root {
+            --primary-bg-color: #1D9ADD;
+            --primary-bg-color2: #1579AB;
+        }
+
+        /* Sidebar active state override (must override base framework) */
+        .app-sidebar .side-menu .side-menu__item:hover,
+        .app-sidebar .side-menu .slide.active > a.side-menu__item {
+            background: linear-gradient(135deg, #1D9ADD, #1579AB) !important;
+            color: #fff !important;
+            border-radius: 10px !important;
+        }
+
+        .app-sidebar .side-menu .side-menu__item:hover .side-menu__icon,
+        .app-sidebar .side-menu .slide.active > a.side-menu__item .side-menu__icon {
+            color: #fff !important;
+        }
+
+        /* Sidebar background & borders */
+        .app-sidebar, .side-header {
+            background: #fff !important;
+        }
+
+        /* Page header style */
+        .page-header {
+            background: linear-gradient(135deg, #1D9ADD, #1579AB) !important;
+            border-radius: 20px !important;
+            padding: 20px 28px !important;
+            margin-bottom: 28px !important;
+            box-shadow: 0 8px 24px rgba(29,154,221,0.25) !important;
+            border: none !important;
+        }
+
+        .page-header .page-title {
+            color: #fff !important;
+            font-weight: 700 !important;
+            font-size: 20px !important;
+        }
+
+        .page-header .breadcrumb-item,
+        .page-header .breadcrumb-item a {
+            color: rgba(255,255,255,0.75) !important;
+        }
+
+        .page-header .breadcrumb-item.active {
+            color: #fff !important;
+        }
+
+        .page-header .breadcrumb-item + .breadcrumb-item::before {
+            color: rgba(255,255,255,0.4) !important;
+        }
+
+        /* Main content bg */
+        .main-content, .side-app {
+            background: #F0F4F8 !important;
+        }
+
+        /* ── Global Toast Notifications (Bottom Right) ── */
+        .global-toast-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            pointer-events: none;
+        }
+
+        .sa-toast {
+            pointer-events: auto;
+            min-width: 300px;
+            max-width: 400px;
+            background: #fff;
+            border-radius: 14px;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 5px solid #1D9ADD;
+            animation: slideInRight 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.3s ease;
+        }
+
+        .sa-toast.toast-error { border-left-color: #EF4444; }
+        .sa-toast.toast-success { border-left-color: #10B981; }
+        .sa-toast.toast-info { border-left-color: #1D9ADD; }
+
+        .sa-toast i {
+            font-size: 20px;
+        }
+        .sa-toast.toast-error i { color: #EF4444; }
+        .sa-toast.toast-success i { color: #10B981; }
+        .sa-toast.toast-info i { color: #1D9ADD; }
+
+        .sa-toast-content {
+            flex-grow: 1;
+        }
+
+        .sa-toast-content p {
+            margin: 0;
+            font-size: 13px;
+            font-weight: 600;
+            color: #1A202C;
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; transform: translateY(0); }
+            to { opacity: 0; transform: translateY(20px); }
+        }
+
+        .sa-toast.fade-out {
+            animation: fadeOut 0.5s ease forwards;
+        }
+
+        
+        /* Compress sidebar items */
+        .side-menu__item {
+            padding: 8px 15px !important;
+            margin-bottom: 0px !important;
+            min-height: 40px !important;
+        }
+        .slide {
+            margin-bottom: 2px !important;
+        }
+
+        /* App header / topbar */
+        .app-header.header {
+            background: #fff !important;
+            border-bottom: 1px solid #E2E8F0 !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05) !important;
+        }
+
+        /* Buttons inside page-header */
+        .page-header .sa-btn {
+            background: rgba(255,255,255,0.15) !important;
+            border: 1px solid rgba(255,255,255,0.25) !important;
+            color: #fff !important;
+            backdrop-filter: blur(6px);
+        }
+
+        .page-header .sa-btn:hover {
+            background: rgba(255,255,255,0.25) !important;
+        }
+
+        .page-header .sa-btn-module {
+            background: rgba(16,185,129,0.9) !important;
+            border: 1px solid rgba(255,255,255,0.2) !important;
+            box-shadow: 0 4px 14px rgba(16,185,129,0.4) !important;
+        }
+
+        /* Profile dropdown avatar */
+        .profile-user {
+            border: 2px solid #1D9ADD !important;
+            box-shadow: 0 2px 8px rgba(29,154,221,0.2) !important;
+        }
+    </style>
+</head>
+
+<body class="app sidebar-mini ltr light-mode">
+
+    <!-- PAGE -->
+    <div class="page">
+        <div class="page-main">
+
+            <!-- app-Header -->
+            <div class="app-header header sticky">
+                <div class="container-fluid main-container">
+                    <div class="d-flex align-items-center">
+                        <a aria-label="Hide Sidebar" class="app-sidebar__toggle" data-bs-toggle="sidebar" href="javascript:void(0)"></a>
+
+                        <a class="logo-horizontal" href="{% url 'superadmin:Dashboard' %}">
+                            <img src="{% static 'superadmin/assets/images/brand/logo_custom.png' %}" class="header-brand-img desktop-logo" alt="Blue Dot" style="height:30px; width:auto;">
+                            <img src="{% static 'superadmin/assets/images/brand/logo_custom.png' %}" class="header-brand-img light-logo1" alt="Blue Dot" style="height:30px; width:auto;">
+                        </a>
+
+                        <div class="d-flex order-lg-2 ms-auto header-right-icons">
+                            <button class="navbar-toggler navresponsive-toggler d-lg-none ms-auto" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent-4"
+                                aria-controls="navbarSupportedContent-4" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon fe fe-more-vertical"></span>
+                            </button>
+                            <div class="navbar navbar-collapse responsive-navbar p-0">
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+                                    <div class="d-flex order-lg-2 align-items-center gap-2">
+
+                                        <!-- Dark/Light Toggle -->
+                                        <div class="d-flex">
+                                            <a class="nav-link icon theme-layout nav-link-bg layout-setting" style="border-radius:10px; padding:8px 12px;">
+                                                <span class="dark-layout"><i class="fe fe-moon" style="font-size:18px;"></i></span>
+                                                <span class="light-layout"><i class="fe fe-sun" style="font-size:18px;"></i></span>
+                                            </a>
+                                        </div>
+
+                                        <!-- Profile Dropdown -->
+                                        <div class="dropdown d-flex profile-1">
+                                            <a href="javascript:void(0)" data-bs-toggle="dropdown" class="nav-link leading-none d-flex align-items-center gap-2" style="padding: 4px 8px; border-radius:12px; border: 1px solid #E2E8F0;">
+                                                <img src="{% static 'superadmin/assets/images_ex/user_1.png' %}" alt="Admin" class="avatar profile-user brround cover-image" style="width:34px;height:34px;">
+                                                <span class="d-none d-sm-block" style="font-size:13px;font-weight:600;color:#1A202C;">Admin</span>
+                                                <i class="fe fe-chevron-down" style="font-size:12px;color:#718096;"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow" style="min-width:200px;">
+                                                <div class="drop-heading" style="background:linear-gradient(135deg,#EBF5FB,#D6EEF9);padding:14px 16px;border-radius:14px 14px 0 0;">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="{% static 'superadmin/assets/images_ex/user_1.png' %}" style="width:36px;height:36px;border-radius:50%;border:2px solid #1D9ADD;">
+                                                        <div>
+                                                            <h6 class="mb-0" style="font-weight:700;font-size:13px;color:#1A202C;">Admin</h6>
+                                                            <small style="color:#1D9ADD;font-size:11px;font-weight:600;">Blue Dot Dashboard</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-divider m-0"></div>
+                                                <a class="dropdown-item" href="{% url 'superadmin:Profile' %}" style="padding:10px 16px;font-size:13px;font-weight:500;">
+                                                    <i class="dropdown-icon fe fe-user me-2" style="color:#1D9ADD;"></i> Profile
+                                                </a>
+                                                <a class="dropdown-item" href="{% url 'superadmin:Logout' %}" style="padding:10px 16px;font-size:13px;font-weight:500;color:#EF4444;">
+                                                    <i class="dropdown-icon fe fe-log-out me-2"></i> Sign out
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /app-Header -->
+
+            <!-- APP-SIDEBAR -->
+            <div class="sticky">
+                <div class="app-sidebar__overlay" data-bs-toggle="sidebar"></div>
+                <div class="app-sidebar">
+                    <!-- Logo -->
+                    <div class="side-header">
+                        <a class="header-brand1" href="{% url 'superadmin:Dashboard' %}">
+                            <img src="{% static 'superadmin/assets/images/brand/logo_white_new.png' %}" class="header-brand-img desktop-logo" alt="Blue Dot" style="height:38px; width:auto;">
+                            <img src="{% static 'superadmin/assets/images/brand/logo_white_new.png' %}" class="header-brand-img toggle-logo" alt="Blue Dot" style="height:38px; width:auto;">
+                            <img src="{% static 'superadmin/assets/images/brand/logo_custom.png' %}" class="header-brand-img light-logo" alt="Blue Dot" style="height:38px; width:auto;">
+                            <img src="{% static 'superadmin/assets/images/brand/logo_custom.png' %}" class="header-brand-img light-logo1" alt="Blue Dot" style="height:38px; width:auto;">
+                        </a>
+                    </div>
+
+                    <div class="main-sidemenu">
+                        <div class="slide-left disabled" id="slide-left">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z" />
+                            </svg>
+                        </div>
+
+                        <ul class="side-menu">
+                            <!-- Section label -->
+                            <li class="sub-category" style="padding:8px 16px 2px;font-size:10px;font-weight:700;color:#A0AEC0;letter-spacing:1.2px;text-transform:uppercase;">
+                                Main Menu
+                            </li>
+
+                            <!-- Dashboard -->
+                            <li {% if path == "dashboard" %} class="slide active" {% else %} class="slide" {% endif %}>
+                                <a class="side-menu__item has-link" href="{% url 'superadmin:Dashboard' %}">
+                                    <i class="side-menu__icon fe fe-home"></i>
+                                    <span class="side-menu__label">Dashboard</span>
+                                </a>
+                            </li>
+
+
+
+
+
+                            <li class="sub-category" style="padding:8px 16px 2px;font-size:10px;font-weight:700;color:#A0AEC0;letter-spacing:1.2px;text-transform:uppercase;">
+                                Content
+                            </li>
+
+                            <!-- Categories -->
+                            <li {% if path == "blog_category" %} class="slide active" {% else %} class="slide" {% endif %}>
+                                <a class="side-menu__item has-link" data-bs-toggle="slide" href="{% url 'superadmin:CategoryList' %}">
+                                    <i class="side-menu__icon fas fa-tags"></i>
+                                    <span class="side-menu__label">Category</span>
+                                </a>
+                            </li>
+
+                            <li {% if path == "blogs" %} class="slide active" {% else %} class="slide" {% endif %}>
+                                <a class="side-menu__item has-link" data-bs-toggle="slide" href="{% url 'superadmin:NewsList' %}">
+                                    <i class="side-menu__icon fe fe-book-open"></i>
+                                    <span class="side-menu__label">News &amp; Stories</span>
+                                </a>
+                            </li>
+
+                            <li {% if path == "career" %} class="slide active" {% else %} class="slide" {% endif %}>
+                                <a class="side-menu__item has-link" data-bs-toggle="slide" href="{% url 'superadmin:CareerList' %}">
+                                    <i class="side-menu__icon fe fe-briefcase"></i>
+                                    <span class="side-menu__label">Career</span>
+                                </a>
+                            </li>
+
+                            <li {% if path == "career_application" %} class="slide active" {% else %} class="slide" {% endif %}>
+                                <a class="side-menu__item has-link" data-bs-toggle="slide" href="{% url 'superadmin:ApplicationList' %}">
+                                    <i class="side-menu__icon fe fe-users"></i>
+                                    <span class="side-menu__label">Career Application</span>
+                                </a>
+                            </li>
+
+
+
+                            <li class="sub-category" style="padding:8px 16px 2px;font-size:10px;font-weight:700;color:#A0AEC0;letter-spacing:1.2px;text-transform:uppercase;">
+                                CRM
+                            </li>
+
+
+
+                            <!-- Contact Messages -->
+                            <li {% if path == "contact" %} class="slide active" {% else %} class="slide" {% endif %}>
+                                <a class="side-menu__item has-link" data-bs-toggle="slide" href="{% url 'superadmin:ContactList' %}">
+                                    <i class="side-menu__icon fas fa-headset"></i>
+                                    <span class="side-menu__label">Contact Messages</span>
+                                </a>
+                            </li>
+
+                            <li class="sub-category" style="padding:8px 16px 2px;font-size:10px;font-weight:700;color:#A0AEC0;letter-spacing:1.2px;text-transform:uppercase;">
+                                Account
+                            </li>
+
+                            <!-- Profile -->
+                            <li {% if path == "profile" %} class="slide active" {% else %} class="slide" {% endif %}>
+                                <a class="side-menu__item has-link" href="{% url 'superadmin:Profile' %}">
+                                    <i class="side-menu__icon fe fe-user"></i>
+                                    <span class="side-menu__label">Profile</span>
+                                </a>
+                            </li>
+
+                            <!-- Logout -->
+                            <li class="slide">
+                                <a class="side-menu__item has-link" href="{% url 'superadmin:Logout' %}" style="color:#EF4444 !important;">
+                                    <i class="side-menu__icon fe fe-log-out" style="color:#EF4444 !important;"></i>
+                                    <span class="side-menu__label" style="color:#EF4444 !important;">Sign Out</span>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                        <div class="slide-right" id="slide-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- /APP-SIDEBAR -->
+            </div>
+

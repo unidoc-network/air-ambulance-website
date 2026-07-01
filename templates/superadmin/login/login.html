@@ -1,0 +1,424 @@
+{% load static %}
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'website/images/favicon.png' %}" />
+    <title>Blue Dot | Sign In</title>
+    <link id="style" href="{% static 'superadmin/assets/plugins/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'superadmin/assets/css/style.css' %}" rel="stylesheet"/>
+    <link href="{% static 'superadmin/assets/css/icons.css' %}" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --bd-primary: #1D9ADD;
+            --bd-primary-dark: #1579AB;
+            --bd-primary-light: rgba(29,154,221,0.12);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: #0a0f1e;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Animated background */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(29,154,221,0.18) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(21,121,171,0.12) 0%, transparent 50%),
+                linear-gradient(135deg, #0a0f1e 0%, #0d1a2e 50%, #0a0f1e 100%);
+            z-index: 0;
+        }
+
+        /* Floating orbs */
+        .orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(60px);
+            animation: float 8s ease-in-out infinite;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .orb-1 {
+            width: 400px; height: 400px;
+            background: rgba(29,154,221,0.12);
+            top: -100px; left: -100px;
+            animation-delay: 0s;
+        }
+        .orb-2 {
+            width: 300px; height: 300px;
+            background: rgba(21,121,171,0.10);
+            bottom: -80px; right: -80px;
+            animation-delay: 3s;
+        }
+        .orb-3 {
+            width: 200px; height: 200px;
+            background: rgba(99,102,241,0.08);
+            top: 40%; right: 20%;
+            animation-delay: 5s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0,0) scale(1); }
+            33% { transform: translate(20px, -20px) scale(1.05); }
+            66% { transform: translate(-15px, 15px) scale(0.97); }
+        }
+
+        /* Grid overlay */
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: linear-gradient(rgba(29,154,221,0.03) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(29,154,221,0.03) 1px, transparent 1px);
+            background-size: 48px 48px;
+            z-index: 0;
+        }
+
+        /* Login wrapper */
+        .login-wrapper {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 390px;
+            padding: 16px;
+        }
+
+        /* Card */
+        .login-card {
+            background: rgba(255,255,255,0.03);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 28px;
+            padding: 36px 32px;
+            box-shadow: 0 32px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(29,154,221,0.05);
+        }
+
+        /* Logo area */
+        .login-logo-wrap {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .login-logo-wrap img {
+            height: 48px;
+            width: auto;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .login-logo-wrap img:hover {
+            transform: scale(1.04);
+        }
+
+        .login-logo-wrap .brand-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 14px;
+            background: rgba(29,154,221,0.12);
+            border: 1px solid rgba(29,154,221,0.2);
+            border-radius: 20px;
+            padding: 5px 14px;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--bd-primary);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .login-logo-wrap h2 {
+            font-size: 26px;
+            font-weight: 800;
+            color: #fff;
+            margin-top: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .login-logo-wrap p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.45);
+            margin-top: 4px;
+        }
+
+        /* Alert / messages */
+        .login-alert {
+            background: rgba(239,68,68,0.1);
+            border: 1px solid rgba(239,68,68,0.2);
+            border-left: 3px solid #EF4444;
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin-bottom: 20px;
+        }
+
+        .login-alert p {
+            color: #FCA5A5;
+            font-size: 13px;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        /* Input groups */
+        .bd-field {
+            margin-bottom: 18px;
+        }
+
+        .bd-field label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.55);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 8px;
+        }
+
+        .bd-input-group {
+            display: flex;
+            align-items: center;
+            background: rgba(255,255,255,0.05);
+            border: 1.5px solid rgba(255,255,255,0.1);
+            border-radius: 14px;
+            transition: all 0.25s ease;
+            overflow: hidden;
+        }
+
+        .bd-input-group:focus-within {
+            border-color: var(--bd-primary);
+            background: rgba(29,154,221,0.06);
+            box-shadow: 0 0 0 4px rgba(29,154,221,0.12);
+        }
+
+        .bd-input-group .bd-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            color: rgba(255,255,255,0.35);
+            font-size: 15px;
+            flex-shrink: 0;
+        }
+
+        .bd-input-group:focus-within .bd-icon {
+            color: var(--bd-primary);
+        }
+
+        .bd-input-group input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #fff;
+            font-size: 15px;
+            font-family: 'Inter', sans-serif;
+            padding: 14px 10px 14px 4px;
+            min-width: 0;
+        }
+
+        .bd-input-group input::placeholder {
+            color: rgba(255,255,255,0.3);
+        }
+
+        .bd-input-group input:-webkit-autofill,
+        .bd-input-group input:-webkit-autofill:hover,
+        .bd-input-group input:-webkit-autofill:focus {
+            -webkit-box-shadow: 0 0 0 30px #0d1a2e inset !important;
+            -webkit-text-fill-color: #fff !important;
+        }
+
+        .bd-input-group .bd-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 16px;
+            color: rgba(255,255,255,0.35);
+            cursor: pointer;
+            font-size: 14px;
+            transition: color 0.2s ease;
+            background: transparent;
+            border: none;
+            outline: none;
+        }
+
+        .bd-input-group .bd-toggle:hover {
+            color: var(--bd-primary);
+        }
+
+        /* Submit button */
+        .bd-submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, var(--bd-primary), var(--bd-primary-dark));
+            border: none;
+            border-radius: 14px;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            box-shadow: 0 6px 20px rgba(29,154,221,0.4);
+            letter-spacing: 0.3px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .bd-submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(29,154,221,0.5);
+            filter: brightness(1.07);
+        }
+
+        .bd-submit-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 12px rgba(29,154,221,0.3);
+        }
+
+        /* Divider */
+        .bd-divider {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 24px 0 0;
+        }
+
+        .bd-divider span {
+            flex: 1;
+            height: 1px;
+            background: rgba(255,255,255,0.07);
+        }
+
+        .bd-divider p {
+            font-size: 11px;
+            color: rgba(255,255,255,0.25);
+            white-space: nowrap;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+
+        /* Footer credit */
+        .login-credit {
+            text-align: center;
+            margin-top: 28px;
+        }
+
+        .login-credit a {
+            color: rgba(255,255,255,0.2);
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: color 0.2s ease;
+        }
+
+        .login-credit a:hover {
+            color: var(--bd-primary);
+        }
+
+        /* Scroll-in animation */
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(28px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .login-card {
+            animation: slideUp 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div class="login-wrapper">
+        <div class="login-card">
+
+            <!-- Logo -->
+            <div class="login-logo-wrap">
+                <img src="{% static 'superadmin/assets/images/brand/logo_white_new.png' %}" alt="Blue Dot Logo" style="height:68px;width:auto;object-fit:contain;">
+            </div>
+
+            <!-- Messages -->
+            {% if messages %}
+            <div class="login-alert">
+                {% for message in messages %}
+                <p><i class="fas fa-exclamation-circle" style="margin-right:6px;"></i>{{ message }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <!-- Form -->
+            <form method="post">
+                {% csrf_token %}
+
+                <div class="bd-field">
+                    <label>Email Address</label>
+                    <div class="bd-input-group">
+                        <span class="bd-icon"><i class="fas fa-envelope"></i></span>
+                        <input type="email" name="email" placeholder="Enter your email" required value="{{ email }}">
+                    </div>
+                </div>
+
+                <div class="bd-field">
+                    <label>Password</label>
+                    <div class="bd-input-group">
+                        <span class="bd-icon"><i class="fas fa-lock"></i></span>
+                        <input type="password" name="password" id="passwordInput" placeholder="Enter your password" required>
+                        <button type="button" class="bd-toggle" onclick="togglePwd()">
+                            <i class="fas fa-eye" id="eyeIcon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <button type="submit" class="bd-submit-btn">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Sign In
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+    function togglePwd() {
+        var input = document.getElementById("passwordInput");
+        var icon = document.getElementById("eyeIcon");
+        if (input.type === "password") {
+            input.type = "text";
+            icon.classList.replace("fa-eye", "fa-eye-slash");
+        } else {
+            input.type = "password";
+            icon.classList.replace("fa-eye-slash", "fa-eye");
+        }
+    }
+    </script>
+
+    <script src="{% static 'superadmin/assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'superadmin/assets/plugins/bootstrap/js/popper.min.js' %}"></script>
+    <script src="{% static 'superadmin/assets/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>

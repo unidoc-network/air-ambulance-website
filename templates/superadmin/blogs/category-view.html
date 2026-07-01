@@ -1,0 +1,189 @@
+{% include 'superadmin/layout/header.html' %}
+ 
+ <!--app-content open-->
+           <div class="main-content app-content mt-0">
+               <div class="side-app">
+
+                   <!-- CONTAINER -->
+                   <div class="main-container container-fluid">
+
+                       <!-- PAGE-HEADER -->
+                       <div class="page-header">
+                           <h1 class="page-title">Categories</h1>
+                           <div>
+                               <a class="sa-btn sa-btn-module" href="javascript:void(0)" onclick="add_modal()"><i class="side-menu__icon fe fe-plus mx-1"></i>Add New</a>
+                           </div>
+                       </div>
+                       <!-- PAGE-HEADER END -->
+
+                        <!-- ROW OPEN -->
+                       <div class="row">
+                            <div class="col-xl-12">
+                               <div class="card">
+                                   <div class="card-header">
+                                       <h3 class="card-title">List Of All Categories</h3>
+                                   </div>
+                                   <div class="card-body">
+                                       <form onsubmit="return false;">
+                                        <div class="row">
+                                         <div class="form-group col-lg-2 col-12">
+                                             <input type="text" class="form-control" id="searchkey" placeholder="Keyword Search" onkeyup="filter(1)">
+                                         </div> 
+
+                                                <div class="form-group col-lg-2 col-12">
+                                                   <select name="" id="status" class="form-control form-select" style="height: 40px;" data-bs-placeholder="Select Status" onchange="filter(1)">
+                                            <option value="">All Status</option>
+                                            <option value="True" selected>Active</option>
+                                            <option value="False">Inactive</option>
+                                             </select>
+                                                </div>
+                                                
+                                                <div class="form-group col-lg-1 col-12">
+                                                    <a class="btn btn-light" style="height: 40px; width: 40px; display: inline-flex; justify-content: center; align-items: center;" href="{{request.path}}" title="Reset"><i class="fe fe-rotate-cw"></i></a>
+                                                </div>
+                                               
+                                       </div>
+                                       </form>	
+                                       <div class="table-responsive" id="table-div">
+                                           {% include 'superadmin/blogs/category-table.html' %}
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <!-- ROW CLOSED -->
+                   </div>
+                   <!-- CONTAINER END -->
+               </div>
+           </div>
+            <!--app-content close-->
+            
+    <!-- Add/Edit Category Modal -->
+    <div class="modal fade" id="categoryModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                                    <h5 class="modal-title" id="catModalTitle">Add Category</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <form id="catForm" method="post">
+                    {% csrf_token %}
+                    <div class="modal-body text-start">
+                        <div class="row">
+                            <div class="form-group col-12">
+                                <label class="form-label">Category Name (English) <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" placeholder="Enter category name" name="name" id="cat_name" required>
+                            </div>
+                            <div class="form-group col-12 mt-3">
+                                <label class="form-label">اسم التصنيف (عربي) <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control text-end" placeholder="أدخل اسم التصنيف" name="name_ar" id="cat_name_ar" required dir="rtl">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="sa-btn sa-btn-primary" type="submit">Save Category</button>
+                        <button class="sa-btn sa-btn-secondary" data-bs-dismiss="modal" type="button">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+   <div class="modal fade" id="modaldemo5" tabindex="-1" role="dialog">
+       <div class="modal-dialog modal-md modal-dialog-centered text-center" role="document">
+           <div class="modal-content ">
+               
+               <div class="modal-body">
+                   <button aria-label="Close" class="btn-close position-absolute" data-bs-dismiss="modal">
+                   <span aria-hidden="true">&times;</span></button>
+                   <i class="icon icon-close fs-70 text-danger lh-1 my-5 d-inline-block"></i>
+                   <h4 class="text-danger">Are You Sure You Want To Delete?</h4>
+                   <p class="mg-b-20 mg-x-20">This category will be deleted permanently.</p>
+                   <input type="hidden" id="hid">
+                   <button class="sa-btn sa-btn-primary" onclick="catdelete()">Yes</button>
+                   <button aria-label="Close" class="sa-btn sa-btn-cancel pd-x-25" data-bs-dismiss="modal">Cancel</button>
+               </div>
+           </div>
+       </div>
+   </div>
+
+<script>
+function add_modal() {
+    $('#catModalTitle').text('Add Category');
+    $('#catForm').attr('action', "{% url 'superadmin:CategoryAdd' %}");
+    $('#cat_name').val('');
+    $('#cat_name_ar').val('');
+    $('#categoryModal').modal('show');
+}
+
+function edit_modal(id, name, name_ar) {
+    $('#catModalTitle').text('Edit Category');
+    var url = "{% url 'superadmin:CategoryUpdate' 0 %}".replace('0', id);
+    $('#catForm').attr('action', url);
+    $('#cat_name').val(name);
+    $('#cat_name_ar').val(name_ar);
+    $('#categoryModal').modal('show');
+}
+
+function filter(page) {
+    var search = $('#searchkey').val();
+    var status = $('#status').val();
+    $.ajax({
+        url: "{% url 'superadmin:CategoryList' %}",
+        type: 'GET',
+        data: {
+            'search': search,
+            'status': status,
+            'page': page
+        },
+        success: function(response) {
+            if (response.status) {
+                $('#table-div').html(response.template);
+            }
+        }
+    });
+}
+
+function catdelete() {
+    var id = $('#hid').val();
+    $.ajax({
+        url: "{% url 'superadmin:CategoryList' %}",
+        type: 'GET',
+        data: {
+            'type': '2',
+            'id': id
+        },
+        success: function(response) {
+            if (response.status) {
+                location.reload();
+            }
+        }
+    });
+}
+
+function statuschange(id, vl) {
+    $.ajax({
+        url: "{% url 'superadmin:CategoryList' %}",
+        type: 'GET',
+        data: {
+            'type': '1',
+            'id': id,
+            'vl': vl
+        },
+        success: function(response) {
+            if (response.status) {
+                location.reload();
+            }
+        }
+    });
+}
+
+function delete_modal(id) {
+    $('#hid').val(id);
+    $('#modaldemo5').modal('show');
+}
+</script>
+
+{% include 'superadmin/layout/footer.html' %}

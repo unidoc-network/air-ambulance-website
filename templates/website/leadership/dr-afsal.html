@@ -1,0 +1,89 @@
+{% extends 'website/layout/base.html' %}
+{% load static %}
+{% block title %}Dr. Afsal | Medical Director | Bluedot{% endblock %}
+{% block meta_description %}Medical team profile page for Dr. Afsal, Medical Director at Bluedot Air Ambulance.{% endblock %}
+{% block content %}
+
+<style>
+        .leader-detail-sec {
+            background-color: #f2f5f8;
+            min-height: calc(100vh - 400px);
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+        }
+
+        .leader-detail-card {
+            text-align: center;
+            width: 100%;
+            padding-top: 120px;
+        }
+
+        .leader-detail-img {
+            width: 250px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            margin: auto;
+        }
+
+        .leader-detail-name {
+            font-size: 45px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: #000;
+            font-family: 'Aeonik';
+            padding-top: 20px;
+        }
+
+        .leader-detail-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #000;
+            margin-bottom: 40px;
+        }
+
+        .leader-detail-bio {
+            max-width: 730px;
+            margin: 0 auto;
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.2;
+            color: #153c5e;
+            font-weight: 400;
+            font-family: 'Aeonik';
+
+        }
+    </style>
+    <section class="leader-detail-sec">
+        <div class="container">
+            <div class="leader-detail-card">
+                <img src="{% static 'website/images/leader3.png' %}" alt="Dr Afsal" class="leader-detail-img">
+                <h1 class="leader-detail-name en-content">Dr Afsal</h1>
+                <h1 class="leader-detail-name ar-content">Dr Afsal</h1>
+
+                <h5 class="leader-detail-title en-content">Medical Director</h5>
+                <h5 class="leader-detail-title ar-content">Medical Director</h5>
+
+                <div class="leader-detail-bio en-content">
+                    <p>A social entrepreneur with a passion to make international patient transfer more economical and
+                        accessible. Nijil formerly headed the first professionally managed networked ambulance service
+                        in India, and its extended services in the Middle east, which now operates more than 3000
+                        ambulances and transports 3 million patients a year worldwide. He has successfully helmed
+                        Bluedot's emergence as an award-winning air ambulance that has set higher standards of service
+                        and efficiency in the industry.</p>
+                </div>
+                <div class="leader-detail-bio ar-content">
+                    <p>A social entrepreneur with a passion to make international patient transfer more economical and
+                        accessible. Nijil formerly headed the first professionally managed networked ambulance service
+                        in India, and its extended services in the Middle east, which now operates more than 3000
+                        ambulances and transports 3 million patients a year worldwide. He has successfully helmed
+                        Bluedot's emergence as an award-winning air ambulance that has set higher standards of service
+                        and efficiency in the industry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% load static %}
+{% if blogs %}
+<div class="news-grid">
+    {% for blog in blogs %}
+    {% cycle 'top-card' 'bottom-left-card' 'bottom-right-card' as card_class silent %}
+    <a href="{% url 'website:blog_detail' slug=blog.slug %}" class="news-card {{ card_class }}"
+       data-category="{{ blog.category.slug|default:'all' }}">
+        <div class="news-card-img-wrapper">
+            {% if blog.image %}
+            <img src="{{ blog.image.url }}" alt="{{ blog.title }}" class="news-card-img">
+            {% else %}
+            <img src="{% static 'website/images/news1.png' %}" alt="{{ blog.title }}" class="news-card-img">
+            {% endif %}
+        </div>
+        <div class="news-card-content">
+            <img src="{% static 'website/images/s-vector.svg' %}" class="news-vector-bg" alt="">
+            {% if blog.tag %}<span class="news-badge">{{ blog.tag }}</span>{% endif %}
+            <h3 class="news-card-title">
+                <span class="en-content">{{ blog.title }}</span>
+                <span class="ar-content">{{ blog.title_ar|default:blog.title }}</span>
+            </h3>
+            <p class="news-card-meta">
+                <span class="en-content">
+                    {% if blog.date %}Published on {{ blog.date|date:"d M Y" }}{% endif %}
+                    {% if blog.time_to_read %}&ndash; {{ blog.time_to_read }} read{% endif %}
+                </span>
+                <span class="ar-content">
+                    {% if blog.date %}نُشر بتاريخ {{ blog.date|date:"d M Y" }}{% endif %}
+                    {% if blog.time_to_read_ar %}&ndash; {{ blog.time_to_read_ar }}{% elif blog.time_to_read %}&ndash; {{ blog.time_to_read }} قراءة{% endif %}
+                </span>
+            </p>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+{% else %}
+<div class="text-center py-5">
+    <p style="color:#666;font-size:18px;">
+        <span class="en-content">No articles found. Check back soon!</span>
+        <span class="ar-content">لم يتم العثور على مقالات. تحقق مرة أخرى قريباً!</span>
+    </p>
+</div>
+{% endif %}

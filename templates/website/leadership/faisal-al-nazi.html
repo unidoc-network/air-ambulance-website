@@ -1,0 +1,93 @@
+{% extends 'website/layout/base.html' %}
+{% load static %}
+{% block title %}Faisal Al Anazi | Leadership | Bluedot{% endblock %}
+{% block meta_description %}Meet Faisal bin Fahad Al Anazi, General Manager – Saudi Arabia at Bluedot.{% endblock %}
+{% block content %}
+
+<style>
+        .leader-detail-sec {
+            background-color: #f2f5f8;
+            min-height: calc(100vh - 400px);
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+        }
+
+        .leader-detail-card {
+            text-align: center;
+            width: 100%;
+            padding-top: 120px;
+        }
+
+        .leader-detail-img {
+            width: 250px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            margin: auto;
+        }
+
+        .leader-detail-name {
+            font-size: 45px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: #000;
+            font-family: 'Aeonik';
+            padding-top: 20px;
+        }
+
+        .leader-detail-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #000;
+            margin-bottom: 40px;
+        }
+
+        .leader-detail-bio {
+            max-width: 730px;
+            margin: 0 auto;
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.2;
+            color: #153c5e;
+            font-weight: 400;
+            font-family: 'Aeonik';
+
+        }
+    </style>
+    <section class="leader-detail-sec">
+        <div class="container">
+            <div class="leader-detail-card">
+                <img src="{% static 'website/images/leader8.png' %}" alt="Faisal al nazi" class="leader-detail-img">
+                <h1 class="leader-detail-name en-content">Faisal bin Fahad Al Anazi</h1>
+                <h1 class="leader-detail-name ar-content">فيصل بن فهد العنزي
+                </h1>
+
+                <h5 class="leader-detail-title en-content">General Manager – Saudi Arabia</h5>
+                <h5 class="leader-detail-title ar-content">المدير العام – المملكة العربية السعودية</h5>
+
+                <div class="leader-detail-bio en-content">
+                    <p>A healthcare operations leader focused on advancing patient access to specialised medical
+                        services across Saudi Arabia and international markets. With more than 14 years of experience in
+                        healthcare operations, patient services, medical case management, and insurance coordination,
+                        Faisal has successfully led complex healthcare and patient transportation initiatives throughout
+                        the Kingdom. As General Manager of Universal Arabia Medical Services (UAMS), a Bluedot company,
+                        he is driving the expansion of medical assistance, patient transfer, and air ambulance services
+                        while strengthening the organisation's position within Saudi Arabia's healthcare ecosystem.</p>
+                </div>
+                <div class="leader-detail-bio ar-content">
+                    <p>مدير متميز في إدارة العمليات الصحية، يركز على تعزيز فرص وصول المرضى إلى الخدمات الطبية المتخصصة
+                        في جميع أنحاء المملكة العربية السعودية والأسواق الدولية. يمتلك فيصل خبرة تمتد لأكثر من 14 عاماً
+                        في مجالات العمليات الصحية، وخدمات المرضى، وإدارة الحالات الطبية، والتنسيق التأميني، حيث نجح في
+                        قيادة مبادرات معقدة في مجالي الرعاية الصحية ونقل المرضى في كافة أرجاء المملكة. وبصفته مديراً
+                        عاماً لشركة "العالمية العربية للخدمات الطبية" (UAMS)، وهي إحدى شركات مجموعة "بلودوت" (Bluedot)،
+                        يتولى قيادة جهود التوسع في خدمات المساعدة الطبية، ونقل المرضى، والإسعاف الجوي، مع تعزيز مكانة
+                        المؤسسة وترسيخ حضورها ضمن منظومة الرعاية الصحية في المملكة العربية السعودية.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+<div class="row" dir="rtl">
+    <div class="col-md-12">
+
+        <!-- Arabic Title & Location -->
+        <div class="career-detail-section mb-4">
+            <h6 class="font-weight-bold border-bottom pb-2 mb-3">المسمى الوظيفي والموقع</h6>
+            <p class="fw-semibold mb-1">{% if career.title_ar %}{{career.title_ar}}{% else %}<span class="text-muted fst-italic">لا يوجد</span>{% endif %}</p>
+            {% if career.location_ar %}<p class="text-muted small">{{career.location_ar}}</p>{% endif %}
+        </div>
+
+        <!-- Arabic Listing Description -->
+        <div class="career-detail-section mb-4">
+            <h6 class="font-weight-bold border-bottom pb-2 mb-3">وصف الإعلان (بطاقة القائمة)</h6>
+            <div class="text-muted" style="white-space: pre-wrap;">
+                {% if career.listing_description_ar %}{{career.listing_description_ar}}{% else %}<span class="fst-italic">لا يوجد وصف للإعلان.</span>{% endif %}
+            </div>
+        </div>
+
+        <!-- Arabic Full Description -->
+        <div class="career-detail-section mb-4">
+            <h6 class="font-weight-bold border-bottom pb-2 mb-3">الوصف الكامل للوظيفة</h6>
+            <div class="text-muted">
+                {% if career.description_ar %}
+                    {{career.description_ar|safe}}
+                {% else %}
+                    <p class="fst-italic">لا يوجد وصف كامل للوظيفة.</p>
+                {% endif %}
+            </div>
+        </div>
+
+    </div>
+</div>

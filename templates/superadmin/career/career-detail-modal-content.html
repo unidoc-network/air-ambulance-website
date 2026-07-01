@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-md-12">
+
+        <!-- English Detail -->
+        <div class="career-detail-section mb-4">
+            <h6 class="font-weight-bold border-bottom pb-2 mb-3">Full Job Description (English)</h6>
+            <div class="text-muted">
+                {{ career.description|safe }}
+            </div>
+        </div>
+
+        <!-- Arabic Detail -->
+        {% if career.description_ar %}
+        <div class="career-detail-section mb-4">
+            <h6 class="font-weight-bold border-bottom pb-2 mb-3 text-end">الوصف الكامل للوظيفة (عربي)</h6>
+            <div class="text-muted text-end" dir="rtl">
+                {{ career.description_ar|safe }}
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+</div>

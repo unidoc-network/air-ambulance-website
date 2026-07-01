@@ -1,0 +1,261 @@
+{% extends 'website/layout/base.html' %}
+{% load static %}{% block title %}Our Fleet | Bluedot Air Ambulance{% endblock %}
+{% block meta_description %}View the full Bluedot fleet of fixed-wing and rotary aircraft used for medical transport missions.{% endblock %}
+{% block content %}
+
+<!-- ========== FLEET BANNER ========== -->
+    <section class="fleet-hero-section">
+        <div class="container">
+            <h1 class="fleet-hero-title">Meet our fleet</h1>
+        </div>
+        <div class="fleet-hero-image-wrap">
+            <img src="{% static 'website/images/fleet-banner.png' %}" alt="Bluedot Fleet Banner" class="fleet-hero-img">
+        </div>
+    </section>
+
+    <!-- ========== EXPLORE FLEET SECTION ========== -->
+    <section class="fleet-explore-section">
+        <div class="container">
+            <!-- Header Row -->
+            <div class="row mb-5">
+                <div class="col-lg-6 offset-lg-6 text-lg-start">
+                    <h2 class="fleet-explore-heading">
+                        Explore our fleet of aircraft that power<br>air medical missions around the world
+                    </h2>
+                </div>
+            </div>
+
+            <!-- Fleet Card -->
+            <div class="fleet-card-container" style="background-image: url('{% static 'website/images/f1.png' %}');">
+                <div class="fleet-card-content">
+                    <div class="fleet-card-text">
+                        <h3>Bombardier Challenger 605</h3>
+                        <p>An impressive jet with the widest cabin in its category, offering outstanding performance
+                            with cost efficiency matching that of an appreciably smaller jet.</p>
+                    </div>
+
+                    <div class="fleet-stats-grid">
+                        <div class="fleet-stat-box">
+                            <span class="stat-main">8 Hrs</span>
+                            <span class="stat-sub">Flight Hours</span>
+                        </div>
+                        <div class="fleet-stat-box">
+                            <span class="stat-main">4,000 Nm</span>
+                            <span class="stat-sub">Max Range</span>
+                        </div>
+                        <div class="fleet-stat-box">
+                            <span class="stat-main">41,000 Ft</span>
+                            <span class="stat-sub">Max Altitude</span>
+                        </div>
+                        <div class="fleet-stat-box">
+                            <span class="stat-main">28 Ft 5 In</span>
+                            <span class="stat-sub">Cabin Length</span>
+                        </div>
+                        <div class="fleet-stat-box">
+                            <span class="stat-main">6 Ft 1 In</span>
+                            <span class="stat-sub">Cabin Height</span>
+                        </div>
+                        <div class="fleet-stat-box">
+                            <span class="stat-main">8 Ft 2 In</span>
+                            <span class="stat-sub">Cabin Width</span>
+                        </div>
+                        <div class="fleet-stat-box span-2">
+                            <span class="stat-main">1 Patient + 2 Medical Crew<br>+ 4 Co-Passengers</span>
+                            <span class="stat-sub">Passenger Capacity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fleet Card 2: Bombardier Challenger 604 -->
+            <div class="fleet-card-container fleet-card-right" style="background-image: url('{% static 'website/images/f2.png' %}');">
+                <div class="fleet-card-content">
+                    <div class="fleet-card-text">
+                        <h3>Bombardier Challenger 604</h3>
+                        <p>Offering a productive in-flight experience for flights up to 7.5 hours in a generous cabin
+                            space featuring breathable, articulating seats and large windows for optimal lighting.</p>
+                    </div>
+
+                    <div class="fleet-stats-grid">
+                        <div class="fleet-stat-box">
+                            <span class="stat-main">8 Hrs</span>
+                            <span class="stat-sub">Flight Hours</span>
+                        </div>
+                        <div class="fleet-stat-box">
+                            <span class="stat-main">4,000 Nm</span>
+                            <span class="stat-sub">Max Range</span>
+                        </div>
+                        <div class="fleet-stat-box">
+                            <span class="stat-main">41,000 Ft</span>
+                            <span class="stat-sub">Max Altitude</span>
+                        </div>
+                        <div class="fleet-stat-box">
+                            <span class="stat-main">28 Ft 4 In</span>
+                            <span class="stat-sub">Cabin Length</span>
+                        </div>
+                        <div class="fleet-stat-box">
+                            <span class="stat-main">6 Ft 1 In</span>
+                            <span class="stat-sub">Cabin Height</span>
+                        </div>
+                        <div class="fleet-stat-box">
+                            <span class="stat-main">8 Ft 2 In</span>
+                            <span class="stat-sub">Cabin Width</span>
+                        </div>
+                        <div class="fleet-stat-box span-2">
+                            <span class="stat-main">1 Patient + 2 Medical Crew<br>+ 4 Co-Passengers</span>
+                            <span class="stat-sub">Passenger Capacity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fleet Card 3: Beechcraft King Air C200 -->
+            <div class="fleet-card-container" style="background-image: url('{% static 'website/images/f3.png' %}');">
+                <div class="fleet-card-content">
+                    <div class="fleet-card-text">
+                        <h3>Beechcraft King Air C200</h3>
+                        <p>A versatile twin-turboprop aircraft well suited for short- and medium-range missions,
+                            offering excellent reliability, cabin accessibility, and performance from shorter runways.
+                        </p>
+                    </div>
+
+                    <div class="fleet-stats-grid">
+                        <div class="fleet-stat-box">
+                            <span class="stat-main">5 Hrs</span>
+                            <span class="stat-sub">Flight Hours</span>
+                        </div>
+                        <div class="fleet-stat-box">
+                            <span class="stat-main">1,720 Nm</span>
+                            <span class="stat-sub">Max Range</span>
+                        </div>
+                        <div class="fleet-stat-box">
+                            <span class="stat-main">35,000 Ft</span>
+                            <span class="stat-sub">Max Altitude</span>
+                        </div>
+                        <div class="fleet-stat-box">
+                            <span class="stat-main">16 Ft 7 In</span>
+                            <span class="stat-sub">Cabin Length</span>
+                        </div>
+                        <div class="fleet-stat-box">
+                            <span class="stat-main">4 Ft 10 In</span>
+                            <span class="stat-sub">Cabin Height</span>
+                        </div>
+                        <div class="fleet-stat-box">
+                            <span class="stat-main">4 Ft 6 In</span>
+                            <span class="stat-sub">Cabin Width</span>
+                        </div>
+                        <div class="fleet-stat-box span-2">
+                            <span class="stat-main">1 Patient + 2 Medical Crew<br>+ Up To 2 Co-Passengers</span>
+                            <span class="stat-sub">Passenger Capacity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fleet Card 4: Beechcraft King Air C90 -->
+            <div class="fleet-card-container fleet-card-right" style="background-image: url('{% static 'website/images/f4.png' %}');">
+                <div class="fleet-card-content">
+                    <div class="fleet-card-text">
+                        <h3>Beechcraft King Air C90</h3>
+                        <p>A reliable twin-turboprop commonly used for short-to-medium medevac missions thanks to its
+                            efficiency, accessibility, and operational flexibility.</p>
+                    </div>
+
+                    <div class="fleet-stats-grid">
+                        <div class="fleet-stat-box">
+                            <span class="stat-main">4 Hrs</span>
+                            <span class="stat-sub">Flight Hours</span>
+                        </div>
+                        <div class="fleet-stat-box">
+                            <span class="stat-main">1,260 Nm</span>
+                            <span class="stat-sub">Max Range</span>
+                        </div>
+                        <div class="fleet-stat-box">
+                            <span class="stat-main">30,000 Ft</span>
+                            <span class="stat-sub">Max Altitude</span>
+                        </div>
+                        <div class="fleet-stat-box">
+                            <span class="stat-main">11 Ft 10 In</span>
+                            <span class="stat-sub">Cabin Length</span>
+                        </div>
+                        <div class="fleet-stat-box">
+                            <span class="stat-main">4 Ft 10 In</span>
+                            <span class="stat-sub">Cabin Height</span>
+                        </div>
+                        <div class="fleet-stat-box">
+                            <span class="stat-main">4 Ft 6 In</span>
+                            <span class="stat-sub">Cabin Width</span>
+                        </div>
+                        <div class="fleet-stat-box span-2">
+                            <span class="stat-main">1 Patient + 2 Medical Crew<br>+ 1 Co-Passenger</span>
+                            <span class="stat-sub">Passenger Capacity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ========== FOOTER ========== -->
+
+{% endblock %}
+{% block extra_scripts %}
+
+<script>
+        const servicesSwiper = new Swiper('.servicesSwiper', {
+            slidesPerView: 1.15,
+            centeredSlides: true,
+            spaceBetween: 24,
+            loop: true,
+            speed: 600,
+            navigation: {
+                nextEl: '#servicesNext',
+                prevEl: '#servicesPrev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1.3,
+                    spaceBetween: 28,
+                },
+                992: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 32,
+                },
+                1200: {
+                    slidesPerView: 1.6,
+                    spaceBetween: 40,
+                },
+            },
+        });
+
+        // Testimonials Swiper
+        const testiSwiper = new Swiper('.testiSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 24,
+            speed: 600,
+            navigation: {
+                nextEl: '#testiNext',
+                prevEl: '#testiPrev',
+            },
+            pagination: {
+                el: '.testi-pagination',
+                type: 'fraction',
+                renderFraction: function (currentClass, totalClass) {
+                    return '<span class="' + currentClass + '"></span> / <span class="' + totalClass + '"></span>';
+                }
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 24,
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 24,
+                }
+            }
+        });
+    </script>
+{% endblock %}
+

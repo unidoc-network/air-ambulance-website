@@ -1,0 +1,174 @@
+<input type="hidden" id="url" name="url" value="{{request.path}}">
+<input type="hidden" id="page" name="page" value="{{page}}">
+
+<table class="table border-top table-bordered mb-0 table-hover">
+    <thead>
+        <tr>
+            <th>SL NO</th>
+            <th class="d-none d-lg-table-cell">IMAGE</th>
+            <th>TITLE</th>
+            <th>CATEGORY</th>
+            <th>DATE</th>
+            <th>EN CONTENT</th>
+            <th>AR DATA</th>
+            <th>STATUS</th>
+            <th>ACTION</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if datas %}
+            {% for data in datas %}
+            <tr>
+                <td>{{forloop.counter0|add:datas.start_index}}</td>
+                <td class="d-none d-lg-table-cell">
+                    {% if data.image %}
+                    <div class="menu-img-preview" style="width: 80px; height: 60px; margin: 0 auto; overflow: hidden; border-radius: 6px; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <a href="{{data.image.url}}" data-lightbox="image-{{ forloop.counter }}">
+                            <img src="{{data.image.url}}" style="width: 100%; height: 100%; object-fit: cover;">
+                        </a>
+                    </div>
+                    {% endif %}
+                </td>
+                <td><div style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{data.title}}</div></td>
+                <td><span class="badge bg-info-transparent rounded-pill px-3" style="color: #059669; font-weight: 600;">{{data.category.name|default:"Uncategorized"}}</span></td>
+
+                <td>{{data.date|date:"d M, Y"}}</td>
+
+                <!-- English Content Button -->
+                <td>
+                    <a href="javascript:void(0)" class="btn btn-view btn-icon" data-bs-toggle="modal" data-bs-target="#blogModal{{data.id}}" title="View English Content">
+                        <i class="fe fe-file-text"></i>
+                    </a>
+                </td>
+
+                <!-- Arabic Data Button -->
+                <td>
+                    <a href="javascript:void(0)" class="btn btn-icon" style="background:#1a3d5c;color:#fff;border-radius:6px;width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;" data-bs-toggle="modal" data-bs-target="#blogArModal{{data.id}}" title="View Arabic Data">
+                        ع
+                    </a>
+                </td>
+
+                <td>
+                    <div class="material-switch">
+                        <input id="blogStatus{{data.id}}" name="blogStatus" type="checkbox" {% if data.is_active %}checked onclick="statuschange({{data.id}},2)"{% else %}onclick="statuschange({{data.id}},1)" {% endif %}  />
+                        <label for="blogStatus{{data.id}}" class="label-success"></label>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn-list">
+                        <a class="btn btn-edit btn-icon" href="{% url 'superadmin:NewsUpdate' data.id %}">
+                            <i class="side-menu__icon fe fe-edit"></i>
+                        </a>
+                        <a class="btn btn-delete btn-icon" href="javascript:void(0)" onclick="delete_modal({{data.id}})">
+                            <i class="side-menu__icon fe fe-trash-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- English Content Modal -->
+                    <div class="modal fade" id="blogModal{{data.id}}" tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-md" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">News Content (English)</h5>
+                                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="blog-content-preview" style="max-height: 400px; overflow-y: auto; text-align: left;">
+                                        {% if data.content %}
+                                            {{data.content|safe}}
+                                        {% else %}
+                                            <p class="text-center text-muted">No content available.</p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="sa-btn sa-btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Arabic Data Modal -->
+                    <div class="modal fade" id="blogArModal{{data.id}}" tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-md" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">المحتوى العربي</h5>
+                                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="blog-content-preview" style="max-height: 400px; overflow-y: auto;" dir="rtl">
+
+                                        {% if data.title_ar %}
+                                        <p class="fw-semibold mb-1" style="font-size:1rem;">{{data.title_ar}}</p>
+                                        {% if data.time_to_read_ar %}<p class="text-muted small mb-3">{{data.time_to_read_ar}}</p>{% endif %}
+                                        <hr>
+                                        {% endif %}
+
+                                        {% if data.content_ar %}
+                                            {{data.content_ar|safe}}
+                                        {% else %}
+                                            <p class="text-center text-muted">لا يوجد محتوى عربي.</p>
+                                        {% endif %}
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="sa-btn sa-btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </td>
+            </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td colspan="9" align="center" class="no-data">No Data</td>
+            </tr>
+        {% endif %}
+    </tbody>
+</table>
+
+{% if datas.paginator.count %}
+<div class="card-body">
+
+    <span class="pagination-info">Showing {{ datas.start_index }}-{{ datas.end_index }} of {{ datas.paginator.count }}</span>
+    {% if datas.has_other_pages %}
+    <ul class="pagination pagination-modern mb-0">
+        {% if datas.has_previous %}
+        <li class="page-item page-prev">
+            <a class="page-link" href="javascript:void(0)" onclick="return filterblog('{{ datas.previous_page_number }}');" tabindex="-1">Prev</a>
+        </li>
+        {% else %}
+        <li class="page-item page-prev disabled">
+            <span class="page-link" tabindex="-1">Prev</span>
+        </li>
+        {% endif %}
+
+        {% for i in datas.paginator.page_range %}
+            {% if datas.number == i %}
+            <li class="page-item active"><span class="page-link">{{ i }}</span></li>
+            {% else %}
+            <li class="page-item"><a class="page-link" href="javascript:void(0)" onclick="return filterblog('{{ i }}');">{{i}}</a></li>
+            {% endif %}
+        {% endfor %}
+
+        {% if datas.has_next %}
+        <li class="page-item page-next">
+            <a class="page-link" href="javascript:void(0)" onclick="return filterblog('{{ datas.next_page_number }}');">Next</a>
+        </li>
+        {% else %}
+        <li class="page-item page-next disabled"><span class="page-link">Next</span></li>
+        {% endif %}
+    </ul>
+    {% endif %}
+</div>
+{% endif %}
+
+

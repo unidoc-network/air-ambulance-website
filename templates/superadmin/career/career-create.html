@@ -1,0 +1,161 @@
+{% include 'superadmin/layout/header.html' %}
+
+<div class="main-content app-content mt-0">
+    <div class="side-app">
+        <div class="main-container container-fluid">
+
+            <div class="page-header">
+                <h1 class="page-title">{% if data %}Edit{% else %}Add{% endif %} Career Listing</h1>
+                <div>
+                    <a class="sa-btn sa-btn-module" href="{% url 'superadmin:CareerList' %}">
+                        <i class="side-menu__icon fe fe-eye mx-1"></i>View All
+                    </a>
+                </div>
+            </div>
+
+            <form method="post">
+                {% csrf_token %}
+                <div class="row">
+
+                    <!-- ── BASIC DETAILS ─────────────────────────────── -->
+                    <div class="col-12 mb-4">
+                        <div class="card mb-0">
+                            <div class="card-header border-bottom-0">
+                                <h3 class="card-title">Basic Details</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+
+                                    <!-- Job Title EN -->
+                                    <div class="form-group col-lg-4 col-md-6 col-12">
+                                        <label class="form-label">Job Title (English) <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" name="title" required value="{{data.title}}" placeholder="e.g. Flight Physician">
+                                    </div>
+
+                                    <!-- Job Title AR -->
+                                    <div class="form-group col-lg-4 col-md-6 col-12">
+                                        <label class="form-label">المسمى الوظيفي (عربي) <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control text-end" name="title_ar" required value="{{data.title_ar}}" placeholder="مثال: طبيب رحلات" dir="rtl">
+                                    </div>
+
+                                    <!-- Close Date -->
+                                    <div class="form-group col-lg-4 col-md-6 col-12">
+                                        <label class="form-label">Close Date <span class="text-danger">*</span></label>
+                                        <input type="date" class="form-control" name="date" required value="{{data.date|date:'Y-m-d'}}">
+                                    </div>
+
+                                    <!-- Location EN -->
+                                    <div class="form-group col-lg-6 col-md-6 col-12">
+                                        <label class="form-label">Location (English) <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" name="location" required value="{{data.location}}" placeholder="e.g. Dubai, UAE">
+                                    </div>
+
+                                    <!-- Location AR -->
+                                    <div class="form-group col-lg-6 col-md-6 col-12">
+                                        <label class="form-label">الموقع (عربي) <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control text-end" name="location_ar" required value="{{data.location_ar}}" placeholder="مثال: دبي، الإمارات" dir="rtl">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ── LISTING DESCRIPTION (Short Card Summary) ──── -->
+                    <div class="col-lg-6 col-12 mb-4">
+                        <div class="card h-100 mb-0">
+                            <div class="card-header border-bottom-0">
+                                <h3 class="card-title">Listing Description — English <span class="text-danger">*</span></h3>
+                                <p class="text-muted small mb-0 mt-1">Short summary shown on job listing cards</p>
+                            </div>
+                            <div class="card-body">
+                                <textarea class="form-control" name="listing_description" rows="6" required placeholder="Brief job summary shown on the careers listing page...">{{data.listing_description}}</textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mb-4">
+                        <div class="card h-100 mb-0">
+                            <div class="card-header border-bottom-0">
+                                <h3 class="card-title">وصف الإعلان — عربي <span class="text-danger">*</span></h3>
+                                <p class="text-muted small mb-0 mt-1">ملخص قصير يظهر في بطاقة الإعلان الوظيفي</p>
+                            </div>
+                            <div class="card-body">
+                                <textarea class="form-control text-end" name="listing_description_ar" rows="6" required dir="rtl" placeholder="ملخص موجز يظهر في صفحة قائمة الوظائف...">{{data.listing_description_ar}}</textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ── DETAIL DESCRIPTION (Full Rich Text) ───────── -->
+                    <div class="col-12 mb-4">
+                        <div class="card mb-0">
+                            <div class="card-header border-bottom-0">
+                                <h3 class="card-title">Full Job Description — English <span class="text-danger">*</span></h3>
+                                <p class="text-muted small mb-0 mt-1">Full content shown on the job detail page (Your Mission, Key Responsibilities, Requirements, etc.)</p>
+                            </div>
+                            <div class="card-body">
+                                <textarea id="career_summernote_en" name="description" required>{{data.description|safe}}</textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mb-4">
+                        <div class="card mb-0">
+                            <div class="card-header border-bottom-0">
+                                <h3 class="card-title">الوصف الكامل للوظيفة — عربي <span class="text-danger">*</span></h3>
+                                <p class="text-muted small mb-0 mt-1">المحتوى الكامل الذي يظهر في صفحة تفاصيل الوظيفة</p>
+                            </div>
+                            <div class="card-body">
+                                <textarea id="career_summernote_ar" name="description_ar" required>{{data.description_ar|safe}}</textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ── ACTION BUTTONS ────────────────────────────── -->
+                    <div class="col-12 mb-4">
+                        <button class="sa-btn sa-btn-primary" type="submit">
+                            <i class="fe fe-check-circle me-1"></i>Save Listing
+                        </button>
+                        <a href="{% url 'superadmin:CareerList' %}" class="btn btn-light ms-2">Cancel</a>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+{% include 'superadmin/layout/footer.html' %}
+
+<script>
+    $(document).ready(function() {
+
+        var toolbarConfig = [
+            ['style', ['style']],
+            ['font', ['bold', 'italic', 'underline', 'clear']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['insert', ['link']],
+            ['view', ['fullscreen', 'codeview', 'help']]
+        ];
+
+        // English detail description
+        $('#career_summernote_en').summernote({
+            height: 350,
+            toolbar: toolbarConfig,
+        });
+
+        // Arabic detail description (RTL)
+        $('#career_summernote_ar').summernote({
+            height: 350,
+            toolbar: toolbarConfig,
+            callbacks: {
+                onInit: function() {
+                    var $editor = $('#career_summernote_ar').next('.note-editor');
+                    $editor.find('.note-editable').attr('dir', 'rtl');
+                }
+            }
+        });
+
+    });
+</script>

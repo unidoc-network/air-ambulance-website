@@ -1,0 +1,155 @@
+{% load static %}
+        </div>
+
+      
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-12 col-sm-12 text-center" style="font-size:13px;color:#718096;">
+                        Copyright &copy; <span id="year"></span> &nbsp;<a href="javascript:void(0)" style="font-weight:700;color:#1D9ADD;text-decoration:none;">Bluedot</a>&nbsp; — All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- FOOTER END -->
+
+    </div>
+
+    <!-- BACK-TO-TOP -->
+    <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+    <!-- GLOBAL TOAST CONTAINER -->
+    <div class="global-toast-container">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="sa-toast toast-{% if message.tags %}{{ message.tags }}{% else %}info{% endif %}" id="toast-{{ forloop.counter }}">
+                    <i class="fas {% if message.tags == 'error' %}fa-times-circle{% elif message.tags == 'success' %}fa-check-circle{% else %}fa-info-circle{% endif %}"></i>
+                    <div class="sa-toast-content">
+                        <p>{{ message }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <!-- JQUERY JS -->
+    <script src="{% static 'superadmin/assets/js/jquery.min.js' %}"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Auto-hide messages
+            $('.sa-toast').each(function(index) {
+                var element = $(this);
+                setTimeout(function() {
+                    element.addClass('fade-out');
+                    setTimeout(function() {
+                        element.remove();
+                    }, 500);
+                }, 4000 + (index * 500));
+            });
+        });
+    </script>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="{% static 'superadmin/assets/plugins/bootstrap/js/popper.min.js' %}"></script>
+    <script src="{% static 'superadmin/assets/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+
+    <!-- SPARKLINE JS-->
+    <script src="{% static 'superadmin/assets/js/jquery.sparkline.min.js' %}"></script>
+
+    <!-- Sticky js -->
+    <script src="{% static 'superadmin/assets/js/sticky.js' %}"></script>
+
+
+
+    <!-- SIDEBAR JS -->
+    <script src="{% static 'superadmin/assets/plugins/sidebar/sidebar.js' %}"></script>
+
+   
+   
+
+    <!-- INTERNAL SELECT2 JS -->
+    <script src="{% static 'superadmin/assets/plugins/select2/select2.full.min.js' %}"></script>
+
+
+
+  
+
+     <!-- INTERNAL Bootstrap-Datepicker js-->
+     <script src="{% static 'superadmin/assets/plugins/bootstrap-daterangepicker/daterangepicker.js' %}"></script>
+     
+       <!-- INTERNAL Bootstrap-Datepicker js-->
+    <script src="{% static 'superadmin/assets/plugins/bootstrap-datepicker/bootstrap-datepicker.js' %}"></script>
+    <!-- DATEPICKER JS -->
+    <script src="{% static 'superadmin/assets/plugins/date-picker/date-picker.js' %}"></script>
+    <script src="{% static 'superadmin/assets/plugins/date-picker/jquery-ui.js' %}"></script>
+    <script src="{% static 'superadmin/assets/plugins/input-mask/jquery.maskedinput.js' %}"></script>
+
+
+
+
+    <!-- INTERNAL Vector js -->
+    <script src="{% static 'superadmin/assets/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js' %}"></script>
+    <script src="{% static 'superadmin/assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js' %}"></script>
+
+    <!-- SIDE-MENU JS-->
+    <script src="{% static 'superadmin/assets/plugins/sidemenu/sidemenu.js' %}"></script>
+
+	<!-- TypeHead js -->
+	<!-- <script src="{% static 'superadmin/assets/plugins/bootstrap5-typehead/autocomplete.js"></script>
+    <script src="{% static 'superadmin/assets/js/typehead.js"></script> -->
+
+    <!-- INTERNAL INDEX JS -->
+    <!-- <script src="{% static 'superadmin/assets/js/index1.js"></script> -->
+
+     <!-- FILE UPLOADES JS -->
+    <script src="{% static 'superadmin/assets/plugins/fileuploads/js/fileupload.js' %}"></script>
+    <script src="{% static 'superadmin/assets/plugins/fileuploads/js/file-upload.js' %}"></script>
+
+     <!-- SELECT2 JS -->
+     <script src="{% static 'superadmin/assets/plugins/select2/select2.full.min.js' %}"></script>
+    <script src="{% static 'superadmin/assets/js/select2.js' %}"></script>
+
+       <!-- COLOR PICKER JS -->
+       <script src="{% static 'superadmin/assets/plugins/pickr-master/pickr.es5.min.js' %}"></script>
+    <script src="{% static 'superadmin/assets/js/picker.js' %}"></script>
+
+    <script src="{% static 'superadmin/assets/js/formelementadvnced.js' %}"></script>
+    <script src="{% static 'superadmin/assets/js/form-elements.js' %}"></script>
+    <!-- Color Theme js -->
+    <script src="{% static 'superadmin/assets/js/themeColors.js' %}"></script>
+
+ 
+    <!-- CUSTOM JS -->
+    <script src="{% static 'superadmin/assets/js/custom.js' %}"></script>
+   <script src="{% static 'superadmin/assets/plugins/summernote/summernote1.js' %}"></script>
+    <script src="{% static 'superadmin/assets/js/summernote.js' %}"></script>
+    <script src="{% static 'superadmin/assets/js/lightbox.min.js' %}"></script>
+    <script src="{% static 'superadmin/custom/custom.js' %}"></script>
+<script>
+    $('#colorpicker').spectrum({
+        color: '#000'
+    });
+    
+    </script>
+    <script type="text/javascript">
+ $('.inline-datepicker-example').datepicker({
+    format: "dd/mm/yyyy",
+  todayBtn: "linked",
+  language: "endinject",
+
+  todayHighlight: true,
+ }).on('changeDate', showTestDate);
+ 
+ function showTestDate(){
+  var value = $('#inline-datepicker-example').datepicker('getFormattedDate');
+  $("#showDate").html(value);
+  //$("#showDate").val(value);  for passing  input value
+
+}
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+{% include 'superadmin/layout/header.html' %}
+
+<!--app-content open-->
+<div class="main-content app-content mt-0">
+    <div class="side-app">
+
+        <!-- CONTAINER -->
+        <div class="main-container container-fluid">
+
+            <!-- PAGE-HEADER -->
+            <div class="page-header">
+                <h1 class="page-title">{% if data %}Edit{% else %}Add{% endif %} Category</h1>
+                <div>
+                    <a class="sa-btn sa-btn-module" href="{% url 'superadmin:CategoryList' %}">
+                        <i class="side-menu__icon fe fe-eye mx-1"></i>View All
+                    </a>
+                </div>
+            </div>
+            <!-- PAGE-HEADER END -->
+
+             <!-- FORM START -->
+             <form method="post">
+                 {% csrf_token %}
+                 <div class="row">
+
+                     <!-- DETAILS START -->
+                     <div class="col-xl-6 col-lg-8 col-md-10 col-12 mx-auto">
+                         <div class="card">
+                             <div class="card-header border-bottom-0">
+                                 <h3 class="card-title">Category Details</h3>
+                             </div>
+                             <div class="card-body">
+                                 <div class="row">
+ 
+                                      <div class="form-group col-lg-6 col-12">
+                                          <label class="form-label">Category Name (English) <span class="text-danger">*</span></label>
+                                          <input type="text" class="form-control" placeholder="Enter category name" name="name" required value="{{data.name}}">
+                                      </div>
+
+                                      <div class="form-group col-lg-6 col-12">
+                                          <label class="form-label">اسم التصنيف (عربي) <span class="text-danger">*</span></label>
+                                          <input type="text" class="form-control text-end" placeholder="أدخل اسم التصنيف" name="name_ar" required value="{{data.name_ar}}" dir="rtl">
+                                      </div>
+ 
+                                     <div class="col-12 border-top mt-4 pt-4">
+                                         <button class="sa-btn sa-btn-primary" type="submit">
+                                             <i class="fe fe-check-circle me-1"></i>Save Category
+                                         </button>
+                                         <a href="{% url 'superadmin:CategoryList' %}" class="btn btn-light ms-2">Cancel</a>
+                                     </div>
+ 
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+ 
+                 </div>
+             </form>
+            <!-- FORM END -->
+
+        </div>
+        <!-- CONTAINER END -->
+
+    </div>
+</div>
+<!--app-content close-->
+
+{% include 'superadmin/layout/footer.html' %}
