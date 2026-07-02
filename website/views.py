@@ -16,7 +16,7 @@ import sys
 # ── HOME ────────────────────────────────────────────────────────────────────
 class HomePageView(View):
     def get(self, request):
-        blogs = Blogs.objects.filter(is_active=True).order_by('-date', '-created_at')[:6]
+        blogs = Blogs.objects.filter(is_active=True).order_by('-date', '-created_at')[:3]
         categories = BlogCategory.objects.filter(is_active=True)
         context = {
             'path': 'home',
@@ -232,7 +232,7 @@ class CareerDetailView(View):
             resume=resume
         )
 
-        # 1. Send application details email to jaseemrahmanjr@gmail.com
+        # 1. Send application details email to mail@bluedotassist.com
         subject_owner = f"Blue Dot - New Career Application: {career.title}"
         body_owner = f"New career application received for position: {career.title}\n\n" \
                      f"Name: {name}\n" \
@@ -258,7 +258,7 @@ class CareerDetailView(View):
                 subject=subject_owner,
                 body=body_owner,
                 from_email=settings.DEFAULT_FROM_EMAIL,
-                to=['jaseemrahmanjr@gmail.com']
+                to=['mail@bluedotassist.com']
             )
             mail_owner.attach_alternative(html_owner, "text/html")
             
@@ -427,7 +427,7 @@ def is_ajax(request):
 # ── LEADERSHIP ───────────────────────────────────────────────────────────────
 class LeadershipDetailView(View):
     def get(self, request, slug, *args, **kwargs):
-        context = {'path': 'about'}
+        context = {'path': 'leadership'}
         # Map slug to template name
         template_name = f'website/leadership/{slug}.html'
         return render(request, template_name, context)
@@ -647,7 +647,7 @@ class SubmitEnquiryView(View):
             country=country
         )
 
-        # 1. Send Enquiry to jaseemrahmanjr@gmail.com
+        # 1. Send Enquiry to mail@bluedotassist.com
         # format of content:
         subject_owner = f"Blue Dot - New Enquiry ({country})"
         body_owner = f"New enquiry received from {country} page:\n\n" \
@@ -677,7 +677,7 @@ class SubmitEnquiryView(View):
                 subject=subject_owner,
                 body=body_owner,
                 from_email=settings.DEFAULT_FROM_EMAIL,
-                to=['jaseemrahmanjr@gmail.com'],
+                to=['mail@bluedotassist.com'],
                 reply_to=[email]
             )
             mail_owner.attach_alternative(html_owner, "text/html")
