@@ -24,7 +24,7 @@ from django.conf.urls import handler404
 from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
     path('superadmin/', include('superadmin.urls')),
     path('', include('website.urls')),
     path('superadmin', RedirectView.as_view(url='/superadmin/')),
