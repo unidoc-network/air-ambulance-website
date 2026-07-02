@@ -624,7 +624,7 @@ img {
     position: relative;
     z-index: 2;
     width: 100%;
-    padding: 217px 140px 100px;
+    padding: 217px 50px 100px;
 }
 
 .svc-card-1 {
@@ -692,8 +692,8 @@ img {
 }
 
 .hero-title {
-    font-size: 70px;
-    font-weight: 600;
+    font-size: 60px;
+    font-weight: 800;
     color: var(--white);
     line-height: 1.1;
     margin-bottom: 10px;
@@ -712,7 +712,7 @@ img {
 }
 
 .hero-description {
-    font-size: 26px;
+    font-size: 22px;
     color: white;
     max-width: 900px;
 
@@ -2036,7 +2036,7 @@ img {
 /* Responsive */
 @media (max-width: 991.98px) {
     .testi-layout {
-        flex-direction: column;
+        flex-direction: column !important;
         align-items: flex-start;
         gap: 36px;
     }
@@ -3430,6 +3430,7 @@ img {
     line-height: 1.5;
     margin-bottom: 10px;
     font-family: "Aeonik";
+    max-width: 480px;
 
 }
 
@@ -3563,7 +3564,7 @@ img {
 
 .highlight-value {
     display: block;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 500;
     font-family: "Aeonik";
     line-height: 1.2;
@@ -4205,7 +4206,9 @@ img {
    RESPONSIVE
    ======================================== */
 @media (max-width: 991.98px) {
-    .header-btn {
+
+    .header-btn,
+    html[dir="rtl"] .header-btn {
         display: none !important;
     }
 
@@ -4331,7 +4334,6 @@ img {
 
     .nav-drawer-actions {
         display: none;
-        /* Hide header top actions on very small screens, keep only close button */
     }
 
     .nav-drawer-content {
@@ -5290,6 +5292,7 @@ img {
     transform: translate(-50%, -100%);
     cursor: pointer;
     z-index: 10;
+    isolation: isolate;
 }
 
 .marker-pin {
@@ -5344,9 +5347,9 @@ img {
 
 .marker-card {
     position: absolute;
-    top: 100%;
+    bottom: 100%;
     left: 50%;
-    transform: translateX(-50%) translateY(10px);
+    transform: translateX(-50%) translateY(-10px);
     background: #fff;
     border-radius: 8px;
     padding: 24px;
@@ -5355,7 +5358,8 @@ img {
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    z-index: 20;
+    z-index: 9999;
+    margin-bottom: 8px;
 }
 
 /* Show card when active */
@@ -5499,7 +5503,7 @@ img {
 
 .hero-title-main {
     font-size: 68px;
-    font-weight: 400;
+    font-weight: 600;
     color: #000000;
     margin-bottom: 16px;
     letter-spacing: -1.5px;
@@ -6690,6 +6694,11 @@ img {
     letter-spacing: -3px;
 }
 
+html[dir="rtl"] .umen-title {
+    font-size: 80px;
+}
+
+
 .umen-subtitle {
     font-size: 20px;
     font-weight: 500;
@@ -6777,21 +6786,12 @@ img {
    Show .en-content only when English is active.
    ===================================================== */
 
-/* Arabic content is hidden by default */
-.ar-content {
+/* Arabic content is hidden by default (when not RTL) */
+html:not([dir="rtl"]) .ar-content {
     display: none !important;
 }
 
-/* English content is shown by default */
-.en-content {
-    display: revert;
-}
-
-/* When Arabic language is active */
-html[dir="rtl"] .ar-content {
-    display: revert !important;
-}
-
+/* English content is hidden when RTL is active */
 html[dir="rtl"] .en-content {
     display: none !important;
 }
@@ -6987,9 +6987,9 @@ html[dir="rtl"] .hero-buttons {
 }
 
 /* ── Services Slider ── */
-html[dir="rtl"] .svc-card {
+/* html[dir="rtl"] .svc-card {
     flex-direction: row-reverse;
-}
+} */
 
 html[dir="rtl"] .svc-card-text {
     text-align: right;
@@ -7020,7 +7020,7 @@ html[dir="rtl"] .accredited-wrapper {
 html[dir="rtl"] .accredited-left-inner {
     text-align: right;
     border-left: none;
-    border-right: 4px solid #0095D6;
+    /* border-right: 4px solid #0095D6; */
     padding-left: 0;
     padding-right: 32px;
 }
@@ -7196,9 +7196,9 @@ html[dir="rtl"] .coordination-card {
     align-items: flex-end;
 }
 
-html[dir="rtl"] .mission-stories-header {
+/* html[dir="rtl"] .mission-stories-header {
     flex-direction: row-reverse;
-}
+} */
 
 html[dir="rtl"] .mission-card-white {
     text-align: right;
@@ -7223,7 +7223,7 @@ html[dir="rtl"] .contact-banner-content {
 }
 
 html[dir="rtl"] .offices-title {
-    text-align: right;
+    text-align: left;
 }
 
 /* ── Roles/Careers page ── */
@@ -7444,6 +7444,7 @@ html[dir="rtl"] svg {
 .oman-worldwide-section {
     padding: 60px 0;
     padding-bottom: 0px;
+    padding-top: 10px;
 }
 
 .worldwide-box {
@@ -8394,6 +8395,9 @@ html[dir="rtl"] svg {
         padding: 80px 0 50px;
     }
 
+    html[dir="rtl"] .contact-title {
+        font-size: 24px;
+    }
 
 }
 
@@ -8447,9 +8451,13 @@ html[dir="rtl"] svg {
 
 @media (max-width: 767.98px) {
     .floating-buttons {
-        bottom: 20px;
+        bottom: 100px;
         right: 20px;
         gap: 10px;
+    }
+
+    .back-to-top {
+        right: 21px;
     }
 
     .whatsapp-float,
@@ -8468,6 +8476,8 @@ html[dir="rtl"] svg {
     font-size: 13px;
     padding: 5px 19px;
 }
+
+
 
 
 /* NEW/////////////////// */
@@ -8514,6 +8524,10 @@ html[dir="rtl"] .pl-7 {
     letter-spacing: 0.2;
 }
 
+html[dir="rtl"] .cabin-stat-main {
+    font-size: 70px;
+}
+
 @media (max-width: 767.98px) {
     .terms-title {
         font-size: 38px;
@@ -8522,6 +8536,27 @@ html[dir="rtl"] .pl-7 {
     .terms-white-card {
         padding: 80px 30px;
     }
+
+    .nav-lang {
+        display: none;
+    }
+
+    html[dir="rtl"] .header-hamburger {
+        margin-right: 15px;
+    }
+
+    .related-blog-section h3 {
+        font-size: 27px;
+        line-height: 44.4px;
+    }
+
+    html[dir="rtl"] .cabin-stat-main {
+        font-size: 50px;
+    }
+
+    .worldwide-content {
+        padding-left: 0px;
+    }
 }
 
 .footer-bottom-links {
@@ -8529,42 +8564,22 @@ html[dir="rtl"] .pl-7 {
     gap: 10px;
 }
 
-/* ── Legal Pages (Terms & Privacy) ── */
-.roles-content-section {
-    padding: 80px 0 100px;
-    background-color: #EDF2F6;
+/* html[dir="rtl"] .header-actions .header-btn{
+    display: none !important;
+} */
+
+.pb-50 {
+    padding-bottom: 60px;
 }
 
-.terms-white-card .join-us-title {
-    display: none; /* Remove stale placeholder heading */
+html[dir="rtl"] .hero-slide {
+    transform: scaleX(-1);
 }
 
-.terms-content p,
-.terms-content li {
-    font-family: 'Aeonik', sans-serif;
-    font-size: 17px;
-    font-weight: 400;
-    color: #1F1F1F;
-    line-height: 1.7;
-    margin-bottom: 14px;
+html[dir="rtl"] .hero-slide-content {
+    transform: scaleX(-1);
 }
 
-.terms-content h3 {
-    font-family: 'Aeonik', sans-serif;
-    font-size: 24px;
-    font-weight: 500;
-    color: #000;
-    margin-top: 40px;
-    margin-bottom: 12px;
-}
-
-.terms-content ul {
-    padding-left: 24px;
-    margin-bottom: 20px;
-}
-
-@media (max-width: 767.98px) {
-    .roles-content-section {
-        padding: 40px 0 60px;
-    }
+html[dir="rtl"] .related-blog-section h3 {
+    text-align: right;
 }
