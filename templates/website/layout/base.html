@@ -45,10 +45,10 @@
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    
-{% include 'website/layout/header.html' %}
-{% block content %}{% endblock %}
-{% include 'website/layout/footer.html' %}
+
+    {% include 'website/layout/header.html' %}
+    {% block content %}{% endblock %}
+    {% include 'website/layout/footer.html' %}
 
     <!-- ========== FOOTER END ========== -->
 
@@ -110,14 +110,14 @@
 
                     <div class="col-md-6">
                         <label class="form-label">Name</label>
-                        <input type="text" class="form-control" name="name" placeholder="ex: john" required>
+                        <input type="text" class="form-control" name="name" placeholder="john" required>
                     </div>
 
                     <div class="col-md-6">
                         <label class="form-label">Choose Services</label>
                         <div class="select-wrapper">
                             <select class="form-select" name="services" required>
-                                <option value="" selected disabled>ex: Air Ambulance</option>
+                                <option value="" selected disabled>Air Ambulance</option>
                                 <option value="Air Ambulance">Air Ambulance</option>
                                 <option value="Commercial Airline Transfer">Commercial Airline Transfer</option>
                                 <option value="Medical Escorts">Medical Escorts</option>
@@ -136,21 +136,23 @@
                             required>
                     </div>
 
-                       <div class="col-12 mt-1 mb-2">
-                                <button type="button" class="verify-email-btn" style="background-color: #009BE0; color: #FFF; border: none; padding: 10px 24px; border-radius: 24px; font-size: 14px; font-weight: 500; cursor: pointer; display: inline-block; font-family: 'Aeonik', sans-serif;">
-                                    <span class="en-content">Click here to verify your email</span>
-                                    <span class="ar-content">اضغط هنا للتحقق من بريدك الإلكتروني</span>
-                                </button>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="oman-verify-code">
-                                        <span class="en-content">Verify Code</span>
-                                        <span class="ar-content">رمز التحقق</span>
-                                    </label>
-                                    <input type="text" class="form-control" id="oman-verify-code" name="verify_code" placeholder="enter code">
-                                </div>
-                            </div>
+                    <div class="col-12 mt-1 mb-2">
+                        <button type="button" class="verify-email-btn"
+                            style="background-color: #009BE0; color: #FFF; border: none; padding: 10px 24px; border-radius: 24px; font-size: 14px; font-weight: 500; cursor: pointer; display: inline-block; font-family: 'Aeonik', sans-serif; margin-top: 10px;">
+                            <span class="en-content">Click here to verify your email</span>
+                            <span class="ar-content">اضغط هنا للتحقق من بريدك الإلكتروني</span>
+                        </button>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="oman-verify-code">
+                                <span class="en-content">Verify Code</span>
+                                <span class="ar-content">رمز التحقق</span>
+                            </label>
+                            <input type="text" class="form-control" id="oman-verify-code" name="verify_code"
+                                placeholder="enter code">
+                        </div>
+                    </div>
 
                     <div class="col-12">
                         <label class="form-label">Message</label>

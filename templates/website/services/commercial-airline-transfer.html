@@ -29,23 +29,32 @@
         </section>
 
         <div class="container service-counter">
-            <div class="global-ops-stats">
+           <div class="global-ops-stats">
                 <div class="global-ops-stat">
-                    <span class="global-ops-number count-up" data-target="60" data-suffix="+">0+</span>
-                    <span class="global-ops-label">Countries Served</span>
+                    <span class="global-ops-number count-up" data-target="2450" data-suffix="+">0+</span>
+                    <span class="global-ops-label en-content">Missions</span>
+                    <span class="global-ops-label ar-content">الدول التي نخدمها</span>
+
                 </div>
                 <div class="global-ops-stat">
-                    <span class="global-ops-number count-up" data-target="140" data-suffix="+">0+</span>
-                    <span class="global-ops-label">Cities Covered</span>
+                    <span class="global-ops-number count-up" data-target="90" data-suffix="+">0+</span>
+                    <span class="global-ops-label en-content">Countries Covered</span>
+                    <span class="global-ops-label ar-content">المدن المشمولة بالخدمة</span>
+
                 </div>
                 <div class="global-ops-stat">
-                    <span class="global-ops-number count-up" data-target="5500" data-suffix="+">0+</span>
-                    <span class="global-ops-label">World Wide Assists</span>
+                    <span class="global-ops-number count-up" data-target="160" data-suffix="+">0+</span>
+                    <span class="global-ops-label en-content">CITYS</span>
+                    <span class="global-ops-label ar-content">الحالات التي تم تنسيقها عالمياً</span>
+
                 </div>
                 <div class="global-ops-stat">
-                    <span class="global-ops-number count-up" data-target="32750" data-suffix="+"
+                    <span class="global-ops-number count-up" data-target="10000" data-suffix="+"
                         data-separator=",">0+</span>
-                    <span class="global-ops-label">Flight Hours</span>
+                    <span class="global-ops-label en-content">Worldwide Assist</span>
+                    <span class="global-ops-label ar-content">ساعات الطيران
+                    </span>
+
                 </div>
             </div>
         </div>
@@ -243,68 +252,61 @@
             </div>
         </section>
 
-        <!-- Behind Transfer Section -->
-        <section class="air-ambulance-info pt-0">
+        <!-- Mission Stories Section -->
+        <section class="mission-stories-section">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-5">
-                        <h2 class="info-tagline en-content">Behind every transfer is a person</h2>
-                        <h2 class="info-tagline ar-content">رعايتنا تتمحور حول الإنسان أولاً</h2>
+                <div class="mission-stories-header">
+                    <h2 class="mission-stories-title en-content">Behind every transfer is a person</h2>
+                    <p class="mission-stories-desc en-content">Every air medical transfer represents someone at a
+                        vulnerable
+                        moment, a patient, a family, and a network of clinicians working to ensure care continues
+                        safely. Here are examples of how we’ve supported patients and the organisations responsible for
+                        their care, across regions and borders.</p>
 
-                    </div>
-                    <div class="col-md-2">
-
-                    </div>
-                    <div class="col-md-5">
-                        <div class="info-description en-content">
-                            <p>Commercial airline medical transfers often support patients during recovery, long-term
-                                treatment, or planned relocation. Each journey represents a moment of trust placed in
-                                the coordination and decisions made on the patient’s behalf.</p>
-                            <p>Below are examples of how medically coordinated airline transfers have supported patients
-                                and organisations across regions.</p>
-                        </div>
-
-                        <div class="info-description ar-content">
-                            <p>كثير من رحلات النقل الطبي عبر الطيران التجاري تكون جزءاً من رحلة علاج أو تعافٍ طويلة، حيث
-                                يضع المرضى وعائلاتهم ثقتهم في كل قرار يتم اتخاذه لضمان رحلة آمنة ومستقرة.</p>
-                            <p>توضح الأمثلة التالية كيف ساهم النقل الطبي المنسق عبر الخطوط الجوية التجارية في دعم المرضى
-                                والمؤسسات عبر مختلف المناطق</p>
-                        </div>
-                    </div>
+                    <h2 class="mission-stories-title ar-content">خلف كل رحلة قصة إنسان</h2>
+                    <p class="mission-stories-desc ar-content">تمثل كل عملية نقل طبي جوي شخصاً يمر بلحظة ضعف؛ مريضاً،
+                        وعائلة، وشبكة
+                        من الأطباء الذين يعملون لضمان استمرار الرعاية بأمان. إليكم أمثلة على كيفية دعمنا للمرضى
+                        والمؤسسات المسؤولة عن رعايتهم، عبر الأقاليم والحدود</p>
                 </div>
 
-                <!-- Mission Cards -->
-                <div class="row g-4 mt-5">
+                <div class="row g-2">
                     <!-- Card 1 -->
                     <div class="col-lg-4">
                         <div class="mission-card-white">
-                            <h3 class="mission-card-title">Delhi to Hyderabad:<br>Emergency Liver Transplant Mission
+                            <h3 class="mission-card-title en-content">Delhi to Hyderabad:<br>Emergency Liver Transplant Mission
                             </h3>
-                            <a href="{% url 'website:blog_detail' slug='default' %}" class="btn-mission-story">Mission story</a>
+                             <h3 class="mission-card-title ar-content">من دلهي إلى حيدر أباد:<br>مهمة زراعة كبد طارئة
+                            </h3>
+                            <a href="{% url 'website:blog_detail' slug='default' %}" class="btn-mission-story en-content">Mission story</a>
+                            <a href="{% url 'website:blog_detail' slug='default' %}" class="btn-mission-story ar-content">قصة المهمة</a>
 
                             <img src="{% static 'website/images/s-vector.svg' %}" class="news-vector-bg" alt="">
-
                         </div>
                     </div>
                     <!-- Card 2 -->
                     <div class="col-lg-4">
                         <div class="mission-card-white">
-                            <h3 class="mission-card-title">A Lifeline from<br>Calicut to Riyadh</h3>
-                            <a href="{% url 'website:blog_detail' slug='default' %}" class="btn-mission-story">Mission story</a>
+                            <h3 class="mission-card-title en-content">A Lifeline from<br>Calicut to Riyadh</h3>
+                                <h3 class="mission-card-title ar-content">شريان حياة من<br>كاليكوت إلى الرياض
+                            </h3>
+                            <a href="{% url 'website:blog_detail' slug='default' %}" class="btn-mission-story en-content">Mission story</a>
+                            <a href="{% url 'website:blog_detail' slug='default' %}" class="btn-mission-story ar-content">قصة المهمة</a>
 
                             <img src="{% static 'website/images/s-vector.svg' %}" class="news-vector-bg" alt="">
-
                         </div>
                     </div>
                     <!-- Card 3 -->
                     <div class="col-lg-4">
                         <div class="mission-card-white">
-                            <h3 class="mission-card-title">Bringing a Critically Ill<br>Patient Safely Across Continents
+                            <h3 class="mission-card-title en-content">Bringing a Critically Ill<br>Patient Safely Across Continents
                             </h3>
-                            <a href="{% url 'website:blog_detail' slug='default' %}" class="btn-mission-story">Mission story</a>
+                            <h3 class="mission-card-title ar-content">نقل مريض بحالة حرجة بأمان عبر القارات
+                            </h3>
+                            <a href="{% url 'website:blog_detail' slug='default' %}" class="btn-mission-story en-content">Mission story</a>
+                            <a href="{% url 'website:blog_detail' slug='default' %}" class="btn-mission-story ar-content">قصة المهمة</a>
 
                             <img src="{% static 'website/images/s-vector.svg' %}" class="news-vector-bg" alt="">
-
                         </div>
                     </div>
                 </div>
@@ -313,14 +315,20 @@
 
 
 
-        <!-- ========== FAQ SECTION ========== -->
+       <!-- ========== FAQ SECTION ========== -->
         <section class="faq-section" id="faq">
             <div class="container">
                 <div class="row">
                     <!-- Left Content -->
                     <div class="col-lg-5 mb-5 mb-lg-0">
-                        <span class="faq-subtitle">Frequently Asked Questions</span>
-                        <h2 class="faq-heading">What else do you<br>need to know?</h2>
+                        <span class="faq-subtitle en-content">Frequently Asked Questions</span>
+                        <span class="faq-subtitle ar-content">الأسئلة الشائعة
+                        </span>
+
+                        <h2 class="faq-heading en-content">What else do you<br>need to know?</h2>
+                        <h2 class="faq-heading ar-content">ما الذي تحتاج إلى معرفته أيضاً؟
+                        </h2>
+
                     </div>
                     <!-- Right Accordion -->
                     <div class="col-lg-7">
@@ -329,18 +337,30 @@
                             <!-- Item 1 -->
                             <div class="accordion-item faq-item">
                                 <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button collapsed faq-button" type="button"
+                                    <button class="accordion-button collapsed faq-button en-content" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
                                         aria-controls="collapseOne">
-                                        What should I focus on when choosing a<br>medical transfer Service?
+                                        ⁠What services do you provide?
+                                    </button>
+                                    <button class="accordion-button collapsed faq-button ar-content" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
+                                        aria-controls="collapseOne">
+                                        ما هي الخدمات التي تقدمونها؟
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                                     data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body faq-body">
-                                        When choosing a medical transfer service, consider factors such as the medical
-                                        crew's qualifications, the equipment on board, the company's safety record, and
-                                        their ability to provide bed-to-bed service.
+                                    <div class="accordion-body faq-body en-content">
+                                        We provide worldwide air ambulance services, commercial medical escorts,
+                                        stretcher transfers, repatriation of patients and mortal remains, ground
+                                        ambulance coordination, medical tourism assistance, and end-to-end medical
+                                        transportation logistics.
+                                    </div>
+                                    <div class="accordion-body faq-body ar-content">
+                                        نحن نقدم خدمات الإسعاف الجوي في جميع أنحاء العالم، والمرافقة الطبية على متن
+                                        الرحلات التجارية، ونقل المرضى على النقالات الطبية (Stretcher Transfers)، وإعادة
+                                        المرضى والجثامين إلى أوطانهم، وتنسيق الإسعاف البري، ومساعدة السياحة العلاجية،
+                                        وإدارة لوجستيات النقل الطبي من البداية وحتى النهاية.
                                     </div>
                                 </div>
                             </div>
@@ -348,20 +368,30 @@
                             <!-- Item 2 -->
                             <div class="accordion-item faq-item">
                                 <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed faq-button" type="button"
+                                    <button class="accordion-button collapsed faq-button en-content" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
                                         aria-controls="collapseTwo">
-                                        Can I book destination hospitals and flights<br>via your Service?
+                                        ⁠ ⁠How does the service work?
+                                    </button>
+                                    <button class="accordion-button collapsed faq-button ar-content" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                        aria-controls="collapseTwo">
+                                        ⁠ كيف تعمل هذه الخدمة؟
                                     </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                     data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body faq-body">
-                                        Yes, we offer comprehensive coordination services including arranging admission
-                                        to
-                                        destination hospitals, booking commercial flights for attendants, and managing
-                                        all
-                                        ground transportation.
+                                    <div class="accordion-body faq-body en-content">
+                                        Once you contact us, our operations team gathers the patient's medical
+                                        information and travel requirements. Our medical team assesses the case,
+                                        recommends the safest mode of transport, provides a quotation, and coordinates
+                                        every aspect of the transfer until the patient reaches the destination hospital
+                                        safely.
+                                    </div>
+                                    <div class="accordion-body faq-body ar-content">
+                                        بمجرد التواصل معنا، يجمع فريق العمليات معلومات المريض الطبية ومتطلبات سفره. بعد
+                                        ذلك، يقيم فريقنا الطبي الحادثة ويقترح الطريقة الأكثر أماناً للنقل، ويقدم لك عرض
+                                        سعر، ثم يتولى تنسيق كل تفاصيل الرحلة حتى يصل المريض إلى المستشفى المستهدف بأمان.
                                     </div>
                                 </div>
                             </div>
@@ -369,19 +399,28 @@
                             <!-- Item 3 -->
                             <div class="accordion-item faq-item">
                                 <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed faq-button" type="button"
+                                    <button class="accordion-button collapsed faq-button en-content" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
                                         aria-controls="collapseThree">
-                                        Is it necessary to translate the medical<br>report for the doctors?
+                                        ⁠How quickly can you arrange a medical transfer?
+                                    </button>
+                                    <button class="accordion-button collapsed faq-button ar-content" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        ⁠ما هي السرعة التي يمكنك بها ترتيب النقل الطبي؟
                                     </button>
                                 </h2>
                                 <div id="collapseThree" class="accordion-collapse collapse"
                                     aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body faq-body">
-                                        Our medical team can typically work with reports in multiple languages. If
-                                        translation is necessary for the receiving facility, we can assist in
-                                        coordinating
-                                        certified medical translations.
+                                    <div class="accordion-body faq-body en-content">
+                                        Depending on the patient's condition, documentation, and aircraft availability,
+                                        transfers can often be arranged within a few hours for urgent cases or within
+                                        24–48 hours for planned missions.
+                                    </div>
+                                    <div class="accordion-body faq-body ar-content">
+                                        يعتمد الأمر على حالة المريض، والأوراق، ومدى توفر الطائرات. ولكن في الغالب، يمكن
+                                        ترتيب رحلات النقل في غضون ساعات قليلة للحالات المستعجلة، أو خلال 24 إلى 48 ساعة
+                                        للمهمات المخطط لها.
                                     </div>
                                 </div>
                             </div>
@@ -389,19 +428,33 @@
                             <!-- Item 4 -->
                             <div class="accordion-item faq-item">
                                 <h2 class="accordion-header" id="headingFour">
-                                    <button class="accordion-button collapsed faq-button" type="button"
+                                    <button class="accordion-button collapsed faq-button en-content" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
                                         aria-controls="collapseFour">
-                                        When should I pay for the Air Ambulance<br>services?
+                                        ⁠What information is required to start the process?
+                                    </button>
+                                    <button class="accordion-button collapsed faq-button ar-content" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        ما هي المعلومات المطلوبة لبدء الإجراءات؟
                                     </button>
                                 </h2>
                                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                                     data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body faq-body">
-                                        Payment terms vary depending on the urgency and specifics of the mission.
-                                        Generally,
-                                        payment or an accepted guarantee of payment (from insurance or an embassy) is
-                                        required prior to the aircraft's dispatch.
+                                    <div class="accordion-body faq-body en-content">
+                                        We generally require: Patient's medical report <br>
+                                        Passport copy <br>
+                                        Current hospital details <br>
+                                        Destination hospital details <br>
+                                        Contact information of the treating doctor and family representative
+                                    </div>
+                                    <div class="accordion-body faq-body ar-content">
+                                        بشكل عام، نطلب ما يلي: <br>
+                                        تقرير طبي للمريض <br>
+                                        صورة جواز السفر <br>
+                                        تفاصيل المستشفى الحالي <br>
+                                        تفاصيل المستشفى المستهدف <br>
+                                        معلومات الاتصال بالطبيب المعالج وممثل الأسرة
                                     </div>
                                 </div>
                             </div>
@@ -409,19 +462,39 @@
                             <!-- Item 5 -->
                             <div class="accordion-item faq-item">
                                 <h2 class="accordion-header" id="headingFive">
-                                    <button class="accordion-button collapsed faq-button" type="button"
+                                    <button class="accordion-button collapsed faq-button en-content" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
                                         aria-controls="collapseFive">
-                                        What happens if I cancel the program?
+                                        What does the medical transfer process include?
+                                    </button>
+                                    <button class="accordion-button collapsed faq-button ar-content" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+                                        aria-controls="collapseFive">
+                                        ماذا تشمل عملية النقل الطبي؟
                                     </button>
                                 </h2>
                                 <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                                     data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body faq-body">
-                                        Cancellations are subject to our terms and conditions. Depending on when the
-                                        cancellation occurs relative to the flight dispatch, there may be cancellation
-                                        fees
-                                        to cover costs already incurred.
+                                    <div class="accordion-body faq-body en-content">
+                                        Our service may include:Medical case assessment <br>
+                                        Flight physician and/or nurse escort <br>
+                                        Medical equipment and medications <br>
+                                        Ground ambulances <br>
+                                        Flight arrangements <br>
+                                        Airport coordination <br>
+                                        Hospital-to-hospital transfer
+                                        24/7 operations support
+                                    </div>
+                                    <div class="accordion-body faq-body ar-content">
+                                        قد تشمل خدمتنا ما يلي: <br>
+                                        تقييم الحالة الطبية <br>
+                                        مرافقة طبيب طيران و/أو ممرض <br>
+                                        معدات طبية وأدوية <br>
+                                        سيارات إسعاف أرضية <br>
+                                        ترتيبات الطيران <br>
+                                        تنسيق المطارات <br>
+                                        نقل من مستشفى إلى آخر
+                                        دعم عمليات على مدار الساعة
                                     </div>
                                 </div>
                             </div>
@@ -429,19 +502,26 @@
                             <!-- Item 6 -->
                             <div class="accordion-item faq-item">
                                 <h2 class="accordion-header" id="headingSix">
-                                    <button class="accordion-button collapsed faq-button" type="button"
+                                    <button class="accordion-button collapsed faq-button en-content" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false"
                                         aria-controls="collapseSix">
-                                        What are the different types of air ambulance?
+                                        ⁠Will the patient have a dedicated case manager?
+                                    </button>
+                                    <button class="accordion-button collapsed faq-button ar-content" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false"
+                                        aria-controls="collapseSix">
+                                        هل سيكون لدى المريض مدير حالة مخصص؟
                                     </button>
                                 </h2>
                                 <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
                                     data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body faq-body">
-                                        Air ambulances generally fall into two categories: dedicated medical aircraft
-                                        (like
-                                        jets or turboprops equipped as flying ICUs) and commercial airline stretcher
-                                        transport, depending on the patient's condition and route.
+                                    <div class="accordion-body faq-body en-content">
+                                        Yes. Every case is assigned a dedicated case coordinator who oversees the
+                                        transfer from start to finish and serves as the primary point of contact.
+                                    </div>
+                                    <div class="accordion-body faq-body ar-content">
+                                        نعم. يتم تخصيص منسق حالات لكل عملية، وهو المسؤول عن متابعة النقل من البداية
+                                        وحتى النهاية ويعتبر نقطة الاتصال الرئيسية.
                                     </div>
                                 </div>
                             </div>
@@ -454,146 +534,7 @@
 
 
 
-        <!-- ========== OPERATIONAL INSIGHTS SECTION ========== -->
-        <section class="insights-section" id="insights">
-            <div class="container">
-                <h2 class="insights-heading en-content">Operational Insights</h2>
-                <h2 class="insights-heading  ar-content">رؤى من خلف العمليات</h2>
 
-                <div class="insights-grid">
-                    <!-- Card 1 -->
-                    <div class="insights-card"
-                        onclick="window.open('https://www.instagram.com/reel/DSUd3MsgVRQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==','_blank')">
-                        <div class="insights-thumb">
-                            <img src="{% static 'website/images/t1.jpeg' %}" alt="The Flying Doctor">
-                            <div class="insights-overlay">
-                                <div class="insights-play">
-                                    <svg viewBox="0 0 68 48" width="68" height="48">
-                                        <path
-                                            d="M66.5 7.7c-.8-2.9-2.9-5-5.8-5.8C55.3 0 34 0 34 0S12.7 0 7.3 1.9C4.4 2.7 2.3 4.8 1.5 7.7 0 13.1 0 24 0 24s0 10.9 1.5 16.3c.8 2.9 2.9 5 5.8 5.8C12.7 48 34 48 34 48s21.3 0 26.7-1.9c2.9-.8 5-2.9 5.8-5.8C68 34.9 68 24 68 24s0-10.9-1.5-16.3z"
-                                            fill="#f00" />
-                                        <path d="M45 24 27 14v20" fill="#fff" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <span class="insights-yt-icon">
-                                <svg viewBox="0 0 24 24" width="20" height="20">
-                                    <path
-                                        d="M23 7s-.3-2-1.2-2.8c-1.1-1.2-2.4-1.2-3-1.3C16.2 2.8 12 2.8 12 2.8s-4.2 0-6.8.1c-.6.1-1.9.1-3 1.3C1.3 5 1 7 1 7S.8 9.2.8 11.5v2.1C.8 16 1 18 1 18s.3 2 1.2 2.8c1.1 1.2 2.6 1.2 3.3 1.2C7.6 22.1 12 22.1 12 22.1s4.2 0 6.8-.2c.6-.1 1.9-.1 3-1.3.9-.8 1.2-2.8 1.2-2.8s.2-2.2.2-4.5v-2.1C23.2 9.2 23 7 23 7zM9.7 15.5V8.4l8.1 3.6-8.1 3.5z"
-                                        fill="#fff" />
-                                </svg>
-                            </span>
-                        </div>
-                        <div class="insights-info en-content">
-                            <span class="insights-num">#01</span>
-                            <h3 class="insights-title">The Flying <br> Doctor</h3>
-                        </div>
-                        <div class="insights-info ar-content">
-                            <span class="insights-num">٠١ #</span>
-                            <h3 class="insights-title">الطبيب الطائر</h3>
-                        </div>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="insights-card"
-                        onclick="window.open('https://www.instagram.com/reel/DTS48rFgXNL/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==','_blank')">
-                        <div class="insights-thumb">
-                            <img src="{% static 'website/images/t1.jpeg' %}" alt="Airline Partnerships">
-                            <div class="insights-overlay">
-                                <div class="insights-play">
-                                    <svg viewBox="0 0 68 48" width="68" height="48">
-                                        <path
-                                            d="M66.5 7.7c-.8-2.9-2.9-5-5.8-5.8C55.3 0 34 0 34 0S12.7 0 7.3 1.9C4.4 2.7 2.3 4.8 1.5 7.7 0 13.1 0 24 0 24s0 10.9 1.5 16.3c.8 2.9 2.9 5 5.8 5.8C12.7 48 34 48 34 48s21.3 0 26.7-1.9c2.9-.8 5-2.9 5.8-5.8C68 34.9 68 24 68 24s0-10.9-1.5-16.3z"
-                                            fill="#f00" />
-                                        <path d="M45 24 27 14v20" fill="#fff" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <span class="insights-yt-icon">
-                                <svg viewBox="0 0 24 24" width="20" height="20">
-                                    <path
-                                        d="M23 7s-.3-2-1.2-2.8c-1.1-1.2-2.4-1.2-3-1.3C16.2 2.8 12 2.8 12 2.8s-4.2 0-6.8.1c-.6.1-1.9.1-3 1.3C1.3 5 1 7 1 7S.8 9.2.8 11.5v2.1C.8 16 1 18 1 18s.3 2 1.2 2.8c1.1 1.2 2.6 1.2 3.3 1.2C7.6 22.1 12 22.1 12 22.1s4.2 0 6.8-.2c.6-.1 1.9-.1 3-1.3.9-.8 1.2-2.8 1.2-2.8s.2-2.2.2-4.5v-2.1C23.2 9.2 23 7 23 7zM9.7 15.5V8.4l8.1 3.6-8.1 3.5z"
-                                        fill="#fff" />
-                                </svg>
-                            </span>
-                        </div>
-                        <div class="insights-info en-content">
-                            <span class="insights-num">#02</span>
-                            <h3 class="insights-title"> Planning and <br> Execution</h3>
-                        </div>
-                        <div class="insights-info ar-content">
-                            <span class="insights-num">٠٤ #</span>
-                            <h3 class="insights-title">شراكات الطيران الطبي</h3>
-                        </div>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="insights-card"
-                        onclick="window.open('https://www.instagram.com/reel/DVflvbFAXn5/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==','_blank')">
-                        <div class="insights-thumb">
-                            <img src="{% static 'website/images/t22.jpg' %}" alt="The Flying Doctor">
-                            <div class="insights-overlay">
-                                <div class="insights-play">
-                                    <svg viewBox="0 0 68 48" width="68" height="48">
-                                        <path
-                                            d="M66.5 7.7c-.8-2.9-2.9-5-5.8-5.8C55.3 0 34 0 34 0S12.7 0 7.3 1.9C4.4 2.7 2.3 4.8 1.5 7.7 0 13.1 0 24 0 24s0 10.9 1.5 16.3c.8 2.9 2.9 5 5.8 5.8C12.7 48 34 48 34 48s21.3 0 26.7-1.9c2.9-.8 5-2.9 5.8-5.8C68 34.9 68 24 68 24s0-10.9-1.5-16.3z"
-                                            fill="#f00" />
-                                        <path d="M45 24 27 14v20" fill="#fff" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <span class="insights-yt-icon">
-                                <svg viewBox="0 0 24 24" width="20" height="20">
-                                    <path
-                                        d="M23 7s-.3-2-1.2-2.8c-1.1-1.2-2.4-1.2-3-1.3C16.2 2.8 12 2.8 12 2.8s-4.2 0-6.8.1c-.6.1-1.9.1-3 1.3C1.3 5 1 7 1 7S.8 9.2.8 11.5v2.1C.8 16 1 18 1 18s.3 2 1.2 2.8c1.1 1.2 2.6 1.2 3.3 1.2C7.6 22.1 12 22.1 12 22.1s4.2 0 6.8-.2c.6-.1 1.9-.1 3-1.3.9-.8 1.2-2.8 1.2-2.8s.2-2.2.2-4.5v-2.1C23.2 9.2 23 7 23 7zM9.7 15.5V8.4l8.1 3.6-8.1 3.5z"
-                                        fill="#fff" />
-                                </svg>
-                            </span>
-                        </div>
-                        <div class="insights-info en-content">
-                            <span class="insights-num">#03</span>
-                            <h3 class="insights-title">Airline <br> partnership</h3>
-                        </div>
-                        <div class="insights-info ar-content">
-                            <span class="insights-num">٠١ #</span>
-                            <h3 class="insights-title">الطبيب الطائر</h3>
-                        </div>
-                    </div>
-                    <!-- Card 4 -->
-                    <div class="insights-card"
-                        onclick="window.open('https://www.instagram.com/reel/DSUd3MsgVRQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==','_blank')">
-                        <div class="insights-thumb">
-                            <img src="{% static 'website/images/t1.jpeg' %}" alt="The Flying Doctor">
-                            <div class="insights-overlay">
-                                <div class="insights-play">
-                                    <svg viewBox="0 0 68 48" width="68" height="48">
-                                        <path
-                                            d="M66.5 7.7c-.8-2.9-2.9-5-5.8-5.8C55.3 0 34 0 34 0S12.7 0 7.3 1.9C4.4 2.7 2.3 4.8 1.5 7.7 0 13.1 0 24 0 24s0 10.9 1.5 16.3c.8 2.9 2.9 5 5.8 5.8C12.7 48 34 48 34 48s21.3 0 26.7-1.9c2.9-.8 5-2.9 5.8-5.8C68 34.9 68 24 68 24s0-10.9-1.5-16.3z"
-                                            fill="#f00" />
-                                        <path d="M45 24 27 14v20" fill="#fff" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <span class="insights-yt-icon">
-                                <svg viewBox="0 0 24 24" width="20" height="20">
-                                    <path
-                                        d="M23 7s-.3-2-1.2-2.8c-1.1-1.2-2.4-1.2-3-1.3C16.2 2.8 12 2.8 12 2.8s-4.2 0-6.8.1c-.6.1-1.9.1-3 1.3C1.3 5 1 7 1 7S.8 9.2.8 11.5v2.1C.8 16 1 18 1 18s.3 2 1.2 2.8c1.1 1.2 2.6 1.2 3.3 1.2C7.6 22.1 12 22.1 12 22.1s4.2 0 6.8-.2c.6-.1 1.9-.1 3-1.3.9-.8 1.2-2.8 1.2-2.8s.2-2.2.2-4.5v-2.1C23.2 9.2 23 7 23 7zM9.7 15.5V8.4l8.1 3.6-8.1 3.5z"
-                                        fill="#fff" />
-                                </svg>
-                            </span>
-                        </div>
-                        <div class="insights-info en-content">
-                            <span class="insights-num">#04</span>
-                            <h3 class="insights-title">The Flying <br> Doctor</h3>
-                        </div>
-                        <div class="insights-info ar-content">
-                            <span class="insights-num">٠١ #</span>
-                            <h3 class="insights-title">الطبيب الطائر</h3>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </section>
 
     </main>
 
