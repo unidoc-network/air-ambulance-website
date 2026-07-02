@@ -33,6 +33,16 @@
                                         <input type="text" id="searchTerm" name="search" value="{{ search }}" class="form-control" placeholder="Search by email or name..." onkeyup="filterContact(1)" style="height: 40px;">
                                     </div>
                                     <div class="form-group col-lg-3 col-12">
+                                        <select id="sourceFilter" name="source" class="form-control form-select" onchange="filterContact(1)" style="height: 40px;">
+                                            <option value="">ALL SOURCES</option>
+                                            <option value="Website" {% if source == 'Website' %}selected{% endif %}>Website</option>
+                                            <option value="Oman" {% if source == 'Oman' %}selected{% endif %}>Oman</option>
+                                            <option value="Qatar" {% if source == 'Qatar' %}selected{% endif %}>Qatar</option>
+                                            <option value="Bahrain" {% if source == 'Bahrain' %}selected{% endif %}>Bahrain</option>
+                                            <option value="Saudi" {% if source == 'Saudi' %}selected{% endif %}>Saudi Arabia</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-lg-3 col-12">
                                         <select id="dateFilter" name="date_filter" class="form-control form-select" onchange="filterContact(1)" style="height: 40px;">
                                             <option value="">ALL TIME</option>
                                             <option value="today" {% if date_filter == 'today' %}selected{% endif %}>TODAY</option>
@@ -91,12 +101,14 @@ function delete_contact(id) {
 function filterContact(page) {
     var search = $('#searchTerm').val();
     var dateFilter = $('#dateFilter').val();
+    var source = $('#sourceFilter').val();
     $.ajax({
         url: "{% url 'superadmin:ContactList' %}",
         type: 'GET',
         data: {
             'search': search,
             'date_filter': dateFilter,
+            'source': source,
             'page': page
         },
         success: function(response) {

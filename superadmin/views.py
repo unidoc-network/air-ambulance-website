@@ -154,6 +154,16 @@ class ContactList(LoginRequiredMixin, View):
                 Q(phone__icontains=search)
             )
 
+        # Source filter
+        source = request.GET.get('source', '').strip()
+        if source:
+            if source.lower() == 'baharain' or source.lower() == 'bahrain':
+                qs = qs.filter(Q(country__iexact='Bahrain') | Q(country__iexact='Baharain'))
+            elif source.lower() == 'saudi':
+                qs = qs.filter(country__icontains='Saudi')
+            else:
+                qs = qs.filter(country__iexact=source)
+
         # Date filter
         date_filter = request.GET.get('date_filter', '')
         now = timezone.now()
@@ -177,6 +187,7 @@ class ContactList(LoginRequiredMixin, View):
             'datas': datas,
             'search': search,
             'date_filter': date_filter,
+            'source': source,
             'page': page,
             'path': 'contact',
         }
@@ -300,6 +311,7 @@ class NewsList(LoginRequiredMixin, View):
 
         search = request.GET.get('search')
         status = request.GET.get('status', 'True')
+        category = request.GET.get('category')
         page_num = request.GET.get('page', 1)
 
         if is_ajax(request):
@@ -326,6 +338,9 @@ class NewsList(LoginRequiredMixin, View):
         elif not search and not request.GET.get('page'):
             conditions &= Q(is_active=True)
 
+        if category:
+            conditions &= Q(category_id=category)
+
         data_list = Blogs.objects.filter(conditions).order_by('-id')
         paginator = Paginator(data_list, 15)
 
@@ -337,6 +352,8 @@ class NewsList(LoginRequiredMixin, View):
         context.update({
             'datas': datas,
             'page': page_num,
+            'categories': BlogCategory.objects.filter(is_active=True),
+            'selected_category': category,
         })
 
         if is_ajax(request):
@@ -532,11 +549,15 @@ class CareerApplicationList(LoginRequiredMixin, View):
         conditions = Q()
         
         search = request.GET.get('search', '').strip()
+        career = request.GET.get('career', '').strip()
         page_num = request.GET.get('page', 1)
 
         if search:
             conditions &= Q(name__icontains=search) | Q(email__icontains=search) | Q(career__title__icontains=search) | Q(location__icontains=search)
         
+        if career:
+            conditions &= Q(career_id=career)
+
         application_qs = CareerApplication.objects.filter(conditions).order_by('-id')
         paginator = Paginator(application_qs, 15)
         
@@ -547,6 +568,8 @@ class CareerApplicationList(LoginRequiredMixin, View):
             
         context['applications'] = datas
         context['search'] = search
+        context['careers'] = Career.objects.filter(is_active=True)
+        context['selected_career'] = career
 
         if is_ajax(request):
             template = loader.get_template('superadmin/career/application-table.html')

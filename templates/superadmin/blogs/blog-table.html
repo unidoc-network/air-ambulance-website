@@ -129,7 +129,10 @@
             {% endfor %}
         {% else %}
             <tr>
-                <td colspan="9" align="center" class="no-data">No Data</td>
+                <td colspan="9" class="text-center py-5">
+                    <i class="fe fe-inbox" style="font-size:2rem;color:#ccc;display:block;margin-bottom:8px;"></i>
+                    <span style="color:#aaa;font-size:0.95rem;">No records found</span>
+                </td>
             </tr>
         {% endif %}
     </tbody>

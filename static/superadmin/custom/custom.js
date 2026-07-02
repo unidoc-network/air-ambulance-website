@@ -493,8 +493,8 @@ $(document).ready(function() {
     function updateResetBtnColor() {
         var hasActiveFilters = false;
         
-        // Check standard search fields
-        var searchFields = ['searchkey', 'searchCareer', 'searchApp', 'search'];
+        // Check all text search fields (existing + new)
+        var searchFields = ['searchkey', 'searchCareer', 'searchApp', 'search', 'searchTerm'];
         searchFields.forEach(function(id) {
             var el = $('#' + id);
             if (el.length && el.val().trim() !== '') {
@@ -516,8 +516,26 @@ $(document).ready(function() {
         if (elDate.length && elDate.val() !== '') {
             hasActiveFilters = true;
         }
+
+        // Source filter (Contact page)
+        var elSource = $('#sourceFilter');
+        if (elSource.length && elSource.val() !== '') {
+            hasActiveFilters = true;
+        }
+
+        // Career filter (Applications page)
+        var elCareer = $('#careerFilter');
+        if (elCareer.length && elCareer.val() !== '') {
+            hasActiveFilters = true;
+        }
+
+        // Category filter (News & Stories page)
+        var elCategory = $('#category');
+        if (elCategory.length && elCategory.val() !== '') {
+            hasActiveFilters = true;
+        }
         
-        // Find reset buttons (usually anchor tags with title='Reset' or containing icon fe-rotate-cw)
+        // Find reset buttons (anchor tags with title='Reset' or containing icon fe-rotate-cw)
         var resetBtns = $('a[title="Reset"], .fe-rotate-cw').closest('a');
         if (hasActiveFilters) {
             resetBtns.removeClass('btn-light').addClass('btn-primary');
@@ -526,11 +544,11 @@ $(document).ready(function() {
         }
     }
     
-    // Attach event listeners
+    // Attach event listeners to all inputs and selects
     $(document).on('keyup change', 'input[type="text"], select', function() {
         updateResetBtnColor();
     });
     
-    // Initial check
+    // Initial check on page load
     setTimeout(updateResetBtnColor, 100);
 });

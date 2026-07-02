@@ -24,23 +24,32 @@
                                        <h3 class="card-title">List Of All News & Stories</h3>
                                    </div>
                                    <div class="card-body">
-                                       <form onsubmit="return false;">
-                                        <div class="row">
-                                         <div class="form-group col-lg-2 col-12">
-                                             <input type="text" class="form-control" id="searchkey" placeholder="Keyword Search" onkeyup="filterblog(1)" style="height: 40px;">
-                                         </div> 
+                                        <form onsubmit="return false;">
+                                         <div class="row">
+                                          <div class="form-group col-lg-3 col-12">
+                                              <input type="text" class="form-control" id="searchkey" placeholder="Keyword Search" onkeyup="filterblog(1)" style="height: 40px;">
+                                          </div> 
 
-                                                <div class="form-group col-lg-2 col-12">
-                                                   <select name="" id="status" class="form-control form-select" style="height: 40px;" data-bs-placeholder="Select Status" onchange="filterblog(1)">
-                                            <option value="">ALL STATUS</option>
-                                            <option value="True" selected>ACTIVE</option>
-                                            <option value="False">INACTIVE</option>
-                                             </select>
-                                                </div>
-                                                
-                                                <div class="form-group col-lg-1 col-12">
-                                                    <a class="btn btn-light" style="height: 40px; width: 40px; display: inline-flex; justify-content: center; align-items: center;" href="{{request.path}}" title="Reset"><i class="fe fe-rotate-cw"></i></a>
-                                                </div>
+                                                 <div class="form-group col-lg-3 col-12">
+                                                    <select name="" id="status" class="form-control form-select" style="height: 40px;" data-bs-placeholder="Select Status" onchange="filterblog(1)">
+                                             <option value="">ALL STATUS</option>
+                                             <option value="True" selected>ACTIVE</option>
+                                             <option value="False">INACTIVE</option>
+                                              </select>
+                                                 </div>
+
+                                                 <div class="form-group col-lg-3 col-12">
+                                                     <select id="category" class="form-control form-select" style="height: 40px;" onchange="filterblog(1)">
+                                                         <option value="">ALL CATEGORIES</option>
+                                                         {% for cat in categories %}
+                                                         <option value="{{ cat.id }}" {% if selected_category == cat.id|stringformat:"i" or selected_category == cat.id|stringformat:"s" %}selected{% endif %}>{{ cat.name }}</option>
+                                                         {% endfor %}
+                                                     </select>
+                                                 </div>
+                                                 
+                                                 <div class="form-group col-lg-1 col-12">
+                                                     <a class="btn btn-light" style="height: 40px; width: 40px; display: inline-flex; justify-content: center; align-items: center;" href="{{request.path}}" title="Reset"><i class="fe fe-rotate-cw"></i></a>
+                                                 </div>
                                                
                                        </div>
                                        </form>	
@@ -82,12 +91,14 @@
 function filterblog(page) {
     var search = $('#searchkey').val();
     var status = $('#status').val();
+    var category = $('#category').val();
     $.ajax({
         url: "{% url 'superadmin:NewsList' %}",
         type: 'GET',
         data: {
             'search': search,
             'status': status,
+            'category': category,
             'page': page
         },
         success: function(response) {

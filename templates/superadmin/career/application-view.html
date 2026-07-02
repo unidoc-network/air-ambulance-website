@@ -18,7 +18,15 @@
                             <form onsubmit="return false;">
                                 <div class="row">
                                     <div class="form-group col-lg-3 col-12">
-                                        <input type="text" class="form-control" id="searchApp" placeholder="Search Applications..." style="height: 40px;">
+                                        <input type="text" class="form-control" id="searchApp" value="{{ search }}" placeholder="Search Applications..." style="height: 40px;">
+                                    </div>
+                                    <div class="form-group col-lg-3 col-12">
+                                        <select id="careerFilter" class="form-control form-select" style="height: 40px;">
+                                            <option value="">ALL CAREERS</option>
+                                            {% for career in careers %}
+                                            <option value="{{ career.id }}" {% if selected_career == career.id|stringformat:"i" or selected_career == career.id|stringformat:"s" %}selected{% endif %}>{{ career.title }}</option>
+                                            {% endfor %}
+                                        </select>
                                     </div>
                                     <div class="form-group col-lg-1 col-12">
                                         <a class="btn btn-light" style="height: 40px; width: 40px; display: inline-flex; justify-content: center; align-items: center;" href="{{request.path}}" title="Reset"><i class="fe fe-rotate-cw"></i></a>
@@ -75,19 +83,26 @@
 
 <script>
     $(document).ready(function() {
-        $('#searchApp').on('keyup', function() {
-            var search = $(this).val();
+        function filterApplications() {
+            var search = $('#searchApp').val();
+            var career = $('#careerFilter').val();
             $.ajax({
                 url: "{% url 'superadmin:ApplicationList' %}",
                 type: 'GET',
-                data: { 'search': search },
+                data: {
+                    'search': search,
+                    'career': career
+                },
                 success: function(response) {
                     if (response.status) {
                         $('#applicationTableBody').html(response.template);
                     }
                 }
             });
-        });
+        }
+
+        $('#searchApp').on('keyup', filterApplications);
+        $('#careerFilter').on('change', filterApplications);
     });
 
     function deleteApp(id) {
