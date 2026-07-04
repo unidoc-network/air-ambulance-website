@@ -9443,3 +9443,15 @@ html[dir="rtl"] .related-blog-section h3 {
         display: block;
     }
 }
+
+
+.leader-detail-bio{
+    max-width: 670px !important;
+    margin: 0 auto !important;
+    text-align: justify !important;
+    font-size: 18px !important;
+    line-height: 1.2 !important;
+    color: #153c5e !important;
+    font-weight: 400;
+    font-family: 'Aeonik';
+}
