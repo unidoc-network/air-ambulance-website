@@ -10,11 +10,18 @@
             <div class="contact-hero-overlay"></div>
         </div>
         <div class="container">
-            <div class="contact-hero-content">
-                <span class="contact-subtitle">Contact Us</span>
-                <h1 class="contact-title">
+             <div class="contact-hero-content">
+                <span class="contact-subtitle en-content">Contact Us</span>
+                <span class="contact-subtitle ar-content">اتصل بنا</span>
+
+                <h1 class="contact-title en-content">
                     We’re here to help. Whether you need medical transport support, have a question about our services,
                     or are exploring a partnership, our <br> team is ready to assist.
+                </h1>
+                <h1 class="contact-title ar-content">
+                    نحن هنا للمساعدة؛ وسواء كنت بحاجة إلى دعم في مجال النقل الطبي، أو كان لديك استفسار حول خدماتنا، أو
+                    كنت تبحث في إمكانية عقد شراكة، فإن فريقنا مستعد لتقديم المساعدة.
+
                 </h1>
             </div>
         </div>
@@ -107,58 +114,98 @@
     <section class="offices-section">
 
         <div class="container">
-            <h2 class="offices-title">Our Offices</h2>
+             <h2 class="offices-title en-content">Our Offices</h2>
+            <h2 class="offices-title ar-content">مكاتبنا</h2>
         </div>
         <div class="interactive-map-container">
             <img src="{% static 'website/images/new-map.png' %}" alt="World Map with Office Locations" class="map-image">
 
             <!-- Dammam Marker -->
-            <div class="map-marker" style="top: 45%; left: 20%;" onclick="toggleMarker(this)">
+             <div class="map-marker" style="top: 45%; left: 22%;" onclick="toggleMarker(this)">
                 <div class="marker-pin">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span class="marker-label">Dammam</span>
+                    <span class="marker-label en-content">Dammam</span>
+                    <span class="marker-label ar-content">الدمام</span>
                 </div>
                 <div class="marker-card">
-                    <h3>SAUDI ARABIA</h3>
-                    <p>Distinction Hub Building, 7250<br>King Fahd Rd, Al Oalya,<br>Office No. 11, First
+                    <h3 class="en-content">SAUDI ARABIA</h3>
+                    <h3 class="ar-content">المملكة العربية السعودية</h3>
+                    <p class="en-content">Distinction Hub Building, 7250<br>King Fahd Rd, Al Oalya,<br>Office No. 11,
+                        First
                         Floor,<br>Riyadh 12311, Saudi Arabia</p>
+                    <p class="ar-content">مبنى "ديستينكشن هب" (Distinction Hub)، 7250<br>طريق الملك فهد، حي
+                        العليا،<br>مكتب رقم 11،<br>الطابق الأول،<br>الرياض 12311، المملكة العربية السعودية
+                    </p>
                     <div class="marker-contact">
-                        <span><i class="fas fa-phone-alt"></i> +971 55 188 1441</span>
-                        <span><i class="far fa-envelope"></i> mail@bluedotassist.com</span>
+                        <span class="en-content">
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+966538855753">+96653 885 5753</a>
+                        </span>
+
+                        <span>
+                            <i class="far fa-envelope"></i>
+                            <a href="mailto:mail@bluedotassist.com">mail@bluedotassist.com</a>
+                        </span>
                     </div>
                 </div>
             </div>
 
             <!-- Dubai Marker -->
-            <div class="map-marker" style="top: 47%; left: 27%;" onclick="toggleMarker(this)">
+          <div class="map-marker" style="top: 48%; left: 27%;" onclick="toggleMarker(this)">
                 <div class="marker-pin">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span class="marker-label">Dubai</span>
+                    <span class="marker-label en-content">Dubai</span>
+                    <span class="marker-label ar-content">دبي</span>
                 </div>
                 <div class="marker-card">
-                    <h3>UAE</h3>
-                    <p>Bluedot Air Ambulance<br>#304, A-Block<br>3rd Floor Centurion Star Building<br>Opp. Deira City
+                    <h3 class="en-content">UAE</h3>
+                    <h3 class="ar-content">الإمارات العربية المتحدة</h3>
+                    <p class="en-content">Bluedot Air Ambulance<br>#304, A-Block<br>3rd Floor Centurion Star
+                        Building<br>Opp. Deira City
                         Centre<br>P.O. Box - 31923, Dubai</p>
+                    <p class="ar-content">بلو دوت للإسعاف الجوي<br>الوحدة 304، المبنى A<br>الطابق الثالث، مبنى سنتوريون
+                        ستار<br>مقابل ديرة سيتي سنتر<br>صندوق بريد: 31923، دبي
+                    </p>
                     <div class="marker-contact">
-                        <span><i class="fas fa-phone-alt"></i> +971 55 188 1441</span>
-                        <span><i class="far fa-envelope"></i> mail@bluedotassist.com</span>
+                        <span>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+971551881441">+971 55 188 1441</a>
+                        </span>
+
+                        <span>
+                            <i class="far fa-envelope"></i>
+                            <a href="mailto:mail@bluedotassist.com">mail@bluedotassist.com</a>
+                        </span>
                     </div>
                 </div>
             </div>
 
             <!-- Ernakulam Marker -->
-            <div class="map-marker active" style="top: 62%; left: 47%;" onclick="toggleMarker(this)">
+           <div class="map-marker" style="top: 62%; left: 47%;" onclick="toggleMarker(this)">
                 <div class="marker-pin">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span class="marker-label">Ernakulam</span>
+                    <span class="marker-label en-content">Ernakulam</span>
+                    <span class="marker-label ar-content">ارناكولم</span>
                 </div>
                 <div class="marker-card">
-                    <h3>INDIA</h3>
-                    <p>2nd Floor, Naj Arcade<br>Near Muttom Metro Station<br>Opposite Metro Pillar No. 176
+                    <h3 class="en-content">INDIA</h3>
+                    <h3 class="ar-content">الهند</h3>
+                    <p class="en-content">2nd Floor, Naj Arcade<br>Near Muttom Metro Station<br>Opposite Metro Pillar
+                        No. 176
                         R<br>Thaikkattukara P O, Muttom,<br>Aluva, Ernakulam, Kerala, India,<br>Pin: 683106</p>
+                    <p class="ar-content">الطابق الثاني، مبنى نج آركيد<br>بالقرب من محطة مترو موتوم<br>مقابل عمود
+                        المترو رقم 176 R<br>تايكاتوكارا P.O، موتوم،<br>الوفا، إرناكولام، كيرلا، الهند،<br>الرمز
+                        البريدي: 683106</p>
                     <div class="marker-contact">
-                        <span><i class="fas fa-phone-alt"></i> +91 974 541 0000</span>
-                        <span><i class="far fa-envelope"></i> mail@bluedotassist.com</span>
+                        <span>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+919745410000">+91 974 541 0000</a>
+                        </span>
+
+                        <span>
+                            <i class="far fa-envelope"></i>
+                            <a href="mailto:mail@bluedotassist.com">mail@bluedotassist.com</a>
+                        </span>
                     </div>
                 </div>
             </div>
