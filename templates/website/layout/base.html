@@ -313,8 +313,39 @@
             });
 
             // News Category Filtering
-            const filterBtns = document.querySelectorAll('.news-filter-btn');
+            const filterBtns = document.querySelectorAll('.news-filter-btn[data-filter]');
             const newsCols = document.querySelectorAll('.news-card-col');
+            const noNewsMessage = document.getElementById('no-news-message');
+
+            function applyFilter(filterValue) {
+                let visibleCount = 0;
+                newsCols.forEach(col => {
+                    const categories = col.getAttribute('data-category').split(' ').map(c => c.trim()).filter(Boolean);
+                    if (filterValue === 'all' || categories.includes(filterValue)) {
+                        if (visibleCount < 3) {
+                            col.style.display = 'flex';
+                            col.style.opacity = '0';
+                            setTimeout(() => {
+                                col.style.transition = 'opacity 0.4s ease';
+                                col.style.opacity = '1';
+                            }, 50);
+                            visibleCount++;
+                        } else {
+                            col.style.display = 'none';
+                        }
+                    } else {
+                        col.style.display = 'none';
+                    }
+                });
+
+                if (noNewsMessage) {
+                    if (visibleCount === 0) {
+                        noNewsMessage.style.display = 'block';
+                    } else {
+                        noNewsMessage.style.display = 'none';
+                    }
+                }
+            }
 
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', function () {
@@ -323,22 +354,14 @@
                     this.classList.add('active');
 
                     const filterValue = this.getAttribute('data-filter');
-
-                    newsCols.forEach(col => {
-                        const categories = col.getAttribute('data-category').split(' ');
-                        if (filterValue === 'all' || categories.includes(filterValue)) {
-                            col.style.display = 'flex';
-                            col.style.opacity = '0';
-                            setTimeout(() => {
-                                col.style.transition = 'opacity 0.4s ease';
-                                col.style.opacity = '1';
-                            }, 50);
-                        } else {
-                            col.style.display = 'none';
-                        }
-                    });
+                    applyFilter(filterValue);
                 });
             });
+
+            // Initialize filter on load for homepage
+            if (filterBtns.length > 0) {
+                applyFilter('all');
+            }
         });
 
         // ── Count-up animation on scroll into view ──

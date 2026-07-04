@@ -16,7 +16,7 @@ import sys
 # ── HOME ────────────────────────────────────────────────────────────────────
 class HomePageView(View):
     def get(self, request):
-        blogs = Blogs.objects.filter(is_active=True).order_by('-date', '-created_at')[:3]
+        blogs = Blogs.objects.filter(is_active=True).order_by('-date', '-created_at')
         categories = BlogCategory.objects.filter(is_active=True)
         context = {
             'path': 'home',

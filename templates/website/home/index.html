@@ -752,7 +752,7 @@
             <!-- News Grid -->
             <div class="row g-4 news-cards-row">
                 {% for blog in blogs %}
-                <div class="col-lg-4 col-md-6 news-card-col" data-category="{{ blog.category.slug }} {% if 'mission' in blog.category.slug %}mission{% endif %}">
+                <div class="col-lg-4 col-md-6 news-card-col" data-category="{% if blog.category %}{{ blog.category.slug }} {% if 'mission' in blog.category.slug %}mission{% endif %}{% else %}uncategorized{% endif %}">
                     <a href="{% url 'website:blog_detail' slug=blog.slug %}" class="news-card">
                         <div class="news-card-img-wrapper">
                             {% if blog.image %}
@@ -764,8 +764,13 @@
                         <div class="news-card-content">
                             <img src="{% static 'website/images/news-vector.png' %}" class="news-vector-bg" alt="">
                             <span class="news-badge">
-                                <span class="en-content">{{ blog.tag|default:blog.category.name }}</span>
-                                <span class="ar-content">{% if blog.category.name_ar %}{{ blog.category.name_ar }}{% else %}{{ blog.tag|default:blog.category.name }}{% endif %}</span>
+                                {% if blog.category %}
+                                    <span class="en-content">{{ blog.tag|default:blog.category.name }}</span>
+                                    <span class="ar-content">{% if blog.category.name_ar %}{{ blog.category.name_ar }}{% else %}{{ blog.tag|default:blog.category.name }}{% endif %}</span>
+                                {% else %}
+                                    <span class="en-content">{{ blog.tag|default:"News" }}</span>
+                                    <span class="ar-content">{{ blog.tag|default:"أخبار" }}</span>
+                                {% endif %}
                             </span>
                             <h3 class="news-card-title">
                                 <span class="en-content">{{ blog.title }}</span>
@@ -778,14 +783,13 @@
                         </div>
                     </a>
                 </div>
-                {% empty %}
-                <div class="col-12 text-center py-5">
+                {% endfor %}
+                <div id="no-news-message" class="col-12 text-center py-5" style="display: none;">
                     <p style="color:#666;font-size:18px;">
                         <span class="en-content">No articles found. Check back soon!</span>
                         <span class="ar-content">لم يتم العثور على مقالات. تحقق مرة أخرى قريباً!</span>
                     </p>
                 </div>
-                {% endfor %}
             </div>
         </div>
     </section>

@@ -4,7 +4,7 @@
     {% for blog in blogs %}
     {% cycle 'top-card' 'bottom-left-card' 'bottom-right-card' as card_class silent %}
     <a href="{% url 'website:blog_detail' slug=blog.slug %}" class="news-card {{ card_class }}"
-       data-category="{{ blog.category.slug|default:'all' }}">
+       data-category="{% if blog.category %}{{ blog.category.slug }}{% else %}uncategorized{% endif %}">
         <div class="news-card-img-wrapper">
             {% if blog.image %}
             <img src="{{ blog.image.url }}" alt="{{ blog.title }}" class="news-card-img">
