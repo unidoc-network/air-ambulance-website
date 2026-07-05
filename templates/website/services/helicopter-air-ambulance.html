@@ -6,7 +6,7 @@
 <main class="air-ambulance-page">
         <!-- Hero Section -->
         <section class="air-ambulance-hero">
-            <img src="{% static 'website/images/heli-banner.png' %}" alt="Air Ambulance Transfer" class="aa-hero-bg">
+            <img src="{% static 'website/images/rotery-banner.png' %}" alt="Air Ambulance Transfer" class="aa-hero-bg">
             <div class="aa-hero-overlay"></div>
             <div class="container aa-hero-content">
                 <div class="hero-text-wrapper">
@@ -184,7 +184,7 @@
         </section>
 
         <!-- Mission Stories Section -->
-        <section class="mission-stories-section">
+        <section class="mission-stories-section pt-30">
             <div class="container">
 
 
@@ -308,6 +308,106 @@
         </section>
 
 
+<section class="saudi-contact-section">
+            <div class="container">
+                <div class="oman-contact-header">
+                   
+                    <h2 class="oman-contact-title en-content">Request a Medical Transport Consultation</h2>
+                    <h2 class="oman-contact-title ar-content">اطلب استشارة نقل طبي</h2>
+
+                </div>
+
+                <div class="oman-form-wrapper">
+                    <form action="{% url 'website:submit_enquiry' %}" method="POST" class="oman-main-form">
+                        {% csrf_token %}
+                        <input type="hidden" name="country" value="Oman">
+
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="oman-name" class="en-content">Name</label>
+                                    <label for="oman-name" class="ar-content">الاسم</label>
+
+                                    <input type="text" id="oman-name" name="name" placeholder=" john" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="oman-services" class="en-content">Choose Services</label>
+                                    <label for="oman-services" class="ar-content">اختر الخدمات</label>
+
+                                    <div class="select-wrapper">
+                                        <select id="oman-services" name="services" required>
+                                            <option value="" disabled selected> Air Ambulance</option>
+                                            <option value="air-ambulance">Air Ambulance</option>
+                                            <option value="commercial-transfer">Commercial Airline Transfer</option>
+                                            <option value="medical-escorts">Medical Escorts</option>
+                                        </select>
+                                        <i class="fas fa-chevron-down ab-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="oman-email" class="en-content">Email Address</label>
+                                    <label for="oman-email" class="ar-content">البريد الإلكتروني</label>
+
+                                    <input type="email" id="oman-email" name="email" placeholder="john@gmail.com"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="oman-phone" class="en-content">Phone Number</label>
+                                    <label for="oman-phone" class="ar-content">رقم الهاتف</label>
+
+                                    <input type="tel" id="oman-phone" name="phone" placeholder="Enter your phone number"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-1 mb-2">
+                                <button type="button" class="verify-email-btn" style="background-color: #009BE0; color: #FFF; border: none; padding: 10px 24px; border-radius: 24px; font-size: 14px; font-weight: 500; cursor: pointer; display: inline-block; font-family: 'Aeonik', sans-serif;">
+                                    <span class="en-content">Click here to verify your email</span>
+                                    <span class="ar-content">اضغط هنا للتحقق من بريدك الإلكتروني</span>
+                                </button>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="oman-verify-code">
+                                        <span class="en-content">Verify Code</span>
+                                        <span class="ar-content">رمز التحقق</span>
+                                    </label>
+                                    <input type="text" id="oman-verify-code" name="verify_code" placeholder="enter code">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="oman-message" class="en-content">Message</label>
+                                    <label for="oman-message" class="ar-content">الرسالة</label>
+
+                                    <textarea id="oman-message" name="message" rows="5"
+                                        placeholder="Enter your question here" required></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="oman-form-footer">
+                                    <div class="oman-consent-group">
+                                        <input type="checkbox" id="oman-consent" name="consent" required>
+                                        <label for="oman-consent" class="en-content">I consent to have this website store my submitted
+                                            information so they can respond to my inquiry.</label>
+                                        <label for="oman-consent" class="ar-content">أوافق على أن يحتفظ هذا الموقع
+                                            بالمعلومات التي قدمتها حتى يتمكن من الرد على استفساري.</label>
+                                    </div>
+                                    <button type="submit" class="oman-btn-submit en-content">Submit</button>
+                                    <button type="submit" class="oman-btn-submit ar-content">إرسال</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
 
     </main>
 
