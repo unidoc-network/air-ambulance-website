@@ -149,7 +149,7 @@ class BlogDetailPageView(View):
         post = get_object_or_404(Blogs, slug=slug, is_active=True)
         recent = Blogs.objects.filter(is_active=True).exclude(id=post.id).order_by('-date', '-created_at')[:3]
         context = {
-            'path': 'blogs',
+            'path': 'blog-detail',
             'post': post,
             'recent': recent,
         }
