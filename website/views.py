@@ -362,7 +362,7 @@ class FleetChallenger604View(View):
 
 class FleetChallenger605View(View):
     def get(self, request):
-        context = {'path': 'fleet'}
+        context = {'path': 'fleet-605'}
         return render(request, 'website/fleet/challenger-605.html', context)
 
 
