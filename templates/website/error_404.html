@@ -22,7 +22,7 @@
         position: absolute;
         font-size: clamp(180px, 30vw, 380px);
         font-weight: 900;
-        color: rgba(0, 82, 163, 0.04);
+        color: rgba(3, 149, 214, 0.04);
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -42,13 +42,13 @@
     .error-404-icon {
         width: 110px;
         height: 110px;
-        background: linear-gradient(135deg, #0052a3 0%, #003d7a 100%);
+        background: #0395d6;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 0 auto 32px;
-        box-shadow: 0 12px 40px rgba(0, 82, 163, 0.25);
+        box-shadow: 0 12px 40px rgba(3, 149, 214, 0.25);
         animation: float 3s ease-in-out infinite;
     }
 
@@ -65,7 +65,7 @@
     .error-404-code {
         font-size: clamp(60px, 10vw, 90px);
         font-weight: 800;
-        color: #0052a3;
+        color: #0395d6;
         line-height: 1;
         margin-bottom: 12px;
         letter-spacing: -2px;
@@ -96,7 +96,7 @@
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        background: linear-gradient(135deg, #0052a3, #003d7a);
+        background: #0395d6;
         color: #ffffff;
         padding: 14px 30px;
         border-radius: 50px;
@@ -104,12 +104,12 @@
         font-weight: 600;
         font-size: 15px;
         transition: all 0.3s ease;
-        box-shadow: 0 6px 20px rgba(0, 82, 163, 0.3);
+        box-shadow: 0 6px 20px rgba(3, 149, 214, 0.3);
     }
 
     .btn-404-primary:hover {
         transform: translateY(-2px);
-        box-shadow: 0 10px 28px rgba(0, 82, 163, 0.4);
+        box-shadow: 0 10px 28px rgba(3, 149, 214, 0.4);
         color: #ffffff;
     }
 
@@ -118,10 +118,10 @@
         align-items: center;
         gap: 8px;
         background: transparent;
-        color: #0052a3;
+        color: #0395d6;
         padding: 14px 30px;
         border-radius: 50px;
-        border: 2px solid #0052a3;
+        border: 2px solid #0395d6;
         text-decoration: none;
         font-weight: 600;
         font-size: 15px;
@@ -129,7 +129,7 @@
     }
 
     .btn-404-secondary:hover {
-        background: #0052a3;
+        background: #0395d6;
         color: #ffffff;
         transform: translateY(-2px);
     }
@@ -137,7 +137,7 @@
     .error-404-links {
         margin-top: 48px;
         padding-top: 36px;
-        border-top: 1px solid rgba(0, 82, 163, 0.12);
+        border-top: 1px solid rgba(3, 149, 214, 0.12);
     }
 
     .error-404-links p {
@@ -157,17 +157,17 @@
         display: inline-block;
         padding: 7px 18px;
         background: #f3f7ff;
-        color: #0052a3;
+        color: #0395d6;
         border-radius: 20px;
         font-size: 13px;
         font-weight: 500;
         text-decoration: none;
         transition: all 0.2s ease;
-        border: 1px solid rgba(0, 82, 163, 0.1);
+        border: 1px solid rgba(3, 149, 214, 0.1);
     }
 
     .quick-link:hover {
-        background: #0052a3;
+        background: #0395d6;
         color: #ffffff;
     }
 </style>
@@ -203,11 +203,7 @@
                 <span class="en-content">Back to Home</span>
                 <span class="ar-content">العودة للرئيسية</span>
             </a>
-            <a href="{% url 'website:contactus' %}" class="btn-404-secondary">
-                <i class="fa-solid fa-headset"></i>
-                <span class="en-content">Contact Us</span>
-                <span class="ar-content">تواصل معنا</span>
-            </a>
+          
         </div>
 
         <div class="error-404-links">
