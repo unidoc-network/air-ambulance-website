@@ -1,4 +1,5 @@
 from django.urls import path
+from django.views.generic import RedirectView
 from website import views
 from django.conf.urls import handler404
 
@@ -51,6 +52,42 @@ urlpatterns = [
     path('send-otp/', views.SendOTPView.as_view(), name='send_otp'),
     path('verify-otp/', views.VerifyOTPView.as_view(), name='verify_otp'),
     path('submit-enquiry/', views.SubmitEnquiryView.as_view(), name='submit_enquiry'),
+
+    # ── 301 Permanent Redirects (legacy URLs from old site) ──────────────────
+    # Vision & Mission → About
+    path('vision-mission-core-values/',
+         RedirectView.as_view(url='/about/', permanent=True),
+         name='redirect_vision_mission'),
+
+    # Enquire Now standalone page → Contact
+    path('enquire-now/',
+         RedirectView.as_view(url='/contact/', permanent=True),
+         name='redirect_enquire_now'),
+
+    # Medical Team listing → About
+    path('medical-team/',
+         RedirectView.as_view(url='/about/', permanent=True),
+         name='redirect_medical_team'),
+
+    # Dr. Mohammed Afsal profile → About
+    path('medical-team/dr-mohammed-afsal/',
+         RedirectView.as_view(url='/about/', permanent=True),
+         name='redirect_dr_afsal'),
+
+    # Dr. Dagemawi Tesefaye profile → About
+    path('medical-team/dr-dagemawi-tesefaye/',
+         RedirectView.as_view(url='/about/', permanent=True),
+         name='redirect_dr_dagemawi'),
+
+    # Abu Dhabi landing page → Contact
+    path('air-ambulance-abu-dhabi/',
+         RedirectView.as_view(url='/contact/', permanent=True),
+         name='redirect_abudhabi'),
+
+    # Kuwait landing page → Contact
+    path('air-ambulance-kuwait/',
+         RedirectView.as_view(url='/contact/', permanent=True),
+         name='redirect_kuwait'),
 ]
 
 handler404 = views.error_404
