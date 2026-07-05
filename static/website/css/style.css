@@ -1285,6 +1285,7 @@ img {
 
     .svc-card-left {
         flex: none;
+        order: 1;
     }
 
     .svc-card-text {
@@ -1294,6 +1295,7 @@ img {
     .svc-card-right {
         height: 260px;
         padding: 0;
+        order: 0;
     }
 
     .svc-card-img {
@@ -1316,6 +1318,7 @@ img {
 
     .svc-card-left {
         height: 340px;
+        order: 1;
     }
 
     .svc-card-text {
@@ -1335,6 +1338,7 @@ img {
     .svc-card-right {
         height: 200px;
         padding: 0;
+        order: 0;
     }
 
     .svc-card-btn {
@@ -2994,9 +2998,9 @@ img {
    FAQ SECTION
    ======================================== */
 .faq-section {
-    padding-top: 90px;
+    padding-top: 80px;
     background: #EDF2F6;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
 }
 
 .faq-subtitle {
@@ -3609,7 +3613,7 @@ img {
     }
 
     .aircraft-highlights-card {
-        padding: 24px;
+        padding: 54px 24px;
     }
 }
 
@@ -4250,6 +4254,21 @@ img {
     }
 }
 
+.marker-1 {
+    top: 39%;
+    left: 22%;
+}
+
+.marker-2 {
+    top: 44%;
+    left: 27%;
+}
+
+.marker-3 {
+    top: 62%;
+    left: 47%;
+}
+
 @media (max-width: 767.98px) {
     .section {
         padding: 70px 0;
@@ -4357,7 +4376,7 @@ img {
     }
 
     .news-hero-section {
-        height: auto;
+        height: 100vh;
         min-height: 500px;
         padding-bottom: 60px;
     }
@@ -4365,6 +4384,21 @@ img {
     .news-title {
         font-size: 32px;
         margin-bottom: 24px;
+    }
+
+    .marker-1 {
+        top: 44%;
+        left: 10%;
+    }
+
+    .marker-2 {
+        top: 49%;
+        left: 17%;
+    }
+
+    .marker-3 {
+        top: 67%;
+        left: 46%;
     }
 }
 
@@ -5295,6 +5329,7 @@ img {
     /* max-width: 1200px; */
     margin: 0 auto;
     /* padding: 0 15px; */
+    overflow: hidden;
 }
 
 .interactive-map-container .map-image {
@@ -5560,8 +5595,8 @@ img {
 }
 
 .air-ambulance-info {
-    padding-bottom: 40px;
-    padding-top: 50px;
+    padding-bottom: 80px;
+    padding-top: 80px;
 }
 
 .service-counter {
@@ -5781,8 +5816,7 @@ img {
    MISSION SECTION (Behind every transfer)
    ======================================== */
 .mission-stories-section {
-    padding: 20px 0;
-    padding-bottom: 0px;
+    padding-top: 80px;
     background-color: #EDF2F6;
 }
 
@@ -5834,6 +5868,14 @@ img {
 
 .pt-20 {
     padding-top: 50px;
+}
+
+.pb-50 {
+    padding-bottom: 80px;
+}
+
+.pt-30 {
+    padding-top: 80px;
 }
 
 .mission-card-title {
@@ -6668,9 +6710,10 @@ img {
 
 /* UMeN Section */
 .umen-section-wrapper {
-    padding-top: 20px;
-
+    padding-top: 0px;
+    padding-bottom: 80px;
 }
+
 
 .umen-section {
     position: relative;
@@ -6712,7 +6755,7 @@ img {
 }
 
 html[dir="rtl"] .umen-title {
-    font-size: 80px;
+    font-size: 70px;
 }
 
 
@@ -7029,6 +7072,13 @@ html[dir="rtl"] .global-ops-heading {
     text-align: right;
 }
 
+@media (max-width: 575.98px) {
+    html[dir="rtl"] .global-ops-heading {
+        font-size: 24px;
+        line-height: 38px;
+    }
+}
+
 /* ── Accredited ── */
 html[dir="rtl"] .accredited-wrapper {
     flex-direction: row-reverse;
@@ -7192,7 +7242,13 @@ html[dir="rtl"] .leader-content {
 }
 
 html[dir="rtl"] .profile-sec a {
-    flex-direction: row-reverse;
+    /* flex-direction: row-reverse; */
+    /* justify-content: flex-end; */
+    gap: 12px;
+}
+
+html[dir="rtl"] .profile-sec .arrow-bg img {
+    transform: rotate(180deg);
 }
 
 /* ── Service pages ── */
@@ -8391,6 +8447,10 @@ html[dir="rtl"] svg {
         width: 100%;
     }
 
+    html[dir="rtl"] .umen-title {
+        font-size: 50px;
+    }
+
     .learn-more-img-wrapper {
         min-height: 330px !important;
     }
@@ -9149,7 +9209,7 @@ html[dir="rtl"] .related-blog-section h3 {
 
 .saudi-contact-section {
     background-color: #EEF3F6;
-    padding: 50px 0;
+    padding: 80px 0;
 }
 
 /* Saudi CTA Section */
@@ -9491,6 +9551,12 @@ html[dir="rtl"] .related-blog-section h3 {
         text-align: center;
         display: block;
     }
+
+    .interactive-map-container .map-image {
+        height: 410px;
+        margin-top: -20px;
+        object-fit: cover;
+    }
 }
 
 
@@ -9509,6 +9575,31 @@ html[dir="rtl"] .related-blog-section h3 {
     padding-top: 70px;
 }
 
-.nav-outline-btn svg path{
+.nav-outline-btn svg path {
     stroke: black;
+}
+
+html[dir="rtl"] .card-icon {
+    margin-left: auto;
+}
+
+/* ── FAQ Accordion RTL ── */
+html[dir="rtl"] .faq-button {
+    text-align: right;
+    padding-right: 0;
+    padding-left: 60px;
+}
+
+html[dir="rtl"] .faq-button::after {
+    right: auto;
+    left: 0;
+}
+
+html[dir="rtl"] .faq-body {
+    text-align: right;
+}
+
+html[dir="rtl"] .diff-text {
+    text-align: right;
+
 }
