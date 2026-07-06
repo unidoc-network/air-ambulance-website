@@ -9606,3 +9606,18 @@ html[dir="rtl"] .diff-text {
 html[dir="rtl"] .card-title{
         margin-left: auto;
 }
+
+html[dir="rtl"] .oman-main-form .select-wrapper i {
+    right: auto;
+    left: 20px;
+}
+
+html[dir="rtl"] .ab-down {
+    right: auto;
+    left: 15px;
+}
+
+/* ── Fleet Slider Nav RTL ── */
+html[dir="rtl"] .fbs-nav {
+    flex-direction: row-reverse;
+}
