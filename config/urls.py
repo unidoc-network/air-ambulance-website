@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from django.views.generic.base import RedirectView
+from django.views.generic import TemplateView
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -25,6 +26,8 @@ from . import views
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
+    path('sitemap.xml', TemplateView.as_view(template_name='sitemap.xml', content_type='text/xml')),
+    path('robots.txt', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
     path('superadmin/', include('superadmin.urls')),
     path('', include('website.urls')),
     path('superadmin', RedirectView.as_view(url='/superadmin/')),
