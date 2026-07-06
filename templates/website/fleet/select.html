@@ -21,25 +21,29 @@ transport services.{% endblock %}
         <div class="swiper fleetssSwiper" dir="ltr">
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
-                <div class="swiper-slide fbs-swiper-slide" data-subtitle="bombardier" data-name="challenger 605"
+                <div class="swiper-slide fbs-swiper-slide" data-subtitle-en="bombardier" data-name-en="challenger 605"
+                    data-subtitle-ar="بومباردييه" data-name-ar="تشالنجر 605"
                     data-url="{% url 'website:fleet_challenger605' %}">
                     <img src="{% static 'website/images/plane.png' %}" alt="Bombardier Challenger 605"
                         class="fbs-plane-img">
                 </div>
                 <!-- Slide 2 -->
-                <div class="swiper-slide fbs-swiper-slide" data-subtitle="bombardier" data-name="challenger 604"
+                <div class="swiper-slide fbs-swiper-slide" data-subtitle-en="bombardier" data-name-en="challenger 604"
+                    data-subtitle-ar="بومباردييه" data-name-ar="تشالنجر 604"
                     data-url="{% url 'website:fleet_challenger604' %}">
                     <img src="{% static 'website/images/plane.png' %}" alt="Bombardier Challenger 604"
                         class="fbs-plane-img">
                 </div>
                 <!-- Slide 3 -->
-                <div class="swiper-slide fbs-swiper-slide" data-subtitle="Beechcraft" data-name="King Air B200"
+                <div class="swiper-slide fbs-swiper-slide" data-subtitle-en="Beechcraft" data-name-en="King Air B200"
+                    data-subtitle-ar="بيتشكرافت" data-name-ar="كينج إير B200"
                     data-url="{% url 'website:fleet_kingair_b200' %}">
                     <img src="{% static 'website/images/plane3.png' %}" alt="Beechcraft King Air B200"
                         class="fbs-plane-img">
                 </div>
                 <!-- Slide 4 -->
-                <div class="swiper-slide fbs-swiper-slide" data-subtitle="Beechcraft" data-name="King Air C90"
+                <div class="swiper-slide fbs-swiper-slide" data-subtitle-en="Beechcraft" data-name-en="King Air C90"
+                    data-subtitle-ar="بيتشكرافت" data-name-ar="كينج إير C90"
                     data-url="{% url 'website:fleet_kingair_c90' %}">
                     <img src="{% static 'website/images/plane4.png' %}" alt="Beechcraft King Air C90"
                         class="fbs-plane-img">
@@ -50,10 +54,14 @@ transport services.{% endblock %}
 
     <!-- Caption below plane -->
     <div class="fbs-caption-wrap">
-        <p class="fbs-subtitle" id="fbsSubtitle">bombardier</p>
-        <h2 class="fbs-name" id="fbsName">challenger 605</h2>
-        <a href="{% url 'website:fleet_challenger605' %}" class="fbs-learn-btn en-content" id="fbsLearnBtn">Learn More</a>
-        <a href="{% url 'website:fleet_challenger605' %}" class="fbs-learn-btn ar-content" id="fbsLearnBtn">المزيد</a>
+        <p class="fbs-subtitle en-content" id="fbsSubtitleEn">bombardier</p>
+        <p class="fbs-subtitle ar-content" id="fbsSubtitleAr">بومباردييه</p>
+        
+        <h2 class="fbs-name en-content" id="fbsNameEn">challenger 605</h2>
+        <h2 class="fbs-name ar-content" id="fbsNameAr">تشالنجر 605</h2>
+        
+        <a href="{% url 'website:fleet_challenger605' %}" class="fbs-learn-btn en-content" id="fbsLearnBtnEn">Learn More</a>
+        <a href="{% url 'website:fleet_challenger605' %}" class="fbs-learn-btn ar-content" id="fbsLearnBtnAr">المزيد</a>
 
     </div>
 
@@ -85,9 +93,12 @@ transport services.{% endblock %}
 
 <script>
     (function () {
-        const subtitleEl = document.getElementById('fbsSubtitle');
-        const nameEl = document.getElementById('fbsName');
-        const learnBtn = document.getElementById('fbsLearnBtn');
+        const subtitleEnEl = document.getElementById('fbsSubtitleEn');
+        const subtitleArEl = document.getElementById('fbsSubtitleAr');
+        const nameEnEl = document.getElementById('fbsNameEn');
+        const nameArEl = document.getElementById('fbsNameAr');
+        const learnBtnEn = document.getElementById('fbsLearnBtnEn');
+        const learnBtnAr = document.getElementById('fbsLearnBtnAr');
 
         const fleetssSwiper = new Swiper('.fleetssSwiper', {
             slidesPerView: 1.35,
@@ -109,9 +120,12 @@ transport services.{% endblock %}
                 slideChange: function () {
                     const slide = this.slides[this.activeIndex];
                     if (slide) {
-                        subtitleEl.textContent = slide.dataset.subtitle || '';
-                        nameEl.textContent = slide.dataset.name || '';
-                        learnBtn.href = slide.dataset.url || '#';
+                        if (subtitleEnEl) subtitleEnEl.textContent = slide.dataset.subtitleEn || '';
+                        if (subtitleArEl) subtitleArEl.textContent = slide.dataset.subtitleAr || '';
+                        if (nameEnEl) nameEnEl.textContent = slide.dataset.nameEn || '';
+                        if (nameArEl) nameArEl.textContent = slide.dataset.nameAr || '';
+                        if (learnBtnEn) learnBtnEn.href = slide.dataset.url || '#';
+                        if (learnBtnAr) learnBtnAr.href = slide.dataset.url || '#';
                     }
                 }
             }
