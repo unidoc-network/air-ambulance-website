@@ -10,11 +10,13 @@ repatriation.{% endblock %}
         <img src="{% static 'website/images/saudi-banner.png' %}" alt="Air Ambulance Transfer" class="aa-hero-bg-saudi">
         <div class="container ">
             <div class="saudi-hero-text-wrapper saudi-hero-content">
-                <h1 class="saudi-banner-title">Air Ambulance Saudi Arabia</h1>
+                <h1 class="saudi-banner-title">
+                    <span class="en-content">Air Ambulance Saudi Arabia</span>
+                    <span class="ar-content">خدمات الإسعاف الجوي والإخلاء الطبي الدولي</span>
+                </h1>
                 <p class="saudi-banner-desc">
-                    Bluedot provides domestic and international air ambulance and medical evacuation services for
-                    critical and non-critical patients, offering complete medical transport solutions across Saudi
-                    Arabia and worldwide.
+                    <span class="en-content">Bluedot provides domestic and international air ambulance and medical evacuation services for critical and non-critical patients, offering complete medical transport solutions across Saudi Arabia and worldwide.</span>
+                    <span class="ar-content">توفر بلودوت خدمات الإسعاف الجوي والإخلاء الطبي المحلي والدولي، مع تنسيق طبي متكامل داخل المملكة العربية السعودية وإلى جميع أنحاء العالم.</span>
                 </p>
 
                 <div class="saudi-features-list">
@@ -24,7 +26,9 @@ repatriation.{% endblock %}
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5 13l4 4L19 7" stroke="#009BE0" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" />
-                            </svg> Available 24/7
+                            </svg> 
+                            <span class="en-content">Available 24/7</span>
+                            <span class="ar-content">متاح على مدار الساعة 24/7</span>
                         </div>
                         <span class="divider">|</span>
                         <div class="saudi-feature-item">
@@ -32,7 +36,9 @@ repatriation.{% endblock %}
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5 13l4 4L19 7" stroke="#009BE0" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" />
-                            </svg> Complete Medical Transport Coordination
+                            </svg> 
+                            <span class="en-content">Complete Medical Transport Coordination</span>
+                            <span class="ar-content">النقل الطبي المتكامل</span>
                         </div>
                     </div>
                     <div class="saudi-feature-row">
@@ -41,7 +47,9 @@ repatriation.{% endblock %}
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5 13l4 4L19 7" stroke="#009BE0" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" />
-                            </svg> ICU-Equipped Air Ambulance Aircraft
+                            </svg> 
+                            <span class="en-content">ICU-Equipped Air Ambulance Aircraft</span>
+                            <span class="ar-content">طائرات مجهزة بوحدات عناية مركزة (ICU)</span>
                         </div>
                         <span class="divider">|</span>
                         <div class="saudi-feature-item">
@@ -49,7 +57,9 @@ repatriation.{% endblock %}
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5 13l4 4L19 7" stroke="#009BE0" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" />
-                            </svg> Specialized Medical Teams
+                            </svg> 
+                            <span class="en-content">Specialized Medical Teams</span>
+                            <span class="ar-content">فرق طبية متخصصة</span>
                         </div>
                     </div>
                     <div class="saudi-feature-row">
@@ -58,7 +68,9 @@ repatriation.{% endblock %}
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5 13l4 4L19 7" stroke="#009BE0" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" />
-                            </svg> Worldwide Coverage
+                            </svg> 
+                            <span class="en-content">Worldwide Coverage</span>
+                            <span class="ar-content">تغطية دولية</span>
                         </div>
                         <span class="divider">|</span>
                         <div class="saudi-feature-item">
@@ -66,15 +78,26 @@ repatriation.{% endblock %}
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5 13l4 4L19 7" stroke="#009BE0" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" />
-                            </svg> Rapid Emergency Response
+                            </svg> 
+                            <span class="en-content">Rapid Emergency Response</span>
+                            <span class="ar-content">استجابة سريعة للحالات الطارئة</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="saudi-hero-actions">
-                    <a href="javascript:void(0)" class="btn-quote trigger-enquiry">Get a Free Quote</a>
-                    <a href="https://wa.me/+971551881441" class="btn-whatsapp" target="_blank">Chat on WhatsApp</a>
-                    <a href="tel:+966538855753" class="link-call">Call Now</a>
+                    <a href="javascript:void(0)" class="btn-quote trigger-enquiry">
+                        <span class="en-content">Get a Free Quote</span>
+                        <span class="ar-content">احصل على عرض سعر</span>
+                    </a>
+                    <a href="https://wa.me/+971551881441" class="btn-whatsapp" target="_blank">
+                        <span class="en-content">Chat on WhatsApp</span>
+                        <span class="ar-content">تواصل عبر واتساب</span>
+                    </a>
+                    <a href="tel:+966538855753" class="link-call">
+                        <span class="en-content">Call Now</span>
+                        <span class="ar-content">اتصل الآن</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -91,7 +114,10 @@ repatriation.{% endblock %}
 
                 <div class="row">
                     <div class="col-lg-12">
-                        <h2 class="join-us-title">Why Choose Bluedot?</h2>
+                        <h2 class="join-us-title">
+                            <span class="en-content">Why Choose Bluedot?</span>
+                            <span class="ar-content">لماذا تختار بلودوت؟</span>
+                        </h2>
                     </div>
                   
                 </div>
@@ -101,20 +127,44 @@ repatriation.{% endblock %}
             <!-- Bottom Stats Box -->
             <div class="saudi-stats-box row">
             <div class="col-lg-12">
-<h4>4,000+ Medical Missions <br> Completed</h4>
-<p>Bluedot has successfully completed more than 4,000 medical transport missions worldwide,including critical care and neonatal patient transfers.</p>
+<h4>
+    <span class="en-content">4,000+ Medical Missions <br> Completed</span>
+    <span class="ar-content">+4000 مهمة طبية ناجحة</span>
+</h4>
+<p>
+    <span class="en-content">Bluedot has successfully completed more than 4,000 medical transport missions worldwide,including critical care and neonatal patient transfers.</span>
+    <span class="ar-content">نفذت بلودوت أكثر من 4000 مهمة طبية حول العالم، بما في ذلك نقل الحالات الحرجة وحديثي الولادة.</span>
+</p>
             </div>
               <div class="col-lg-12">
-<h4>Trusted by 100+ Embassies & <br> Consulates</h4>
-<p>Bluedot is trusted by more than 100 embassies, consulates, government organizations, and international institutions for medical repatriation and patient transport.</p>
+<h4>
+    <span class="en-content">Trusted by 100+ Embassies & <br> Consulates</span>
+    <span class="ar-content">+100 سفارة وقنصلية</span>
+</h4>
+<p>
+    <span class="en-content">Bluedot is trusted by more than 100 embassies, consulates, government organizations, and international institutions for medical repatriation and patient transport.</span>
+    <span class="ar-content">تحظى بلودوت بثقة أكثر من 100 سفارة وقنصلية وجهات حكومية ومنظمات دولية.</span>
+</p>
             </div>
               <div class="col-lg-12">
-<h4>100% Mission Success Rate</h4>
-<p>A proven track record built on meticulous planning, rapid response, and safe medicaltransportation.</p>
+<h4>
+    <span class="en-content">100% Mission Success Rate</span>
+    <span class="ar-content">100% نجاح في تنفيذ المهام</span>
+</h4>
+<p>
+    <span class="en-content">A proven track record built on meticulous planning, rapid response, and safe medicaltransportation.</span>
+    <span class="ar-content">سجل حافل بالنجاح من خلال التخطيط الدقيق والاستجابة السريعة للحالات الطبية المعقدة.</span>
+</p>
             </div>
               <div class="col-lg-12">
-<h4>Serving 90+ Cities & Countries</h4>
-<p>Providing air ambulance and medical evacuation services across more than 90 cities and countries worldwide.</p>
+<h4>
+    <span class="en-content">Serving 90+ Cities & Countries</span>
+    <span class="ar-content">+90 مدينة ودولة</span>
+</h4>
+<p>
+    <span class="en-content">Providing air ambulance and medical evacuation services across more than 90 cities and countries worldwide.</span>
+    <span class="ar-content">نقدم خدمات الإسعاف الجوي والإخلاء الطبي في أكثر من 90 مدينة ودولة حول العالم.</span>
+</p>
             </div>
             </div>
         </div>
@@ -124,17 +174,24 @@ repatriation.{% endblock %}
         <div class="container ">
             <div class="row">
                 <div class="col-md-4">
-                    <h2 class="info-tagline">Bluedot Air Ambulance &International Medical Evacuation</h2>
+                    <h2 class="info-tagline">
+                        <span class="en-content">Bluedot Air Ambulance &International Medical Evacuation</span>
+                        <span class="ar-content">بلودوت للإسعاف الجوي والإخلاء الطبي الدولي</span>
+                    </h2>
                 </div>
                 <div class="col-md-2">
 
                 </div>
                 <div class="col-md-6">
                     <div class="info-description">
-                        <p>Bluedot is one of the Middle East’s leading providers of Air Ambulance and International Medical Evacuation services. 
-We deliver comprehensive medical transport solutions for critical and non-critical patients within Saudi Arabia and across the globe.
+                        <p>
+                            <span class="en-content">Bluedot is one of the Middle East’s leading providers of Air Ambulance and International Medical Evacuation services. We deliver comprehensive medical transport solutions for critical and non-critical patients within Saudi Arabia and across the globe.</span>
+                            <span class="ar-content">يعد بلودوت من أبرز مزودي خدمات الإسعاف الجوي والإخلاء الطبي الدولي في الشرق الأوسط، حيث نقدم حلول نقل طبي متكاملة للحالات الحرجة وغير الحرجة داخل المملكة العربية السعودية وخارجها.</span>
                         </p>
-                        <p>Our experienced medical professionals, global aviation network, and extensive operational expertise enable us to coordinate complex medical transfers quickly, safely, and efficiently.</p>
+                        <p>
+                            <span class="en-content">Our experienced medical professionals, global aviation network, and extensive operational expertise enable us to coordinate complex medical transfers quickly, safely, and efficiently.</span>
+                            <span class="ar-content">يعتمد نجاحنا على فريق طبي متخصص وخبرة واسعة في إدارة عمليات النقل الطبي المعقدة وشبكة عالمية من المطارات ومقدمي الخدمات الطبية لضمان سرعة الاستجابة وسهولة الإجراءات.</span>
+                        </p>
 
                     </div>
                 </div>
@@ -145,40 +202,79 @@ We deliver comprehensive medical transport solutions for critical and non-critic
     <section class="saudi-services-section">
         <div class="container">
             <div class="saudi-services-card">
-                <h2 class="saudi-services-title">Our Services</h2>
+                <h2 class="saudi-services-title">
+                    <span class="en-content">Our Services</span>
+                    <span class="ar-content">خدماتنا</span>
+                </h2>
                 
                 <div class="row g-4 mt-4">
                     <!-- Column 1 -->
                     <div class="col-md-4">
                         <div class="saudi-service-item">
-                            <h3 class="saudi-service-name">Air Ambulance</h3>
-                            <p class="saudi-service-desc">Fully equipped ICU air ambulance aircraft providing safe medical transportation for critically ill patients within Saudi Arabia and internationally.</p>
+                            <h3 class="saudi-service-name">
+                                <span class="en-content">Air Ambulance</span>
+                                <span class="ar-content">الإسعاف الجوي</span>
+                            </h3>
+                            <p class="saudi-service-desc">
+                                <span class="en-content">Fully equipped ICU air ambulance aircraft providing safe medical transportation for critically ill patients within Saudi Arabia and internationally.</span>
+                                <span class="ar-content">طائرات إسعاف مجهزة بالكامل لنقل المرضى ذوي الحالات الحرجة داخل المملكة العربية السعودية وخارجها، مع توفير رعاية طبية متخصصة طوال الرحلة.</span>
+                            </p>
                         </div>
                         <div class="saudi-service-item mt-4 mt-md-5">
-                            <h3 class="saudi-service-name">Medical Escort Services</h3>
-                            <p class="saudi-service-desc">Experienced medical escorts accompany patients on commercial flights when a dedicated air ambulance is not required.</p>
+                            <h3 class="saudi-service-name">
+                                <span class="en-content">Medical Escort Services</span>
+                                <span class="ar-content">المرافقة الطبية</span>
+                            </h3>
+                            <p class="saudi-service-desc">
+                                <span class="en-content">Experienced medical escorts accompany patients on commercial flights when a dedicated air ambulance is not required.</span>
+                                <span class="ar-content">مرافق طبي متخصص يرافق المرضى على الرحلات التجارية للحالات التي لا تتطلب طائرة إسعاف كاملة، مع تقديم الرعاية الطبية اللازمة أثناء السفر.</span>
+                            </p>
                         </div>
                     </div>
                     <!-- Column 2 -->
                     <div class="col-md-4">
                         <div class="saudi-service-item">
-                            <h3 class="saudi-service-name">Domestic Medical Evacuation</h3>
-                            <p class="saudi-service-desc">Safe and efficient patient transfers between hospitals and cities across Saudi Arabia, with complete medical and logistical coordination.</p>
+                            <h3 class="saudi-service-name">
+                                <span class="en-content">Domestic Medical Evacuation</span>
+                                <span class="ar-content">الإخلاء الطبي المحلي</span>
+                            </h3>
+                            <p class="saudi-service-desc">
+                                <span class="en-content">Safe and efficient patient transfers between hospitals and cities across Saudi Arabia, with complete medical and logistical coordination.</span>
+                                <span class="ar-content">خدمات نقل المرضى بين المستشفيات والمدن داخل المملكة العربية السعودية، مع تنسيق طبي ولوجستي متكامل لضمان وصول المريض بأمان وسرعة.</span>
+                            </p>
                         </div>
                         <div class="saudi-service-item mt-4 mt-md-5">
-                            <h3 class="saudi-service-name">Comprehensive Medical Transport</h3>
-                            <p class="saudi-service-desc">Complete coordination of the patient's journey from their current location to the receiving medical facility, including all required medical transport and healthcare arrangements.</p>
+                            <h3 class="saudi-service-name">
+                                <span class="en-content">Comprehensive Medical Transport</span>
+                                <span class="ar-content">النقل الطبي المتكامل</span>
+                            </h3>
+                            <p class="saudi-service-desc">
+                                <span class="en-content">Complete coordination of the patient's journey from their current location to the receiving medical facility, including all required medical transport and healthcare arrangements.</span>
+                                <span class="ar-content">نتولى إدارة وتنسيق رحلة المريض بالكامل، بدءاً من موقعه الحالي وحتى وصوله إلى الجهة الطبية المستقبلة، مع توفير جميع وسائل النقل والرعاية الطبية اللازمة.</span>
+                            </p>
                         </div>
                     </div>
                     <!-- Column 3 -->
                     <div class="col-md-4">
                         <div class="saudi-service-item">
-                            <h3 class="saudi-service-name">International Medical Evacuation</h3>
-                            <p class="saudi-service-desc">End-to-end coordination of international patient transfers, including medical supervision, flight arrangements, and logistical support.</p>
+                            <h3 class="saudi-service-name">
+                                <span class="en-content">International Medical Evacuation</span>
+                                <span class="ar-content">الإخلاء الطبي الدولي</span>
+                            </h3>
+                            <p class="saudi-service-desc">
+                                <span class="en-content">End-to-end coordination of international patient transfers, including medical supervision, flight arrangements, and logistical support.</span>
+                                <span class="ar-content">تنسيق كامل لعمليات نقل المرضى بين الدول، مع توفير الرعاية الطبية المناسبة وإدارة جميع الإجراءات الطبية واللوجستية طوال الرحلة.</span>
+                            </p>
                         </div>
                         <div class="saudi-service-item mt-4 mt-md-5">
-                            <h3 class="saudi-service-name">Medical Repatriation</h3>
-                            <p class="saudi-service-desc">Safe and professionally managed medical repatriation services, helping patients return to their home country or place of residence under continuous medical supervision.</p>
+                            <h3 class="saudi-service-name">
+                                <span class="en-content">Medical Repatriation</span>
+                                <span class="ar-content">الإعادة الطبية إلى الوطن</span>
+                            </h3>
+                            <p class="saudi-service-desc">
+                                <span class="en-content">Safe and professionally managed medical repatriation services, helping patients return to their home country or place of residence under continuous medical supervision.</span>
+                                <span class="ar-content">خدمات إعادة المرضى إلى بلدانهم أو أماكن إقامتهم بأمان، مع إشراف طبي كامل وتنسيق جميع ترتيبات النقل والرعاية.</span>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -191,72 +287,161 @@ We deliver comprehensive medical transport solutions for critical and non-critic
         <div class="container">
             <div class="saudi-coverage-card">
                 <div class="saudi-coverage-header">
-                    <h2 class="saudi-coverage-title">Air Ambulance Services<br>Across Saudi Arabia</h2>
-                    <p class="saudi-coverage-desc">Bluedot provides Air Ambulance and Medical Evacuation services throughout Saudi Arabia, including:</p>
+                    <h2 class="saudi-coverage-title">
+                        <span class="en-content">Air Ambulance Services<br>Across Saudi Arabia</span>
+                        <span class="ar-content">خدمات الإسعاف الجوي في جميع أنحاء المملكة العربية السعودية</span>
+                    </h2>
+                    <p class="saudi-coverage-desc">
+                        <span class="en-content">Bluedot provides Air Ambulance and Medical Evacuation services throughout Saudi Arabia, including:</span>
+                        <span class="ar-content">توفر بلودوت خدمات الإسعاف الجوي والإخلاء الطبي من وإلى جميع المدن الرئيسية في المملكة، بما في ذلك:</span>
+                    </p>
                 </div>
 
                 <div class="saudi-regions-grid">
                     <!-- Row 1: Full-width + Half -->
                     <div class="saudi-region-pill saudi-pill-wide">
-                        <span class="saudi-pill-name">Riyadh Region</span>
-                        <span class="saudi-pill-cities">Riyadh | Al Kharj | Al Dawadmi | Al Zulfi | Al Majma'ah</span>
+                        <span class="saudi-pill-name">
+                            <span class="en-content">Riyadh Region</span>
+                            <span class="ar-content">1 منطقة الرياض</span>
+                        </span>
+                        <span class="saudi-pill-cities">
+                            <span class="en-content">Riyadh | Al Kharj | Al Dawadmi | Al Zulfi | Al Majma'ah</span>
+                            <span class="ar-content">الرياض، الخرج، الدوادمي، الزلفي، المجمعة.</span>
+                        </span>
                     </div>
                     <div class="saudi-region-pill saudi-pill-wide">
-                        <span class="saudi-pill-name">Makkah Region</span>
-                        <span class="saudi-pill-cities">Makkah | Jeddah | Taif | Al Qunfudhah</span>
+                        <span class="saudi-pill-name">
+                            <span class="en-content">Makkah Region</span>
+                            <span class="ar-content">2 منطقة مكة المكرمة</span>
+                        </span>
+                        <span class="saudi-pill-cities">
+                            <span class="en-content">Makkah | Jeddah | Taif | Al Qunfudhah</span>
+                            <span class="ar-content">مكة المكرمة، جدة، الطائف، القنفذة.</span>
+                        </span>
                     </div>
 
                     <!-- Row 2: Half + Full-width -->
                     <div class="saudi-region-pill">
-                        <span class="saudi-pill-name">Madinah Region</span>
-                        <span class="saudi-pill-cities">Madinah | Yanbu | Al Ula</span>
+                        <span class="saudi-pill-name">
+                            <span class="en-content">Madinah Region</span>
+                            <span class="ar-content">3 منطقة المدينة المنورة</span>
+                        </span>
+                        <span class="saudi-pill-cities">
+                            <span class="en-content">Madinah | Yanbu | Al Ula</span>
+                            <span class="ar-content">المدينة المنورة، ينبع، العلا.</span>
+                        </span>
                     </div>
                     <div class="saudi-region-pill saudi-pill-full">
-                        <span class="saudi-pill-name">Eastern Province</span>
-                        <span class="saudi-pill-cities">Dammam | Al Khobar | Dhahran | Al Ahsa | Jubail | Qatif | Nairyah</span>
+                        <span class="saudi-pill-name">
+                            <span class="en-content">Eastern Province</span>
+                            <span class="ar-content">5 المنطقة الشرقية</span>
+                        </span>
+                        <span class="saudi-pill-cities">
+                            <span class="en-content">Dammam | Al Khobar | Dhahran | Al Ahsa | Jubail | Qatif | Nairyah</span>
+                            <span class="ar-content">الدمام، الخبر، الظهران، الأحساء، الجبيل، القطيف ، النعيريه .</span>
+                        </span>
                     </div>
 
                     <!-- Row 3: Three equal -->
                     <div class="saudi-region-pill">
-                        <span class="saudi-pill-name">Qassim Region</span>
-                        <span class="saudi-pill-cities">Buraydah | Unaizah | Unaizah</span>
+                        <span class="saudi-pill-name">
+                            <span class="en-content">Qassim Region</span>
+                            <span class="ar-content">4 منطقة القصيم</span>
+                        </span>
+                        <span class="saudi-pill-cities">
+                            <span class="en-content">Buraydah | Unaizah | Unaizah</span>
+                            <span class="ar-content">بريدة، عنيزة، الرس.</span>
+                        </span>
                     </div>
                     <div class="saudi-region-pill">
-                        <span class="saudi-pill-name">Northern Borders</span>
-                        <span class="saudi-pill-cities">Arar | Rafha | Turaif</span>
+                        <span class="saudi-pill-name">
+                            <span class="en-content">Northern Borders</span>
+                            <span class="ar-content">9 منطقة الحدود الشمالية</span>
+                        </span>
+                        <span class="saudi-pill-cities">
+                            <span class="en-content">Arar | Rafha | Turaif</span>
+                            <span class="ar-content">عرعر، رفحاء، طريف.</span>
+                        </span>
                     </div>
                     <div class="saudi-region-pill">
-                        <span class="saudi-pill-name">Al Bahah Region</span>
-                        <span class="saudi-pill-cities">Al Bahah | Baljurashi | Al Makhwah</span>
+                        <span class="saudi-pill-name">
+                            <span class="en-content">Al Bahah Region</span>
+                            <span class="ar-content">12 منطقة الباحة</span>
+                        </span>
+                        <span class="saudi-pill-cities">
+                            <span class="en-content">Al Bahah | Baljurashi | Al Makhwah</span>
+                            <span class="ar-content">الباحة، بلجرشي، المخواة.</span>
+                        </span>
                     </div>
 
                     <!-- Row 4: Three equal -->
                     <div class="saudi-region-pill">
-                        <span class="saudi-pill-name">Hail Region</span>
-                        <span class="saudi-pill-cities">Hail | Baqaa | Al Ghazalah</span>
+                        <span class="saudi-pill-name">
+                            <span class="en-content">Hail Region</span>
+                            <span class="ar-content">8 منطقة حائل</span>
+                        </span>
+                        <span class="saudi-pill-cities">
+                            <span class="en-content">Hail | Baqaa | Al Ghazalah</span>
+                            <span class="ar-content">حائل، بقعاء، الغزالة.</span>
+                        </span>
                     </div>
                     <div class="saudi-region-pill">
-                        <span class="saudi-pill-name">Tabuk Region</span>
-                        <span class="saudi-pill-cities">Tabuk | Duba | Al Wajh</span>
+                        <span class="saudi-pill-name">
+                            <span class="en-content">Tabuk Region</span>
+                            <span class="ar-content">7 منطقة تبوك</span>
+                        </span>
+                        <span class="saudi-pill-cities">
+                            <span class="en-content">Tabuk | Duba | Al Wajh</span>
+                            <span class="ar-content">تبوك، ضباء، الوجه.</span>
+                        </span>
                     </div>
                     <div class="saudi-region-pill">
-                        <span class="saudi-pill-name">Al Jouf Region</span>
-                        <span class="saudi-pill-cities">Sakaka | Al Qurayyat | Dumat Al Jandal</span>
+                        <span class="saudi-pill-name">
+                            <span class="en-content">Al Jouf Region</span>
+                            <span class="ar-content">13 منطقة الجوف</span>
+                        </span>
+                        <span class="saudi-pill-cities">
+                            <span class="en-content">Sakaka | Al Qurayyat | Dumat Al Jandal</span>
+                            <span class="ar-content">سكاكا، القريات، دومة الجندل</span>
+                        </span>
                     </div>
 
                     <!-- Row 5: Three equal -->
                     <div class="saudi-region-pill">
-                        <span class="saudi-pill-name">Najran Region</span>
-                        <span class="saudi-pill-cities">Najran | Sharurah | Abu Arish</span>
+                        <span class="saudi-pill-name">
+                            <span class="en-content">Najran Region</span>
+                            <span class="ar-content">11 منطقة نجران</span>
+                        </span>
+                        <span class="saudi-pill-cities">
+                            <span class="en-content">Najran | Sharurah | Abu Arish</span>
+                            <span class="ar-content">نجران، شرورة.</span>
+                        </span>
                     </div>
                     <div class="saudi-region-pill">
-                        <span class="saudi-pill-name">Asir Region</span>
-                        <span class="saudi-pill-cities">Abha | Khamis Mushait | Bisha</span>
+                        <span class="saudi-pill-name">
+                            <span class="en-content">Asir Region</span>
+                            <span class="ar-content">6 منطقة عسير</span>
+                        </span>
+                        <span class="saudi-pill-cities">
+                            <span class="en-content">Abha | Khamis Mushait | Bisha</span>
+                            <span class="ar-content">أبها، خميس مشيط، بيشة.</span>
+                        </span>
                     </div>
                     <div class="saudi-region-pill">
-                        <span class="saudi-pill-name">Jazan Region</span>
-                        <span class="saudi-pill-cities">Jazan | Sabya | Abu Arish</span>
+                        <span class="saudi-pill-name">
+                            <span class="en-content">Jazan Region</span>
+                            <span class="ar-content">10 منطقة جازان</span>
+                        </span>
+                        <span class="saudi-pill-cities">
+                            <span class="en-content">Jazan | Sabya | Abu Arish</span>
+                            <span class="ar-content">جازان، صبيا، أبو عريش.</span>
+                        </span>
                     </div>
+                </div>
+                <div class="text-center mt-4">
+                    <p class="saudi-coverage-desc">
+                        <span class="ar-content">كما يمكننا ترتيب عمليات النقل الطبي الدولي إلى أوروبا وآسيا وأفريقيا وأمريكا الشمالية وغيرها من الوجهات العالمية.</span>
+                    </p>
                 </div>
             </div>
         </div>
@@ -267,16 +452,25 @@ We deliver comprehensive medical transport solutions for critical and non-critic
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="oman-bg-content">
-                            <h2>Advanced Air Ambulance <br> Fleet for Critical Care</h2>
-                            <p>Bluedot operates a diverse fleet of modern air ambulance aircraft equipped with advanced intensive care technology. Every aircraft is selected based on the patient’s medical condition, travel distance, and operational requirements to ensure the highest standards of safety and care.</p>
-                            <p class="mb-0">Our fleet includes:</p>
+                            <h2>
+                                <span class="en-content">Advanced Air Ambulance <br> Fleet for Critical Care</span>
+                                <span class="ar-content">أسطول جوي متطور للحالات الحرجة</span>
+                            </h2>
+                            <p>
+                                <span class="en-content">Bluedot operates a diverse fleet of modern air ambulance aircraft equipped with advanced intensive care technology. Every aircraft is selected based on the patient’s medical condition, travel distance, and operational requirements to ensure the highest standards of safety and care.</span>
+                                <span class="ar-content">توفر بلودوت حلول الإسعاف الجوي باستخدام أسطول متنوع من الطائرات الطبية المجهزة بأحدث تقنيات العناية المركزة، ويتم اختيار الطائرة الأنسب وفقاً للحالة الطبية للمريض، وعدد المرافقين، ومسافة الرحلة، لضمان أعلى مستويات السلامة والرعاية الطبية.<br>تشمل الطائرات المستخدمة:</span>
+                            </p>
+                            <p class="mb-0 en-content">Our fleet includes:</p>
 
 <p class="mb-0">Challenger 604</p>
 <p class="mb-0">Challenger 605</p>
 <p class="mb-0">King Air B200</p>
 <p class="">King Air C90</p>
 
-<p>All aircraft are equipped with ICU medical equipment, patient monitoring systems,ventilators, and life-support technology operated by highly trained aeromedical teams.</p>
+<p>
+    <span class="en-content">All aircraft are equipped with ICU medical equipment, patient monitoring systems,ventilators, and life-support technology operated by highly trained aeromedical teams.</span>
+    <span class="ar-content">جميع الطائرات مجهزة بأجهزة مراقبة المرضى، وأجهزة التنفس الصناعي، ومعدات العناية المركزة، ويشرف على الرحلات طاقم طبي متخصص لضمان تقديم أفضل رعاية للمريض طوال رحلة النقل.</span>
+</p>
                         </div>
                     </div>
                 </div>
@@ -287,18 +481,33 @@ We deliver comprehensive medical transport solutions for critical and non-critic
         <div class="container">
             <!-- Commercial Medical Flights -->
             <div class="saudi-extra-block">
-                <h2 class="saudi-extra-title">Commercial Medical Flights</h2>
-                <p class="saudi-extra-text">Bluedot also provides Medical Escort Services on commercial airlines for patients who are medically fit to travel without requiring a dedicated air ambulance aircraft.</p>
-                <p class="saudi-extra-text">Our team coordinates every aspect of the journey, including airline arrangements, airport assistance, hospital coordination, and continuous medical supervision from departure to arrival.</p>
+                <h2 class="saudi-extra-title">
+                    <span class="en-content">Commercial Medical Flights</span>
+                    <span class="ar-content">النقل الطبي عبر الطيران التجاري</span>
+                </h2>
+                <p class="saudi-extra-text">
+                    <span class="en-content">Bluedot also provides Medical Escort Services on commercial airlines for patients who are medically fit to travel without requiring a dedicated air ambulance aircraft.</span>
+                    <span class="ar-content">توفر بلودوت خدمات النقل الطبي عبر الرحلات التجارية للحالات التي تسمح حالتها الصحية بالسفر دون الحاجة إلى طائرة إسعاف خاصة، مع توفير مرافقين طبيين مؤهلين لمتابعة الحالة طوال الرحلة.</span>
+                </p>
+                <p class="saudi-extra-text">
+                    <span class="en-content">Our team coordinates every aspect of the journey, including airline arrangements, airport assistance, hospital coordination, and continuous medical supervision from departure to arrival.</span>
+                    <span class="ar-content">كما يتولى فريقنا التنسيق الكامل مع شركات الطيران والمطارات والمستشفيات والجهات المعنية، لضمان رحلة آمنة وسلسة، بدءاً من ترتيب إجراءات السفر وحتى وصول المريض إلى وجهته واستكمال الرعاية الطبية عند الوصول.</span>
+                </p>
             </div>
 
             <!-- Pediatric & Neonatal -->
             <div class="saudi-extra-block saudi-extra-two-col">
                 <div class="saudi-extra-left">
-                    <h2 class="saudi-extra-title">Pediatric & Neonatal<br>Air Ambulance</h2>
+                    <h2 class="saudi-extra-title">
+                        <span class="en-content">Pediatric & Neonatal<br>Air Ambulance</span>
+                        <span class="ar-content">نقل الأطفال وحديثي الولادة</span>
+                    </h2>
                 </div>
                 <div class="saudi-extra-right">
-                    <p class="saudi-extra-text">Bluedot specializes in the safe transportation of infants, children, and neonatal patients using fully equipped neonatal incubators and experienced pediatric critical care teams</p>
+                    <p class="saudi-extra-text">
+                        <span class="en-content">Bluedot specializes in the safe transportation of infants, children, and neonatal patients using fully equipped neonatal incubators and experienced pediatric critical care teams</span>
+                        <span class="ar-content">تتخصص بلودوت في نقل الأطفال وحديثي الولادة باستخدام حاضنات طبية مجهزة بالكامل وفرق طبية ذات خبرة في التعامل مع الحالات الحرجة للأطفال والرضع.</span>
+                    </p>
                 </div>
             </div>
         </div>
@@ -312,15 +521,42 @@ We deliver comprehensive medical transport solutions for critical and non-critic
                     <img src="{% static 'website/images/saudi-fort.png' %}" alt="Saudi Arabia Air Ambulance">
                 </div>
                 <div class="saudi-cost-content">
-                    <h2 class="saudi-cost-title">How Much Does An<br>Air Ambulance Cost?</h2>
-                    <p class="saudi-cost-text">The cost of an Air Ambulance or Medical <br> Evacuation depends on several factors, <br> including:</p>
-                    <p class="saudi-cost-text mb-1">• Patient Location</p>
-                    <p class="saudi-cost-text mb-1">• Destination</p>
-                    <p class="saudi-cost-text mb-1">• Medical Condition</p>
-                    <p class="saudi-cost-text mb-1">• Aircraft Type</p>
-                    <p class="saudi-cost-text mb-4">• Required Medical Team</p>
-                    <p class="saudi-cost-text">Contact Bluedot today for a fast, accurate, <br> and personalized quotation.</p>
-                    <a href="javascript:void(0)" class="saudi-cost-btn trigger-enquiry">Get a Free Quote</a>
+                    <h2 class="saudi-cost-title">
+                        <span class="en-content">How Much Does An<br>Air Ambulance Cost?</span>
+                        <span class="ar-content">كم تبلغ تكلفة الإسعاف الجوي؟</span>
+                    </h2>
+                    <p class="saudi-cost-text">
+                        <span class="en-content">The cost of an Air Ambulance or Medical <br> Evacuation depends on several factors, <br> including:</span>
+                        <span class="ar-content">تعتمد تكلفة الإسعاف الجوي والإخلاء الطبي على عدة عوامل تشمل:</span>
+                    </p>
+                    <p class="saudi-cost-text mb-1">
+                        <span class="en-content">• Patient Location</span>
+                        <span class="ar-content">• موقع المريض</span>
+                    </p>
+                    <p class="saudi-cost-text mb-1">
+                        <span class="en-content">• Destination</span>
+                        <span class="ar-content">• الوجهة المطلوبة</span>
+                    </p>
+                    <p class="saudi-cost-text mb-1">
+                        <span class="en-content">• Medical Condition</span>
+                        <span class="ar-content">• الحالة الطبية</span>
+                    </p>
+                    <p class="saudi-cost-text mb-1">
+                        <span class="en-content">• Aircraft Type</span>
+                        <span class="ar-content">• نوع الطائرة المناسبة</span>
+                    </p>
+                    <p class="saudi-cost-text mb-4">
+                        <span class="en-content">• Required Medical Team</span>
+                        <span class="ar-content">• الفريق الطبي المطلوب</span>
+                    </p>
+                    <p class="saudi-cost-text">
+                        <span class="en-content">Contact Bluedot today for a fast, accurate, <br> and personalized quotation.</span>
+                        <span class="ar-content">للحصول على عرض سعر سريع ودقيق، يرجى التواصل مع فريق بلودوت.</span>
+                    </p>
+                    <a href="javascript:void(0)" class="saudi-cost-btn trigger-enquiry">
+                        <span class="en-content">Get a Free Quote</span>
+                        <span class="ar-content">احصل على عرض سعر مجاني</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -329,8 +565,10 @@ We deliver comprehensive medical transport solutions for critical and non-critic
       <section class="saudi-contact-section">
             <div class="container">
                 <div class="oman-contact-header">
-                   
-                    <h2 class="oman-contact-title">Request a Medical Transport Consultation</h2>
+                    <h2 class="oman-contact-title">
+                        <span class="en-content">Request a Medical Transport Consultation</span>
+                        <span class="ar-content">احصل على استشارة وعرض سعر</span>
+                    </h2>
                 </div>
 
                 <div class="oman-form-wrapper">
@@ -341,19 +579,25 @@ We deliver comprehensive medical transport solutions for critical and non-critic
                         <div class="row g-4">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="oman-name">Name</label>
-                                    <input type="text" id="oman-name" name="name" placeholder="ex: john" required>
+                                    <label for="oman-name">
+                                        <span class="en-content">Name</span>
+                                        <span class="ar-content">الاسم الكامل</span>
+                                    </label>
+                                    <input type="text" id="oman-name" name="name" placeholder="john" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="oman-services">Choose Services</label>
+                                    <label for="oman-services">
+                                        <span class="en-content">Choose Services</span>
+                                        <span class="ar-content">نوع النقل</span>
+                                    </label>
                                     <div class="select-wrapper">
                                         <select id="oman-services" name="services" required>
-                                            <option value="" disabled selected>ex: Air Ambulance</option>
-                                            <option value="air-ambulance">Air Ambulance</option>
-                                            <option value="commercial-transfer">Commercial Airline Transfer</option>
-                                            <option value="medical-escorts">Medical Escorts</option>
+                                            <option value="" disabled selected>Select Service / اختر الخدمة</option>
+                                            <option value="air-ambulance">Air Ambulance / طيارة خاصة</option>
+                                            <option value="commercial-transfer">Commercial Airline Transfer / طيارة تجارية</option>
+                                            <option value="medical-escorts">Medical Escorts / المرافقة الطبية</option>
                                         </select>
                                         <i class="fas fa-chevron-down ab-down"></i>
                                     </div>
@@ -361,16 +605,54 @@ We deliver comprehensive medical transport solutions for critical and non-critic
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="oman-email">Email Address</label>
+                                    <label for="oman-email">
+                                        <span class="en-content">Email Address</span>
+                                        <span class="ar-content">البريد الإلكتروني</span>
+                                    </label>
                                     <input type="email" id="oman-email" name="email" placeholder="john@gmail.com"
                                         required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="oman-phone">Phone Number</label>
+                                    <label for="oman-phone">
+                                        <span class="en-content">Phone Number</span>
+                                        <span class="ar-content">رقم الهاتف</span>
+                                    </label>
                                     <input type="tel" id="oman-phone" name="phone" placeholder="Enter your phone number"
                                         required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="oman-destination">
+                                        <span class="en-content">Destination</span>
+                                        <span class="ar-content">الوجهة المطلوبة</span>
+                                    </label>
+                                    <div class="select-wrapper">
+                                        <select id="oman-destination" name="destination" required>
+                                            <option value="" disabled selected>Select Country / اختر الدولة</option>
+                                            <option value="saudi-arabia">Saudi Arabia / السعودية</option>
+                                            <option value="uae">UAE / الإمارات</option>
+                                            <option value="qatar">Qatar / قطر</option>
+                                            <option value="bahrain">Bahrain / البحرين</option>
+                                            <option value="oman">Oman / عمان</option>
+                                            <option value="uk">UK / بريطانيا</option>
+                                            <option value="usa">USA / أمريكا</option>
+                                            <option value="india">India / الهند</option>
+                                            <option value="other">Other / أخرى</option>
+                                        </select>
+                                        <i class="fas fa-chevron-down ab-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="oman-medical-condition">
+                                        <span class="en-content">Medical Condition</span>
+                                        <span class="ar-content">الحالة الطبية</span>
+                                    </label>
+                                    <input type="text" id="oman-medical-condition" name="medical_condition" placeholder="Describe the condition" required>
                                 </div>
                             </div>
                             <div class="col-12 mt-1 mb-2">
@@ -390,7 +672,10 @@ We deliver comprehensive medical transport solutions for critical and non-critic
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label for="oman-message">Message</label>
+                                    <label for="oman-message">
+                                        <span class="en-content">Message</span>
+                                        <span class="ar-content">رسالتك</span>
+                                    </label>
                                     <textarea id="oman-message" name="message" rows="5"
                                         placeholder="Enter your question here" required></textarea>
                                 </div>
@@ -399,10 +684,15 @@ We deliver comprehensive medical transport solutions for critical and non-critic
                                 <div class="oman-form-footer">
                                     <div class="oman-consent-group">
                                         <input type="checkbox" id="oman-consent" name="consent" required>
-                                        <label for="oman-consent">I consent to have this website store my submitted
-                                            information so they can respond to my inquiry.</label>
+                                        <label for="oman-consent">
+                                            <span class="en-content">I consent to have this website store my submitted information so they can respond to my inquiry.</span>
+                                            <span class="ar-content">أوافق على قيام هذا الموقع بتخزين معلوماتي المقدمة حتى يتمكنوا من الرد على استفساري.</span>
+                                        </label>
                                     </div>
-                                    <button type="submit" class="oman-btn-submit">Submit</button>
+                                    <button type="submit" class="oman-btn-submit">
+                                        <span class="en-content">Submit</span>
+                                        <span class="ar-content">إرسال الطلب</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -415,12 +705,32 @@ We deliver comprehensive medical transport solutions for critical and non-critic
     <section class="saudi-cta-section">
         <div class="container">
             <div class="saudi-cta-inner">
-                <h2 class="saudi-cta-title">Need An Air Ambulance Or Emergency<br>Medical Evacuation?</h2>
-                <p class="saudi-cta-desc">Bluedot's medical coordination team is available 24 hours a day to arrange emergency medical transportation within Saudi Arabia or anywhere in the world.</p>
+                <h2 class="saudi-cta-title">
+                    <span class="en-content">Need An Air Ambulance Or Emergency<br>Medical Evacuation?</span>
+                    <span class="ar-content">هل تحتاج إلى إسعاف جوي أو إخلاء طبي عاجل؟</span>
+                </h2>
+                <p class="saudi-cta-desc">
+                    <span class="en-content">Bluedot's medical coordination team is available 24 hours a day to arrange emergency medical transportation within Saudi Arabia or anywhere in the world.</span>
+                    <span class="ar-content">فريق بلودوت متاح على مدار الساعة لمساعدتك في ترتيب النقل الطبي داخل المملكة العربية السعودية أو إلى أي وجهة حول العالم.</span>
+                </p>
                 <div class="saudi-cta-actions">
-                    <a href="tel:+966538855753" class="saudi-cta-btn-solid">Call Now</a>
-                    <a href="https://wa.me/+971551881441" class="saudi-cta-btn-outline" target="_blank">Chat on WhatsApp</a>
-                    <a href="mail@bluedotassist.com" class="saudi-cta-link">Send us a mail</a>
+                    <a href="tel:+966538855753" class="saudi-cta-btn-solid">
+                        <span class="en-content">Call Now</span>
+                        <span class="ar-content">اتصل الآن</span>
+                    </a>
+                    <a href="https://wa.me/+966538855753" class="saudi-cta-btn-outline" target="_blank">
+                        <span class="en-content">Chat on WhatsApp</span>
+                        <span class="ar-content">واتساب مباشر</span>
+                    </a>
+                    <a href="mailto:mail@bluedotassist.com" class="saudi-cta-link">
+                        <span class="en-content">Send us a mail</span>
+                        <span class="ar-content">البريد الإلكتروني</span>
+                    </a>
+                </div>
+                <div class="text-center mt-4" style="color: #ffffff;">
+                    <p class="saudi-cta-desc m-0">
+                        <span class="ar-content">خدمة متاحة 24 ساعة يومياً | 7 أيام في الأسبوع</span>
+                    </p>
                 </div>
             </div>
         </div>
