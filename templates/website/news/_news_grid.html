@@ -14,17 +14,15 @@
         </div>
         <div class="news-card-content">
             <img src="{% static 'website/images/s-vector.svg' %}" class="news-vector-bg" alt="">
-            {% if blog.tag %}<span class="news-badge">{{ blog.tag }}</span>{% endif %}
-          
-             <span class="news-badge">
-                                {% if blog.category %}
-                                    <span class="en-content">{{ blog.tag|default:blog.category.name }}</span>
-                                    <span class="ar-content">{% if blog.category.name_ar %}{{ blog.category.name_ar }}{% else %}{{ blog.tag|default:blog.category.name }}{% endif %}</span>
-                                {% else %}
-                                    <span class="en-content">{{ blog.tag|default:"News" }}</span>
-                                    <span class="ar-content">{{ blog.tag|default:"أخبار" }}</span>
-                                {% endif %}
-                            </span>
+            <span class="news-badge">
+                {% if blog.category %}
+                    <span class="en-content">{{ blog.tag|default:blog.category.name }}</span>
+                    <span class="ar-content">{% if blog.category.name_ar %}{{ blog.category.name_ar }}{% else %}{{ blog.tag|default:blog.category.name }}{% endif %}</span>
+                {% else %}
+                    <span class="en-content">{{ blog.tag|default:"News" }}</span>
+                    <span class="ar-content">{{ blog.tag|default:"أخبار" }}</span>
+                {% endif %}
+            </span>
           
             <h3 class="news-card-title">
                 <span class="en-content">{{ blog.title }}</span>

@@ -74,9 +74,15 @@
 
         <!-- Category Filter Tabs -->
         <div class="news-filters">
-            <button class="news-filter-btn {% if active_category == 'all' %}active{% endif %}" data-category="all">All Categories</button>
+            <button class="news-filter-btn {% if active_category == 'all' %}active{% endif %}" data-category="all">
+                <span class="en-content">All Categories</span>
+                <span class="ar-content">جميع الفئات</span>
+            </button>
             {% for cat in categories %}
-            <button class="news-filter-btn {% if active_category == cat.slug %}active{% endif %}" data-category="{{ cat.slug }}">{{ cat.name }}</button>
+            <button class="news-filter-btn {% if active_category == cat.slug %}active{% endif %}" data-category="{{ cat.slug }}">
+                <span class="en-content">{{ cat.name }}</span>
+                <span class="ar-content">{{ cat.name_ar|default:cat.name }}</span>
+            </button>
             {% endfor %}
         </div>
 
