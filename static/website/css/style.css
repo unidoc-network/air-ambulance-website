@@ -6128,6 +6128,7 @@ img {
     font-family: 'Aeonik', sans-serif;
     transition: all 0.3s ease;
     border: 1px solid #DDDDDD;
+    background-image: none !important;
 }
 
 .enquiry-form .form-control:focus,
@@ -9620,4 +9621,8 @@ html[dir="rtl"] .ab-down {
 /* ── Fleet Slider Nav RTL ── */
 html[dir="rtl"] .fbs-nav {
     flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .news-hero-bg img{
+transform: scaleX(-1);
 }
