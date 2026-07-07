@@ -1,4 +1,31 @@
 User-agent: *
 Allow: /
 
+# Block private and non-SEO pages
+Disallow: /admin/
+Disallow: /api/
+Disallow: /login/
+Disallow: /signup/
+Disallow: /dashboard/
+Disallow: /account/
+Disallow: /profile/
+Disallow: /thank-you/
+Disallow: /success/
+Disallow: /error/
+Disallow: /payment/
+Disallow: /checkout/
+
+# Block search/filter/query URLs
+Disallow: /*?search=
+Disallow: /*?filter=
+Disallow: /*?sort=
+Disallow: /*?category=
+Disallow: /*?tag=
+Disallow: /*?utm_source=
+Disallow: /*?utm_medium=
+Disallow: /*?utm_campaign=
+Disallow: /*?fbclid=
+Disallow: /*?gclid=
+
+# Sitemap
 Sitemap: https://www.bluedotairambulance.com/sitemap.xml

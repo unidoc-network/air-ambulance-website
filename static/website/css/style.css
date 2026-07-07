@@ -7213,14 +7213,6 @@ html[dir="rtl"] .form-check {
     flex-direction: row-reverse;
 }
 
-html[dir="rtl"] .enquiry-drawer-footer {
-    flex-direction: row-reverse;
-}
-
-html[dir="rtl"] .nav-socials {
-    flex-direction: row-reverse;
-}
-
 /* ── About Page ── */
 html[dir="rtl"] .about-banner-content {
     text-align: right;
