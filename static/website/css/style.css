@@ -8985,8 +8985,8 @@ html[dir="rtl"] .related-blog-section h3 {
 }
 
 .saudi-regions-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
 }
 
@@ -8997,16 +8997,6 @@ html[dir="rtl"] .related-blog-section h3 {
     display: flex;
     flex-direction: column;
     gap: 4px;
-    flex: 1 1 calc(33.333% - 12px);
-    min-width: 200px;
-}
-
-.saudi-pill-wide {
-    flex: 1 1 calc(50% - 12px);
-}
-
-.saudi-pill-full {
-    flex: 2 1 calc(66.666% - 12px);
 }
 
 .saudi-pill-name {
@@ -9026,11 +9016,8 @@ html[dir="rtl"] .related-blog-section h3 {
 }
 
 @media (max-width: 991px) {
-
-    .saudi-region-pill,
-    .saudi-pill-wide,
-    .saudi-pill-full {
-        flex: 1 1 calc(50% - 12px);
+    .saudi-regions-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -9039,10 +9026,8 @@ html[dir="rtl"] .related-blog-section h3 {
         padding: 40px 20px;
     }
 
-    .saudi-region-pill,
-    .saudi-pill-wide,
-    .saudi-pill-full {
-        flex: 1 1 100%;
+    .saudi-regions-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -9617,4 +9602,9 @@ html[dir="rtl"] .fbs-nav {
 
 html[dir="rtl"] .news-hero-bg img{
 transform: scaleX(-1);
+}
+
+.saudi-feature-item span{
+        color: white;
+    font-size: 19px;
 }
