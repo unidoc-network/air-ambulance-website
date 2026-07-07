@@ -4,104 +4,181 @@
   <!-- Main Pages -->
   <url>
     <loc>https://www.bluedotairambulance.com/</loc>
-    <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
 
   <url>
-    <loc>https://www.bluedotairambulance.com/about-us/</loc>
-    <lastmod>2026-07-06</lastmod>
+    <loc>https://www.bluedotairambulance.com/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://www.bluedotairambulance.com/contact-us/</loc>
-    <lastmod>2026-07-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-
-  <!-- Fleet Pages -->
-  <url>
-    <loc>https://www.bluedotairambulance.com/fleet-select/</loc>
-    <lastmod>2026-07-06</lastmod>
+    <loc>https://www.bluedotairambulance.com/fleet/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <url>
-    <loc>https://www.bluedotairambulance.com/challenger-605/</loc>
-    <lastmod>2026-07-06</lastmod>
+    <loc>https://www.bluedotairambulance.com/careers/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.60</priority>
   </url>
 
   <url>
-    <loc>https://www.bluedotairambulance.com/challenger-604/</loc>
-    <lastmod>2026-07-06</lastmod>
+    <loc>https://www.bluedotairambulance.com/contact/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://www.bluedotairambulance.com/king-air-b200/</loc>
-    <lastmod>2026-07-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://www.bluedotairambulance.com/king-air-c90/</loc>
-    <lastmod>2026-07-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.70</priority>
   </url>
 
   <!-- Service Pages -->
   <url>
-    <loc>https://www.bluedotairambulance.com/air-ambulance-service-in-uae/</loc>
-    <lastmod>2026-07-06</lastmod>
+    <loc>https://www.bluedotairambulance.com/air-ambulance/24-7-air-ambulance/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
-    <loc>https://www.bluedotairambulance.com/rotary-wing-medical-transport/</loc>
-    <lastmod>2026-07-06</lastmod>
+    <loc>https://www.bluedotairambulance.com/air-ambulance/commercial-airline-stretcher-service/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://www.bluedotairambulance.com/medical-escort/</loc>
-    <lastmod>2026-07-06</lastmod>
+    <loc>https://www.bluedotairambulance.com/air-ambulance/medical-escort/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://www.bluedotairambulance.com/ground-ambulance/</loc>
-    <lastmod>2026-07-06</lastmod>
+    <loc>https://www.bluedotairambulance.com/air-ambulance/Rotary-Wing-Services/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
 
-  <!-- Blog / News -->
+  <!-- Fleet Pages -->
+  <url>
+    <loc>https://www.bluedotairambulance.com/fleet/challenger-605/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bluedotairambulance.com/fleet/challenger-604/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bluedotairambulance.com/fleet/king-air-b200/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bluedotairambulance.com/fleet/king-air-c90/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Blog Main Page -->
   <url>
     <loc>https://www.bluedotairambulance.com/blog/</loc>
-    <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Blog Articles -->
+  <url>
+    <loc>https://www.bluedotairambulance.com/blog/bluedot-wins-marketing-campaign-of-the-year-at-the/</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.60</priority>
   </url>
 
-  <!-- Careers -->
   <url>
-    <loc>https://www.bluedotairambulance.com/careers/</loc>
-    <lastmod>2026-07-06</lastmod>
+    <loc>https://www.bluedotairambulance.com/blog/air-ambulance-in-india/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bluedotairambulance.com/blog/infant-air-transfer-on-ecmo/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bluedotairambulance.com/blog/cost-effective-medical-transfers/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bluedotairambulance.com/blog/doctors-in-jet-suits/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bluedotairambulance.com/blog/medevac-aircraft/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bluedotairambulance.com/blog/umen/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bluedotairambulance.com/blog/digital-health-technology/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bluedotairambulance.com/blog/eurami-camts/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bluedotairambulance.com/blog/challenging-psychiatric-case-transfer/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bluedotairambulance.com/blog/neonatal-paediatric-transfer/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bluedotairambulance.com/blog/we-won-etisalat-award-2021/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bluedotairambulance.com/blog/new-york-lifts-ban-on-air-ambulance-blood-transfus/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+  </url>
+
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://www.bluedotairambulance.com/privacy-policy/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bluedotairambulance.com/terms-and-conditions/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
   </url>
 
 </urlset>
