@@ -32,7 +32,7 @@ urlpatterns = [
     path('air-ambulance/24-7-air-ambulance/', views.ServiceAirAmbulanceView.as_view(), name='service_air_ambulance'),
     path('air-ambulance/commercial-airline-stretcher-service/', views.ServiceCommercialView.as_view(), name='service_commercial'),
     path('air-ambulance/medical-escort/', views.ServiceMedicalEscortView.as_view(), name='service_medical_escort'),
-    path('air-ambulance/Rotary-Wing-Services/', views.ServiceHelicopterView.as_view(), name='service_helicopter'),
+    path('air-ambulance/helicopter-air-ambulance/', views.ServiceHelicopterView.as_view(), name='service_helicopter'),
 
     # ── Fleet ────────────────────────────────────────────────────────────────
     path('fleet/', views.FleetSelectView.as_view(), name='fleet_select'),
@@ -88,6 +88,11 @@ urlpatterns = [
     path('air-ambulance-kuwait/',
          RedirectView.as_view(url='/contact/', permanent=True),
          name='redirect_kuwait'),
+
+    # Fleet Select legacy page → Fleet overview
+    path('fleet-select/',
+         RedirectView.as_view(url='/fleet/', permanent=True),
+         name='redirect_fleet_select'),
 ]
 
 handler404 = views.error_404
