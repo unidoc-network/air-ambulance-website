@@ -14,14 +14,15 @@
                 <span class="contact-subtitle en-content">Contact Us</span>
                 <span class="contact-subtitle ar-content">اتصل بنا</span>
 
-                <h1 class="contact-title en-content">
-                    We’re here to help. Whether you need medical transport support, have a question about our services,
-                    or are exploring a partnership, our <br> team is ready to assist.
-                </h1>
-                <h1 class="contact-title ar-content">
-                    نحن هنا للمساعدة؛ وسواء كنت بحاجة إلى دعم في مجال النقل الطبي، أو كان لديك استفسار حول خدماتنا، أو
-                    كنت تبحث في إمكانية عقد شراكة، فإن فريقنا مستعد لتقديم المساعدة.
-
+                <h1 class="contact-title">
+                    <span class="en-content">
+                        We’re here to help. Whether you need medical transport support, have a question about our services,
+                        or are exploring a partnership, our <br> team is ready to assist.
+                    </span>
+                    <span class="ar-content">
+                        نحن هنا للمساعدة؛ وسواء كنت بحاجة إلى دعم في مجال النقل الطبي، أو كان لديك استفسار حول خدماتنا، أو
+                        كنت تبحث في إمكانية عقد شراكة، فإن فريقنا مستعد لتقديم المساعدة.
+                    </span>
                 </h1>
             </div>
         </div>
@@ -39,33 +40,45 @@
                     <div class="row g-4">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="name">Name</label>
+                                <label for="name">
+                                    <span class="en-content">Name</span>
+                                    <span class="ar-content">الاسم الكامل</span>
+                                </label>
                                 <input type="text" id="name" name="name" placeholder="john" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="services">Choose Services</label>
+                                <label for="services">
+                                    <span class="en-content">Choose Services</span>
+                                    <span class="ar-content">نوع النقل</span>
+                                </label>
                                 <div class="select-wrapper">
                                     <select id="services" name="services" required>
-                                        <option value="" disabled selected>Air Ambulance</option>
-                                        <option value="air-ambulance">Air Ambulance</option>
-                                        <option value="commercial-transfer">Commercial Airline Transfer</option>
-                                        <option value="medical-escorts">Medical Escorts</option>
+                                        <option value="" disabled selected>Select Service / اختر الخدمة</option>
+                                        <option value="air-ambulance">Air Ambulance / طيارة خاصة</option>
+                                        <option value="commercial-transfer">Commercial Airline Transfer / طيارة تجارية</option>
+                                        <option value="medical-escorts">Medical Escorts / المرافقة الطبية</option>
                                     </select>
-                                    <i class="fas fa-chevron-down"></i>
+                                    <i class="fas fa-chevron-down ab-down"></i>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="email">Email Address</label>
+                                <label for="email">
+                                    <span class="en-content">Email Address</span>
+                                    <span class="ar-content">البريد الإلكتروني</span>
+                                </label>
                                 <input type="email" id="email" name="email" placeholder="john@gmail.com" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="phone">Phone Number</label>
+                                <label for="phone">
+                                    <span class="en-content">Phone Number</span>
+                                    <span class="ar-content">رقم الهاتف</span>
+                                </label>
                                 <input type="tel" id="phone" name="phone" placeholder="Enter your phone number"
                                     required>
                             </div>
@@ -87,7 +100,10 @@
                             </div>
                         <div class="col-12">
                             <div class="form-group">
-                                <label for="message">Message</label>
+                                <label for="message">
+                                    <span class="en-content">Message</span>
+                                    <span class="ar-content">رسالتك</span>
+                                </label>
                                 <textarea id="message" name="message" rows="5" placeholder="Enter your question here"
                                     required></textarea>
                             </div>
@@ -96,10 +112,15 @@
                             <div class="form-footer">
                                 <div class="consent-group">
                                     <input type="checkbox" id="consent" name="consent" required>
-                                    <label for="consent">I consent to have this website store my submitted information
-                                        so they can respond to my inquiry.</label>
+                                    <label for="consent">
+                                        <span class="en-content">I consent to have this website store my submitted information so they can respond to my inquiry.</span>
+                                        <span class="ar-content">أوافق على قيام هذا الموقع بتخزين معلوماتي المقدمة حتى يتمكنوا من الرد على استفساري.</span>
+                                    </label>
                                 </div>
-                                <button type="submit" class="btn-submit">Submit</button>
+                                <button type="submit" class="btn-submit">
+                                    <span class="en-content">Submit</span>
+                                    <span class="ar-content">إرسال الطلب</span>
+                                </button>
                             </div>
                         </div>
                     </div>

@@ -78,18 +78,21 @@
                     <path
                         d="M9.50246 4.25722C9.19873 3.4979 8.46332 3 7.64551 3H4.89474C3.8483 3 3 3.8481 3 4.89453C3 13.7892 10.2108 21 19.1055 21C20.1519 21 21 20.1516 21 19.1052L21.0005 16.354C21.0005 15.5361 20.5027 14.8009 19.7434 14.4971L17.1069 13.4429C16.4249 13.1701 15.6483 13.2929 15.0839 13.7632L14.4035 14.3307C13.6089 14.9929 12.4396 14.9402 11.7082 14.2088L9.79222 12.2911C9.06079 11.5596 9.00673 10.3913 9.66895 9.59668L10.2363 8.9163C10.7066 8.35195 10.8305 7.57516 10.5577 6.89309L9.50246 4.25722Z"
                         stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg> 24/7 Global Assistance</a>
+                </svg> 
+                <span class="en-content">24/7 Global Assistance</span>
+                <span class="ar-content">المساعدة العالمية 24/7</span>
+            </a>
             <div class="enquiry-header-right">
                 <div class="nav-lang">
                     <span class="lang-current-label">EN</span>
                     <i class="fas fa-chevron-down"></i>
                     <div class="lang-dropdown">
                         <span class="lang-option active" data-lang="en">
-                            <span class="lang-flag">🇬🇧</span>
+                   
                             <span class="lang-name">EN</span>
                         </span>
                         <span class="lang-option" data-lang="ar">
-                            <span class="lang-flag">🇸🇦</span>
+                         
                             <span class="lang-name">AR</span>
                         </span>
                     </div>
@@ -111,29 +114,42 @@
                 <div class="row g-4">
 
                     <div class="col-md-6">
-                        <label class="form-label">Name</label>
+                        <label class="form-label">
+                            <span class="en-content">Name</span>
+                            <span class="ar-content">الاسم الكامل</span>
+                        </label>
                         <input type="text" class="form-control" name="name" placeholder="john" required>
                     </div>
 
                     <div class="col-md-6">
-                        <label class="form-label">Choose Services</label>
+                        <label class="form-label">
+                            <span class="en-content">Choose Services</span>
+                            <span class="ar-content">نوع النقل</span>
+                        </label>
                         <div class="select-wrapper">
                             <select class="form-select" name="services" required>
-                                <option value="" selected disabled>Air Ambulance</option>
-                                <option value="Air Ambulance">Air Ambulance</option>
-                                <option value="Commercial Airline Transfer">Commercial Airline Transfer</option>
-                                <option value="Medical Escorts">Medical Escorts</option>
+                                <option value="" selected disabled>Select Service / اختر الخدمة</option>
+                                <option value="air-ambulance">Air Ambulance / طيارة خاصة</option>
+                                <option value="commercial-transfer">Commercial Airline Transfer / طيارة تجارية</option>
+                                <option value="medical-escorts">Medical Escorts / المرافقة الطبية</option>
                             </select>
+                            <i class="fas fa-chevron-down ab-down"></i>
                         </div>
                     </div>
 
                     <div class="col-md-6">
-                        <label class="form-label">Email Address</label>
+                        <label class="form-label">
+                            <span class="en-content">Email Address</span>
+                            <span class="ar-content">البريد الإلكتروني</span>
+                        </label>
                         <input type="email" class="form-control" name="email" placeholder="john@gmail.com" required>
                     </div>
 
                     <div class="col-md-6">
-                        <label class="form-label">Phone Number</label>
+                        <label class="form-label">
+                            <span class="en-content">Phone Number</span>
+                            <span class="ar-content">رقم الهاتف</span>
+                        </label>
                         <input type="tel" class="form-control" name="phone" placeholder="Enter your phone number"
                             required>
                     </div>
@@ -157,7 +173,10 @@
                     </div>
 
                     <div class="col-12">
-                        <label class="form-label">Message</label>
+                        <label class="form-label">
+                            <span class="en-content">Message</span>
+                            <span class="ar-content">رسالتك</span>
+                        </label>
                         <textarea class="form-control" name="message" rows="5" placeholder="Enter your question here"
                             required></textarea>
                     </div>
@@ -167,15 +186,16 @@
                             <input class="form-check-input" type="checkbox" id="consentCheck" name="consent" required>
 
                             <label class="form-check-label" for="consentCheck">
-                                I consent to have this website store my submitted information so they can respond to my
-                                inquiry.
+                                <span class="en-content">I consent to have this website store my submitted information so they can respond to my inquiry.</span>
+                                <span class="ar-content">أوافق على قيام هذا الموقع بتخزين معلوماتي المقدمة حتى يتمكنوا من الرد على استفساري.</span>
                             </label>
                         </div>
                     </div>
 
                     <div class="col-12 text-end mt-4">
                         <button type="submit" class="btn-submit">
-                            Submit
+                            <span class="en-content">Submit</span>
+                            <span class="ar-content">إرسال الطلب</span>
                         </button>
                     </div>
 
@@ -184,13 +204,25 @@
         </div>
 
         <div class="enquiry-drawer-footer">
-            <a href="{% url 'website:careers' %}" class="nav-outline-btn">Join the journey</a>
+            <a href="{% url 'website:careers' %}" class="nav-outline-btn">
+                <span class="en-content">Join the journey</span>
+                <span class="ar-content">انضم إلى رحلتنا</span>
+            </a>
             <div class="nav-socials">
                 <a href="https://www.linkedin.com/company/bluedotairambulance/posts/?feedView=all&viewAsMember=true"
-                    target="_blank">LinkedIn</a>
+                    target="_blank">
+                    <span class="en-content">LinkedIn</span>
+                    <span class="ar-content">لينكد إن</span>
+                </a>
                 <a href="https://web.facebook.com/bluedotairambulance/?locale=id_ID&_rdc=1&_rdr"
-                    target="_blank">Facebook</a>
-                <a href="https://www.instagram.com/bluedotairambulance/" target="_blank">Instagram</a>
+                    target="_blank">
+                    <span class="en-content">Facebook</span>
+                    <span class="ar-content">فيسبوك</span>
+                </a>
+                <a href="https://www.instagram.com/bluedotairambulance/" target="_blank">
+                    <span class="en-content">Instagram</span>
+                    <span class="ar-content">إنستغرام</span>
+                </a>
             </div>
         </div>
     </div>
