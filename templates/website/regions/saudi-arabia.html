@@ -631,7 +631,7 @@ repatriation.{% endblock %}
                                         <span class="en-content">Name</span>
                                         <span class="ar-content">الاسم الكامل</span>
                                     </label>
-                                    <input type="text" id="oman-name" name="name" placeholder="john" required>
+                                    <input type="text" id="oman-name" name="name" data-en="john" data-ar="أحمد" placeholder="john" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -642,10 +642,10 @@ repatriation.{% endblock %}
                                     </label>
                                     <div class="select-wrapper">
                                         <select id="oman-services" name="services" required>
-                                            <option value="" disabled selected>Select Service / اختر الخدمة</option>
-                                            <option value="air-ambulance">Air Ambulance / طيارة خاصة</option>
-                                            <option value="commercial-transfer">Commercial Airline Transfer / طيارة تجارية</option>
-                                            <option value="medical-escorts">Medical Escorts / المرافقة الطبية</option>
+                                            <option value="" disabled selected data-en="Select Service" data-ar="اختر الخدمة">Select Service</option>
+                                            <option value="air-ambulance" data-en="Air Ambulance" data-ar="إسعاف جوي">Air Ambulance</option>
+                                            <option value="commercial-transfer" data-en="Commercial Airline Transfer" data-ar="نقل عبر الخطوط الجوية التجارية">Commercial Airline Transfer</option>
+                                            <option value="medical-escorts" data-en="Medical Escorts" data-ar="مرافقون طبيون">Medical Escorts</option>
                                         </select>
                                         <i class="fas fa-chevron-down ab-down"></i>
                                     </div>
@@ -657,8 +657,7 @@ repatriation.{% endblock %}
                                         <span class="en-content">Email Address</span>
                                         <span class="ar-content">البريد الإلكتروني</span>
                                     </label>
-                                    <input type="email" id="oman-email" name="email" placeholder="john@gmail.com"
-                                        required>
+                                    <input type="email" id="oman-email" name="email" data-en="john@gmail.com" data-ar="ahmed@gmail.com" placeholder="john@gmail.com" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -667,8 +666,7 @@ repatriation.{% endblock %}
                                         <span class="en-content">Phone Number</span>
                                         <span class="ar-content">رقم الهاتف</span>
                                     </label>
-                                    <input type="tel" id="oman-phone" name="phone" placeholder="Enter your phone number"
-                                        required>
+                                    <input type="tel" id="oman-phone" name="phone" data-en="Enter your phone number" data-ar="أدخل رقم هاتفك" placeholder="Enter your phone number" required>
                                 </div>
                             </div>
                                 <div class="col-12 mt-1 mb-2">
@@ -677,38 +675,6 @@ repatriation.{% endblock %}
                                     <span class="ar-content">اضغط هنا للتحقق من بريدك الإلكتروني</span>
                                 </button>
                             </div>
-                            <!-- <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="oman-destination">
-                                        <span class="en-content">Destination</span>
-                                        <span class="ar-content">الوجهة المطلوبة</span>
-                                    </label>
-                                    <div class="select-wrapper">
-                                        <select id="oman-destination" name="destination" required>
-                                            <option value="" disabled selected>Select Country / اختر الدولة</option>
-                                            <option value="saudi-arabia">Saudi Arabia / السعودية</option>
-                                            <option value="uae">UAE / الإمارات</option>
-                                            <option value="qatar">Qatar / قطر</option>
-                                            <option value="bahrain">Bahrain / البحرين</option>
-                                            <option value="oman">Oman / عمان</option>
-                                            <option value="uk">UK / بريطانيا</option>
-                                            <option value="usa">USA / أمريكا</option>
-                                            <option value="india">India / الهند</option>
-                                            <option value="other">Other / أخرى</option>
-                                        </select>
-                                        <i class="fas fa-chevron-down ab-down"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="oman-medical-condition">
-                                        <span class="en-content">Medical Condition</span>
-                                        <span class="ar-content">الحالة الطبية</span>
-                                    </label>
-                                    <input type="text" id="oman-medical-condition" name="medical_condition" placeholder="Describe the condition" required>
-                                </div>
-                            </div> -->
                         
                             <div class="col-12">
                                 <div class="form-group">
@@ -716,7 +682,7 @@ repatriation.{% endblock %}
                                         <span class="en-content">Verify Code</span>
                                         <span class="ar-content">رمز التحقق</span>
                                     </label>
-                                    <input type="text" id="oman-verify-code" name="verify_code" placeholder="enter code">
+                                    <input type="text" id="oman-verify-code" name="verify_code" data-en="enter code" data-ar="أدخل الرمز" placeholder="enter code">
                                 </div>
                             </div>
                             <div class="col-12">
@@ -726,7 +692,7 @@ repatriation.{% endblock %}
                                         <span class="ar-content">رسالتك</span>
                                     </label>
                                     <textarea id="oman-message" name="message" rows="5"
-                                        placeholder="Enter your question here" required></textarea>
+                                        data-en="Enter your question here" data-ar="أدخل سؤالك هنا" placeholder="Enter your question here" required></textarea>
                                 </div>
                             </div>
                             <div class="col-12">
