@@ -9661,7 +9661,19 @@ transform: scaleX(-1);
     .saudi-service-divider {
         display: none;
     }
+    .enquiry-drawer-footer .nav-socials a{
+        font-size: 10px;
+    }
+    .nav-outline-btn{
+            font-size: 8px;
+    }
+    .nav-socials a{
+            font-size: 12px;
+    }
 }
 html[dir="rtl"] .aa-hero-bg{
    transform: scaleX(-1); 
+}
+.points-head h3{
+        padding-bottom: 40px;
 }
