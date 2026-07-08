@@ -118,7 +118,7 @@
                             <span class="en-content">Name</span>
                             <span class="ar-content">الاسم الكامل</span>
                         </label>
-                        <input type="text" class="form-control" name="name" placeholder="john" required>
+                        <input type="text" class="form-control" name="name" data-en="john" data-ar="أحمد" placeholder="john" required>
                     </div>
 
                     <div class="col-md-6">
@@ -128,10 +128,10 @@
                         </label>
                         <div class="select-wrapper">
                             <select class="form-select" name="services" required>
-                                <option value="" selected disabled>Select Service / اختر الخدمة</option>
-                                <option value="air-ambulance">Air Ambulance / طيارة خاصة</option>
-                                <option value="commercial-transfer">Commercial Airline Transfer / طيارة تجارية</option>
-                                <option value="medical-escorts">Medical Escorts / المرافقة الطبية</option>
+                                <option value="" selected disabled data-en="Select Service" data-ar="اختر الخدمة">Select Service</option>
+                                <option value="air-ambulance" data-en="Air Ambulance" data-ar="إسعاف جوي">Air Ambulance</option>
+                                <option value="commercial-transfer" data-en="Commercial Airline Transfer" data-ar="نقل عبر الخطوط الجوية التجارية">Commercial Airline Transfer</option>
+                                <option value="medical-escorts" data-en="Medical Escorts" data-ar="مرافقون طبيون">Medical Escorts</option>
                             </select>
                             <i class="fas fa-chevron-down ab-down"></i>
                         </div>
@@ -142,7 +142,7 @@
                             <span class="en-content">Email Address</span>
                             <span class="ar-content">البريد الإلكتروني</span>
                         </label>
-                        <input type="email" class="form-control" name="email" placeholder="john@gmail.com" required>
+                        <input type="email" class="form-control" name="email" data-en="john@gmail.com" data-ar="أدخل بريدك الإلكتروني" placeholder="Enter your Email" required>
                     </div>
 
                     <div class="col-md-6">
@@ -150,8 +150,7 @@
                             <span class="en-content">Phone Number</span>
                             <span class="ar-content">رقم الهاتف</span>
                         </label>
-                        <input type="tel" class="form-control" name="phone" placeholder="Enter your phone number"
-                            required>
+                        <input type="tel" class="form-control" name="phone" data-en="Enter your phone number" data-ar="أدخل رقم هاتفك" placeholder="Enter your phone number" required>
                     </div>
 
                     <div class="col-12 mt-1 mb-2">
@@ -168,7 +167,7 @@
                                 <span class="ar-content">رمز التحقق</span>
                             </label>
                             <input type="text" class="form-control" id="oman-verify-code" name="verify_code"
-                                placeholder="enter code">
+                                data-en="enter code" data-ar="أدخل الرمز" placeholder="enter code">
                         </div>
                     </div>
 
@@ -177,8 +176,7 @@
                             <span class="en-content">Message</span>
                             <span class="ar-content">رسالتك</span>
                         </label>
-                        <textarea class="form-control" name="message" rows="5" placeholder="Enter your question here"
-                            required></textarea>
+                        <textarea class="form-control" name="message" rows="5" data-en="Enter your question here" data-ar="أدخل سؤالك هنا" placeholder="Enter your question here" required></textarea>
                     </div>
 
                     <div class="col-12">
