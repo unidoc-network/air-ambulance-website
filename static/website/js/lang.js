@@ -30,9 +30,17 @@
             opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);
         });
 
-        /* 4. Update verify code input placeholders dynamically */
-        document.querySelectorAll('input[name="verify_code"]').forEach(function (input) {
-            input.placeholder = lang === 'ar' ? 'أدخل الرمز' : 'enter code';
+        /* 4. Update dynamic attributes for placeholders and options */
+        document.querySelectorAll('[data-en][data-ar]').forEach(function (el) {
+            var text = lang === 'ar' ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+            
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                el.placeholder = text;
+            } else if (el.tagName === 'OPTION') {
+                el.textContent = text;
+            } else {
+                el.textContent = text;
+            }
         });
 
         /* 5. Save */

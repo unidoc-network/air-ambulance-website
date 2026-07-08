@@ -9254,9 +9254,9 @@ html[dir="rtl"] .related-blog-section h3 {
 }
 
 .saudi-cta-btn-outline {
-    background-color: transparent;
-    color: #0A3554;
-    border: 1.5px solid #0A3554;
+ background-color: #009BE0;
+    color: #fff;
+   
     padding: 11px 30px;
     border-radius: 30px;
     font-size: 15px;
