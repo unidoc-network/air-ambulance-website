@@ -4269,6 +4269,21 @@ img {
     left: 47%;
 }
 
+.marker-4 {
+    top: 40%;
+    left: 17%;
+}
+
+.marker-5 {
+    top: 41%;
+    left: 20%;
+}
+
+.marker-6 {
+    top: 58%;
+    left: 49%;
+}
+
 @media (max-width: 767.98px) {
     .section {
         padding: 70px 0;
@@ -4399,6 +4414,21 @@ img {
     .marker-3 {
         top: 67%;
         left: 46%;
+    }
+
+    .marker-4 {
+        top: 45%;
+        left: 5%;
+    }
+
+    .marker-5 {
+        top: 46%;
+        left: 8%;
+    }
+
+    .marker-6 {
+        top: 63%;
+        left: 48%;
     }
 }
 
@@ -9539,7 +9569,7 @@ background-color: #009BE0;
     }
 
     .interactive-map-container .map-image {
-        height: 410px;
+        height: 310px;
         margin-top: -20px;
         object-fit: cover;
     }
