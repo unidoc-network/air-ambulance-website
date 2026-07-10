@@ -299,7 +299,7 @@ for safe patient travel.{% endblock %}
                                     <label for="oman-name" class="en-content">Name</label>
                                     <label for="oman-name" class="ar-content">الاسم</label>
 
-                                    <input type="text" id="oman-name" name="name" placeholder=" john" required>
+                                    <input type="text" id="oman-name" name="name" placeholder="john" data-en="john" data-ar="الاسم" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -309,10 +309,10 @@ for safe patient travel.{% endblock %}
 
                                     <div class="select-wrapper">
                                         <select id="oman-services" name="services" required>
-                                            <option value="" disabled selected>Select Service / اختر الخدمة</option>
-                                            <option value="air-ambulance">Air Ambulance / طيارة خاصة</option>
-                                            <option value="commercial-transfer">Commercial Airline Transfer / طيارة تجارية</option>
-                                            <option value="medical-escorts">Medical Escorts / المرافقة الطبية</option>
+                                            <option value="" disabled selected data-en="Select Service" data-ar="اختر الخدمة">Select Service</option>
+                                            <option value="air-ambulance" data-en="Air Ambulance" data-ar="طيارة خاصة">Air Ambulance</option>
+                                            <option value="commercial-transfer" data-en="Commercial Airline Transfer" data-ar="طيارة تجارية">Commercial Airline Transfer</option>
+                                            <option value="medical-escorts" data-en="Medical Escorts" data-ar="المرافقة الطبية">Medical Escorts</option>
                                         </select>
                                         <i class="fas fa-chevron-down ab-down"></i>
                                     </div>
@@ -323,7 +323,7 @@ for safe patient travel.{% endblock %}
                                     <label for="oman-email" class="en-content">Email Address</label>
                                     <label for="oman-email" class="ar-content">البريد الإلكتروني</label>
 
-                                    <input type="email" id="oman-email" name="email" placeholder="john@gmail.com"
+                                    <input type="email" id="oman-email" name="email" placeholder="john@gmail.com" data-en="john@gmail.com" data-ar="john@gmail.com"
                                         required>
                                 </div>
                             </div>
@@ -332,7 +332,7 @@ for safe patient travel.{% endblock %}
                                     <label for="oman-phone" class="en-content">Phone Number</label>
                                     <label for="oman-phone" class="ar-content">رقم الهاتف</label>
 
-                                    <input type="tel" id="oman-phone" name="phone" placeholder="Enter your phone number"
+                                    <input type="tel" id="oman-phone" name="phone" placeholder="Enter your phone number" data-en="Enter your phone number" data-ar="أدخل رقم هاتفك"
                                         required>
                                 </div>
                             </div>
@@ -348,7 +348,7 @@ for safe patient travel.{% endblock %}
                                         <span class="en-content">Verify Code</span>
                                         <span class="ar-content">رمز التحقق</span>
                                     </label>
-                                    <input type="text" id="oman-verify-code" name="verify_code" placeholder="enter code">
+                                    <input type="text" id="oman-verify-code" name="verify_code" placeholder="enter code" data-en="enter code" data-ar="أدخل الرمز">
                                 </div>
                             </div>
                             <div class="col-12">
@@ -357,7 +357,7 @@ for safe patient travel.{% endblock %}
                                     <label for="oman-message" class="ar-content">الرسالة</label>
 
                                     <textarea id="oman-message" name="message" rows="5"
-                                        placeholder="Enter your question here" required></textarea>
+                                        placeholder="Enter your question here" data-en="Enter your question here" data-ar="اكتب رسالتك هنا" required></textarea>
                                 </div>
                             </div>
                             <div class="col-12">

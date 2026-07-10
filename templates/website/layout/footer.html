@@ -6,22 +6,21 @@
             <div class="footer-row1">
                 <div class="footer-logo">
                     <img src="{% static 'website/images/bl-logo.svg' %}" alt="Bluedot Logo" class="footer-logo-img">
+                    <ul class="footer-links-sub footer-nav-center en-content">
+                        <li><a href="{% url 'website:about' %}">About Us</a></li>
+                        <li><a href="{% url 'website:fleet_select' %}">Fleet</a></li>
+                        <li><a href="{% url 'website:blogs' %}">News &amp; Insights</a></li>
+                        <li><a href="{% url 'website:careers' %}">Careers</a></li>
+                        <li><a href="{% url 'website:contactus' %}">Contact</a></li>
+                    </ul>
+                    <ul class="footer-links-sub footer-nav-center ar-content">
+                        <li><a href="{% url 'website:about' %}">من نحن</a></li>
+                        <li><a href="{% url 'website:fleet_select' %}">الأسطول</a></li>
+                        <li><a href="{% url 'website:blogs' %}">الأخبار و الرؤى</a></li>
+                        <li><a href="{% url 'website:careers' %}">الوظائف</a></li>
+                        <li><a href="{% url 'website:contactus' %}">اتصل بنا</a></li>
+                    </ul>
                 </div>
-                <ul class="footer-links-sub footer-nav-center en-content">
-                    <li><a href="{% url 'website:about' %}">About Us</a></li>
-                    <li><a href="{% url 'website:fleet_select' %}">Fleet</a></li>
-                    <li><a href="{% url 'website:blogs' %}">News &amp; Insights</a></li>
-                    <li><a href="{% url 'website:careers' %}">Careers</a></li>
-                    <li><a href="{% url 'website:contactus' %}">Contact</a></li>
-                </ul>
-
-                <ul class="footer-links-sub footer-nav-center ar-content">
-                    <li><a href="{% url 'website:about' %}">من نحن</a></li>
-                    <li><a href="{% url 'website:fleet_select' %}">الأسطول</a></li>
-                    <li><a href="{% url 'website:blogs' %}">الأخبار و الرؤى</a></li>
-                    <li><a href="{% url 'website:careers' %}">الوظائف</a></li>
-                    <li><a href="{% url 'website:contactus' %}">اتصل بنا</a></li>
-                </ul>
                 <div class="footer-badges">
                     <!-- <img src="{% static 'website/images/certificate.png' %}" alt="EURAMI Accredited Provider" class="footer-badge-img"> -->
 
