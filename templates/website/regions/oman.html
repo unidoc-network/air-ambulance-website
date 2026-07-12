@@ -1,467 +1,770 @@
 {% extends 'website/layout/base.html' %}
 {% load static %}{% block title %}24/7 Air Ambulance Service Oman | Muscat | Get A Quote{% endblock %}
-{% block meta_description %}Air ambulance service in Oman and Muscat with medical evacuation support and patient transfer services.{% endblock %}
+{% block meta_description %}Air ambulance service in Oman and Muscat with medical evacuation support and patient
+transfer services.{% endblock %}
 {% block content %}
 
 <main class="air-ambulance-page">
-        <!-- Hero Section -->
-        <section class="air-ambulance-hero">
-            <img src="{% static 'website/images/oman.png' %}" alt="Air Ambulance Transfer" class="aa-hero-bg">
-            <div class="aa-hero-overlay"></div>
-            <div class="container aa-hero-content">
-                <div class="hero-text-wrapper">
-                    <h1 class="hero-title-main">Journeys of Care</h1>
-                    <p class="hero-subtitle">224/7 Air Ambulance Service Oman</p>
-                    <a href="javascript:void(0)" class="btn-talk-advisor trigger-enquiry">Book Now</a>
-                </div>
+    <!-- Hero Section -->
+    <section class="air-ambulance-hero-oman">
+        <!-- <img src="{% static 'website/images/oman-bg-new.png' %}" alt="Air Ambulance Transfer" class="aa-hero-bg"> -->
+        <div class="aa-hero-overlay"></div>
+        <div class="container aa-hero-content">
+            <div class="hero-text-wrapper">
+                <h1 class="hero-title-main">
+                    <span class="en-content">Journeys of Care</span>
+                    <span class="ar-content">رحلات الرعاية الشاملة</span>
+                </h1>
+                <p class="hero-subtitle">
+                    <span class="en-content">24/7 Air Ambulance Service Oman</span>
+                    <span class="ar-content">خدمة الإسعاف الجوي على مدار الساعة في البحرين</span>
+                </p>
+                <a href="javascript:void(0)" class="btn-talk-advisor trigger-enquiry">
+                    <span class="en-content">Book Now</span>
+                    <span class="ar-content">احجز الآن</span>
+                </a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Intro & Stats Section -->
-        <section class="oman-intro-section">
-            <div class="container">
-
-
-                <!-- Top White Box -->
-                <div class="oman-intro-top">
+    <!-- Intro & Stats Section -->
+    <section class="oman-intro-section">
+        <div class="container">
 
 
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <h2 class="join-us-title">The Middle East's leading Air Ambulance Service</h2>
-                        </div>
-                        <div class="col-lg-2">
+            <!-- Top White Box -->
+            <div class="oman-intro-top">
 
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="join-us-text">
-                                <p>Based in Dubai, Bluedot is the Middle East’s leading provider of Air Ambulance
-                                    service with a difference: a committed, rightly qualified, and highly experienced
-                                    medical team, a strongly service-minded approach, and strictly deploying CAMTS &
-                                    EURAMI certified operators.</p>
-                            </div>
-                        </div>
-                    </div>
 
-                </div>
-
-                <!-- Bottom Stats Box -->
-                <div class="oman-stats-box">
-                    <div class="oman-stat-col">
-                        <h3 class="oman-stat-val">4000+ Medical<br>Assists</h3>
-                        <p class="oman-stat-desc">Completed over 4000 assists worldwide, including neonatal transfers.
-                        </p>
-                    </div>
-                    <div class="oman-stat-col">
-                        <h3 class="oman-stat-val">100% Success<br>Rate</h3>
-                        <p class="oman-stat-desc">Attending to every detail and improvising in the face of challenges.
-                        </p>
-                    </div>
-                    <div class="oman-stat-col">
-                        <h3 class="oman-stat-val">100+ Embassies<br>&amp; Consulates</h3>
-                        <p class="oman-stat-desc">International missions in the Middle East trust us for smooth
-                            repatriation.</p>
-                    </div>
-                    <div class="oman-stat-col">
-                        <h3 class="oman-stat-val">90+ Cities and<br>Countries</h3>
-                        <p class="oman-stat-desc">Serving you at new and more locations all over the blue planet.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="air-ambulance-info">
-            <div class="container ">
                 <div class="row">
-                    <div class="col-md-4">
-                        <h2 class="info-tagline">Bluedot : Quality Leader in
-                            Air Ambulance</h2>
+                    <div class="col-lg-4">
+                        <h2 class="join-us-title">
+                            <span class="en-content">The Middle East's leading Air Ambulance Service</span>
+                            <span class="ar-content">المزود الرائد لخدمات الإسعاف الجوي في الشرق الأوسط</span>
+                        </h2>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-lg-2">
 
                     </div>
-                    <div class="col-md-6">
-                        <div class="info-description">
-                            <p>Bluedot (formerly Universal Medical Transfer services) has years of experience and
-                                networks with Airports around the world, including Muscat International Airport, Oman
-                                ensuring smooth passage, rapid response, and easier paperwork with shorter lead times.
+                    <div class="col-lg-6">
+                        <div class="join-us-text">
+                            <p>
+                                <span class="en-content">Based in Dubai, Bluedot is the Middle East’s leading provider
+                                    of Air Ambulance service with a difference: a committed, rightly qualified, and
+                                    highly experienced medical team, a strongly service-minded approach, and strictly
+                                    deploying CAMTS &amp; EURAMI certified operators.</span>
+                                <span class="ar-content">انطلاقاً من مقرنا في دبي، تبرز بلودوت كجهة رائدة في تقديم خدمات
+                                    الطيران الطبي في منطقة الشرق الأوسط بمفهوم مختلف؛ يرتكز على طاقم طبي عالي الكفاءة
+                                    ومخضرم، وثقافة تتمحور حول خدمة المريض وتلبية احتياجاته، مع الالتزام الصارم بتشغيل
+                                    طائرات تابعة لمشغلين حاصلين على أعلى الاعتمادات والشهادات الدولية في مجال النقل
+                                    الطبي الجوي.</span>
                             </p>
-                            <p>Bluedot is the Middle East’s leading provider of Air Ambulance service with a difference:
-                                a committed, rightly qualified, and highly experienced medical team that has led more
-                                than 4000 medical assists worldwide, counting more than 100 embassies and consulates
-                                among our clients, as well as several government organizations in the middle east.</p>
-
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Worldwide Section -->
-        <section class="oman-worldwide-section">
-            <div class="container">
-                <div class="worldwide-box">
-                    <div class="row h-100">
-                        <div class="col-lg-5">
-                            <div class="worldwide-content">
-                                <h2>24/7 Air Ambulance<br>Worldwide</h2>
-                                <p>Our Air Ambulance control centre is available 24/7 to talk to you. Bluedot can
+            </div>
+
+            <!-- Bottom Stats Box -->
+            <div class="oman-stats-box">
+                <div class="oman-stat-col">
+                    <h3 class="oman-stat-val">
+                        <span class="en-content">4000+ Medical<br>Assists</span>
+                        <span class="ar-content">أكثر من +٤٠٠٠ مهمة<br>مساعدة طبية</span>
+                    </h3>
+                    <p class="oman-stat-desc">
+                        <span class="en-content">Completed over 4000 assists worldwide, including neonatal
+                            transfers.</span>
+                        <span class="ar-content">أتممنا بنجاح أكثر من أربعة آلاف مهمة مساعدة طبية حول العالم، بما في ذلك
+                            عمليات نقل المواليد والحديثي الولادة.</span>
+                    </p>
+                </div>
+                <div class="oman-stat-col">
+                    <h3 class="oman-stat-val">
+                        <span class="en-content">100% Success<br>Rate</span>
+                        <span class="ar-content">نسبة نجاح<br>كاملة ومطلقة</span>
+                    </h3>
+                    <p class="oman-stat-desc">
+                        <span class="en-content">Attending to every detail and improvising in the face of
+                            challenges.</span>
+                        <span class="ar-content">نتميز بالاهتمام بأدق التفاصيل والقدرة العالية على الابتكار والارتجال
+                            الطبي لمواجهة أي تحديات طارئة.</span>
+                    </p>
+                </div>
+                <div class="oman-stat-col">
+                    <h3 class="oman-stat-val">
+                        <span class="en-content">100+ Embassies<br>&amp; Consulates</span>
+                        <span class="ar-content">شراكة مع أكثر من<br>+١٠٠ سفارة وقنصلية</span>
+                    </h3>
+                    <p class="oman-stat-desc">
+                        <span class="en-content">International missions in the Middle East trust us for smooth
+                            repatriation.</span>
+                        <span class="ar-content">تحظى بعثاتنا الدولية بثقة الهيئات الدبلوماسية في الشرق الأوسط لإتمام
+                            عمليات إعادة المرضى إلى أوطانهم بسلاسة تامة.</span>
+                    </p>
+                </div>
+                <div class="oman-stat-col">
+                    <h3 class="oman-stat-val">
+                        <span class="en-content">90+ Cities and<br>Countries</span>
+                        <span class="ar-content">تغطية تشمل أكثر من<br>+٩٠ مدينة ودولة</span>
+                    </h3>
+                    <p class="oman-stat-desc">
+                        <span class="en-content">Serving you at new and more locations all over the blue planet.</span>
+                        <span class="ar-content">نعمل على خدمتكم والوصول إليكم في مواقع جديدة ومتزايدة عبر مختلف قارات
+                            الكوكب الأزرق.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="air-ambulance-info">
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="info-tagline">
+                        <span class="en-content">Bluedot: Quality Leader in Air Ambulance</span>
+                        <span class="ar-content">بلودوت: الريادة في معايير الجودة لقطاع الإسعاف الجوي</span>
+                    </h2>
+                </div>
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-md-6">
+                    <div class="info-description">
+                        <p>
+                            <span class="en-content">Bluedot (formerly Universal Medical Transfer services) has years of
+                                experience and networks with Airports around the world, including Muscat International
+                                Airport, Oman ensuring smooth passage, rapid response, and easier paperwork with shorter
+                                lead times.</span>
+                            <span class="ar-content">تتمتع بلودوت (المعروفة سابقاً باسم اليونيفرسال لخدمات النقل الطبي)
+                                بسنوات طويلة من الخبرة وشبكة علاقات راسخة مع المطارات حول العالم، بما في ذلك مطار مسقط
+                                الدولي في سلطنة عمان؛ مما يضمن لمرضانا عبوراً آمناً وسلساً، واستجابة فائقة السرعة،
+                                وتسهيل الإجراءات الورقية والمعاملات الرسمية في أقصر وقت ممكن.</span>
+                        </p>
+                        <p>
+                            <span class="en-content">Bluedot is the Middle East’s leading provider of Air Ambulance
+                                service: a committed, rightly qualified, and highly experienced medical team that has
+                                led more than 4000 medical assists worldwide, counting more than 100 embassies and
+                                consulates among our clients, as well as several government organizations in the middle
+                                east.</span>
+                            <span class="ar-content">ونظراً لمكانتنا كمزود رائد للإسعاف الجوي، يقود عملياتنا فريق طبي
+                                متخصص أشرف على آلاف الحالات، مما جعلنا الشريك المفضل لأكثر من مئة سفارة وقنصلية وجهة
+                                حكومية في منطقة الشرق الأوسط.</span>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Worldwide Section -->
+    <section class="oman-worldwide-section">
+        <div class="container">
+            <div class="worldwide-box">
+                <div class="row h-100">
+                    <div class="col-lg-5">
+                        <div class="worldwide-content">
+                            <h2>
+                                <span class="en-content">24/7 Air Ambulance<br>Worldwide</span>
+                                <span class="ar-content">إسعاف جوي عالمي<br>على مدار الساعة</span>
+                            </h2>
+                            <p>
+                                <span class="en-content">Our Air Ambulance control centre is available 24/7 to talk to
+                                    you. Bluedot can
                                     arrange medical transport home for patients within the shortest time possible by jet
-                                    or helicopter. You can make an inquiry by calling us or filling in our contact form.
-                                </p>
-                                <p>We plan the entire journey from bedside to bedside (bed to bed care) from Oman to any
+                                    or helicopter. You can make an inquiry by calling us or filling in our contact
+                                    form.</span>
+                                <span class="ar-content">يعمل مركز التحكم والعمليات الخاص بالإسعاف الجوي لدينا على مدار
+                                    الساعة طوال أيام الأسبوع للإجابة على استفساراتكم. وتستطيع بلودوت ترتيب رحلات العودة
+                                    الطبية للمرضى إلى بلدانهم في أسرع وقت ممكن، سواء عبر الطائرات النفاثة أو المروحيات.
+                                    ويمكنكم تقديم طلبكم مباشرة عبر الاتصال بنا أو ملء استمارة التواصل.</span>
+                            </p>
+                            <p>
+                                <span class="en-content">We plan the entire journey from bedside to bedside (bed to bed
+                                    care) from Oman to any
                                     country in the world and back. Therefore our clients include more than 90 embassies
                                     and international consulates worldwide, as well as several governmental
-                                    organizations.</p>
-                            </div>
+                                    organizations.</span>
+                                <span class="ar-content">نحن نتولى التخطيط لرحلة الرعاية المتكاملة من السرير إلى السرير
+                                    (من سرير المستشفى الأول إلى سرير المستشفى المستقبِل)، من سلطنة عمان إلى أي دولة في
+                                    العالم وإليها.</span>
+                            </p>
                         </div>
-                        <div class="col-lg-7 d-flex align-items-end justify-content-end pr-0">
-                            <div class="worldwide-img-wrapper">
-                                <img src="{% static 'website/images/24.png' %}" alt="24/7 Air Ambulance Worldwide">
-                            </div>
+                    </div>
+                    <div class="col-lg-7 d-flex align-items-end justify-content-end pr-0">
+                        <div class="worldwide-img-wrapper">
+                            <img src="{% static 'website/images/24.png' %}" alt="24/7 Air Ambulance Worldwide">
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
     <section class="air-ambulance-info">
-            <div class="container ">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h2 class="info-tagline">The Bluedot Fleet</h2>
-                    </div>
-                    <div class="col-md-2">
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="info-tagline">
+                        <span class="en-content">The Bluedot Fleet</span>
+                        <span class="ar-content">أسطول بلودوت الجوي</span>
+                    </h2>
+                </div>
+                <div class="col-md-2">
 
-                    </div>
-                    <div class="col-md-6">
-                        <div class="info-description">
-                            <p>To serve you better, we provide access to a modern fleet of medically equipped Air
+                </div>
+                <div class="col-md-6">
+                    <div class="info-description">
+                        <p>
+                            <span class="en-content">To serve you better, we provide access to a modern fleet of
+                                medically equipped Air
                                 Ambulance aircraft designed to meet a wide range of patient transport requirements.
                                 Depending on the patient's medical condition, travel distance, and operational needs, we
-                                deploy the most suitable aircraft for each mission.
-                            </p>
-                            <p>Our fleet includes the Challenger 604 and Challenger 605 for long-range international
+                                deploy the most suitable aircraft for each mission.</span>
+                            <span class="ar-content">لضمان تقديم أفضل مستويات الرعاية، نوفر لعملائنا أسطولًا حديثًا من
+                                طائرات الإسعاف الجوي المجهزة بأحدث التقنيات الطبية، والمصممة لتلبية مختلف احتياجات النقل
+                                الطبي. ويتم اختيار الطائرة الأنسب لكل مهمة بناءً على الحالة الطبية للمريض، ومسافة
+                                الرحلة، والمتطلبات التشغيلية، لضمان أعلى مستويات الكفاءة والسلامة.</span>
+                        </p>
+                        <p>
+                            <span class="en-content">Our fleet includes the Challenger 604 and Challenger 605 for
+                                long-range international
                                 medical evacuations, as well as the King Air B200 and King Air C90 for short- and
                                 medium-range patient transfers. All aircraft are equipped with advanced intensive care
                                 medical equipment and operated by experienced aeromedical teams, ensuring the highest
-                                standards of safety and patient care throughout every journey.</p>
+                                standards of safety and patient care throughout every journey.</span>
+                            <span class="ar-content">يشمل أسطولنا طائرات تشالنجر 604 وتشالنجر 605 المخصصة لعمليات
+                                الإخلاء الطبي الدولية طويلة المدى، بالإضافة إلى طائرات كينغ إير B200 وكينغ إير C90
+                                المناسبة لعمليات النقل الطبي قصيرة ومتوسطة المدى. وجميع الطائرات مجهزة بوحدات عناية
+                                مركزة متقدمة ومعدات طبية حديثة، ويشرف عليها طواقم طبية متخصصة في طب الطيران لضمان تقديم
+                                رعاية طبية متكاملة طوال الرحلة.</span>
+                        </p>
 
-                            <p>To provide a complete medical transport solution, Bluedot also coordinates Ground
+                        <p>
+                            <span class="en-content">To provide a complete medical transport solution, Bluedot also
+                                coordinates Ground
                                 Ambulances, Commercial Medical Flights, Medical Escort Services, and Helicopter
                                 Transfers, ensuring seamless patient transportation from the point of origin to the
-                                receiving medical facility anywhere in the world.</p>
+                                receiving medical facility anywhere in the world.</span>
+                            <span class="ar-content">ولتقديم حل متكامل للنقل الطبي، تنسق بلودوت أيضًا خدمات سيارات
+                                الإسعاف الأرضية، والرحلات الطبية التجارية، وخدمات المرافقة الطبية، والنقل الطبي بطائرات
+                                الهليكوبتر، مما يضمن انتقال المرضى بسلاسة وأمان من نقطة الانطلاق وحتى المنشأة الطبية
+                                المستقبلة في أي مكان حول العالم.</span>
+                        </p>
 
-                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="oman-worldwide-section">
-            <div class="container">
-                <div class="worldwide-box">
-                    <div class="row h-100">
-                        <div class="col-lg-7 d-flex align-items-end justify-content-end pr-0">
-                            <div class="worldwide-img-wrapper">
-                                <img src="{% static 'website/images/abt-oman.png' %}" alt="24/7 Air Ambulance Worldwide">
-                            </div>
+    <section class="oman-worldwide-section">
+        <div class="container">
+            <div class="worldwide-box">
+                <div class="row h-100">
+                    <div class="col-lg-7 d-flex align-items-end justify-content-end pr-0">
+                        <div class="worldwide-img-wrapper">
+                            <img src="{% static 'website/images/abt-oman.png' %}" alt="24/7 Air Ambulance Worldwide">
                         </div>
-                        <div class="col-lg-5">
-                            <div class="worldwide-content">
-                                <h2>About Oman</h2>
-                                <p>Oman is the oldest continuously independent state in the Arab world and offers a
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="worldwide-content">
+                            <h2>
+                                <span class="en-content">About Oman</span>
+                                <span class="ar-content">نبذة عن مملكة البحرين</span>
+                            </h2>
+                            <p>
+                                <span class="en-content">Oman is the oldest continuously independent state in the Arab
+                                    world and offers a
                                     great mix of natural wealth, traditional values, and modern infrastructure.
                                     Expatriates form a major part of the population and visitors are frequent from
                                     neighboring countries. Hence the need for air ambulance services, including
                                     repatriation and chartered flights are not infrequent. Omani nationals also travel
-                                    abroad for advanced healthcare services, including to India and Europe.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Oman Info Cards Section -->
-        <section class="oman-cards-section">
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-lg-4">
-                        <div class="oman-info-card">
-                            <h3>Muscat International Airport</h3>
-                            <p>Muscat International Airport (IATA: MCT, ICAO: OOMS), formerly Seeb International
-                                Airport, is the main international airport in Oman and is located in Seeb, 32 km from
-                                the old city and capital Muscat within the Muscat metropolitan area. The airport serves
-                                as the hub for flag carrier Oman Air and Oman's first budget airline Salam Air, and
-                                features flights to several regional destinations as well as some intercontinental
-                                services to Asia, Africa, and Europe.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="oman-info-card">
-                            <h3>Tourism Destination</h3>
-                            <p>Middle eastern and Arab citizens, including Omanis who are residing outside of Oman,
-                                represent the highest ratio of all tourists visiting Oman, estimated to be 48 percent.
-                                The second highest number of visitors comes from other Asian countries, which account
-                                for 17 percent of the total number of visitors. Healthcare facilities are increasingly
-                                growing in the country with over 60 hospitals and 900 medical centers.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="oman-info-card">
-                            <h3>Healthcare Services in Oman</h3>
-                            <p>Omani hospitals, medical centers, dispensaries, and clinics, include those managed by the
-                                Ministry of Public Health, the Ministry of Defence, one university hospital, and one
-                                hospital for the Royal Oman Police. The Omani Ministry of Health has established
-                                standards, policies, and funding for the expansion of public healthcare facilities in
-                                Oman.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Hospitals Directory Section -->
-        <section class="oman-hospitals-section">
-            <div class="container">
-                <div class="hospitals-tabs">
-                    <button class="hospital-tab active">Hospitals in Muscat</button>
-                    <button class="hospital-tab">Hospitals outside of Muscat</button>
-                </div>
-
-                <div class="hospitals-grid">
-                    <ul class="hospital-list">
-                        <li>Abeer Hospital</li>
-                        <li>Al Khair Hospital</li>
-                        <li>Al Masarra Hospital<br>(Psychiatric Hospital)</li>
-                        <li>Al Nahdha Hospital</li>
-                        <li>Al Shaiti Hospital</li>
-                        <li>Aster Al Raffah Hospital</li>
-                        <li>Apollo Hospital</li>
-                        <li>Armed Forces Hospital</li>
-                        <li>Badr al Samaa Group of Hospitals and Polyclinic</li>
-                    </ul>
-                    <ul class="hospital-list">
-                        <li>Bilad Bahi Bu Ali Hospital</li>
-                        <li>Boukha Hospital</li>
-                        <li>Burjeel Hospital</li>
-                        <li>Deba Hospital</li>
-                        <li>Fakih IVF Hospital</li>
-                        <li>Gulf Specialized Hospital</li>
-                        <li>Haima Hospital</li>
-                        <li>Hamdan Hospital</li>
-                        <li>Ibn Sina Hospital</li>
-                        <li>Ibri Hospital</li>
-                        <li>Izki Hospital</li>
-                        <li>Khoula Hospital (National Trauma Center)</li>
-                    </ul>
-                    <ul class="hospital-list">
-                        <li>KIMS Oman Hospital</li>
-                        <li>Lifeline Hospital</li>
-                        <li>Masirah Hospital</li>
-                        <li>Muscat Private Hospital and IVF Center</li>
-                        <li>NMC Healthcare Specialty Hospital</li>
-                        <li>Police Hospital</li>
-                        <li>Quiriyat Hospital</li>
-                        <li>The Royal Hospital</li>
-                        <li>Starcare Group of Hospitals (Seeb)</li>
-                    </ul>
-                    <ul class="hospital-list">
-                        <li>Starcare Group of Hospitals (Bousher)</li>
-                        <li>Sultan Qaboos University Hospital</li>
-                        <li>Wadi Mistal Hospital</li>
-                        <li>Al Hayat International Hospital (Cardiology, Orthopaedics, Diabetes, Gyneac, and other
-                            specialties) and Al Hayat polyclinics (Al Ghubra, Sohar and Al Hail)</li>
-                    </ul>
-                </div>
-            </div>
-            <img class="ab-vec" src="{% static 'website/images/ve.png' %}" alt="">
-        </section>
-
-
-        <!-- Air Ambulance In Oman Section -->
-        <section class="oman-bg-section" style="background-image: url('{% static 'website/images/oman-bg.png' %}');">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="oman-bg-content">
-                            <h2>Air Ambulance In Oman</h2>
-                            <p>We provide air ambulance services from major city centers and hospitals in Oman, it is
-                                our mission to provide a travel experience that is as safe, comfortable, and stress-free
-                                as possible for patients and loved ones alike. Cities we cover include: Muscat, Seeb,
-                                Salalah,Bawshar,Sohar,Suwayq,Ibri,Saham,Barka,Rustaq.</p>
-                            <p>Bluedot Air Ambulance services include medical repatriation flights as well as medical
-                                assistance flights. Allied Bluedot services include chartered flights and medical escort
-                                services, as well as FAA-approved medical stretchers on commercial flights.</p>
-                            <p>Air Ambulance Services are often used for repatriation by embassies and consulates. In a
-                                recent instance, the Philippine Embassy in Muscat announced a government-funded
-                                repatriation flight for Filipino nationals affected by the travel restrictions or their
-                                departure from Oman to the Philippines in July 2021.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="air-ambulance-info">
-            <div class="container ">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h2 class="info-tagline">Pediatric & Neonatal <br> Transport</h2>
-                    </div>
-                    <div class="col-md-2">
-
-                    </div>
-                    <div class="col-md-6">
-                        <div class="info-description">
-                            <p>Bluedot also specializes in pediatric and neonatal transport with incubators from Muscat
-                                International Airport and other airports in the Middle East such as Dubai International
-                                Airport, Abu Dhabi International Airport, Bahrain International Airport, and Kuwait
-                                International Airport.
+                                    abroad for advanced healthcare services, including to India and Europe.</span>
+                                <span class="ar-content">تعد سلطنة عمان أقدم دولة مستقلة مستمرة في العالم العربي، وتقدم
+                                    مزيجاً رائعاً من الثروات الطبيعية، والقيم التقليدية الأصيلة، والبنية التحتية
+                                    الحديثة. ويشكل الوافدون جزءاً كبيراً من التركيبة السكانية في السلطنة، إلى جانب
+                                    التدفق المستمر للزوار من الدول المجاورة؛ ونتيجة لذلك، تبرز الحاجة المتواصلة لخدمات
+                                    الإسعاف الجوي، ورحلات الإخلاء الطبي، والرحلات الخاصة. كما يتوجه المواطنون العمانيون
+                                    بانتظام إلى الخارج لتلقي خدمات الرعاية الصحية المتقدمة، لا سيما في الهند
+                                    وأوروبا.</span>
                             </p>
-                            <p>We have carried out, with 100% success, the transfer of child/ infant patients across
-                                international borders from the Middle East to South Asian countries, such as from UAE
-                                and Oman to India, Bangladesh, Sri Lanka, etc. as well as to Western countries such as
-                                Canada, United States, United Kingdom, etc.</p>
-
                         </div>
                     </div>
+
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-
-
-        </section>
-
-        <!-- UMeN Section -->
-        <section class="oman-umen-section">
-            <div class="row g-0 h-100">
-                <div class="col-lg-6">
-                    <div class="umen-content-box">
-                        <h2>Bluedot's Universal<br>Medical Escort Network<br>(UMeN)</h2>
-                        <p>All <u>air ambulance</u> medical staff are vetted by Bluedot for their qualifications and
-                            continuous training credentials. Our lead medical team has flight physicians with over
-                            fifteen years of experience in critical care transport and medical escort services. We are
-                            part of Bluedot's Universal Medical Escort Network UMeN which gives access to a worldwide
-                            network of aeromedical professionals.</p>
-                        <p>We employ several kinds of jets from a large fleet of aircraft, depending on patient needs,
-                            from short range, such as King Air B200, to mid-range, such as Learjet 45, to long-range
-                            flights such as Challenger 650 or Global Express, as well as network with ground ambulances
-                            and helicopter ambulances for shorter range parts of the journey.</p>
-                        <p>Bluedot is available at any time to assist you with costs, or any other queries you may have.
-                            If you would like an ambulance flight for an emergency or plan a medical flight in advance,
-                            then WhatsApp chat on <u>+971 55 188 1441</u> , and we will give you specific costs and a
-                            quotation tailored to your needs.</p>
+    <!-- Oman Info Cards Section -->
+    <section class="oman-cards-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="oman-info-card">
+                        <h3>
+                            <span class="en-content">Muscat International Airport</span>
+                            <span class="ar-content">مطار البحرين الدولي</span>
+                        </h3>
+                        <p>
+                            <span class="en-content">Muscat International Airport (IATA: MCT, ICAO: OOMS), formerly Seeb
+                                International Airport, is the main international airport in Oman and is located in Seeb,
+                                32 km from the old city and capital Muscat. The airport serves as the hub for flag
+                                carrier Oman Air and Oman's first budget airline Salam Air, and features flights to
+                                several regional destinations as well as intercontinental services to Asia, Africa, and
+                                Europe.</span>
+                            <span class="ar-content">هو المطار الدولي الرئيسي في سلطنة عمان (المعروف سابقاً باسم مطار
+                                السيب الدولي)، ويقع في ولاية السيب على بعد اثنين وثلاثين كيلومتراً من العاصمة القديمة
+                                مسقط. يمثل المطار المركز الرئيسي لعمليات الناقلة الوطنية "الطيران العماني"، بالإضافة إلى
+                                طيران السلام (أول طيران اقتصادي عماني). ويسير المطار رحلات متعددة إلى مختلف الوجهات
+                                الإقليمية، بجانب رحلات دولية تربط السلطنة بقارات آسيا وأفريقيا وأوروبا.</span>
+                        </p>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="umen-img-box">
-                        <img src="{% static 'website/images/u-m.png' %}" alt="Medical Escort Network">
+                <div class="col-lg-4">
+                    <div class="oman-info-card">
+                        <h3>
+                            <span class="en-content">Tourism Destination</span>
+                            <span class="ar-content">وجهة سياحية رائدة</span>
+                        </h3>
+                        <p>
+                            <span class="en-content">Middle eastern and Arab citizens, including Omanis residing outside
+                                of Oman, represent the highest ratio of all tourists visiting Oman, estimated to be 48
+                                percent. The second highest number of visitors comes from other Asian countries, which
+                                account for 17 percent. Healthcare facilities are increasingly growing in the country
+                                with over 60 hospitals and 900 medical centers.</span>
+                            <span class="ar-content">يمثل المواطنون العرب والخليجيون، بما في ذلك العمانيون المقيمون في
+                                الخارج، النسبة الأعلى من إجمالي السياح الذين يزورون السلطنة، والذين تُقدّر نسبتهم
+                                بثمانية وأربعين بالمئة، يليهم الزوار القادمون من الدول الآسيوية الأخرى بنسبة سبعة عشر
+                                بالمئة. وتوازياً مع هذا الإقبال، تشهد المرافق الطبية في البلاد نمواً متسارعاً؛ حيث تضم
+                                السلطنة اليوم أكثر من ستين مستشفى وتسعمئة مركز طبي مجهز.</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="oman-info-card">
+                        <h3>
+                            <span class="en-content">Healthcare Services in Oman</span>
+                            <span class="ar-content">الخدمات الصحية في البحرين</span>
+                        </h3>
+                        <p>
+                            <span class="en-content">Omani hospitals, medical centers, dispensaries, and clinics include
+                                those managed by the Ministry of Public Health, the Ministry of Defence, one university
+                                hospital, and one hospital for the Royal Oman Police. The Omani Ministry of Health has
+                                established standards, policies, and funding for the expansion of public and private
+                                healthcare facilities.</span>
+                            <span class="ar-content">تتوزع المستشفيات، والمراكز الطبية، والعيادات في سلطنة عمان لتشمل
+                                تلك التي تديرها وزارة الصحة، ووزارة الدفاع، بالإضافة إلى مستشفى جامعي تخصصي، ومستشفى
+                                تابع لشرطة عمان السلطانية. وتضع وزارة الصحة العمانية المعايير، والسياسات، والتمويل
+                                اللازم للتوسع المستمر في منشآت الرعاية الصحية الحكومية والخاصة لخدمة كافة المواطنين
+                                والمقيمين.</span>
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Oman Contact Form Section -->
-        <section class="oman-contact-section">
-            <div class="container">
-                <div class="oman-contact-header">
-                    <span class="oman-contact-subtitle">Contact Us</span>
-                    <h2 class="oman-contact-title">We’re here to help. Whether you need medical<br>transport support,
-                        have a question about our<br>services, or are exploring a partnership, our<br>team is ready to
-                        assist.</h2>
+    <!-- Hospitals Directory Section -->
+    <section class="oman-hospitals-section">
+        <div class="container">
+            <div class="hospitals-tabs">
+                <button class="hospital-tab active" data-tab="muscat">
+                    <span class="en-content">Hospitals in Muscat</span>
+                    <span class="ar-content">مستشفيات مسقط</span>
+                </button>
+                <button class="hospital-tab" data-tab="outside">
+                    <span class="en-content">Hospitals outside of Muscat</span>
+                    <span class="ar-content">مستشفيات خارج مسقط</span>
+                </button>
+            </div>
+
+            <!-- Tab Panel: Hospitals in Muscat -->
+            <div class="hospitals-grid tab-panel" id="tab-muscat">
+                <ul class="hospital-list">
+                    <li><span class="en-content">Abeer Hospital</span><span class="ar-content">مستشفى عبير</span></li>
+                    <li><span class="en-content">Al Khair Hospital</span><span class="ar-content">مستشفى الخير</span>
+                    </li>
+                    <li><span class="en-content">Al Masarra Hospital (Psychiatric Hospital)</span><span
+                            class="ar-content">مستشفى المسرة (للصحة النفسية)</span></li>
+                    <li><span class="en-content">Al Nahdha Hospital</span><span class="ar-content">مستشفى النهضة</span>
+                    </li>
+                    <li><span class="en-content">Al Shaiti Hospital</span><span class="ar-content">مستشفى الشاطئ</span>
+                    </li>
+                    <li><span class="en-content">Aster Al Raffah Hospital</span><span class="ar-content">مستشفى أستر
+                            الرفاعة</span></li>
+                    <li><span class="en-content">Apollo Hospital</span><span class="ar-content">مستشفى أبولو</span></li>
+                    <li><span class="en-content">Armed Forces Hospital</span><span class="ar-content">مستشفى القوات
+                            المسلحة</span></li>
+                    <li><span class="en-content">Badr al Samaa Group of Hospitals and Polyclinic</span><span
+                            class="ar-content">مجموعة مستشفيات وعيادات بدر السماء</span></li>
+                </ul>
+                <ul class="hospital-list">
+                    <li><span class="en-content">Burjeel Hospital</span><span class="ar-content">مستشفى بورجيل</span>
+                    </li>
+                    <li><span class="en-content">Fakih IVF Hospital</span><span class="ar-content">مستشفى فقيه
+                            للإخصاب</span></li>
+                    <li><span class="en-content">Gulf Specialized Hospital</span><span class="ar-content">مستشفى الخليج
+                            التخصصي</span></li>
+                    <li><span class="en-content">Hamdan Hospital</span><span class="ar-content">مستشفى حمدان</span></li>
+                    <li><span class="en-content">Ibn Sina Hospital</span><span class="ar-content">مستشفى ابن سينا</span>
+                    </li>
+                    <li><span class="en-content">Khoula Hospital (National Trauma Center)</span><span
+                            class="ar-content">مستشفى خولة (المركز الوطني لتقويم العظام والتقويم)</span></li>
+                    <li><span class="en-content">KIMS Oman Hospital</span><span class="ar-content">مستشفى كيمز
+                            عُمان</span></li>
+                    <li><span class="en-content">Lifeline Hospital</span><span class="ar-content">مستشفى لايف
+                            لاين</span></li>
+                    <li><span class="en-content">Muscat Private Hospital and IVF Center</span><span
+                            class="ar-content">مستشفى مسقط الخاص ومركز الإخصاب</span></li>
+                </ul>
+                <ul class="hospital-list">
+                    <li><span class="en-content">NMC Healthcare Specialty Hospital</span><span class="ar-content">مستشفى
+                            إن إم سي للرعاية الصحية</span></li>
+                    <li><span class="en-content">Police Hospital</span><span class="ar-content">مستشفى الشرطة</span>
+                    </li>
+                    <li><span class="en-content">The Royal Hospital</span><span class="ar-content">المستشفى
+                            السلطاني</span></li>
+                    <li><span class="en-content">Starcare Group of Hospitals (Seeb &amp; Bousher)</span><span
+                            class="ar-content">مستشفى ستاركير (السيب وبوشر)</span></li>
+                    <li><span class="en-content">Sultan Qaboos University Hospital</span><span class="ar-content">مستشفى
+                            جامعة السلطان قابوس</span></li>
+                    <li><span class="en-content">Wadi Mistal Hospital</span><span class="ar-content">مستشفى وادي
+                            مستل</span></li>
+                </ul>
+                <ul class="hospital-list">
+                    <li><span class="en-content">Al Hayat International Hospital (Cardiology, Orthopaedics, Diabetes,
+                            Gyneac)</span><span class="ar-content">مستشفى الحياة الدولي ومجمعات الحياة الطبية</span>
+                    </li>
+                    <li><span class="en-content">Al Hayat Polyclinics (Al Ghubra, Sohar &amp; Al Hail)</span><span
+                            class="ar-content">عيادات الحياة (الغبرة، صحار، الهيل)</span></li>
+                    <li><span class="en-content">Alofa Specialty Hospital</span><span class="ar-content">مستشفى ألوفت
+                            التخصصي</span></li>
+                </ul>
+            </div>
+
+            <!-- Tab Panel: Hospitals outside of Muscat -->
+            <div class="hospitals-grid tab-panel" id="tab-outside" style="display:none;">
+                <ul class="hospital-list">
+                    <li><span class="en-content">Ibri Hospital</span><span class="ar-content">مستشفى عبري</span></li>
+                    <li><span class="en-content">Izki Hospital</span><span class="ar-content">مستشفى إزكي</span></li>
+                    <li><span class="en-content">Haima Hospital</span><span class="ar-content">مستشفى حيماً</span></li>
+                    <li><span class="en-content">Deba Hospital</span><span class="ar-content">مستشفى دبا</span></li>
+                    <li><span class="en-content">Boukha Hospital</span><span class="ar-content">مستشفى بخاء</span></li>
+                    <li><span class="en-content">Masirah Hospital</span><span class="ar-content">مستشفى مصيرة</span>
+                    </li>
+                    <li><span class="en-content">Bilad Bahi Bu Ali Hospital</span><span class="ar-content">مستشفى بلاد
+                            بني بو علي</span></li>
+                    <li><span class="en-content">Wadi Mistal Hospital</span><span class="ar-content">مستشفى وادي
+                            مستل</span></li>
+                </ul>
+                <ul class="hospital-list">
+                    <li><span class="en-content">Al Khair Hospital</span><span class="ar-content">مستشفى الخير</span>
+                    </li>
+                    <li><span class="en-content">Hamdan Hospital</span><span class="ar-content">مستشفى حمدان</span></li>
+                    <li><span class="en-content">Ibn Sina Hospital</span><span class="ar-content">مستشفى ابن سينا</span>
+                    </li>
+                    <li><span class="en-content">Saham Hospital</span><span class="ar-content">مستشفى صحم</span></li>
+                    <li><span class="en-content">Salalah Hospital (Sultan Qaboos Hospital)</span><span
+                            class="ar-content">مستشفى صلالة (مستشفى السلطان قابوس)</span></li>
+                    <li><span class="en-content">Sohar Hospital</span><span class="ar-content">مستشفى صحار</span></li>
+                    <li><span class="en-content">Sur Hospital</span><span class="ar-content">مستشفى صور</span></li>
+                </ul>
+                <ul class="hospital-list">
+                    <li><span class="en-content">Rustaq Hospital</span><span class="ar-content">مستشفى الرستاق</span>
+                    </li>
+                    <li><span class="en-content">Al Buraymi Hospital</span><span class="ar-content">مستشفى
+                            البريمي</span></li>
+                    <li><span class="en-content">Nizwa Hospital</span><span class="ar-content">مستشفى نزوى</span></li>
+                    <li><span class="en-content">Duqm Hospital</span><span class="ar-content">مستشفى الدقم</span></li>
+                    <li><span class="en-content">Khasab Hospital</span><span class="ar-content">مستشفى خصب</span></li>
+                    <li><span class="en-content">Bahla Hospital</span><span class="ar-content">مستشفى بهلاء</span></li>
+                    <li><span class="en-content">Shinas Hospital</span><span class="ar-content">مستشفى شناص</span></li>
+                </ul>
+                <ul class="hospital-list">
+                    <li><span class="en-content">Adam Hospital</span><span class="ar-content">مستشفى آدم</span></li>
+                    <li><span class="en-content">Thumrayt Hospital</span><span class="ar-content">مستشفى ثمريت</span>
+                    </li>
+                    <li><span class="en-content">Al Mudhaibi Hospital</span><span class="ar-content">مستشفى
+                            المضيبي</span></li>
+                    <li><span class="en-content">Sinaw Hospital</span><span class="ar-content">مستشفى سناو</span></li>
+                    <li><span class="en-content">Ibra Hospital</span><span class="ar-content">مستشفى إبراء</span></li>
+                    <li><span class="en-content">Al Kamil Hospital</span><span class="ar-content">مستشفى الكامل</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <img class="ab-vec" src="{% static 'website/images/ve.png' %}" alt="">
+    </section>
+
+
+
+    <!-- Air Ambulance In Oman Section -->
+    <section class="oman-bg-section" style="background-image: url('{% static 'website/images/oman-bg.png' %}');">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="oman-bg-content">
+                        <h2><span class="en-content">Air Ambulance In Oman</span><span class="ar-content">الإسعاف الجوي
+                                في سلطنة عمان</span></h2>
+                        <p><span class="en-content">We provide air ambulance services from major city centers and
+                                hospitals in Oman. Cities we cover include: Muscat, Seeb, Salalah, Bawshar, Sohar,
+                                Suwayq, Ibri, Saham, Barka, Rustaq.</span><span class="ar-content">نحن نقدم خدمات
+                                الإسعاف الجوي من مختلف المدن الرئيسية والمستشفيات في سلطنة عمان. وتشمل المدن والمناطق
+                                التي نغطيها: مسقط، السيب، صلالة، بوشر، صحار، السويق، عبري، صحم، بركاء، والرستاق.</span>
+                        </p>
+                        <p><span class="en-content">Bluedot Air Ambulance services include medical repatriation flights
+                                as well as medical assistance flights, chartered flights and medical escort services, as
+                                well as FAA-approved medical stretchers on commercial flights.</span><span
+                                class="ar-content">تتضمن خدمات بلودوت رحلات الإخلاء الطبي الدولي ورحلات المساعدة الطبية،
+                                إلى جانب الرحلات الخاصة (التشارتر)، وخدمات المرافق الطبيالجوي، وتوفير النقالات الطبية
+                                المعتمدة من هيئة الطيران الفيدرالي على متن الرحلات التجارية.</span></p>
+                        <p><span class="en-content">Air Ambulance Services are often used for repatriation by embassies
+                                and consulates. We have successfully coordinated many such humanitarian missions with
+                                diplomatic bodies to facilitate the safe return of patients to their home
+                                countries.</span><span class="ar-content">وغالباً ما تُستعان بخدمات الإسعاف الجوي من قبل
+                                السفارات والقنصليات لإعادة الرعايا، حيث نسقنا بنجاح العديد من هذه المهام الإنسانية
+                                المعقدة بالتعاون مع الهيئات الدبلوماسية لتسهيل عودة الحالات المرضية إلى بلدانهم بسلاسة
+                                وأمان.</span></p>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="oman-form-wrapper">
-                    <form action="{% url 'website:submit_enquiry' %}" method="POST" class="oman-main-form">
-                        {% csrf_token %}
-                        <input type="hidden" name="country" value="Oman">
+    <section class="air-ambulance-info">
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="info-tagline"><span class="en-content">Pediatric &amp; Neonatal<br>Transport</span><span
+                            class="ar-content">نقل الأطفال وحديثي الولادة</span></h2>
+                </div>
+                <div class="col-md-2">
 
-                        <div class="row g-4">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="oman-name">Name</label>
-                                    <input type="text" id="oman-name" name="name" placeholder="ex: john" required>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-description en-content">
+                        <p>Bluedot also specializes in pediatric and neonatal transport with incubators from Muscat
+                            International Airport and other airports in the Middle East such as Dubai International
+                            Airport, Abu Dhabi International Airport, Bahrain International Airport, and Kuwait
+                            International Airport.
+                        </p>
+                        <p>We have carried out, with 100% success, the transfer of child/ infant patients across
+                            international borders from the Middle East to South Asian countries, such as from UAE
+                            and Oman to India, Bangladesh, Sri Lanka, etc. as well as to Western countries such as
+                            Canada, United States, United Kingdom, etc.</p>
+
+                    </div>
+
+                    <div class="info-description ar-content">
+                        <p>تتخصص بلودوت في عمليات نقل الأطفال وحديثي الولادة باستخدام حواضن طبية متطورة انطلاقاً من مطار
+                            مسقط الدولي وكافة مطارات الشرق الأوسط مثل مطار دبي الدولي، ومطار أبوظبي الدولي، ومطار
+                            البحرين الدولي، ومطار الكويت الدولي.
+                        </p>
+                        <p>وقد نفذنا بنجاح تام وبنسبة مئة بالمئة عمليات نقل للأطفال والرضع عبر الحدود الدولية من منطقة
+                            الشرق الأوسط إلى دول جنوب آسيا (مثل النقل من الإمارات وعمان إلى الهند، وبنغلاديش،
+                            وسريلانكا)، بالإضافة إلى الدول الغربية مثل كندا، والولايات المتحدة الأمريكية، والمملكة
+                            المتحدة.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    </section>
+
+    <!-- UMeN Section -->
+    <section class="oman-umen-section">
+        <div class="row g-0 h-100">
+            <div class="col-lg-6">
+                <div class="umen-content-box">
+                    <h2><span class="en-content">Bluedot's Universal<br>Medical Escort Network<br>(UMeN)</span><span
+                            class="ar-content">الشبكة العالمية للمرافقين الطبيين<br>التابعة لبلودوت</span></h2>
+                    <p><span class="en-content">All <u>air ambulance</u> medical staff are vetted by Bluedot for their
+                            qualifications and continuous training credentials. Our lead medical team has flight
+                            physicians with over fifteen years of experience in critical care transport. We are part of
+                            Bluedot's Universal Medical Escort Network UMeN which gives access to a worldwide network of
+                            aeromedical professionals.</span><span class="ar-content">تخضع جميع الأطقم الطبية في الإسعاف
+                            الجوي لعمليات فحص وتدقيق صارمة من بلودوت للتحقق من مؤهلاتهم وتدريبهم المستمر. ويضم فريقنا
+                            الطبي القيادي أطباء طيران يتمتعون بخبرة تتجاوز خمسة عشر عاماً في نقل حالات الرعاية الحرجة.
+                            ونحن جزء من الشبكة العالمية للمرافقين الطبيين UMeN مما يتيح لنا الوصول إلى نخبة من خبراء طب
+                            الطيران حول العالم.</span></p>
+
+                    <p><span class="en-content">Bluedot is available at any time to assist you with costs or any other
+                            queries. If you need an emergency ambulance flight or want to plan a medical flight in
+                            advance, WhatsApp us on <u>+971 55 188 1441</u> and we will provide a specific quotation
+                            tailored to your needs.</span><span class="ar-content">نحن في بلودوت على استعداد تام
+                            لمساعدتكم في أي وقت بخصوص تقدير التكاليف أو الإجابة على استفساراتكم. إذا كنتم بحاجة إلى رحلة
+                            إسعاف جوي طارئة أو تخططون لرحلة طبية مسبقة، يسعدنا تواصلكم معنا عبر واتساب على الرقم:
+                            <u>1441 188 55 971+</u>، وسيقوم فريقنا بتزويدكم بالتكلفة الدقيقة وعرض سعر مخصص بالكامل
+                            لاحتياجاتكم.</span></p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="umen-img-box">
+                    <img src="{% static 'website/images/u-m.png' %}" alt="Medical Escort Network">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Oman Contact Form Section -->
+    <section class="oman-contact-section">
+        <div class="container">
+            <div class="oman-contact-header">
+                <span class="oman-contact-subtitle"><span class="en-content">Contact Us</span><span
+                        class="ar-content">تواصل معنا</span></span>
+                <h2 class="oman-contact-title"><span class="en-content">We're here to help. Whether you need medical
+                        transport support, have a question about our services, or are exploring a partnership, our team
+                        is ready to assist.</span><span class="ar-content">نحن هنا من أجلكم. سواء كنتم بحاجة إلى دعم في
+                        النقل الطبي، أو لديكم استفسار حول خدماتنا، أو ترغبون في بناء شراكة عمل، فإن فريقنا مستعد دائماً
+                        لتقديم المساعدة الفورية.</span></h2>
+            </div>
+
+            <div class="oman-form-wrapper">
+                <form action="{% url 'website:submit_enquiry' %}" method="POST" class="oman-main-form">
+                    {% csrf_token %}
+                    <input type="hidden" name="country" value="Oman">
+
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="oman-name">
+                                    <span class="en-content">Name</span>
+                                    <span class="ar-content">الاسم الكامل</span>
+                                </label>
+                                <input type="text" id="oman-name" name="name" data-en="john" data-ar="أحمد"
+                                    placeholder="john" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="oman-services">
+                                    <span class="en-content">Choose Services</span>
+                                    <span class="ar-content">نوع النقل</span>
+                                </label>
+                                <div class="select-wrapper">
+                                    <select id="oman-services" name="services" required>
+                                        <option value="" disabled selected data-en="Select Service"
+                                            data-ar="اختر الخدمة">Select Service</option>
+                                        <option value="air-ambulance" data-en="Air Ambulance" data-ar="إسعاف جوي">Air
+                                            Ambulance</option>
+                                        <option value="commercial-transfer" data-en="Commercial Airline Transfer"
+                                            data-ar="نقل عبر الخطوط الجوية التجارية">Commercial Airline Transfer
+                                        </option>
+                                        <option value="medical-escorts" data-en="Medical Escorts"
+                                            data-ar="مرافقون طبيون">Medical Escorts</option>
+                                    </select>
+                                    <i class="fas fa-chevron-down ab-down"></i>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="oman-services">Choose Services</label>
-                                    <div class="select-wrapper">
-                                        <select id="oman-services" name="services" required>
-                                            <option value="" disabled selected>ex: Air Ambulance</option>
-                                            <option value="air-ambulance">Air Ambulance</option>
-                                            <option value="commercial-transfer">Commercial Airline Transfer</option>
-                                            <option value="medical-escorts">Medical Escorts</option>
-                                        </select>
-                                        <i class="fas fa-chevron-down ab-down"></i>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="oman-email">
+                                    <span class="en-content">Email Address</span>
+                                    <span class="ar-content">البريد الإلكتروني</span>
+                                </label>
+                                <input type="email" id="oman-email" name="email" data-en="john@gmail.com"
+                                    data-ar="أدخل بريدك الإلكتروني" placeholder="Enter your Email" required>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="oman-email">Email Address</label>
-                                    <input type="email" id="oman-email" name="email" placeholder="john@gmail.com"
-                                        required>
-                                </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="oman-phone">
+                                    <span class="en-content">Phone Number</span>
+                                    <span class="ar-content">رقم الهاتف</span>
+                                </label>
+                                <input type="tel" id="oman-phone" name="phone" data-en="Enter your phone number"
+                                    data-ar="أدخل رقم هاتفك" placeholder="Enter your phone number" required>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="oman-phone">Phone Number</label>
-                                    <input type="tel" id="oman-phone" name="phone" placeholder="Enter your phone number"
-                                        required>
-                                </div>
+                        </div>
+                        <div class="col-12 mt-1 mb-2">
+                            <button type="button" class="verify-email-btn"
+                                style="background-color: #009BE0; color: #FFF; border: none; padding: 10px 24px; border-radius: 24px; font-size: 14px; font-weight: 500; cursor: pointer; display: inline-block; font-family: 'Aeonik', sans-serif;">
+                                <span class="en-content">Click here to verify your email</span>
+                                <span class="ar-content">اضغط هنا للتحقق من بريدك الإلكتروني</span>
+                            </button>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="oman-verify-code">
+                                    <span class="en-content">Verify Code</span>
+                                    <span class="ar-content">رمز التحقق</span>
+                                </label>
+                                <input type="text" id="oman-verify-code" name="verify_code" data-en="enter code"
+                                    data-ar="أدخل الرمز" placeholder="enter code">
                             </div>
-                            <div class="col-12 mt-1 mb-2">
-                                <button type="button" class="verify-email-btn" style="background-color: #009BE0; color: #FFF; border: none; padding: 10px 24px; border-radius: 24px; font-size: 14px; font-weight: 500; cursor: pointer; display: inline-block; font-family: 'Aeonik', sans-serif;">
-                                    <span class="en-content">Click here to verify your email</span>
-                                    <span class="ar-content">اضغط هنا للتحقق من بريدك الإلكتروني</span>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="oman-message">
+                                    <span class="en-content">Message</span>
+                                    <span class="ar-content">رسالتك</span>
+                                </label>
+                                <textarea id="oman-message" name="message" rows="5" data-en="Enter your question here"
+                                    data-ar="أدخل سؤالك هنا" placeholder="Enter your question here" required></textarea>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="oman-form-footer">
+                                <div class="oman-consent-group">
+                                    <input type="checkbox" id="oman-consent" name="consent" required>
+                                    <label for="oman-consent">
+                                        <span class="en-content">I consent to have this website store my submitted
+                                            information so they can respond to my inquiry.</span>
+                                        <span class="ar-content">أوافق على قيام هذا الموقع بتخزين معلوماتي المقدمة حتى
+                                            يتمكنوا من الرد على استفساري.</span>
+                                    </label>
+                                </div>
+                                <button type="submit" class="oman-btn-submit">
+                                    <span class="en-content">Submit</span>
+                                    <span class="ar-content">إرسال الطلب</span>
                                 </button>
                             </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="oman-verify-code">
-                                        <span class="en-content">Verify Code</span>
-                                        <span class="ar-content">رمز التحقق</span>
-                                    </label>
-                                    <input type="text" id="oman-verify-code" name="verify_code" placeholder="enter code">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="oman-message">Message</label>
-                                    <textarea id="oman-message" name="message" rows="5"
-                                        placeholder="Enter your question here" required></textarea>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="oman-form-footer">
-                                    <div class="oman-consent-group">
-                                        <input type="checkbox" id="oman-consent" name="consent" required>
-                                        <label for="oman-consent">I consent to have this website store my submitted
-                                            information so they can respond to my inquiry.</label>
-                                    </div>
-                                    <button type="submit" class="oman-btn-submit">Submit</button>
-                                </div>
-                            </div>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
+</main>
 
 
-    <!-- ========== FOOTER ========== -->
+<!-- ========== FOOTER ========== -->
 
 {% endblock %}
 {% block extra_scripts %}
 
+<script>
+    (function () {
+        const tabs = document.querySelectorAll('.hospital-tab');
+        const panels = document.querySelectorAll('.tab-panel');
 
+        tabs.forEach(function (tab) {
+            tab.addEventListener('click', function () {
+                // Remove active from all tabs
+                tabs.forEach(function (t) { t.classList.remove('active'); });
+                // Add active to clicked tab
+                tab.classList.add('active');
 
+                // Hide all panels
+                panels.forEach(function (p) { p.style.display = 'none'; });
+
+                // Show the matching panel
+                var target = 'tab-' + tab.getAttribute('data-tab');
+                var panel = document.getElementById(target);
+                if (panel) { panel.style.display = ''; }
+            });
+        });
+    })();
+</script>
 
 {% endblock %}
-

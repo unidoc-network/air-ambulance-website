@@ -4407,13 +4407,13 @@ img {
     }
 
     .marker-1 {
-        top: 44%;
-        left: 10%;
+             top: 44%;
+        left: 21%;
     }
 
     .marker-2 {
-        top: 49%;
-        left: 17%;
+     top: 50%;
+        left: 27%;
     }
 
     .marker-3 {
@@ -4422,13 +4422,13 @@ img {
     }
 
     .marker-4 {
-        top: 45%;
-        left: 5%;
+     top: 45%;
+        left: 13%;
     }
 
     .marker-5 {
-        top: 46%;
-        left: 8%;
+                top: 46%;
+        left: 17%;
     }
 
     .marker-6 {
@@ -5441,7 +5441,7 @@ img {
 
 .marker-card {
     position: absolute;
-    bottom: 100%;
+    top: 100%;
     left: 50%;
     transform: translateX(-50%) translateY(-10px);
     background: #fff;
@@ -7460,7 +7460,14 @@ html[dir="rtl"] svg {
     font-family: "Aeonik";
 
 }
+html[dir="rtl"] .oman-stat-val {
+        font-size: 19px;
+}
 
+html[dir="rtl"] .oman-stat-col{
+    border-right: none;
+    
+}
 .oman-stat-desc {
     color: #FFFFFF;
     font-size: 16px;
@@ -7792,6 +7799,22 @@ html[dir="rtl"] svg {
     line-height: 1;
 }
 
+/* RTL overrides for Arabic */
+html[dir="rtl"] .hospital-list li {
+    padding-left: 0;
+    padding-right: 15px;
+    text-align: right;
+}
+
+html[dir="rtl"] .hospital-list li::before {
+    left: auto;
+    right: 0;
+}
+
+html[dir="rtl"] .hospitals-tabs {
+    justify-content: flex-end;
+}
+
 /* Responsive */
 @media (max-width: 991.98px) {
     .hospitals-grid {
@@ -8018,6 +8041,7 @@ html[dir="rtl"] svg {
     line-height: 1.2;
     letter-spacing: -1px;
     margin: 0;
+        max-width: 850px;
 }
 
 .oman-form-wrapper {
@@ -9710,10 +9734,58 @@ transform: scaleX(-1);
         margin-top: 0px;
 
     }
+    html[dir="rtl"] .accredited-left-inner{
+            padding-right: 16px;
+    }
 }
 html[dir="rtl"] .aa-hero-bg{
    transform: scaleX(-1); 
 }
 .points-head h3{
         padding-bottom: 40px;
+}
+
+html[dir="rtl"] .news-card-content {
+        padding: 32px 39px 32px 32px
+}
+
+.air-ambulance-hero-oman{
+        background: url(../images/oman-bg-new.png);
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: cover;
+    height: 150vh;
+    padding-top: 50px;
+    /* padding-bottom: 390px; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    position: relative;
+}
+
+.air-ambulance-hero-bahrain{
+    background: url(../images/bahr.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+      height: 150vh;
+    padding-top: 50px;
+    /* padding-bottom: 390px; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    position: relative;
+}
+.air-ambulance-hero-qatar{
+    background: url(../images/qt.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+      height: 150vh;
+    padding-top: 50px;
+    /* padding-bottom: 390px; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    position: relative; 
 }
