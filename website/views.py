@@ -403,6 +403,12 @@ class RegionSaudiView(View):
         return render(request, 'website/regions/saudi-arabia.html', context)
 
 
+class RegionKuwaitView(View):
+    def get(self, request):
+        context = {'path': 'regions'}
+        return render(request, 'website/regions/kuwait.html', context)
+
+
 # ── THANK YOU ────────────────────────────────────────────────────────────────
 class ThankYouView(View):
     def get(self, request):

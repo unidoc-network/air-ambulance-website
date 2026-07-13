@@ -9783,9 +9783,20 @@ html[dir="rtl"] .news-card-content {
     background-size: cover;
       height: 150vh;
     padding-top: 50px;
-    /* padding-bottom: 390px; */
+    /* display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    position: relative;  */
+}
+.air-ambulance-hero-kuwait{
+    background: url(../images/bahr.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 150vh;
+    padding-top: 50px;
     display: flex;
     align-items: flex-start;
     justify-content: start;
-    position: relative; 
+    position: relative;
 }
