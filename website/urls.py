@@ -47,52 +47,25 @@ urlpatterns = [
     path('air-ambulance-oman/', views.RegionOmanView.as_view(), name='region_oman'),
     path('air-ambulance-qatar/', views.RegionQatarView.as_view(), name='region_qatar'),
     path('air-ambulance-saudi-arabia/', views.RegionSaudiView.as_view(), name='region_saudi'),
+    path('air-ambulance-kuwait/', views.RegionKuwaitView.as_view(), name='region_kuwait'),
+
+    # Fleet Select legacy page → Fleet overview
+    path('fleet-select/',
+         RedirectView.as_view(url='/fleet/', permanent=True),
+         name='redirect_fleet_select'),
 
     # ── OTP & Enquiry Handling ───────────────────────────────────────────────
     path('send-otp/', views.SendOTPView.as_view(), name='send_otp'),
     path('verify-otp/', views.VerifyOTPView.as_view(), name='verify_otp'),
     path('submit-enquiry/', views.SubmitEnquiryView.as_view(), name='submit_enquiry'),
 
-    # ── 301 Permanent Redirects (legacy URLs from old site) ──────────────────
-    # Vision & Mission → About
-    path('vision-mission-core-values/',
-         RedirectView.as_view(url='/about/', permanent=True),
-         name='redirect_vision_mission'),
-
-    # Enquire Now standalone page → Contact
-    path('enquire-now/',
-         RedirectView.as_view(url='/contact/', permanent=True),
-         name='redirect_enquire_now'),
-
-    # Medical Team listing → About
-    path('medical-team/',
-         RedirectView.as_view(url='/about/', permanent=True),
-         name='redirect_medical_team'),
-
-    # Dr. Mohammed Afsal profile → About
-    path('medical-team/dr-mohammed-afsal/',
-         RedirectView.as_view(url='/about/', permanent=True),
-         name='redirect_dr_afsal'),
-
-    # Dr. Dagemawi Tesefaye profile → About
-    path('medical-team/dr-dagemawi-tesefaye/',
-         RedirectView.as_view(url='/about/', permanent=True),
-         name='redirect_dr_dagemawi'),
-
-    # Abu Dhabi landing page → Contact
-    path('air-ambulance-abu-dhabi/',
-         RedirectView.as_view(url='/contact/', permanent=True),
-         name='redirect_abudhabi'),
-
-    # Kuwait landing page → Contact
-    path('air-ambulance-kuwait/',
-         RedirectView.as_view(url='/contact/', permanent=True),
-         name='redirect_kuwait'),
-
-    # Fleet Select legacy page → Fleet overview
-    path('fleet-select/',
-         RedirectView.as_view(url='/fleet/', permanent=True),
-         name='redirect_fleet_select'),
+    # ── 301 Permanent Redirects ──────────────────────────────────────────────
+    path('vision-mission-core-values/', RedirectView.as_view(url='/about/', permanent=True), name='redirect_vision_mission'),
+    path('enquire-now/', RedirectView.as_view(url='/contact/', permanent=True), name='redirect_enquire_now'),
+    path('medical-team/', RedirectView.as_view(url='/about/', permanent=True), name='redirect_medical_team'),
+    path('medical-team/dr-mohammed-afsal/', RedirectView.as_view(url='/about/', permanent=True), name='redirect_dr_afsal'),
+    path('medical-team/dr-dagemawi-tesefaye/', RedirectView.as_view(url='/about/', permanent=True), name='redirect_dr_dagemawi'),
+    path('air-ambulance-abu-dhabi/', RedirectView.as_view(url='/contact/', permanent=True), name='redirect_abudhabi'),
 ]
 
 handler404 = views.error_404
