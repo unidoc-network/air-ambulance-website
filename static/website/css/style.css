@@ -4396,7 +4396,7 @@ img {
     }
 
     .news-hero-section {
-        height: 100vh;
+        height: 60vh;
         min-height: 500px;
         padding-bottom: 60px;
     }
@@ -8352,7 +8352,7 @@ html[dir="rtl"] .hospitals-tabs {
     }
 
     .about-banner {
-        height: 100vh;
+        height: 130vh;
     }
 
     .pt-40 {
@@ -8399,7 +8399,7 @@ html[dir="rtl"] .hospitals-tabs {
     }
 
     .hero-text-wrapper {
-        padding-top: 180px;
+        padding-top: 70px;
     }
 
     .btn-talk-advisor {
