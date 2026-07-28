@@ -4368,12 +4368,43 @@ img {
     }
 
     .nav-drawer-header {
-        padding: 20px;
-        justify-content: flex-end;
+        padding: 12px 15px;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
     }
 
     .nav-drawer-actions {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 4px;
+        flex: 1;
+        overflow-x: auto;
+        /* Just in case it overflows, allow scroll instead of cut off */
+    }
+
+    .nav-drawer-actions::-webkit-scrollbar {
         display: none;
+    }
+
+    .nav-drawer-actions .nav-outline-btn {
+        padding: 4px 6px;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        white-space: nowrap;
+    }
+
+    .nav-drawer-actions .nav-outline-btn svg {
+        width: 14px !important;
+        height: 14px !important;
+    }
+
+    .nav-drawer-header .nav-close-btn svg {
+        width: 20px;
+        height: 20px;
     }
 
     .nav-drawer-content {
@@ -4408,12 +4439,12 @@ img {
     }
 
     .marker-1 {
-             top: 44%;
+        top: 44%;
         left: 21%;
     }
 
     .marker-2 {
-     top: 50%;
+        top: 50%;
         left: 27%;
     }
 
@@ -4423,12 +4454,12 @@ img {
     }
 
     .marker-4 {
-     top: 45%;
+        top: 45%;
         left: 13%;
     }
 
     .marker-5 {
-                top: 46%;
+        top: 46%;
         left: 17%;
     }
 
@@ -5147,7 +5178,7 @@ img {
 .contact-hero-overlay {
     position: absolute;
     inset: 0;
-      background-color: rgb(0 0 0 / 31%);
+    background-color: rgb(0 0 0 / 31%);
     z-index: 1;
 }
 
@@ -5620,7 +5651,7 @@ img {
     display: inline-block;
     padding: 12px 32px;
     /* border: 2px solid rgba(0, 0, 0, 0.85); */
-        background: #009BE0;
+    background: #009BE0;
     border-radius: 999px;
     color: #ffffff;
     font-size: 18px;
@@ -6326,12 +6357,12 @@ img {
 
 @media (max-width: 767.98px) {
     .hero-title {
-        font-size: 34px;
+        font-size: 30px;
 
     }
 
     .hero-description {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .btn-hero-secondary {
@@ -7461,14 +7492,16 @@ html[dir="rtl"] svg {
     font-family: "Aeonik";
 
 }
+
 html[dir="rtl"] .oman-stat-val {
-        font-size: 19px;
+    font-size: 19px;
 }
 
-html[dir="rtl"] .oman-stat-col{
+html[dir="rtl"] .oman-stat-col {
     border-right: none;
-    
+
 }
+
 .oman-stat-desc {
     color: #FFFFFF;
     font-size: 16px;
@@ -7513,7 +7546,11 @@ html[dir="rtl"] .oman-stat-col{
 
 @media (max-width: 767.98px) {
     .hero-slide-content {
-        padding: 197px 10px 100px;
+        padding: 107px 10px 100px;
+    }
+
+    .heroBannerSwiper .hero-slide-last {
+        background-position: right !important;
     }
 
     .oman-intro-section {
@@ -8042,7 +8079,7 @@ html[dir="rtl"] .hospitals-tabs {
     line-height: 1.2;
     letter-spacing: -1px;
     margin: 0;
-        max-width: 850px;
+    max-width: 850px;
 }
 
 .oman-form-wrapper {
@@ -8184,7 +8221,7 @@ html[dir="rtl"] .hospitals-tabs {
 }
 
 .oman-btn-submit:hover {
-      background-color: #009BE0;
+    background-color: #009BE0;
     color: #FFF;
 }
 
@@ -9210,7 +9247,7 @@ html[dir="rtl"] .related-blog-section h3 {
 }
 
 .saudi-cost-btn:hover {
-        background-color: #009BE0;
+    background-color: #009BE0;
     color: #fff;
 }
 
@@ -9315,9 +9352,9 @@ html[dir="rtl"] .related-blog-section h3 {
 }
 
 .saudi-cta-btn-outline {
- background-color: #009BE0;
+    background-color: #009BE0;
     color: #fff;
-   
+
     padding: 11px 30px;
     border-radius: 30px;
     font-size: 15px;
@@ -9328,7 +9365,7 @@ html[dir="rtl"] .related-blog-section h3 {
 }
 
 .saudi-cta-btn-outline:hover {
-background-color: #009BE0;
+    background-color: #009BE0;
     color: #fff;
 }
 
@@ -9650,8 +9687,9 @@ html[dir="rtl"] .diff-text {
     text-align: right;
 
 }
-html[dir="rtl"] .card-title{
-        margin-left: auto;
+
+html[dir="rtl"] .card-title {
+    margin-left: auto;
 }
 
 html[dir="rtl"] .oman-main-form .select-wrapper i {
@@ -9669,12 +9707,12 @@ html[dir="rtl"] .fbs-nav {
     flex-direction: row-reverse;
 }
 
-html[dir="rtl"] .news-hero-bg img{
-transform: scaleX(-1);
+html[dir="rtl"] .news-hero-bg img {
+    transform: scaleX(-1);
 }
 
-.saudi-feature-item span{
-        color: white;
+.saudi-feature-item span {
+    color: white;
     font-size: 19px;
 }
 
@@ -9722,36 +9760,43 @@ transform: scaleX(-1);
     .saudi-service-divider {
         display: none;
     }
-    .enquiry-drawer-footer .nav-socials a{
+
+    .enquiry-drawer-footer .nav-socials a {
         font-size: 10px;
     }
-    .nav-outline-btn{
-            font-size: 8px;
+
+    .nav-outline-btn {
+        font-size: 8px;
     }
-    .nav-socials a{
-            font-size: 12px;
+
+    .nav-socials a {
+        font-size: 12px;
     }
-    .footer-links-sub{
+
+    .footer-links-sub {
         margin-top: 0px;
 
     }
-    html[dir="rtl"] .accredited-left-inner{
-            padding-right: 16px;
+
+    html[dir="rtl"] .accredited-left-inner {
+        padding-right: 16px;
     }
 }
-html[dir="rtl"] .aa-hero-bg{
-   transform: scaleX(-1); 
+
+html[dir="rtl"] .aa-hero-bg {
+    transform: scaleX(-1);
 }
-.points-head h3{
-        padding-bottom: 40px;
+
+.points-head h3 {
+    padding-bottom: 40px;
 }
 
 html[dir="rtl"] .news-card-content {
-        padding: 32px 39px 32px 32px
+    padding: 32px 39px 32px 32px
 }
 
-.air-ambulance-hero-oman{
-        background: url(../images/oman-bg-new.png);
+.air-ambulance-hero-oman {
+    background: url(../images/oman-bg-new.png);
     background-repeat: no-repeat;
     /* background-position: center; */
     background-size: cover;
@@ -9764,12 +9809,12 @@ html[dir="rtl"] .news-card-content {
     position: relative;
 }
 
-.air-ambulance-hero-bahrain{
+.air-ambulance-hero-bahrain {
     background: url(../images/bahr.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-      height: 150vh;
+    height: 150vh;
     padding-top: 50px;
     /* padding-bottom: 390px; */
     display: flex;
@@ -9777,19 +9822,21 @@ html[dir="rtl"] .news-card-content {
     justify-content: start;
     position: relative;
 }
-.air-ambulance-hero-qatar{
+
+.air-ambulance-hero-qatar {
     background: url(../images/qt.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-      height: 150vh;
+    height: 150vh;
     padding-top: 50px;
     /* display: flex;
     align-items: flex-start;
     justify-content: start;
     position: relative;  */
 }
-.air-ambulance-hero-kuwait{
+
+.air-ambulance-hero-kuwait {
     background: url(../images/bahr.png);
     background-repeat: no-repeat;
     background-position: center;
