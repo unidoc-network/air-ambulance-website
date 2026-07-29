@@ -1,0 +1,92 @@
+{% extends 'website/layout/base.html' %}
+{% load static %}
+{% block title %}Sabrish Kattur Guruprasad | Leadership | Bluedot{% endblock %}
+{% block meta_description %}Meet Sabrish Kattur Guruprasad, Business Head - APAC  at Bluedot.{% endblock %}
+{% block content %}
+
+<style>
+    .leader-detail-sec {
+        background-color: #f2f5f8;
+        min-height: calc(100vh - 400px);
+        display: flex;
+        align-items: center;
+        padding: 80px 0;
+    }
+
+    .leader-detail-card {
+        text-align: center;
+        width: 100%;
+        padding-top: 120px;
+    }
+
+    .leader-detail-img {
+        width: 250px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        margin: auto;
+    }
+
+    .leader-detail-name {
+        font-size: 45px;
+        font-weight: 500;
+        margin-bottom: 5px;
+        color: #000;
+        font-family: 'Aeonik';
+        padding-top: 20px;
+    }
+
+    .leader-detail-title {
+        font-size: 16px;
+        font-weight: 500;
+        color: #000;
+        margin-bottom: 40px;
+    }
+
+    .leader-detail-bio {
+        max-width: 730px;
+        margin: 0 auto;
+        text-align: left;
+        font-size: 18px;
+        line-height: 1.2;
+        color: #153c5e;
+        font-weight: 400;
+        font-family: 'Aeonik';
+
+    }
+</style>
+<section class="leader-detail-sec">
+    <div class="container">
+        <div class="leader-detail-card">
+            <img src="{% static 'website/images/sabrish.png' %}" alt="Faisal al nazi" class="leader-detail-img">
+            <h1 class="leader-detail-name">
+                <span class="en-content">Sabrish Kattur Guruprasad</span>
+                <span class="ar-content">سابريش كاتور غوروبراساد</span>
+            </h1>
+
+            <h5 class="leader-detail-title en-content">Business Head - APAC</h5>
+            <h5 class="leader-detail-title ar-content">رئيس قطاع الأعمال - منطقة آسيا والمحيط الهادئ</h5>
+
+            <div class="leader-detail-bio en-content">
+                <p>Sabrish Kattur Guruprasad is a high-performing Healthcare Operations Executive currently working in the role of Business Head (APAC) - Bluedot Air Ambulance with 12+ years of healthcare experience driving P&L operations, medical aviation (Medevac), and hospital administration. Currently leading regional growth at Bluedot Air Ambulance, Sabrish excels at scaling high-growth enterprises, securing elite B2B hospital network partnerships, and managing complex cross-border aeromedical logistics. 
+                </p>
+                <p>
+                    A certified Lean Six Sigma Green Belt, Sabrish’s expertise lies in financial stewardship with operational excellence. Throughout the leadership career in his previous roles Sabrish has consistently scaled multi-crore revenues, optimized CapEx, and engineered lean clinical workflows to hit operational breakeven milestones.
+                </p>
+            </div>
+            <div class="leader-detail-bio ar-content">
+         
+   <p>
+    يُعد سابريش كاتور غوروبراساد تنفيذاً عالي الأداء في مجال إدارة العمليات الصحية، ويشغل حالياً منصب رئيس قطاع الأعمال لمنطقة آسيا والمحيط الهادئ في شركة بلودوت للإسعاف الجوي. يمتلك خبرة تمتد لأكثر من اثني عشر عاماً في قطاع الرعاية الصحية، نجح خلالها في قيادة عمليات الأرباح والخسائر، والإخلاء الطبي الجوي، وإدارة المستشفيات. ويتولى سابريش حالياً قيادة التوسع والنمو الإقليمي لشركة بلودوت للإسعاف الجوي؛ حيث يتميز بكفاءة استثنائية في توسيع نطاق المشاريع عالية النمو، وإبرام شراكات النخبة مع شبكات المستشفيات في قطاع الأعمال بين الشركات، وإدارة العمليات اللوجستية المعقدة للطب الجوي عابر الحدود.
+   </p>
+
+   <p>
+    يحمل سابريش شهادة الحزام الأخضر المعتمدة في منهجية "لين ستة سيجما" لتطوير الجودة، وتتركز خبراته الإستثنائية في توجيه الإدارة المالية وتحقيق التميز التشغيلي. وخلال مسيرته القيادية في مناصبه السابقة، تمكن سابريش بشكل مستمر من تعظيم الإيرادات بملايين العملات (ما يعادل فئات الكرور)، وتحسين النفقات الرأسمالية، وهندسة تدفقات العمل السريرية الرشيقة لتحقيق مستويات كسر التعادل والربحية التشغيلية.
+   </p>
+</div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
