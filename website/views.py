@@ -16,7 +16,7 @@ import sys
 # ── HOME ────────────────────────────────────────────────────────────────────
 class HomePageView(View):
     def get(self, request):
-        blogs = Blogs.objects.filter(is_active=True).order_by('-date', '-created_at')
+        blogs = Blogs.objects.filter(is_active=True).order_by('sequence', '-date', '-created_at')
         categories = BlogCategory.objects.filter(is_active=True)
         context = {
             'path': 'home',
@@ -117,10 +117,10 @@ class BlogListView(View):
         category_slug = request.GET.get('category', 'all')
         
         # Banner always shows the latest overall blog post
-        featured = Blogs.objects.filter(is_active=True).order_by('-date', '-created_at').first()
+        featured = Blogs.objects.filter(is_active=True).order_by('sequence', '-date', '-created_at').first()
 
         # Grid list shows all filtered posts (including the featured one)
-        grid_blogs = Blogs.objects.filter(is_active=True).order_by('-date', '-created_at')
+        grid_blogs = Blogs.objects.filter(is_active=True).order_by('sequence', '-date', '-created_at')
         if category_slug and category_slug != 'all':
             grid_blogs = grid_blogs.filter(category__slug=category_slug)
 
@@ -147,7 +147,7 @@ class BlogListView(View):
 class BlogDetailPageView(View):
     def get(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Blogs, slug=slug, is_active=True)
-        recent = Blogs.objects.filter(is_active=True).exclude(id=post.id).order_by('-date', '-created_at')[:3]
+        recent = Blogs.objects.filter(is_active=True).exclude(id=post.id).order_by('sequence', '-date', '-created_at')[:3]
         context = {
             'path': 'blog-detail',
             'post': post,
