@@ -147,6 +147,29 @@ function delete_modal(id) {
     $('#hid').val(id);
     $('#modaldemo5').modal('show');
 }
+
+function updateBlogSequence(id, sequence) {
+    $.ajax({
+        url: "{% url 'superadmin:UpdateBlogSequence' %}",
+        type: 'POST',
+        data: {
+            'id': id,
+            'sequence': sequence,
+            'csrfmiddlewaretoken': '{{ csrf_token }}'
+        },
+        success: function(response) {
+            if (response.status) {
+                location.reload(); // Reload to reflect new ordering
+            } else {
+                alert(response.message);
+            }
+        },
+        error: function(err) {
+            console.error(err);
+            alert("Error updating sequence");
+        }
+    });
+}
 </script>
 
 {% include 'superadmin/layout/footer.html' %}

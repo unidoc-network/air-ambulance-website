@@ -105,6 +105,7 @@ class Blogs(BaseModel, ImageCompressMixin):
     time_to_read_ar = models.CharField(max_length=50, null=True, blank=True, verbose_name="Time to Read (AR)")  # Optional
     tag = models.CharField(max_length=100, null=True, blank=True)  # e.g. "Food Story"
     slug = AutoSlugField(populate_from="title", null=True, blank=True, unique=True)
+    sequence = models.IntegerField(default=9999, verbose_name="Sequence Order")
 
     class Meta:
         verbose_name = "News & Story"

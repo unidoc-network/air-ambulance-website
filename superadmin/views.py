@@ -342,7 +342,7 @@ class NewsList(LoginRequiredMixin, View):
         if category:
             conditions &= Q(category_id=category)
 
-        data_list = Blogs.objects.filter(conditions).order_by('-id')
+        data_list = Blogs.objects.filter(conditions).order_by('sequence', '-id')
         paginator = Paginator(data_list, 15)
 
         try:
@@ -350,11 +350,14 @@ class NewsList(LoginRequiredMixin, View):
         except (PageNotAnInteger, EmptyPage):
             datas = paginator.page(1)
         
+        total_blogs = Blogs.objects.count()
+        
         context.update({
             'datas': datas,
             'page': page_num,
             'categories': BlogCategory.objects.filter(is_active=True),
             'selected_category': category,
+            'total_blogs_range': list(range(1, total_blogs + 1)) if total_blogs > 0 else [],
         })
 
         if is_ajax(request):
@@ -363,6 +366,19 @@ class NewsList(LoginRequiredMixin, View):
             return JsonResponse({'status': True, 'template': html_content})
 
         return renderhelper(request, 'blogs', 'blog-view', context)
+
+class UpdateBlogSequence(LoginRequiredMixin, View):
+    def post(self, request):
+        try:
+            blog_id = request.POST.get('id')
+            sequence = int(request.POST.get('sequence'))
+            blog = Blogs.objects.get(id=blog_id)
+            blog.sequence = sequence
+            blog.save()
+            messages.info(request, 'Sequence updated successfully.')
+            return JsonResponse({'status': True, 'message': 'Sequence updated successfully.'})
+        except Exception as e:
+            return JsonResponse({'status': False, 'message': str(e)})
 
 
 class NewsAdd(LoginRequiredMixin, View):

@@ -8,6 +8,7 @@
             <th class="d-none d-lg-table-cell">IMAGE</th>
             <th>TITLE</th>
             <th>CATEGORY</th>
+            <th>SEQUENCE</th>
             <th>DATE</th>
             <th>EN CONTENT</th>
             <th>AR DATA</th>
@@ -31,6 +32,15 @@
                 </td>
                 <td><div style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{data.title}}</div></td>
                 <td><span class="badge bg-info-transparent rounded-pill px-3" style="color: #059669; font-weight: 600;">{{data.category.name|default:"Uncategorized"}}</span></td>
+                
+                <td>
+                    <select class="form-select" style="min-width: 90px; border-radius: 8px; font-weight: 600;" onchange="updateBlogSequence({{data.id}}, this.value)">
+                        <option value="9999" {% if data.sequence == 9999 %}selected{% endif %}>-</option>
+                        {% for i in total_blogs_range %}
+                        <option value="{{i}}" {% if data.sequence == i %}selected{% endif %}>{{i}}</option>
+                        {% endfor %}
+                    </select>
+                </td>
 
                 <td>{{data.date|date:"d M, Y"}}</td>
 

@@ -30,6 +30,7 @@ urlpatterns = [
     # News & Stories
     path('News-Stories', views.NewsList.as_view(), name='NewsList'),
     path('News-Stories-Add', views.NewsAdd.as_view(), name='NewsAdd'),
+    path('News-Stories-Sequence', views.UpdateBlogSequence.as_view(), name='UpdateBlogSequence'),
     path('News-Stories-Update/<int:id>', views.NewsAdd.as_view(), name='NewsUpdate'),
 
     # Categories
