@@ -55,6 +55,10 @@ for idx, row in enumerate(rows):
     if not title:
         continue
         
+    if Blogs.objects.filter(title=title).exists():
+        print(f"Skipping '{title}' (already exists)")
+        continue
+        
     # Published date
     published_raw = str(published_cell) if published_cell else ''
     date_obj = None
