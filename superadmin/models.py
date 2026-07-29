@@ -60,10 +60,17 @@ class ContactForm(BaseModel):
     """
     name = models.CharField(max_length=100, null=True)
     email = models.EmailField(null=True)
+    country_code = models.CharField(max_length=10, null=True, blank=True)
     phone = models.TextField(null=True, blank=True)
     service = models.CharField(max_length=255, null=True, blank=True)
     message = models.TextField(null=True)
     country = models.CharField(max_length=100, default='Website', null=True, blank=True)
+
+    @property
+    def full_phone(self):
+        if self.country_code and self.phone:
+            return f"{self.country_code} {self.phone}"
+        return self.phone or "-"
 
 # Removed Team model
 
@@ -152,6 +159,7 @@ class CareerApplication(BaseModel):
     career = models.ForeignKey(Career, on_delete=models.CASCADE, related_name='applications')
     name = models.CharField(max_length=255, null=True, blank=True)
     email = models.EmailField(null=True, blank=True)
+    country_code = models.CharField(max_length=10, null=True, blank=True)
     phone = models.CharField(max_length=50, null=True, blank=True)
     location = models.CharField(max_length=255, null=True, blank=True)
     resume = models.FileField(upload_to='Resumes/', null=True, blank=True)
@@ -162,5 +170,11 @@ class CareerApplication(BaseModel):
 
     def __str__(self):
         return f"{self.name} - {self.career.title}"
+
+    @property
+    def full_phone(self):
+        if self.country_code and self.phone:
+            return f"{self.country_code} {self.phone}"
+        return self.phone or "-"
 
 

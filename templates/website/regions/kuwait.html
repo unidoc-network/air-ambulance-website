@@ -457,7 +457,45 @@
                                         <span class="en-content">Phone Number</span>
                                         <span class="ar-content">رقم الهاتف</span>
                                     </label>
-                                    <input type="tel" id="oman-phone" name="phone" data-en="Enter your phone number" data-ar="أدخل رقم هاتفك" placeholder="Enter your phone number" required>
+                                    <div class="d-flex flex-nowrap" style="gap: 10px;">
+                                        <div class="select-wrapper" style="width: 95px; flex-shrink: 0;">
+                                            <select id="country-code" name="country_code" required style="padding-left: 8px; padding-right: 20px;">
+                                                <optgroup label="GCC">
+                                                    <option value="+971" selected>🇦🇪 +971</option>
+                                                    <option value="+966">🇸🇦 +966</option>
+                                                    <option value="+965">🇰🇼 +965</option>
+                                                    <option value="+973">🇧🇭 +973</option>
+                                                    <option value="+974">🇶🇦 +974</option>
+                                                    <option value="+968">🇴🇲 +968</option>
+                                                </optgroup>
+                                                <optgroup label="INDIA">
+                                                    <option value="+91">🇮🇳 +91</option>
+                                                </optgroup>
+                                                <optgroup label="EUROPE">
+                                                    <option value="+44">🇬🇧 +44</option>
+                                                    <option value="+49">🇩🇪 +49</option>
+                                                    <option value="+33">🇫🇷 +33</option>
+                                                    <option value="+39">🇮🇹 +39</option>
+                                                    <option value="+34">🇪🇸 +34</option>
+                                                    <option value="+7">🇷🇺 +7</option>
+                                                </optgroup>
+                                                <optgroup label="MIDDLE EAST">
+                                                    <option value="+964">🇮🇶 +964</option>
+                                                    <option value="+961">🇱🇧 +961</option>
+                                                    <option value="+972">🇮🇱 +972</option>
+                                                    <option value="+970">🇵🇸 +970</option>
+                                                    <option value="+962">🇯🇴 +962</option>
+                                                </optgroup>
+                                                <optgroup label="AFRICA">
+                                                    <option value="+20">🇪🇬 +20</option>
+                                                    <option value="+27">🇿🇦 +27</option>
+                                                    <option value="+234">🇳🇬 +234</option>
+                                                </optgroup>
+                                            </select>
+                                            <i class="fas fa-chevron-down ab-down" style="right: 8px;"></i>
+                                        </div>
+                                        <input type="tel" id="oman-phone" name="phone" data-en="Enter your phone number" data-ar="أدخل رقم هاتفك" placeholder="Enter your phone number" style="flex-grow: 1; min-width: 0; padding-left: 12px;" required>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-12 mt-1 mb-2">

@@ -23,7 +23,7 @@
                 <td>{{ item.name|default:"-" }}</td>
                 <td><span class="badge bg-primary text-white rounded-pill px-3">{{ item.service|default:"-" }}</span></td>
                 <td><a href="mailto:{{ item.email }}">{{ item.email|default:"-" }}</a></td>
-                <td>{{ item.phone|default:"-" }}</td>
+                <td>{{ item.full_phone|default:"-" }}</td>
                 <td><span class="badge bg-secondary text-white rounded-pill px-3">{{ item.country|default:"Website" }}</span></td>
                 <td>
                     {% if item.message %}
@@ -42,7 +42,7 @@
                                     <p><strong>Name:</strong> {{ item.name }}</p>
                                     <p><strong>Service:</strong> {{ item.service|default:"-" }}</p>
                                     <p><strong>Email:</strong> {{ item.email }}</p>
-                                    <p><strong>Phone:</strong> {{ item.phone }}</p>
+                                    <p><strong>Phone:</strong> {{ item.full_phone }}</p>
                                     <p><strong>Country/Source:</strong> {{ item.country|default:"Website" }}</p>
                                     <hr>
                                     <p>{{ item.message }}</p>

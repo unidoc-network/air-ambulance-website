@@ -117,10 +117,48 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        // Phone number input restriction: restrict alphabets/symbols (allow numbers, spaces, +, -, (, ))
+        const countryCodeSelect = form.querySelector('select[name="country_code"]');
+        
+        function updatePhoneMaxLength() {
+            if (!phoneInput || !countryCodeSelect) return;
+            const code = countryCodeSelect.value;
+            let maxLength = 15; // default max length for "others"
+            if (code === '+91') {
+                maxLength = 10;
+            } else if (code === '+971') {
+                maxLength = 9;
+            } else if (code === '+966') {
+                maxLength = 9;
+            } else if (['+965', '+968', '+974', '+973'].includes(code)) {
+                maxLength = 8;
+            }
+            phoneInput.setAttribute('maxlength', maxLength);
+        }
+
+        if (countryCodeSelect && phoneInput) {
+            countryCodeSelect.addEventListener('change', function() {
+                updatePhoneMaxLength();
+                // Trim phone if it exceeds new length
+                const cleanPhone = phoneInput.value.replace(/[^0-9]/g, '');
+                const maxLen = parseInt(phoneInput.getAttribute('maxlength') || '15', 10);
+                if (cleanPhone.length > maxLen) {
+                    phoneInput.value = cleanPhone.slice(0, maxLen);
+                }
+            });
+            // Initial call
+            updatePhoneMaxLength();
+        }
+
+        // Phone number input restriction: strictly restrict to digits and enforce length
         if (phoneInput) {
             phoneInput.addEventListener('input', function (e) {
-                this.value = this.value.replace(/[^0-9\s\+\-\(\)]/g, '');
+                // Allow only digits to accurately measure length based on country code
+                this.value = this.value.replace(/[^0-9]/g, '');
+                
+                const maxLen = parseInt(this.getAttribute('maxlength') || '15', 10);
+                if (this.value.length > maxLen) {
+                    this.value = this.value.slice(0, maxLen);
+                }
             });
         }
 
@@ -340,8 +378,34 @@ document.addEventListener('DOMContentLoaded', function () {
             // 5. Validate Phone
             const phone = phoneInput ? phoneInput.value.trim() : '';
             const cleanPhone = phone.replace(/[\s\-\(\)\+]/g, '');
-            if (!phone || cleanPhone.length < 7 || cleanPhone.length > 15) {
-                showFormAlert('Please enter a valid Phone Number (7 to 15 digits).', 'red');
+            const countryCodeSelect = form.querySelector('select[name="country_code"]');
+            const countryCode = countryCodeSelect ? countryCodeSelect.value : '';
+            
+            let isValidPhone = true;
+            let phoneErrorMsg = '';
+
+            if (!phone) {
+                isValidPhone = false;
+                phoneErrorMsg = 'Please enter your Phone Number.';
+            } else if (countryCode === '+91' && cleanPhone.length !== 10) {
+                isValidPhone = false;
+                phoneErrorMsg = 'Please enter a valid 10-digit Indian phone number.';
+            } else if (countryCode === '+971' && (cleanPhone.length < 8 || cleanPhone.length > 9)) {
+                isValidPhone = false;
+                phoneErrorMsg = 'Please enter a valid 8 or 9-digit UAE phone number.';
+            } else if (countryCode === '+966' && cleanPhone.length !== 9) {
+                isValidPhone = false;
+                phoneErrorMsg = 'Please enter a valid 9-digit Saudi phone number.';
+            } else if (['+965', '+968', '+974', '+973'].includes(countryCode) && cleanPhone.length !== 8) {
+                isValidPhone = false;
+                phoneErrorMsg = 'Please enter a valid 8-digit phone number for GCC.';
+            } else if (!['+91', '+971', '+966', '+965', '+968', '+974', '+973'].includes(countryCode) && (cleanPhone.length < 7 || cleanPhone.length > 15)) {
+                isValidPhone = false;
+                phoneErrorMsg = 'Please enter a valid phone number (7 to 15 digits).';
+            }
+
+            if (!isValidPhone) {
+                showFormAlert(phoneErrorMsg, 'red');
                 if (phoneInput) {
                     phoneInput.style.borderColor = 'red';
                     phoneInput.focus();

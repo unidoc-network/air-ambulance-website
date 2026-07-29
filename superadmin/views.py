@@ -151,7 +151,8 @@ class ContactList(LoginRequiredMixin, View):
             qs = qs.filter(
                 Q(name__icontains=search) |
                 Q(email__icontains=search) |
-                Q(phone__icontains=search)
+                Q(phone__icontains=search) |
+                Q(country_code__icontains=search)
             )
 
         # Source filter
@@ -553,7 +554,7 @@ class CareerApplicationList(LoginRequiredMixin, View):
         page_num = request.GET.get('page', 1)
 
         if search:
-            conditions &= Q(name__icontains=search) | Q(email__icontains=search) | Q(career__title__icontains=search) | Q(location__icontains=search)
+            conditions &= Q(name__icontains=search) | Q(email__icontains=search) | Q(career__title__icontains=search) | Q(location__icontains=search) | Q(phone__icontains=search) | Q(country_code__icontains=search)
         
         if career:
             conditions &= Q(career_id=career)

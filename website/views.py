@@ -189,6 +189,7 @@ class CareerDetailView(View):
         name = request.POST.get('name', '').strip()
         email = request.POST.get('email', '').strip()
         phone = request.POST.get('phone', '').strip()
+        country_code = request.POST.get('country_code', '').strip()
         location = request.POST.get('location', '').strip()
         resume = request.FILES.get('resume')
 
@@ -208,8 +209,22 @@ class CareerDetailView(View):
             return JsonResponse({'status': 'error', 'message': 'Please enter a valid email address.'}, status=400)
             
         phone_clean = re.sub(r'[\s\-\(\)]', '', phone)
-        if not re.match(r'^\+?[0-9]{7,15}$', phone_clean):
-            return JsonResponse({'status': 'error', 'message': 'Please enter a valid phone number.'}, status=400)
+        # Dynamic length validation based on country code
+        if country_code == '+91':
+            if not re.match(r'^[0-9]{10}$', phone_clean):
+                return JsonResponse({'status': 'error', 'message': 'Please enter a valid 10-digit Indian phone number.'}, status=400)
+        elif country_code == '+971':
+            if not re.match(r'^[0-9]{8,9}$', phone_clean):
+                return JsonResponse({'status': 'error', 'message': 'Please enter a valid 8 or 9-digit UAE phone number.'}, status=400)
+        elif country_code == '+966':
+            if not re.match(r'^[0-9]{9}$', phone_clean):
+                return JsonResponse({'status': 'error', 'message': 'Please enter a valid 9-digit Saudi phone number.'}, status=400)
+        elif country_code in ['+965', '+968', '+974', '+973']:
+            if not re.match(r'^[0-9]{8}$', phone_clean):
+                return JsonResponse({'status': 'error', 'message': 'Please enter a valid 8-digit phone number for GCC.'}, status=400)
+        else:
+            if not re.match(r'^\+?[0-9]{7,15}$', phone_clean):
+                return JsonResponse({'status': 'error', 'message': 'Please enter a valid phone number (7 to 15 digits).'}, status=400)
             
         if not location:
             return JsonResponse({'status': 'error', 'message': 'Please enter your location.'}, status=400)
@@ -220,6 +235,7 @@ class CareerDetailView(View):
         name = strip_tags(name)
         email = strip_tags(email)
         phone = strip_tags(phone)
+        country_code = strip_tags(country_code)
         location = strip_tags(location)
 
         # Save record
@@ -227,6 +243,7 @@ class CareerDetailView(View):
             career=career,
             name=name,
             email=email,
+            country_code=country_code,
             phone=phone,
             location=location,
             resume=resume
@@ -237,7 +254,7 @@ class CareerDetailView(View):
         body_owner = f"New career application received for position: {career.title}\n\n" \
                      f"Name: {name}\n" \
                      f"Email: {email}\n" \
-                     f"Phone: {phone}\n" \
+                     f"Phone: {country_code} {phone}\n" \
                      f"Location: {location}\n"
                      
         html_owner = f"""
@@ -248,7 +265,7 @@ class CareerDetailView(View):
             <tr><td><strong>Position</strong></td><td>{career.title}</td></tr>
             <tr><td><strong>Name</strong></td><td>{name}</td></tr>
             <tr><td><strong>Email</strong></td><td>{email}</td></tr>
-            <tr><td><strong>Phone</strong></td><td>{phone}</td></tr>
+            <tr><td><strong>Phone</strong></td><td>{country_code} {phone}</td></tr>
             <tr><td><strong>Location</strong></td><td>{location}</td></tr>
         </table>
         """
@@ -602,6 +619,7 @@ class SubmitEnquiryView(View):
         name = request.POST.get('name', '').strip()
         email = request.POST.get('email', '').strip()
         phone = request.POST.get('phone', '').strip()
+        country_code = request.POST.get('country_code', '').strip()
         service = request.POST.get('services', '').strip()
         message = request.POST.get('message', '').strip()
         consent = request.POST.get('consent', '')
@@ -616,8 +634,22 @@ class SubmitEnquiryView(View):
             return JsonResponse({'status': 'error', 'message': 'Please enter a valid email address.'}, status=400)
             
         phone_clean = re.sub(r'[\s\-\(\)]', '', phone)
-        if not re.match(r'^\+?[0-9]{7,15}$', phone_clean):
-            return JsonResponse({'status': 'error', 'message': 'Please enter a valid phone number (7 to 15 digits).'}, status=400)
+        # Dynamic length validation based on country code
+        if country_code == '+91':
+            if not re.match(r'^[0-9]{10}$', phone_clean):
+                return JsonResponse({'status': 'error', 'message': 'Please enter a valid 10-digit Indian phone number.'}, status=400)
+        elif country_code == '+971':
+            if not re.match(r'^[0-9]{8,9}$', phone_clean):
+                return JsonResponse({'status': 'error', 'message': 'Please enter a valid 8 or 9-digit UAE phone number.'}, status=400)
+        elif country_code == '+966':
+            if not re.match(r'^[0-9]{9}$', phone_clean):
+                return JsonResponse({'status': 'error', 'message': 'Please enter a valid 9-digit Saudi phone number.'}, status=400)
+        elif country_code in ['+965', '+968', '+974', '+973']:
+            if not re.match(r'^[0-9]{8}$', phone_clean):
+                return JsonResponse({'status': 'error', 'message': 'Please enter a valid 8-digit phone number for GCC.'}, status=400)
+        else:
+            if not re.match(r'^\+?[0-9]{7,15}$', phone_clean):
+                return JsonResponse({'status': 'error', 'message': 'Please enter a valid phone number (7 to 15 digits).'}, status=400)
             
         if not service:
             return JsonResponse({'status': 'error', 'message': 'Please select a service.'}, status=400)
@@ -639,6 +671,7 @@ class SubmitEnquiryView(View):
         name = strip_tags(name)
         email = strip_tags(email)
         phone = strip_tags(phone)
+        country_code = strip_tags(country_code)
         service = strip_tags(service)
         message = strip_tags(message)
         country = strip_tags(country)
@@ -647,6 +680,7 @@ class SubmitEnquiryView(View):
         enquiry = ContactForm.objects.create(
             name=name,
             email=email,
+            country_code=country_code,
             phone=phone,
             service=service,
             message=message,
@@ -659,7 +693,7 @@ class SubmitEnquiryView(View):
         body_owner = f"New enquiry received from {country} page:\n\n" \
                      f"Name: {name}\n" \
                      f"Email: {email}\n" \
-                     f"Phone: {phone}\n" \
+                     f"Phone: {country_code} {phone}\n" \
                      f"Service: {service}\n" \
                      f"Country/Source: {country}\n" \
                      f"Message:\n{message}\n"
@@ -671,7 +705,7 @@ class SubmitEnquiryView(View):
             <tr style="background-color: #f2f2f2;"><th align="left">Field</th><th align="left">Submitted Value</th></tr>
             <tr><td><strong>Name</strong></td><td>{name}</td></tr>
             <tr><td><strong>Email</strong></td><td>{email}</td></tr>
-            <tr><td><strong>Phone</strong></td><td>{phone}</td></tr>
+            <tr><td><strong>Phone</strong></td><td>{country_code} {phone}</td></tr>
             <tr><td><strong>Service</strong></td><td>{service}</td></tr>
             <tr><td><strong>Country/Source</strong></td><td>{country}</td></tr>
             <tr><td><strong>Message</strong></td><td>{message}</td></tr>
@@ -696,7 +730,7 @@ class SubmitEnquiryView(View):
         applicant_context = {
             'name': name,
             'email': email,
-            'phone': phone,
+            'phone': f"{country_code} {phone}",
             'service': service,
             'message': message,
             'country': country,
