@@ -16,6 +16,7 @@ ENV/
 
 # Django static and media
 /staticfiles/
+/media/
 
 # Local settings & secrets
 .env
