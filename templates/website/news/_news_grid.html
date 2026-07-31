@@ -31,7 +31,7 @@
             <p class="news-card-meta">
                 <span class="en-content">
                     {% if blog.date %}Published on {{ blog.date|date:"d M Y" }}{% endif %}
-                    {% if blog.time_to_read %}&ndash; {{ blog.time_to_read }} read{% endif %}
+                    {% if blog.time_to_read %}&ndash; {{ blog.time_to_read }}{% endif %}
                 </span>
                 <span class="ar-content">
                     {% if blog.date %}نُشر بتاريخ {{ blog.date|date:"d M Y" }}{% endif %}
