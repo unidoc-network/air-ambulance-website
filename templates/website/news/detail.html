@@ -12,7 +12,7 @@
                     <p>
                         <span class="en-content">
                             {% if post.date %}Published on {{ post.date|date:"d M Y" }}{% endif %}
-                            {% if post.time_to_read %}&ndash; {{ post.time_to_read }} read{% endif %}
+                            {% if post.time_to_read %}&ndash; {{ post.time_to_read }} {% endif %}
                         </span>
                         <span class="ar-content">
                             {% if post.date %}نُشر بتاريخ {{ post.date|date:"d M Y" }}{% endif %}
