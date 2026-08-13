@@ -29,3 +29,4 @@ Disallow: /*?gclid=
 
 # Sitemap
 Sitemap: https://www.bluedotairambulance.com/sitemap.xml
+Sitemap: https://www.bluedotairambulance.com/fleet-sitemap.xml

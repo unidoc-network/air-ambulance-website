@@ -250,11 +250,12 @@
                     <!-- Card 1 -->
                     <div class="col-lg-4">
                         <div class="mission-card-white">
-                            <h3 class="mission-card-title en-content">UAE to China on Flight Stretcher: Mission Stories
+                            <h3 class="mission-card-title en-content">A Critical Care Mission - Middle East to Europe
                             </h3>
-                             <h3 class="mission-card-title ar-content">من الإمارات إلى الصين عبر نقالة طبية: قصص من واقع مهامنا</h3>
-                            <a href="https://www.bluedotairambulance.com/blog/uae-to-china-on-flight-stretcher-mission-stories/" class="btn-mission-story en-content">Mission story</a>
-                            <a href="https://www.bluedotairambulance.com/blog/uae-to-china-on-flight-stretcher-mission-stories/" class="btn-mission-story ar-content">قصة المهمة</a>
+                             <h3 class="mission-card-title ar-content">رعاية حرجة - من الشرق الأوسط إلى أوروبا
+</h3>
+                            <a href="https://www.bluedotairambulance.com/blog/a-critical-care-mission-middle-east-to-europe/" class="btn-mission-story en-content">Mission story</a>
+                            <a href="https://www.bluedotairambulance.com/blog/a-critical-care-mission-middle-east-to-europe/" class="btn-mission-story ar-content">قصة المهمة</a>
 
                             <img src="{% static 'website/images/s-vector.svg' %}" class="news-vector-bg" alt="">
                         </div>
@@ -263,10 +264,10 @@
                     <div class="col-lg-4">
                         <div class="mission-card-white">
                             <h3 class="mission-card-title en-content">
-Dubai to Bangkok: Urgent Lung Cancer Case Transfer</h3>
-                                <h3 class="mission-card-title ar-content">من دبي إلى بانكوك: نقل عاجل لمريض مصاب بسرطان الرئة</h3>
-                            <a href="https://www.bluedotairambulance.com/blog/dubai-to-bangkok-urgent-lung-cancer-case-transfer/" class="btn-mission-story en-content">Mission story</a>
-                            <a href="https://www.bluedotairambulance.com/blog/dubai-to-bangkok-urgent-lung-cancer-case-transfer/" class="btn-mission-story ar-content">قصة المهمة</a>
+Lifesaving Burn Evacuation from the Maldives to Bangkok</h3>
+                                <h3 class="mission-card-title ar-content">إخلاء طبي لإنقاذ حياة مصاب بحروق من جزر المالديف إلى بانكوك</h3>
+                            <a href="https://www.bluedotairambulance.com/blog/lifesaving-burn-evacuation-from-the-maldives-to-ba/" class="btn-mission-story en-content">Mission story</a>
+                            <a href="https://www.bluedotairambulance.com/blog/lifesaving-burn-evacuation-from-the-maldives-to-ba/" class="btn-mission-story ar-content">قصة المهمة</a>
 
                             <img src="{% static 'website/images/s-vector.svg' %}" class="news-vector-bg" alt="">
                         </div>
@@ -656,9 +657,40 @@ Dubai to Bangkok: Urgent Lung Cancer Case Transfer</h3>
 
 {% endblock %}
 {% block extra_scripts %}
-
-
-
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "Is medical equipment provided during transport?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Necessary medical equipment and medications are provided based on the patient's clinical condition and physician's assessment."
+    }
+  },{
+    "@type": "Question",
+    "name": "Are your services available internationally?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. We provide worldwide medical transportation and repatriation services across multiple countries."
+    }
+  },{
+    "@type": "Question",
+    "name": "Will the patient have a dedicated case manager?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Every case is assigned a dedicated case coordinator who oversees the transfer from start to finish and serves as the primary point of contact."
+    }
+  },{
+    "@type": "Question",
+    "name": " Is your operations team available 24/7?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Our operations center is available 24 hours a day, 7 days a week, to support emergency and scheduled medical transfers worldwide."
+    }
+  }]
+}
+</script>
 {% endblock %}
 
