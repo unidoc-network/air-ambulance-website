@@ -5,7 +5,27 @@
 {% block content %}
 
 <section class="blog-detail pt-pb common-padding">
+
+
     <div class="container">
+<div class="hero-breadcrumb">
+    <span class="en-content">
+        <a href="{% url 'website:home' %}">Home</a>
+        <span class="separator">/</span>
+        <a href="#">News</a>
+        <span class="separator">/</span>
+        <span class="active">Detail</span>
+    </span>
+    <span class="ar-content">
+        <a href="{% url 'website:home' %}">الرئيسية</a>
+        <span class="separator">/</span>
+        <a href="#">الأخبار</a>
+        <span class="separator">/</span>
+        <span class="active">Detail</span>
+    </span>
+</div>
+
+
         <div class="row">
             <div class="col-lg-8">
                 <div class="">

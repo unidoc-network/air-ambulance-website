@@ -7,6 +7,8 @@
 <!-- ========== NEWS HERO SECTION ========== -->
 {% if featured %}
 <section class="news-hero-section">
+
+
     <div class="news-hero-bg">
         {% if featured.image %}
         <img src="{{ featured.image.url }}" alt="{{ featured.title }}" class="news-hero-img">
@@ -16,6 +18,20 @@
         <div class="news-hero-overlay"></div>
     </div>
     <div class="container h-100 position-relative z-1">
+<div class="hero-breadcrumb">
+    <span class="en-content">
+        <a href="{% url 'website:home' %}">Home</a>
+        <span class="separator">/</span>
+        <span class="active">News</span>
+    </span>
+    <span class="ar-content">
+        <a href="{% url 'website:home' %}">الرئيسية</a>
+        <span class="separator">/</span>
+        <span class="active">الأخبار</span>
+    </span>
+</div>
+
+
         <div class="news-hero-content">
             <p class="news-meta">
                 <span class="en-content">
