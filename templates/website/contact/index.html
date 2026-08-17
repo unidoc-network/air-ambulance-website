@@ -5,11 +5,27 @@
 
 <!-- ========== CONTACT HERO START ========== -->
     <section class="contact-hero">
+
+
         <div class="contact-hero-bg">
             <img src="{% static 'website/images/contact-new.png' %}" alt="Helicopter at Sunset">
             <div class="contact-hero-overlay"></div>
         </div>
         <div class="container">
+<div class="hero-breadcrumb">
+    <span class="en-content">
+        <a href="{% url 'website:home' %}">Home</a>
+        <span class="separator">/</span>
+        <span class="active">Contact Us</span>
+    </span>
+    <span class="ar-content">
+        <a href="{% url 'website:home' %}">الرئيسية</a>
+        <span class="separator">/</span>
+        <span class="active">اتصل بنا</span>
+    </span>
+</div>
+
+
              <div class="contact-hero-content">
                 <span class="contact-subtitle en-content">Contact Us</span>
                 <span class="contact-subtitle ar-content">اتصل بنا</span>

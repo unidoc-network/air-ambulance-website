@@ -3,6 +3,7 @@
 .roles-hero {
     padding: 200px 0 60px;
     background-color: #EDF2F6;
+    position: relative;
 }
 
 .roles-title {

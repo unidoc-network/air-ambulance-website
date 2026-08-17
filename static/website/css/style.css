@@ -3168,6 +3168,11 @@ img {
     padding-top: 100px;
 }
 
+.blog-detail {
+    position: relative;
+    padding-top: 250px !important;
+}
+
 .related-blog-section {
     padding-bottom: 50px;
 }
@@ -3315,12 +3320,13 @@ img {
 }
 
 .challenger-hero-section .container {
-    position: relative;
-    z-index: 2;
+    /* Container static so breadcrumb can position relative to section */
 }
 
 .challenger-hero-content {
     max-width: 800px;
+    position: relative;
+    z-index: 2;
 }
 
 .challenger-hero-title {
@@ -9847,4 +9853,119 @@ html[dir="rtl"] .news-card-content {
     align-items: flex-start;
     justify-content: start;
     position: relative;
+}
+
+/* Hero Breadcrumb Styles */
+.hero-breadcrumb {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    font-weight: 500;
+    
+    /* Default flow positioning for most pages */
+    padding-top: 150px;
+    margin-bottom: -170px;
+    position: relative;
+    z-index: 10;
+}
+
+/* Mobile adjustments for normal flow breadcrumbs */
+@media (max-width: 991px) {
+    .hero-breadcrumb {
+        padding-top: 100px;
+        margin-bottom: -50px;
+    }
+}
+
+/* Override for sections where the container is pushed to the bottom (flex-end) or have top padding */
+.about-banner .hero-breadcrumb,
+.challenger-hero-section .hero-breadcrumb,
+.roles-hero .hero-breadcrumb,
+.blog-detail .hero-breadcrumb {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 0;
+    margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+    .about-banner .hero-breadcrumb,
+    .challenger-hero-section .hero-breadcrumb,
+    .roles-hero .hero-breadcrumb,
+    .blog-detail .hero-breadcrumb {
+        top: 100px;
+    }
+}
+
+/* Match Bootstrap container max-widths to keep breadcrumbs aligned perfectly */
+@media (min-width: 576px) { .about-banner .hero-breadcrumb, .challenger-hero-section .hero-breadcrumb, .roles-hero .hero-breadcrumb, .blog-detail .hero-breadcrumb { max-width: 540px; } }
+@media (min-width: 768px) { .about-banner .hero-breadcrumb, .challenger-hero-section .hero-breadcrumb, .roles-hero .hero-breadcrumb, .blog-detail .hero-breadcrumb { max-width: 720px; } }
+@media (min-width: 992px) { .about-banner .hero-breadcrumb, .challenger-hero-section .hero-breadcrumb, .roles-hero .hero-breadcrumb, .blog-detail .hero-breadcrumb { max-width: 960px; } }
+@media (min-width: 1200px) { .about-banner .hero-breadcrumb, .challenger-hero-section .hero-breadcrumb, .roles-hero .hero-breadcrumb, .blog-detail .hero-breadcrumb { max-width: 1140px; } }
+@media (min-width: 1400px) { .about-banner .hero-breadcrumb, .challenger-hero-section .hero-breadcrumb, .roles-hero .hero-breadcrumb, .blog-detail .hero-breadcrumb { max-width: 1320px; } }
+
+.hero-breadcrumb a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    border: none !important;
+    padding: 0 !important;
+}
+
+.hero-breadcrumb a:hover {
+    color: #fff;
+}
+
+.hero-breadcrumb span.separator {
+    margin: 0 8px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.hero-breadcrumb .active {
+    color: #fff;
+}
+
+/* Dark Breadcrumb variant for light backgrounds (e.g. Air Ambulance page) */
+.hero-breadcrumb.text-dark,
+.fleet-hero-section .hero-breadcrumb,
+.roles-hero .hero-breadcrumb,
+.terms-hero .hero-breadcrumb,
+.air-ambulance-hero .hero-breadcrumb,
+.blog-detail .hero-breadcrumb {
+    color: rgba(0, 0, 0, 0.8);
+}
+.hero-breadcrumb.text-dark a,
+.fleet-hero-section .hero-breadcrumb a,
+.roles-hero .hero-breadcrumb a,
+.terms-hero .hero-breadcrumb a,
+.air-ambulance-hero .hero-breadcrumb a,
+.blog-detail .hero-breadcrumb a {
+    color: rgba(0, 0, 0, 0.8);
+}
+.hero-breadcrumb.text-dark a:hover,
+.hero-breadcrumb.text-dark .active,
+.fleet-hero-section .hero-breadcrumb a:hover,
+.fleet-hero-section .hero-breadcrumb .active,
+.roles-hero .hero-breadcrumb a:hover,
+.roles-hero .hero-breadcrumb .active,
+.terms-hero .hero-breadcrumb a:hover,
+.terms-hero .hero-breadcrumb .active,
+.air-ambulance-hero .hero-breadcrumb a:hover,
+.air-ambulance-hero .hero-breadcrumb .active,
+.blog-detail .hero-breadcrumb a:hover,
+.blog-detail .hero-breadcrumb .active {
+    color: #000;
+}
+.hero-breadcrumb.text-dark span.separator,
+.fleet-hero-section .hero-breadcrumb span.separator,
+.roles-hero .hero-breadcrumb span.separator,
+.terms-hero .hero-breadcrumb span.separator,
+.air-ambulance-hero .hero-breadcrumb span.separator,
+.blog-detail .hero-breadcrumb span.separator {
+    color: rgba(0, 0, 0, 0.5);
 }

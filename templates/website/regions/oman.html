@@ -7,9 +7,29 @@ transfer services.{% endblock %}
 <main class="air-ambulance-page">
     <!-- Hero Section -->
     <section class="air-ambulance-hero-oman">
+
+
         <!-- <img src="{% static 'website/images/oman-bg-new.png' %}" alt="Air Ambulance Transfer" class="aa-hero-bg"> -->
         <div class="aa-hero-overlay"></div>
         <div class="container aa-hero-content">
+<div class="hero-breadcrumb">
+    <span class="en-content">
+        <a href="{% url 'website:home' %}">Home</a>
+        <span class="separator">/</span>
+        <a href="#">Regions</a>
+        <span class="separator">/</span>
+        <span class="active">Oman</span>
+    </span>
+    <span class="ar-content">
+        <a href="{% url 'website:home' %}">الرئيسية</a>
+        <span class="separator">/</span>
+        <a href="#">المناطق</a>
+        <span class="separator">/</span>
+        <span class="active">عمان</span>
+    </span>
+</div>
+
+
             <div class="hero-text-wrapper">
                 <h1 class="hero-title-main">
                     <span class="en-content">Journeys of Care</span>
