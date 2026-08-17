@@ -330,7 +330,10 @@ class CareerDetailView(View):
         request.session['verified_email'] = None
         request.session.modified = True
 
-        return JsonResponse({'status': 'success', 'redirect_url': '/thank-you/'})
+        lang = getattr(request, 'LANGUAGE_CODE', 'en')
+        if lang not in ('en', 'ar'):
+            lang = 'en'
+        return JsonResponse({'status': 'success', 'redirect_url': f'/thank-you/{lang}/'})
 
 
 # ── SERVICES ─────────────────────────────────────────────────────────────────
@@ -611,10 +614,14 @@ class VerifyOTPView(View):
 
 class SubmitEnquiryView(View):
     def post(self, request):
+        lang = getattr(request, 'LANGUAGE_CODE', 'en')
+        if lang not in ('en', 'ar'):
+            lang = 'en'
+
         # Honeypot checks
         honeypot = request.POST.get('website_url', '') or request.POST.get('_honey', '')
         if honeypot:
-            return JsonResponse({'status': 'success', 'redirect_url': '/thank-you/'})
+            return JsonResponse({'status': 'success', 'redirect_url': f'/thank-you/{lang}/'})
             
         name = request.POST.get('name', '').strip()
         email = request.POST.get('email', '').strip()
@@ -767,4 +774,4 @@ class SubmitEnquiryView(View):
         request.session['verified_email'] = None
         request.session.modified = True
 
-        return JsonResponse({'status': 'success', 'redirect_url': '/thank-you/'})
+        return JsonResponse({'status': 'success', 'redirect_url': f'/thank-you/{lang}/'})

@@ -1,11 +1,11 @@
-{% load static %}
+{% load static lang_tags %}
 <!-- ========== HEADER START ========== -->
 <header class="site-header{% if path != 'home' and path != 'about' and path != 'blogs' and path != 'fleet-605' %} site-header-light{% endif %}" id="siteHeader">
     <div class="header-main">
         <div class="container">
             <div class="header-inner">
                 <!-- Logo -->
-                <a href="{% url 'website:home' %}" class="header-logo" id="headerLogo">
+                <a href="{% lang_url 'website:home' %}" class="header-logo" id="headerLogo">
                     {% if path == 'home' or path == 'about' or path == 'blogs' or path == 'fleet-605' %}
                     <img src="{% static 'website/images/main-logo.png' %}" alt="Bluedot Logo">
                     {% else %}
@@ -36,15 +36,13 @@
                         تقديم استفسار
                     </a>
                     <div class="header-lang" id="langSelector">
-                        <span class="lang-current-label">EN</span>
+                        <span class="lang-current-label">{{ LANGUAGE_CODE|default:'en'|upper }}</span>
                         <i class="fas fa-chevron-down"></i>
                         <div class="lang-dropdown">
-                            <span class="lang-option active" data-lang="en">
-
+                            <span class="lang-option{% if LANGUAGE_CODE != 'ar' %} active{% endif %}" data-lang="en">
                                 <span class="lang-name">EN</span>
                             </span>
-                            <span class="lang-option" data-lang="ar">
-
+                            <span class="lang-option{% if LANGUAGE_CODE == 'ar' %} active{% endif %}" data-lang="ar">
                                 <span class="lang-name">AR</span>
                             </span>
                         </div>
@@ -81,15 +79,13 @@
                     </svg> Make an Enquiry</a>
                 <a href="javascript:void(0)" class="nav-outline-btn trigger-enquiry ar-content">تقديم استفسار</a>
                 <div class="nav-lang">
-                    <span class="lang-current-label">EN</span>
+                    <span class="lang-current-label">{{ LANGUAGE_CODE|default:'en'|upper }}</span>
                     <i class="fas fa-chevron-down"></i>
                     <div class="lang-dropdown">
-                        <span class="lang-option active" data-lang="en">
-
+                        <span class="lang-option{% if LANGUAGE_CODE != 'ar' %} active{% endif %}" data-lang="en">
                             <span class="lang-name">EN</span>
                         </span>
-                        <span class="lang-option" data-lang="ar">
-
+                        <span class="lang-option{% if LANGUAGE_CODE == 'ar' %} active{% endif %}" data-lang="ar">
                             <span class="lang-name">AR</span>
                         </span>
                     </div>
@@ -108,26 +104,22 @@
                 <!-- Main Menu -->
                 <div class="nav-menu-main">
                     <ul class="header-nav-links en-content">
-                        <li><a href="{% url 'website:about' %}">About Us</a></li>
+                        <li><a href="{% lang_url 'website:about' %}">About Us</a></li>
                         <li><a href="#services" class="has-submenu" data-target="servicesMenu">Services</a></li>
-                        <li><a href="{% url 'website:fleet_select' %}">Fleet</a></li>
-                        <li><a href="{% url 'website:blogs' %}">News &amp; Insights</a></li>
-                        <li><a href="{% url 'website:careers' %}">Careers</a></li>
-                        <li><a href="{% url 'website:contactus' %}">Contact</a></li>
-
+                        <li><a href="{% lang_url 'website:fleet_select' %}">Fleet</a></li>
+                        <li><a href="{% lang_url 'website:blogs' %}">News &amp; Insights</a></li>
+                        <li><a href="{% lang_url 'website:careers' %}">Careers</a></li>
+                        <li><a href="{% lang_url 'website:contactus' %}">Contact</a></li>
                     </ul>
 
                     <ul class="header-nav-links ar-content">
-                        <li><a href="{% url 'website:about' %}">من نحن</a></li>
+                        <li><a href="{% lang_url 'website:about' %}">من نحن</a></li>
                         <li><a href="#services" class="has-submenu" data-target="servicesMenu">خدماتنا</a></li>
-                        <li><a href="{% url 'website:fleet_select' %}">أسطولنا</a></li>
-                        <li><a href="{% url 'website:blogs' %}">آخر الأخبار</a></li>
-                        <li><a href="{% url 'website:careers' %}">وظائف</a></li>
-                        <li><a href="{% url 'website:contactus' %}">تواصل معنا</a></li>
-
+                        <li><a href="{% lang_url 'website:fleet_select' %}">أسطولنا</a></li>
+                        <li><a href="{% lang_url 'website:blogs' %}">آخر الأخبار</a></li>
+                        <li><a href="{% lang_url 'website:careers' %}">وظائف</a></li>
+                        <li><a href="{% lang_url 'website:contactus' %}">تواصل معنا</a></li>
                     </ul>
-
-
                 </div>
 
                 <!-- Services Submenu -->
@@ -139,34 +131,32 @@
                         </svg>
                     </button>
                     <ul class="header-nav-links ">
-                        <li class="en-content"><a href="{% url 'website:service_air_ambulance' %}">Air Ambulance</a>
+                        <li class="en-content"><a href="{% lang_url 'website:service_air_ambulance' %}">Air Ambulance</a>
                         </li>
-                        <li class="ar-content"><a href="{% url 'website:service_air_ambulance' %}">الإسعاف الجوي</a>
+                        <li class="ar-content"><a href="{% lang_url 'website:service_air_ambulance' %}">الإسعاف الجوي</a>
                         </li>
-                        <li class="en-content"><a href="{% url 'website:service_commercial' %}">Commercial Airline
+                        <li class="en-content"><a href="{% lang_url 'website:service_commercial' %}">Commercial Airline
                                 Transfer</a></li>
-                        <li class="ar-content"><a href="{% url 'website:service_commercial' %}">نقل المرضى عبر الطيران
+                        <li class="ar-content"><a href="{% lang_url 'website:service_commercial' %}">نقل المرضى عبر الطيران
                                 التجاري</a></li>
 
-                        <li class="en-content"><a href="{% url 'website:service_medical_escort' %}">Medical Escorts</a>
+                        <li class="en-content"><a href="{% lang_url 'website:service_medical_escort' %}">Medical Escorts</a>
                         </li>
-                        <li class="ar-content"><a href="{% url 'website:service_medical_escort' %}">المرافقة الطبية</a>
+                        <li class="ar-content"><a href="{% lang_url 'website:service_medical_escort' %}">المرافقة الطبية</a>
                         </li>
 
-                        <li class="en-content"><a href="{% url 'website:service_helicopter' %}">Rotary Wing Services</a>
+                        <li class="en-content"><a href="{% lang_url 'website:service_helicopter' %}">Rotary Wing Services</a>
                         </li>
-                        <li class="ar-content"><a href="{% url 'website:service_helicopter' %}">الإسعاف الجوي
+                        <li class="ar-content"><a href="{% lang_url 'website:service_helicopter' %}">الإسعاف الجوي
                                 بالمروحيات</a>
                         </li>
-
                     </ul>
-
                 </div>
             </div>
         </div>
 
         <div class="nav-drawer-footer en-content">
-            <a href="{% url 'website:careers' %}" class="nav-outline-btn">Join the journey</a>
+            <a href="{% lang_url 'website:careers' %}" class="nav-outline-btn">Join the journey</a>
             <div class="nav-socials">
                 <a href="https://www.linkedin.com/company/bluedotairambulance/posts/?feedView=all&viewAsMember=true" target="_blank">LinkedIn</a>
                 <a href="https://www.facebook.com/bluedotairambulance/?locale=id_ID&_rdc=2&_rdr#" target="_blank">Facebook</a>
@@ -174,7 +164,7 @@
             </div>
         </div>
         <div class="nav-drawer-footer ar-content">
-            <a href="{% url 'website:careers' %}" class="nav-outline-btn">انضم إلى الفريق</a>
+            <a href="{% lang_url 'website:careers' %}" class="nav-outline-btn">انضم إلى الفريق</a>
             <div class="nav-socials">
                 <a href="https://www.linkedin.com/company/bluedotairambulance/posts/?feedView=all&viewAsMember=true" target="_blank">لينكدإن</a>
                 <a href="https://www.facebook.com/bluedotairambulance/?locale=id_ID&_rdc=2&_rdr#" target="_blank">فيسبوك</a>

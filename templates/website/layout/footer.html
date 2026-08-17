@@ -1,4 +1,4 @@
-{% load static %}
+{% load static lang_tags %}
 
     <footer class="site-footer">
         <div class="container">
@@ -7,18 +7,18 @@
                 <div class="footer-logo">
                     <img src="{% static 'website/images/bl-logo.svg' %}" alt="Bluedot Logo" class="footer-logo-img">
                     <ul class="footer-links-sub footer-nav-center en-content">
-                        <li><a href="{% url 'website:about' %}">About Us</a></li>
-                        <li><a href="{% url 'website:fleet_select' %}">Fleet</a></li>
-                        <li><a href="{% url 'website:blogs' %}">News &amp; Insights</a></li>
-                        <li><a href="{% url 'website:careers' %}">Careers</a></li>
-                        <li><a href="{% url 'website:contactus' %}">Contact</a></li>
+                        <li><a href="{% lang_url 'website:about' %}">About Us</a></li>
+                        <li><a href="{% lang_url 'website:fleet_select' %}">Fleet</a></li>
+                        <li><a href="{% lang_url 'website:blogs' %}">News &amp; Insights</a></li>
+                        <li><a href="{% lang_url 'website:careers' %}">Careers</a></li>
+                        <li><a href="{% lang_url 'website:contactus' %}">Contact</a></li>
                     </ul>
                     <ul class="footer-links-sub footer-nav-center ar-content">
-                        <li><a href="{% url 'website:about' %}">من نحن</a></li>
-                        <li><a href="{% url 'website:fleet_select' %}">الأسطول</a></li>
-                        <li><a href="{% url 'website:blogs' %}">الأخبار و الرؤى</a></li>
-                        <li><a href="{% url 'website:careers' %}">الوظائف</a></li>
-                        <li><a href="{% url 'website:contactus' %}">اتصل بنا</a></li>
+                        <li><a href="{% lang_url 'website:about' %}">من نحن</a></li>
+                        <li><a href="{% lang_url 'website:fleet_select' %}">الأسطول</a></li>
+                        <li><a href="{% lang_url 'website:blogs' %}">الأخبار و الرؤى</a></li>
+                        <li><a href="{% lang_url 'website:careers' %}">الوظائف</a></li>
+                        <li><a href="{% lang_url 'website:contactus' %}">اتصل بنا</a></li>
                     </ul>
                 </div>
                 <div class="footer-badges">
@@ -47,10 +47,10 @@
                 <div class="footer-col-left en-content">
                     <span class="footer-title">Services</span>
                     <ul class="footer-links-main">
-                        <li><a href="{% url 'website:service_air_ambulance' %}">Air Ambulance</a></li>
-                        <li><a href="{% url 'website:service_commercial' %}">Commercial Airline Transfer</a></li>
-                        <li><a href="{% url 'website:service_medical_escort' %}">Medical Escorts</a></li>
-                        <li><a href="{% url 'website:service_helicopter' %}">Rotary Wing Services</a></li>
+                        <li><a href="{% lang_url 'website:service_air_ambulance' %}">Air Ambulance</a></li>
+                        <li><a href="{% lang_url 'website:service_commercial' %}">Commercial Airline Transfer</a></li>
+                        <li><a href="{% lang_url 'website:service_medical_escort' %}">Medical Escorts</a></li>
+                        <li><a href="{% lang_url 'website:service_helicopter' %}">Rotary Wing Services</a></li>
                     </ul>
                 </div>
 
@@ -58,10 +58,10 @@
                 <div class="footer-col-left  ar-content">
                     <span class="footer-title">خدماتنا</span>
                     <ul class="footer-links-main">
-                        <li><a href="{% url 'website:service_air_ambulance' %}">الإسعاف الجوي</a></li>
-                        <li><a href="{% url 'website:service_commercial' %}">نقل المرضى عبر الطيران التجاري</a></li>
-                        <li><a href="{% url 'website:service_medical_escort' %}">المرافقة الطبية</a></li>
-                        <li><a href="{% url 'website:service_helicopter' %}">الإسعاف الجوي بالمروحيات</a></li>
+                        <li><a href="{% lang_url 'website:service_air_ambulance' %}">الإسعاف الجوي</a></li>
+                        <li><a href="{% lang_url 'website:service_commercial' %}">نقل المرضى عبر الطيران التجاري</a></li>
+                        <li><a href="{% lang_url 'website:service_medical_escort' %}">المرافقة الطبية</a></li>
+                        <li><a href="{% lang_url 'website:service_helicopter' %}">الإسعاف الجوي بالمروحيات</a></li>
                     </ul>
                 </div>
 
@@ -75,11 +75,11 @@
                 <p class="copyright ar-content">٢٠٢٦ &copy; بلو دوت للإسعاف الجوي
                 </p>
                 <div class="footer-bottom-links ">
-                    <a href="{% url 'website:privacy_policy' %}" class="en-content">Privacy Policy</a>
-                    <a href="{% url 'website:terms_conditions' %}" class="en-content">Terms and Conditions</a>
+                    <a href="{% lang_url 'website:privacy_policy' %}" class="en-content">Privacy Policy</a>
+                    <a href="{% lang_url 'website:terms_conditions' %}" class="en-content">Terms and Conditions</a>
 
-                    <a href="{% url 'website:privacy_policy' %}" class="ar-content">سياسة الخصوصية</a>
-                    <a href="{% url 'website:terms_conditions' %}" class="ar-content">شروط وأحكام</a>
+                    <a href="{% lang_url 'website:privacy_policy' %}" class="ar-content">سياسة الخصوصية</a>
+                    <a href="{% lang_url 'website:terms_conditions' %}" class="ar-content">شروط وأحكام</a>
                 </div>
             </div>
 

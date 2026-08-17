@@ -1,9 +1,10 @@
 /**
  * Bluedot - Language Switcher (EN / AR)
  * ======================================
+ * Suffix-based URL routing: /en/, /ar/, /about/en/, /about/ar/
  * Toggles html[dir] between "ltr" and "rtl".
  * Content switching is done via static .en-content / .ar-content elements in HTML.
- * No dynamic text replacement — no flash, no broken tags.
+ * Synchronizes localStorage, session cookies (bluedot_lang, django_language), and URL path.
  */
 
 (function () {
@@ -11,8 +12,27 @@
 
     var STORAGE_KEY = 'bluedot_lang';
     var DEFAULT_LANG = 'en';
+    var SUFFIX_REGEX = /^(.*?)\/(en|ar)\/?$/;
 
-    /* ── Apply a language ── */
+    /* ── Detect language from current URL pathname or DOM ── */
+    function getUrlLang() {
+        var pathname = window.location.pathname;
+        var match = pathname.match(SUFFIX_REGEX);
+        if (match && (match[2] === 'en' || match[2] === 'ar')) {
+            return match[2];
+        }
+        var docLang = document.documentElement.getAttribute('lang');
+        if (docLang === 'en' || docLang === 'ar') {
+            return docLang;
+        }
+        try {
+            var saved = localStorage.getItem(STORAGE_KEY);
+            if (saved === 'en' || saved === 'ar') return saved;
+        } catch (e) {}
+        return DEFAULT_LANG;
+    }
+
+    /* ── Apply a language to DOM elements and cookies ── */
     function applyLang(lang) {
         var html = document.documentElement;
 
@@ -25,7 +45,7 @@
             el.textContent = lang.toUpperCase();
         });
 
-        /* 3. Mark active option */
+        /* 3. Mark active option in all dropdowns */
         document.querySelectorAll('.lang-option').forEach(function (opt) {
             opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);
         });
@@ -33,7 +53,6 @@
         /* 4. Update dynamic attributes for placeholders and options */
         document.querySelectorAll('[data-en][data-ar]').forEach(function (el) {
             var text = lang === 'ar' ? el.getAttribute('data-ar') : el.getAttribute('data-en');
-            
             if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
                 el.placeholder = text;
             } else if (el.tagName === 'OPTION') {
@@ -43,36 +62,50 @@
             }
         });
 
-        /* 5. Save */
+        /* 5. Save to localStorage and Cookies */
         try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+        document.cookie = "bluedot_lang=" + lang + "; path=/; max-age=31536000; SameSite=Lax";
+        document.cookie = "django_language=" + lang + "; path=/; max-age=31536000; SameSite=Lax";
+    }
+
+    /* ── Switch to a target language by updating the URL ── */
+    function switchLanguage(targetLang) {
+        var pathname = window.location.pathname;
+        var newPath = '';
+
+        var match = pathname.match(SUFFIX_REGEX);
+        if (match) {
+            var base = match[1] || '';
+            newPath = (base ? base : '') + '/' + targetLang + '/';
+        } else if (pathname === '/' || pathname === '') {
+            newPath = '/' + targetLang + '/';
+        } else {
+            var cleanPath = pathname.replace(/\/+$/, '');
+            newPath = cleanPath + '/' + targetLang + '/';
+        }
+
+        // Save preference before navigation
+        try { localStorage.setItem(STORAGE_KEY, targetLang); } catch (e) {}
+        document.cookie = "bluedot_lang=" + targetLang + "; path=/; max-age=31536000; SameSite=Lax";
+        document.cookie = "django_language=" + targetLang + "; path=/; max-age=31536000; SameSite=Lax";
+
+        var targetUrl = newPath + window.location.search + window.location.hash;
+        window.location.href = targetUrl;
     }
 
     /* ── Init ── */
     function init() {
-        /* Read saved preference */
-        var saved;
-        try { saved = localStorage.getItem(STORAGE_KEY); } catch (e) {}
-        var lang = saved || DEFAULT_LANG;
+        var currentLang = getUrlLang();
 
         /* Wire option clicks */
         document.querySelectorAll('.lang-option').forEach(function (opt) {
             opt.addEventListener('click', function (e) {
                 e.preventDefault();
                 e.stopPropagation();
-                
-                var selectedLang = this.getAttribute('data-lang');
-                var currentLang = document.documentElement.getAttribute('lang') || DEFAULT_LANG;
-                console.log("Language option clicked:", selectedLang, "Current lang:", currentLang);
 
+                var selectedLang = this.getAttribute('data-lang');
                 if (selectedLang !== currentLang) {
-                    try { 
-                        localStorage.setItem(STORAGE_KEY, selectedLang);
-                        console.log("Set STORAGE_KEY in localStorage to:", selectedLang);
-                    } catch (err) {
-                        console.error("Error setting localStorage:", err);
-                    }
-                    // Reload the page to allow Swiper and other plugins to re-initialize with the correct RTL/LTR layout
-                    window.location.reload();
+                    switchLanguage(selectedLang);
                 } else {
                     /* Close all dropdowns if clicking the already active language */
                     document.querySelectorAll('.header-lang, .nav-lang').forEach(function (d) {
@@ -100,7 +133,7 @@
         });
 
         /* Apply on load */
-        applyLang(lang);
+        applyLang(currentLang);
     }
 
     if (document.readyState === 'loading') {

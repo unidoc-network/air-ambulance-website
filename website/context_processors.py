@@ -10,9 +10,14 @@ def canonical_url(request):
         mobile_assistance = "+966538855753"
         whatsapp_number = "966538855753"
         
+    lang = getattr(request, 'LANGUAGE_CODE', 'en')
+    if lang not in ('en', 'ar'):
+        lang = 'en'
+
     return {
         "canonical_url": request.build_absolute_uri(request.path),
         "global_phone_number": phone_number,
         "mobile_assistance_number": mobile_assistance,
         "global_whatsapp_number": whatsapp_number,
+        "LANGUAGE_CODE": lang,
     }

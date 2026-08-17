@@ -2,7 +2,7 @@ from django.test import TestCase, Client
 from django.urls import reverse
 from django.core.files.uploadedfile import SimpleUploadedFile
 from superadmin.models import ContactForm, Career, CareerApplication
-from django.core import mail
+from django.template import Template, Context
 
 class FormVerificationTests(TestCase):
     def setUp(self):
@@ -78,7 +78,7 @@ class FormVerificationTests(TestCase):
         })
         self.assertEqual(response.status_code, 200)
         self.assertIn('redirect_url', response.json())
-        self.assertEqual(response.json()['redirect_url'], '/thank-you/')
+        self.assertEqual(response.json()['redirect_url'], '/thank-you/en/')
 
         # Verify record is saved in DB
         self.assertEqual(ContactForm.objects.count(), 1)
@@ -110,10 +110,69 @@ class FormVerificationTests(TestCase):
         })
         self.assertEqual(response.status_code, 200)
         self.assertIn('redirect_url', response.json())
-        self.assertEqual(response.json()['redirect_url'], '/thank-you/')
+        self.assertEqual(response.json()['redirect_url'], '/thank-you/en/')
 
         # Verify application record is saved
         self.assertEqual(CareerApplication.objects.count(), 1)
         app = CareerApplication.objects.first()
         self.assertEqual(app.name, 'Applicant Name')
         self.assertEqual(app.career, self.career)
+
+
+class LanguageSuffixRoutingTests(TestCase):
+    def setUp(self):
+        self.client = Client()
+
+    def test_base_url_redirects_to_en_by_default(self):
+        response = self.client.get('/')
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response.get('Location'), '/en/')
+
+    def test_base_url_redirects_to_saved_arabic_language(self):
+        self.client.cookies['bluedot_lang'] = 'ar'
+        response = self.client.get('/')
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response.get('Location'), '/ar/')
+
+    def test_direct_access_en_and_ar_homepage(self):
+        response_en = self.client.get('/en/')
+        self.assertEqual(response_en.status_code, 200)
+        self.assertIn('bluedot_lang', response_en.cookies)
+        self.assertEqual(response_en.cookies['bluedot_lang'].value, 'en')
+
+        response_ar = self.client.get('/ar/')
+        self.assertEqual(response_ar.status_code, 200)
+        self.assertIn('bluedot_lang', response_ar.cookies)
+        self.assertEqual(response_ar.cookies['bluedot_lang'].value, 'ar')
+
+    def test_subpage_suffix_routing(self):
+        response_about_en = self.client.get('/about/en/')
+        self.assertEqual(response_about_en.status_code, 200)
+
+        response_about_ar = self.client.get('/about/ar/')
+        self.assertEqual(response_about_ar.status_code, 200)
+        self.assertEqual(response_about_ar.cookies['bluedot_lang'].value, 'ar')
+
+    def test_unprefixed_page_redirects_to_current_lang(self):
+        # Without cookie -> default 'en'
+        response = self.client.get('/about/')
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response.get('Location'), '/about/en/')
+
+        # With Arabic cookie -> redirects to /about/ar/
+        self.client.cookies['bluedot_lang'] = 'ar'
+        response_ar = self.client.get('/about/')
+        self.assertEqual(response_ar.status_code, 302)
+        self.assertEqual(response_ar.get('Location'), '/about/ar/')
+
+    def test_superadmin_unaffected(self):
+        response = self.client.get('/superadmin/')
+        self.assertEqual(response.status_code, 200)
+
+    def test_lang_url_template_tag(self):
+        template = Template("{% load lang_tags %}{% lang_url 'website:home' %} | {% lang_url 'website:about' %}")
+        rendered_en = template.render(Context({'LANGUAGE_CODE': 'en'}))
+        self.assertEqual(rendered_en, "/en/ | /about/en/")
+
+        rendered_ar = template.render(Context({'LANGUAGE_CODE': 'ar'}))
+        self.assertEqual(rendered_ar, "/ar/ | /about/ar/")
