@@ -15,14 +15,14 @@
     <span class="en-content">
         <a href="{% url 'website:home' %}">Home</a>
         <span class="separator">/</span>
-        <a href="#">Services</a>
+        <a href="#" onclick="event.preventDefault(); document.getElementById('headerHamburger').click(); document.querySelector('.has-submenu[data-target=\'servicesMenu\']').click();">Services</a>
         <span class="separator">/</span>
-        <span class="active">Helicopter Air Ambulance</span>
+        <span class="active">Helicopter Emergency Medical Services</span>
     </span>
     <span class="ar-content">
         <a href="{% url 'website:home' %}">الرئيسية</a>
         <span class="separator">/</span>
-        <a href="#">الخدمات</a>
+        <a href="#" onclick="event.preventDefault(); document.getElementById('headerHamburger').click(); document.querySelector('.has-submenu[data-target=\'servicesMenu\']').click();">الخدمات</a>
         <span class="separator">/</span>
         <span class="active">هليكوبتر الإسعاف الجوي</span>
     </span>
@@ -31,12 +31,12 @@
 
                 <div class="hero-text-wrapper">
                     <h1 class="hero-title-main">
-                        <span class="en-content">Rotary Wing  Services</span>
+                        <span class="en-content">Helicopter Emergency Medical Services</span>
                         <span class="ar-content">خدمات النقل الطبي بالمروحيات</span>
                     </h1>
 
 
-                    <p class="hero-subtitle en-content">Rapid rotary wing medical transport designed to provide safe,
+                    <p class="hero-subtitle en-content">Rapid Helicopter Emergency Medical Services designed to provide safe,
                         efficient, and flexible patient transfers between hospitals, offshore facilities, industrial
                         sites, remote locations, and critical infrastructure where direct access matters.</p>
                     <p class="hero-subtitle ar-content">خدمات نقل طبي بالمروحيات توفر حلولاً آمنة وسريعة ومرنة لنقل
@@ -59,8 +59,8 @@
             <div class="container ">
                 <div class="row">
                     <div class="col-md-4">
-                        <h2 class="info-tagline en-content">When immediate access makes the difference</h2>
-                        <h2 class="info-tagline ar-content">عندما يكون الوصول السريع هو ما يصنع الفرق</h2>
+                        <h2 class="info-tagline en-content">What is Helicopter Emergency Medical Services (HEMS)?</h2>
+                        <h2 class="info-tagline ar-content">خدمات الإسعاف المروحي كجزء من استجابة متكاملة لطوارئ ما قبل المستشفى</h2>
 
                     </div>
                     <div class="col-md-2">
@@ -68,29 +68,37 @@
                     </div>
                     <div class="col-md-6">
                         <div class="info-description en-content">
-                            <p>In some situations, the challenge is not only providing medical care, but reaching the
-                                patient or destination safely and efficiently.</p>
-                            <p>Rotary wing medical transport is used when patients require rapid access between
-                                locations that are difficult to reach by road or fixed-wing aircraft, including offshore
-                                facilities, industrial sites, government operations, maritime environments, and remote
-                                project locations.</p>
-                            <p>These missions support transfers between hospitals, offshore platforms, industrial
-                                facilities, helipads, and remote destinations where operational flexibility and direct
-                                access are essential.</p>
+                            <p>Helicopter Emergency Medical Services (HEMS) are a critical component of modern pre-hospital emergency care. By combining advanced clinical teams, aviation capability, and coordinated emergency response, HEMS enables specialist medical care to reach patients before they arrive at hospital, helping reduce delays to definitive treatment when every minute matters.</p>
                         </div>
 
                         <div class="info-description ar-content">
-                            <p>في بعض الحالات، لا يكون التحدي في تقديم الرعاية الطبية فحسب، بل في الوصول إلى المريض أو
-                                وجهة العلاج بسرعة وكفاءة وأمان.</p>
-                            <p>تُستخدم خدمات النقل الطبي بالمروحيات عندما تتطلب الحالة الوصول السريع بين مواقع يصعب
-                                الوصول إليها براً أو عبر الطائرات ثابتة الجناح، بما في ذلك المنشآت البحرية، والمواقع
-                                الصناعية، والجهات الحكومية، والبيئات البحرية، ومواقع المشاريع النائية.</p>
-
-                            <p>وتشمل هذه المهام عمليات النقل بين المستشفيات، والمنصات البحرية، والمنشآت الصناعية، ومهابط
-                                الطائرات، والمواقع النائية التي تتطلب مرونة تشغيلية وإمكانية وصول مباشرة.</p>
+                            <p>تُعد خدمات الطوارئ الطبية بالمروحيات (HEMS) عنصراً حيوياً في منظومة الرعاية الطارئة الحديثة لما قبل المستشفى. ومن خلال الجمع بين الفرق الطبية المتخصصة، الإمكانيات الجوية، والاستجابة المنسقة للطوارئ، يتيح الإسعاف المروحي وصول الرعاية الطبية المتقدمة إلى المرضى قبل وصولهم إلى المستشفى، مما يساهم في تقليل أي تأخير في العلاج النهائي عندما تكون كل دقيقة ذات أهمية بالغة.</p>
                         </div>
                     </div>
                 </div>
+
+                <div class="row pt-5">
+                    <div class="col-md-4">
+                        <h2 class="info-tagline en-content">HEMS as Part of an Integrated Pre-Hospital Emergency Medical Response</h2>
+                        <h2 class="info-tagline ar-content">خدمات الإسعاف المروحي كجزء من استجابة متكاملة لطوارئ ما قبل المستشفى</h2>
+
+                    </div>
+                    <div class="col-md-2">
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-description en-content">
+                            <p>Helicopter Emergency Medical Services (HEMS) are a critical component of modern pre-hospital emergency care. By combining advanced clinical teams, aviation capability, and coordinated emergency response, HEMS enables specialist medical care to reach patients before they arrive at hospital, helping reduce delays to definitive treatment when every minute matters.</p>
+                            <p>At Bluedot, HEMS operates as part of a wider pre-hospital emergency medical system that integrates ground response, critical care transport, medical coordination, and connected healthcare technologies to support continuity of care from the scene of an incident through to hospital handover.</p>
+                        </div>
+
+                        <div class="info-description ar-content">
+                            <p>تُعد خدمات الطوارئ الطبية بالمروحيات (HEMS) عنصراً حيوياً في منظومة الرعاية الطارئة الحديثة لما قبل المستشفى. ومن خلال الجمع بين الفرق الطبية المتخصصة، الإمكانيات الجوية، والاستجابة المنسقة للطوارئ، يتيح الإسعاف المروحي وصول الرعاية الطبية المتقدمة إلى المرضى قبل وصولهم إلى المستشفى، مما يساهم في تقليل أي تأخير في العلاج النهائي عندما تكون كل دقيقة ذات أهمية بالغة.</p>
+                            <p>وفي شركة بلودوت، تعمل خدمات الإسعاف المروحي كجزء من نظام إسعافي وطبي واسع لما قبل المستشفى يدمج الاستجابة البرية، نقل الرعاية الحرجة عبر النقالة الطبية، التنسيق الطبي، وتقنيات الرعاية الصحية المترابطة لدعم استمرارية الرعاية الطبية من موقع الحادث وحتى التسليم المباشر للمستشفى.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -98,21 +106,17 @@
         <section class="coordination-section">
             <div class="container">
                 <div class="coordination-header">
-                    <h2 class="coordination-title en-content">How Rotary Wing Medical Transport works</h2>
+                    <h2 class="coordination-title en-content">OUR HEMS CAPABILITIES: Comprehensive <br> Emergency Medical Response</h2>
                     <h2 class="coordination-title ar-content">
-                        كيف تتم عمليات النقل الطبي بالمروحيات</h2>
+                        قدراتنا في مجال الإسعاف المروحي: استجابة طبية شاملة للطوارئ</h2>
 
-                    <p class="coordination-subtitle en-content">Rotary wing medical transport combines medical planning,
-                        aviation coordination, and specialist patient care to deliver safe and efficient transfers from
-                        departure through arrival.</p>
-                    <p class="coordination-subtitle ar-content">تجمع خدمات النقل الطبي بالمروحيات بين التخطيط الطبي
-                        والتنسيق التشغيلي والرعاية المتخصصة لضمان تنفيذ عمليات النقل بأعلى مستويات السلامة والكفاءة من
-                        نقطة الانطلاق وحتى الوصول.</p>
+                    <p class="coordination-subtitle en-content">Rather than providing helicopter transport alone, Bluedot delivers a coordinated emergency medical capability designed for complex operational environments.</p>
+                    <p class="coordination-subtitle ar-content">بدلاً من تقديم خدمة النقل بالمروحيات بمفردها، توفر بلودوت منظومة استجابة طبية طارئة ومنسقة تم تصميمها خصيصاً للتعامل مع البيئات التشغيلية المعقدة.</p>
                 </div>
 
                 <div class="row coordination-grid">
                     <!-- Card 1 -->
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 mb-4">
                         <div class="coordination-card">
                             <div class="card-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="185" height="163" viewBox="0 0 185 163"
@@ -127,19 +131,14 @@
                                         stroke="white" stroke-width="4" />
                                 </svg>
                             </div>
-                            <h3 class="card-title en-content">It begins with understanding the mission</h3>
-                            <h3 class="card-title ar-content">تبدأ العملية بفهم متطلبات المهمة</h3>
-                            <p class="card-text en-content">Every mission begins with reviewing the patient's medical
-                                condition,
-                                transfer requirements, destination, and operational considerations to determine the most
-                                appropriate aircraft, medical crew, and level of care.</p>
-                            <p class="card-text ar-content">تبدأ كل مهمة بدراسة الحالة الطبية للمريض ومتطلبات النقل
-                                والوجهة والظروف التشغيلية، لتحديد
-                                الطائرة والطاقم الطبي ومستوى الرعاية الأنسب لكل حالة.</p>
+                            <h3 class="card-title en-content">Critical Care Response</h3>
+                            <h3 class="card-title ar-content">الاستجابة للرعاية الحرجة</h3>
+                            <p class="card-text en-content">Specialist physicians, flight paramedics, and critical care medical staff provide advanced life support from first patient contact through hospital handover.</p>
+                            <p class="card-text ar-content">يقدم أطباء متخصصون، ومسعفو طيران، وطاقم طبي للرعاية الحرجة دعم حياة متقدم من على النقالة الطبية منذ التواصل الأول مع المريض وحتى تسليمه المباشر للمستشفى.</p>
                         </div>
                     </div>
                     <!-- Card 2 -->
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 mb-4">
                         <div class="coordination-card">
                             <div class="card-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="168" height="183" viewBox="0 0 168 183"
@@ -158,20 +157,14 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <h3 class="card-title en-content">Then we coordinate the transfer</h3>
-                            <h3 class="card-title ar-content">ثم نقوم بتنسيق عملية النقل</h3>
-
-                            <p class="card-text en-content">Flight operations, medical teams, ground transportation,
-                                landing
-                                coordination, and receiving facilities are organised to ensure every stage of the
-                                journey is managed safely and efficiently.</p>
-                            <P class="card-text ar-content">يتم تنسيق عمليات الطيران، والفرق الطبية، ووسائل النقل
-                                الأرضي، وتصاريح الهبوط، والجهة
-                                الطبية المستقبلة لضمان تنفيذ جميع مراحل المهمة بأعلى مستويات الكفاءة والسلامة.</P>
+                            <h3 class="card-title en-content">Rapid Medical Evacuation</h3>
+                            <h3 class="card-title ar-content">الإخلاء الطبي السريع</h3>
+                            <p class="card-text en-content">Fast deployment for emergency incidents requiring immediate transport from remote, offshore, industrial, or inaccessible locations.</p>
+                            <p class="card-text ar-content">إرسال واستجابة سريعة للحوادث الطارئة التي تتطلب نقلاً فورياً عبر النقالة الطبية من المواقع النائية، البحرية، الصناعية، أو المناطق التي يصعب الوصول إليها.</p>
                         </div>
                     </div>
                     <!-- Card 3 -->
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 mb-4">
                         <div class="coordination-card">
                             <div class="card-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="169" height="169" viewBox="0 0 169 169"
@@ -190,15 +183,146 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <h3 class="card-title en-content">And we stay with it</h3>
-                            <h3 class="card-title ar-content">ونبقى مع الحالة حتى اكتمال المهمة</h3>
+                            <h3 class="card-title en-content">Inter-Facility Critical Care Transfer</h3>
+                            <h3 class="card-title ar-content">نقل الرعاية الحرجة بين المنشآت</h3>
+                            <p class="card-text en-content">Safe transfer of critically ill patients between hospitals while maintaining continuous intensive care throughout the journey.</p>
+                            <p class="card-text ar-content">نقل آمن للمرضى ذوي الحالات الحرجة بين المستشفيات عبر النقالة الطبية مع الحفاظ على تقديم رعاية مركزة مستمرة طوال مسار الرحلة.</p>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="coordination-card">
+                            <div class="card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="185" height="163" viewBox="0 0 185 163"
+                                    fill="none">
+                                    <path
+                                        d="M84.3379 6.62039L3.25513 147.06C-0.301752 153.221 4.14198 160.918 11.2557 160.918H173.421C180.53 160.918 184.979 153.221 181.422 147.06L100.339 6.62039C96.7822 0.45987 87.8947 0.45987 84.3379 6.62039Z"
+                                        stroke="white" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" />
+                                    <path d="M92.415 50.6836V108.509" stroke="white" stroke-width="4"
+                                        stroke-miterlimit="10" stroke-linecap="round" />
+                                    <path
+                                        d="M92.339 125.004C94.7801 125.004 96.759 123.025 96.759 120.584C96.759 118.143 94.7801 116.164 92.339 116.164C89.8979 116.164 87.9189 118.143 87.9189 120.584C87.9189 123.025 89.8979 125.004 92.339 125.004Z"
+                                        stroke="white" stroke-width="4" />
+                                </svg>
+                            </div>
+                            <h3 class="card-title en-content">Medical Command & Coordination</h3>
+                            <h3 class="card-title ar-content">القيادة والتنسيق الطبي</h3>
+                            <p class="card-text en-content">24/7 operational coordination managing mission planning, aviation logistics, hospital communication, and medical oversight.</p>
+                            <p class="card-text ar-content">تنسيق تشغيلي على مدار الساعة يتبع تخطيط المهمة، والترتيبات اللوجستية للطيران، والتواصل مع المستشفيات، والإشراف الطبي على النقالة الطبية.</p>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="coordination-card">
+                            <div class="card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="168" height="183" viewBox="0 0 168 183"
+                                    fill="none">
+                                    <path
+                                        d="M26.4434 180.437L42.1645 164.335C44.8361 161.599 48.4819 160.038 52.3028 159.996L108.242 159.376C110.198 159.353 112.078 158.596 113.501 157.256L164.021 109.709C166.088 107.764 165.54 104.35 162.971 103.151L158.686 101.15C153.263 98.6151 146.881 99.2773 142.097 102.877L117.996 120.996"
+                                        stroke="white" stroke-width="4" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M2 144.964L29.3246 119.317C29.3246 119.317 51.6143 100.145 76.3016 118.838H96.9548C104.079 118.838 110.309 123.645 112.117 130.537L112.885 133.471C113.418 135.495 111.892 137.478 109.795 137.478L68.6255 137.531"
+                                        stroke="white" stroke-width="4" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M82.3175 21.6804C83.6837 17.4523 85.5941 13.9016 88.4407 10.9485C96.1776 2.93756 105.581 0.136601 116.233 3.2306C126.889 6.32459 133.378 13.7228 135.517 24.6564C136.894 31.7121 135.387 38.509 132.849 45.0852C129.504 53.7582 124.282 61.282 118.247 68.2654C108.002 80.1238 96.0711 90.0565 83.1052 98.7867C82.4849 99.2015 82.0663 99.1825 81.465 98.7829C67.3955 89.421 54.5248 78.6967 43.8423 65.5139C37.9512 58.2413 33.0457 50.3826 30.3855 41.3099C28.4751 34.7947 27.6112 28.1614 29.7804 21.5586C33.3577 10.6706 40.8739 4.02978 52.2376 2.40096C65.4736 0.505746 77.3244 7.96102 81.8494 20.5235C81.9483 20.8013 82.0739 21.0753 82.3175 21.6804Z"
+                                        stroke="white" stroke-width="4" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <h3 class="card-title en-content">Integrated Ground & Air Response</h3>
+                            <h3 class="card-title ar-content">الاستجابة البرية والجویة المتكاملة</h3>
+                            <p class="card-text en-content">Coordinated deployment of helicopters, ground ambulances, and medical teams to provide the most medically appropriate response.</p>
+                            <p class="card-text ar-content">توظيف منسق للمروحيات، وسيارات الإسعاف البرية المجهزة بنقالات طبية، والفرق الطبية لتقديم الاستجابة الأكثر ملاءمة من الناحية الطبية.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                            <p class="card-text en-content">Throughout the transfer, our medical and operational teams
-                                remain involved until the patient is safely handed over to the receiving healthcare
-                                facility.</p>
+        <!-- Industries Section -->
+        <section class="coordination-section pt-0">
+            <div class="container">
+                <div class="coordination-header mt-5 pt-5 border-top">
+                    <h2 class="coordination-title en-content">INDUSTRIES WE SUPPORT: Supporting High-Risk Operations Across the GCC</h2>
+                    <h2 class="coordination-title ar-content">القطاعات التي ندعمها: دعم العمليات عالية المخاطر في جميع أنحاء دول مجلس التعاون الخليجي</h2>
 
-                            <p class="card-text ar-content">يواصل فريقنا الطبي والتشغيلي متابعة الحالة طوال المهمة حتى
-                                يتم تسليم المريض بأمان إلى المنشأة الطبية المستقبلة.</p>
+                    <p class="coordination-subtitle en-content">Bluedot HEMS is designed to support organisations where emergency preparedness is essential to operational resilience.</p>
+                    <p class="coordination-subtitle ar-content">تم تصميم خدمات الإسعاف المروحي في بلودوت لدعم المؤسسات والقطاعات التي تُعد فيها الجاهزية للطوارئ عاملاً أساسياً لاستدامة العمليات ومرونتها.</p>
+                </div>
+
+                <div class="row coordination-grid">
+                    <!-- Card 1 -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="coordination-card">
+                            <div class="card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="185" height="163" viewBox="0 0 185 163" fill="none"><path d="M84.3379 6.62039L3.25513 147.06C-0.301752 153.221 4.14198 160.918 11.2557 160.918H173.421C180.53 160.918 184.979 153.221 181.422 147.06L100.339 6.62039C96.7822 0.45987 87.8947 0.45987 84.3379 6.62039Z" stroke="white" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" /><path d="M92.415 50.6836V108.509" stroke="white" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" /><path d="M92.339 125.004C94.7801 125.004 96.759 123.025 96.759 120.584C96.759 118.143 94.7801 116.164 92.339 116.164C89.8979 116.164 87.9189 118.143 87.9189 120.584C87.9189 123.025 89.8979 125.004 92.339 125.004Z" stroke="white" stroke-width="4" /></svg>
+                            </div>
+                            <h3 class="card-title en-content">Oil & Gas</h3>
+                            <h3 class="card-title ar-content">قطاع النفط والغاز</h3>
+                            <p class="card-text en-content">Emergency medical support for onshore facilities, offshore platforms, refineries, drilling operations, and remote energy infrastructure.</p>
+                            <p class="card-text ar-content">تقديم الدعم الطبي الطارئ للمنشآت البرية، المنصات البحرية، المصافي، عمليات الحفر، والبنية التحتية للطاقة في المناطق النائية.</p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="coordination-card">
+                            <div class="card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="168" height="183" viewBox="0 0 168 183" fill="none"><path d="M26.4434 180.437L42.1645 164.335C44.8361 161.599 48.4819 160.038 52.3028 159.996L108.242 159.376C110.198 159.353 112.078 158.596 113.501 157.256L164.021 109.709C166.088 107.764 165.54 104.35 162.971 103.151L158.686 101.15C153.263 98.6151 146.881 99.2773 142.097 102.877L117.996 120.996" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /><path d="M2 144.964L29.3246 119.317C29.3246 119.317 51.6143 100.145 76.3016 118.838H96.9548C104.079 118.838 110.309 123.645 112.117 130.537L112.885 133.471C113.418 135.495 111.892 137.478 109.795 137.478L68.6255 137.531" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /><path d="M82.3175 21.6804C83.6837 17.4523 85.5941 13.9016 88.4407 10.9485C96.1776 2.93756 105.581 0.136601 116.233 3.2306C126.889 6.32459 133.378 13.7228 135.517 24.6564C136.894 31.7121 135.387 38.509 132.849 45.0852C129.504 53.7582 124.282 61.282 118.247 68.2654C108.002 80.1238 96.0711 90.0565 83.1052 98.7867C82.4849 99.2015 82.0663 99.1825 81.465 98.7829C67.3955 89.421 54.5248 78.6967 43.8423 65.5139C37.9512 58.2413 33.0457 50.3826 30.3855 41.3099C28.4751 34.7947 27.6112 28.1614 29.7804 21.5586C33.3577 10.6706 40.8739 4.02978 52.2376 2.40096C65.4736 0.505746 77.3244 7.96102 81.8494 20.5235C81.9483 20.8013 82.0739 21.0753 82.3175 21.6804Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                            </div>
+                            <h3 class="card-title en-content">Offshore Energy</h3>
+                            <h3 class="card-title ar-content">الطاقة البحرية</h3>
+                            <p class="card-text en-content">Rapid helicopter medical evacuation from offshore assets with coordinated transfer to specialist hospitals.</p>
+                            <p class="card-text ar-content">إخلاء طبي سريع بالمروحيات عبر النقالة الطبية من الأصول والمنشآت البحرية مع نقل منسق إلى المستشفيات المتخصصة.</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="coordination-card">
+                            <div class="card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="169" height="169" viewBox="0 0 169 169" fill="none"><path d="M84.2638 105.451C96.4962 105.451 106.412 95.5342 106.412 83.3019C106.412 71.0696 96.4962 61.1533 84.2638 61.1533C72.0315 61.1533 62.1152 71.0696 62.1152 83.3019C62.1152 95.5342 72.0315 105.451 84.2638 105.451Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /><path d="M84.2635 136.44C113.166 136.44 136.595 113.01 136.595 84.1083C136.595 55.2062 113.166 31.7764 84.2635 31.7764C55.3614 31.7764 31.9316 55.2062 31.9316 84.1083C31.9316 113.01 55.3614 136.44 84.2635 136.44Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /><path d="M84.2651 166.53C129.699 166.53 166.53 129.699 166.53 84.2651C166.53 38.8314 129.699 2 84.2651 2C38.8313 2 2 38.8314 2 84.2651C2 129.699 38.8313 166.53 84.2651 166.53Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                            </div>
+                            <h3 class="card-title en-content">Maritime & Ports</h3>
+                            <h3 class="card-title ar-content">القطاع البحري والموانئ</h3>
+                            <p class="card-text en-content">Emergency response for ports, terminals, vessels, and marine operations requiring rapid access to advanced medical care.</p>
+                            <p class="card-text ar-content">استجابة طارئة للموانئ، المحطات، السفن، والعمليات البحرية التي تتطلب وصولاً سريعاً إلى الرعاية الطبية المتقدمة على النقالة الطبية.</p>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="coordination-card">
+                            <div class="card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="185" height="163" viewBox="0 0 185 163" fill="none"><path d="M84.3379 6.62039L3.25513 147.06C-0.301752 153.221 4.14198 160.918 11.2557 160.918H173.421C180.53 160.918 184.979 153.221 181.422 147.06L100.339 6.62039C96.7822 0.45987 87.8947 0.45987 84.3379 6.62039Z" stroke="white" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" /><path d="M92.415 50.6836V108.509" stroke="white" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" /><path d="M92.339 125.004C94.7801 125.004 96.759 123.025 96.759 120.584C96.759 118.143 94.7801 116.164 92.339 116.164C89.8979 116.164 87.9189 118.143 87.9189 120.584C87.9189 123.025 89.8979 125.004 92.339 125.004Z" stroke="white" stroke-width="4" /></svg>
+                            </div>
+                            <h3 class="card-title en-content">Construction & Giga Projects</h3>
+                            <h3 class="card-title ar-content">قطاع الإنشاءات والمشاريع العملاقة</h3>
+                            <p class="card-text en-content">Dedicated emergency medical response for major construction sites, infrastructure developments, and large workforce environments.</p>
+                            <p class="card-text ar-content">استجابة طبية مخصصة للطوارئ لمواقع البناء الكبرى، مشاريع تطوير البنية التحتية، وبؤر التجمع العمالي الضخمة.</p>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="coordination-card">
+                            <div class="card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="168" height="183" viewBox="0 0 168 183" fill="none"><path d="M26.4434 180.437L42.1645 164.335C44.8361 161.599 48.4819 160.038 52.3028 159.996L108.242 159.376C110.198 159.353 112.078 158.596 113.501 157.256L164.021 109.709C166.088 107.764 165.54 104.35 162.971 103.151L158.686 101.15C153.263 98.6151 146.881 99.2773 142.097 102.877L117.996 120.996" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /><path d="M2 144.964L29.3246 119.317C29.3246 119.317 51.6143 100.145 76.3016 118.838H96.9548C104.079 118.838 110.309 123.645 112.117 130.537L112.885 133.471C113.418 135.495 111.892 137.478 109.795 137.478L68.6255 137.531" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /><path d="M82.3175 21.6804C83.6837 17.4523 85.5941 13.9016 88.4407 10.9485C96.1776 2.93756 105.581 0.136601 116.233 3.2306C126.889 6.32459 133.378 13.7228 135.517 24.6564C136.894 31.7121 135.387 38.509 132.849 45.0852C129.504 53.7582 124.282 61.282 118.247 68.2654C108.002 80.1238 96.0711 90.0565 83.1052 98.7867C82.4849 99.2015 82.0663 99.1825 81.465 98.7829C67.3955 89.421 54.5248 78.6967 43.8423 65.5139C37.9512 58.2413 33.0457 50.3826 30.3855 41.3099C28.4751 34.7947 27.6112 28.1614 29.7804 21.5586C33.3577 10.6706 40.8739 4.02978 52.2376 2.40096C65.4736 0.505746 77.3244 7.96102 81.8494 20.5235C81.9483 20.8013 82.0739 21.0753 82.3175 21.6804Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                            </div>
+                            <h3 class="card-title en-content">Government & Public Safety</h3>
+                            <h3 class="card-title ar-content">القطاع الحكومي والسلامة العامة</h3>
+                            <p class="card-text en-content">Supporting government agencies, emergency services, disaster response, and public events through integrated medical response capabilities.</p>
+                            <p class="card-text ar-content">دعم الجهات الحكومية، خدمات الطوارئ، الاستجابة للكوارث، والفعاليات العامة عبر إمكانيات استجابة طبية متكاملة.</p>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="coordination-card">
+                            <div class="card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="169" height="169" viewBox="0 0 169 169" fill="none"><path d="M84.2638 105.451C96.4962 105.451 106.412 95.5342 106.412 83.3019C106.412 71.0696 96.4962 61.1533 84.2638 61.1533C72.0315 61.1533 62.1152 71.0696 62.1152 83.3019C62.1152 95.5342 72.0315 105.451 84.2638 105.451Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /><path d="M84.2635 136.44C113.166 136.44 136.595 113.01 136.595 84.1083C136.595 55.2062 113.166 31.7764 84.2635 31.7764C55.3614 31.7764 31.9316 55.2062 31.9316 84.1083C31.9316 113.01 55.3614 136.44 84.2635 136.44Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /><path d="M84.2651 166.53C129.699 166.53 166.53 129.699 166.53 84.2651C166.53 38.8314 129.699 2 84.2651 2C38.8313 2 2 38.8314 2 84.2651C2 129.699 38.8313 166.53 84.2651 166.53Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                            </div>
+                            <h3 class="card-title en-content">Industrial & Free Zones</h3>
+                            <h3 class="card-title ar-content">المناطق الصناعية والحرة</h3>
+                            <p class="card-text en-content">Medical support for manufacturing facilities, industrial zones, logistics hubs, and remote operational sites.</p>
+                            <p class="card-text ar-content">دعم طبي لمصانع الإنتاج، المناطق الصناعية، المراكز اللوجستية، والموقع التشغيلية النائية.</p>
                         </div>
                     </div>
                 </div>
@@ -210,74 +334,149 @@
             <div class="container">
 
 
-                    <div class="row">
+                <div class="row">
                     <div class="col-md-5">
-                        <h2 class="info-tagline en-content">Who Rotary Wing Medical <br> Transport is for</h2>
-                        <h2 class="info-tagline ar-content">متى تكون خدمات النقل الطبي بالمروحيات هي الخيار المناسب؟
-                        </h2>
-
+                        <h2 class="info-tagline en-content">CONNECTED EMERGENCY CARE: Technology That Supports Better Medical Decisions</h2>
+                        <h2 class="info-tagline ar-content">الرعاية الصحية الطارئة المترابطة: تقنيات تدعم اتخاذ قرارات طبية أفضل</h2>
                     </div>
                     <div class="col-md-2">
-
                     </div>
                     <div class="col-md-5">
                         <div class="info-description">
-                            <!-- <p>HEMS is commonly used for:</p> -->
-                            <ul class="custom-list en-content">
-                                <li>Hospital-to-hospital patient transfers</li>
-                                <li>Remote workforce locations and hard-to-reach environments</li>
-                                <li>Offshore oil and gas facilities, maritime operations, and industrial environments
-                                </li>
-                                <li>Government operations and major infrastructure projects requiring rapid access</li>
-                            </ul>
-                            <ul class="custom-list ar-content">
-                                <li>النقل بين المستشفيات</li>
-                                <li>مواقع العمل النائية والبيئات التي يصعب الوصول إليها</li>
-                                <li>منشآت النفط والغاز البحرية، والعمليات البحرية، والبيئات الصناعية
-                                </li>
-                                <li>الجهات الحكومية ومشاريع البنية التحتية الكبرى التي تتطلب سرعة الوصول</li>
-                            </ul>
+                            <p class="en-content mb-3">Emergency medicine depends on accurate information and rapid decision-making.</p>
+                            <p class="ar-content mb-3">يعتمد طب الطوارئ اعتماداً كلياً على دقة المعلومات وسرعة اتخاذ القرارات.</p>
+
+                            <p class="en-content mb-3">Bluedot integrates connected medical technologies, operational coordination, and real-time communication to improve situational awareness throughout every mission. Patient information, medical observations, and operational updates can be shared securely between responders, aircraft, medical coordination teams, and receiving hospitals, helping doctors prepare before the patient arrives.</p>
+                            <p class="ar-content mb-3">تدمج بلودوت التقنيات الطبية المترابطة، والتنسيق التشغيلي، والتواصل الفوري لتحسين الوعي الظرفي طوال كل مهمة. حيث يتم مشاركة معلومات المريض، والملاحظات الطبية للنقالة الطبية، والتحديثات التشغيلية بأمان بين فرق الاستجابة، الطائرة، طواقم التنسيق الطبي، والمستشفيات المستقبِلة، مما يساعد الأطباء على الاستعداد مسبقاً قبل وصول المريض.</p>
+
+                            <p class="en-content">This connected approach supports faster medical decision-making, improved coordination, and greater continuity of care across the entire emergency response pathway. This reflects the IoMT and connected-care architecture described in your enterprise capability documentation.</p>
+                            <p class="ar-content">يدعم هذا النهج المترابط اتخاذ القرارات الطبية بسرعة أكبر، وتحسين مستوى التنسيق، وتحقيق استمرارية أعلى للرعاية الطبية عبر مسار الاستجابة للطوارئ بأكمله. وهو ما يعكس بنية إنترنت الأشياء الطبية (IoMT) وهيكلية الرعاية المترابطة المعتمدة في وثائق القدرات المؤسسية لديك.</p>
                         </div>
                     </div>
-
                 </div>
 
 
-            <div class="row pt-20">
+                <div class="row pt-20">
                     <div class="col-md-5">
-                        <h2 class="info-tagline en-content">Choosing the right <br> level of support</h2>
-                        <h2 class="info-tagline ar-content">تحديد مستوى الدعم الطبي واللوجستي المناسب
-
+                        <h2 class="info-tagline en-content">WHEN HEMS IS THE RIGHT CHOICE</h2>
+                        <h2 class="info-tagline ar-content">متى تكون خدمات الإسعاف المروحي الخيار الأمثل؟</h2>
                     </div>
                     <div class="col-md-2">
-
                     </div>
                     <div class="col-md-5">
-                        <div class="info-description en-content">
-                            <p>Rotary wing medical transport is the preferred solution when patients require direct
-                                access between hospitals, offshore facilities, industrial sites, government operations,
-                                or remote project locations where fixed-wing aircraft or road transport are not
-                                practical.</p>
-                            <p>For longer international transfers or cases requiring extended in-flight intensive care,
-                                fixed-wing air ambulance or commercial airline medical transport may be more
-                                appropriate. Our coordination team assesses every case individually and recommends the
-                                safest transport solution.</p>
+                        <div class="info-description">
+                            <p class="en-content mb-3">Helicopter Emergency Medical Services are deployed when speed, accessibility, and advanced medical capability provide a clear medical advantage.</p>
+                            <p class="ar-content mb-3">يتم الاستعانة بخدمات الطوارئ الطبية بالمروحيات عندما تمنح السرعة، وسهولة الوصول، والإمكانيات الطبية المتقدمة أسبقية وفائدة طبية واضحة.</p>
 
-                        </div>
+                            <p class="en-content mb-3">HEMS may be appropriate for patients requiring urgent treatment following serious trauma, medical emergencies, industrial incidents, offshore accidents, remote site emergencies, or situations where road transport would significantly delay access to specialist care.</p>
+                            <p class="ar-content mb-3">قد يكون الإسعاف المروحي خياراً مناسباً للمرضى الذين يحتاجون إلى علاج عاجل على النقالة الطبية إثر إصابات بليغة، طوارئ طبية، حوادث صناعية، حوادث بحرية، أو طوارئ في المناطق النائية، وكذلك في الحالات التي قد يؤدي فيها النقل البري إلى تأخير الوصول للرعاية المتخصصة بشكل كبير.</p>
 
-                        <div class="info-description ar-content">
-                            <p>يُعد النقل الطبي بالمروحيات الخيار الأمثل عندما تتطلب الحالة الوصول المباشر بين
-                                المستشفيات، والمنشآت البحرية، والمواقع الصناعية، والجهات الحكومية، أو مواقع المشاريع
-                                النائية التي لا يكون فيها النقل البري أو الطائرات ثابتة الجناح الخيار الأنسب.</p>
-                            <p>أما في حالات النقل الدولي لمسافات طويلة أو الحالات التي تتطلب رعاية طبية متقدمة خلال
-                                الرحلة، فقد تكون طائرات الإسعاف الجوي أو خدمات النقل الطبي عبر الرحلات التجارية هي
-                                الخيار الأنسب. ويقوم فريق التنسيق الطبي لدينا بتقييم كل حالة على حدة واختيار وسيلة النقل
-                                الأكثر أماناً وملاءمة.</p>
-
+                            <p class="en-content">Every mission is medically assessed to ensure helicopter deployment represents the safest and most appropriate solution for the patient's condition and operational environment.</p>
+                            <p class="ar-content">تخضع كل مهمة لتقييم طبي شامل لضمان أن توظيف المروحية يمثل الحل الأكثر أماناً وملاءمة لحالة المريض على النقالة الطبية والبيئة التشغيلية المحيطة.</p>
                         </div>
                     </div>
                 </div>
 
+                <div class="row pt-20 mt-4">
+                    <div class="col-md-5">
+                        <h2 class="info-tagline en-content">EVERY MISSION BEGINS WITH A MEDICAL ASSESSMENT</h2>
+                        <h2 class="info-tagline ar-content">كل مهمة تبدأ بتقييم طبي شامل</h2>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-md-5">
+                        <div class="info-description">
+                            <p class="en-content mb-3">Every emergency presents unique operational and medical challenges.</p>
+                            <p class="ar-content mb-3">تفرض كل حالة طوارئ تحديات تشغيلية وطبية فريدة من نوعها.</p>
+
+                            <p class="en-content mb-3">Before deployment, our medical and operational teams assess the patient's condition, incident location, environmental factors, aircraft availability, weather conditions, and destination hospital to determine the most appropriate response.</p>
+                            <p class="ar-content mb-3">قبل إرسال المروحية، تقوم طواقمنا الطبية والتشغيلية بتقييم حالة المريض على النقالة الطبية، موقع الحادث، العوامل البيئية، جاهزية الطائرات، الأحوال الجوية، والمستشفى المستقبِل لتحديد طبيعة الاستجابة الأكثر ملاءمة.</p>
+
+                            <p class="en-content">Whether the mission requires helicopter evacuation, ground medical support, or coordinated inter-facility transfer, every decision is guided by patient safety, medical benefit, and operational effectiveness.</p>
+                            <p class="ar-content">سواء تطلبت المهمة إخلاء بالمروحية، أو دعماً طبياً برياً، أو نقلاً منسقاً بين المنشآت الطبية، فإن كل قرار يستند ويرتكز على سلامة المريض، الفائدة الطبية للنقالة، والفاعلية التشغيلية.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Why Choose Bluedot HEMS Section -->
+        <section class="coordination-section pt-0">
+            <div class="container">
+                <div class="coordination-header mt-5 pt-5 border-top">
+                    <h2 class="coordination-title en-content">WHY CHOOSE BLUEDOT HEMS: Integrated Emergency Medical Capability</h2>
+                    <h2 class="coordination-title ar-content">لماذا تختار خدمات الإسعاف المروحي من بلودوت؟ قدرات طبية متكاملة للطوارئ</h2>
+
+                    <p class="coordination-subtitle en-content">A coordinated emergency response model combining aviation, critical care medicine, operational command, and medical coordination.</p>
+                    <p class="coordination-subtitle ar-content">نموذج استجابة منسق للطوارئ يجمع بين علوم الطيران، طب الرعاية الحرجة، القيادة التشغيلية، والتنسيق الطبي للنقالات.</p>
+                </div>
+
+                <div class="row coordination-grid">
+                    <!-- Card 1 -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="coordination-card">
+                            <div class="card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="168" height="183" viewBox="0 0 168 183" fill="none">
+                                    <path d="M26.4434 180.437L42.1645 164.335C44.8361 161.599 48.4819 160.038 52.3028 159.996L108.242 159.376C110.198 159.353 112.078 158.596 113.501 157.256L164.021 109.709C166.088 107.764 165.54 104.35 162.971 103.151L158.686 101.15C153.263 98.6151 146.881 99.2773 142.097 102.877L117.996 120.996" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <h3 class="card-title en-content">Experienced Medical Teams</h3>
+                            <h3 class="card-title ar-content">طواقم طبية ذات خبرة عالية</h3>
+                            <p class="card-text en-content">Highly trained physicians, flight paramedics, and emergency medical professionals delivering advanced pre-hospital critical care.</p>
+                            <p class="card-text ar-content">أطباء، ومسعفو طيران، وأخصائيون في طب الطوارئ تم تدريبهم على أعلى مستوى لتقديم رعاية حادة ومتقدمة على النقالة الطبية قبل الوصول إلى المستشفى.</p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="coordination-card">
+                            <div class="card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="185" height="163" viewBox="0 0 185 163" fill="none">
+                                    <path d="M84.3379 6.62039L3.25513 147.06C-0.301752 153.221 4.14198 160.918 11.2557 160.918H173.421C180.53 160.918 184.979 153.221 181.422 147.06L100.339 6.62039C96.7822 0.45987 87.8947 0.45987 84.3379 6.62039Z" stroke="white" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" />
+                                    <path d="M92.415 50.6836V108.509" stroke="white" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" />
+                                    <path d="M92.339 125.004C94.7801 125.004 96.759 123.025 96.759 120.584C96.759 118.143 94.7801 116.164 92.339 116.164C89.8979 116.164 87.9189 118.143 87.9189 120.584C87.9189 123.025 89.8979 125.004 92.339 125.004Z" stroke="white" stroke-width="4" />
+                                </svg>
+                            </div>
+                            <h3 class="card-title en-content">Rapid Emergency Response</h3>
+                            <h3 class="card-title ar-content">استجابة طارئة وسريعة</h3>
+                            <p class="card-text en-content">Designed to support urgent medical incidents across urban, industrial, offshore, and remote environments.</p>
+                            <p class="card-text ar-content">صُممت الخدمة لدعم حوادث الطوارئ الطبية العاجلة عبر البيئات الحضرية، الصناعية، البحرية، والنائية.</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="coordination-card">
+                            <div class="card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="169" height="169" viewBox="0 0 169 169" fill="none">
+                                    <path d="M84.2638 105.451C96.4962 105.451 106.412 95.5342 106.412 83.3019C106.412 71.0696 96.4962 61.1533 84.2638 61.1533C72.0315 61.1533 62.1152 71.0696 62.1152 83.3019C62.1152 95.5342 72.0315 105.451 84.2638 105.451Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M84.2635 136.44C113.166 136.44 136.595 113.01 136.595 84.1083C136.595 55.2062 113.166 31.7764 84.2635 31.7764C55.3614 31.7764 31.9316 55.2062 31.9316 84.1083C31.9316 113.01 55.3614 136.44 84.2635 136.44Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M84.2651 166.53C129.699 166.53 166.53 129.699 166.53 84.2651C166.53 38.8314 129.699 2 84.2651 2C38.8313 2 2 38.8314 2 84.2651C2 129.699 38.8313 166.53 84.2651 166.53Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <h3 class="card-title en-content">Enterprise Emergency Solutions</h3>
+                            <h3 class="card-title ar-content">حلول طوارئ للمؤسسات والشركات</h3>
+                            <p class="card-text en-content">Supporting governments, energy operators, industrial organisations, maritime operators, and major infrastructure projects with scalable emergency medical capabilities.</p>
+                            <p class="card-text ar-content">دعم الحكومات، مشغلي قطاع الطاقة، المؤسسات الصناعية، المشغلين البحريين، ومشاريع البنية التحتية الكبرى بإمكانيات طبية طارئة وقابلة للتوسع.</p>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="coordination-card">
+                            <div class="card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="138" height="138" viewBox="0 0 138 138" fill="none">
+                                    <path d="M68.7844 135.569C105.666 135.569 135.569 105.666 135.569 68.7844C135.569 31.9029 105.666 2 68.7844 2C31.9029 2 2 31.9029 2 68.7844C2 105.666 31.9029 135.569 68.7844 135.569Z" stroke="white" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" />
+                                    <path d="M68.7842 2V135.569" stroke="white" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" />
+                                    <path d="M129.809 35.3921H7.75977" stroke="white" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" />
+                                    <path d="M129.809 102.176H7.75977" stroke="white" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <h3 class="card-title en-content">International Standards</h3>
+                            <h3 class="card-title ar-content">معايير دولية معتمدة</h3>
+                            <p class="card-text en-content">Operations developed in accordance with recognised aviation and medical best practices while supporting applicable regional regulatory requirements.</p>
+                            <p class="card-text ar-content">تطوير وسير العمليات يتم وفقاً لأفضل الممارسات المعتمدة عالمياً في مجالي الطيران والخدمات الطبية، مع الامتثال التام للمتطلبات التنظيمية والإقليمية المعمول بها.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -321,6 +520,268 @@ Dubai to Bangkok: Urgent Lung Cancer Case Transfer</h3>
                             <a href="https://www.bluedotairambulance.com/blog/israel-to-bangkok-on-a-12-hour-flight/" class="btn-mission-story ar-content">قصة المهمة</a>
 
                             <img src="{% static 'website/images/s-vector.svg' %}" class="news-vector-bg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== FAQ SECTION ========== -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <div class="row">
+                    <!-- Left Content -->
+                    <div class="col-lg-5 mb-5 mb-lg-0">
+                        <span class="faq-subtitle en-content">Frequently Asked Questions</span>
+                        <span class="faq-subtitle ar-content">الأسئلة الشائعة</span>
+
+                        <h2 class="faq-heading en-content">What else do you<br>need to know?</h2>
+                        <h2 class="faq-heading ar-content">ما الذي تحتاج إلى معرفته أيضاً؟</h2>
+                    </div>
+                    <!-- Right Accordion -->
+                    <div class="col-lg-7">
+                        <div class="accordion faq-accordion" id="faqAccordion">
+
+                            <!-- Item 1 -->
+                            <div class="accordion-item faq-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed faq-button en-content" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        What is Helicopter Emergency Medical Services (HEMS)?
+                                    </button>
+                                    <button class="accordion-button collapsed faq-button ar-content" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        ما هي خدمات الطوارئ الطبية بالمروحيات ؟
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body faq-body en-content">
+                                        Helicopter Emergency Medical Services (HEMS) combine advanced emergency medicine with rapid air transportation. Unlike a standard helicopter transfer, HEMS brings specialist physicians, critical care paramedics, advanced medical equipment, and life-saving treatment directly to the patient before transport to an appropriate medical facility.
+                                    </div>
+                                    <div class="accordion-body faq-body ar-content">
+                                        تجمع خدمات الطوارئ الطبية بالمروحيات بين طب الطوارئ المتقدم والنقل الجوي السريع. وعلى عكس النقل العادي بالمروحيات، تجلب هذه الخدمة أطباء متخصصين، ومسعفي رعاية حرجة، ومعدات طبية متقدمة، وعلاجاً منقذاً للحياة مباشرة إلى المريض على النقالة الطبية قبل نقله إلى المنشأة الطبية المناسبة.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="accordion-item faq-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed faq-button en-content" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        When is HEMS used?
+                                    </button>
+                                    <button class="accordion-button collapsed faq-button ar-content" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        متى تُستخدم خدمات الإسعاف المروحي ؟
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body faq-body en-content">
+                                        HEMS is deployed when rapid access to advanced medical care provides a medical advantage. This includes severe trauma, medical emergencies, remote or offshore incidents, industrial accidents, mass casualty events, and situations where road transport may delay definitive treatment.
+                                    </div>
+                                    <div class="accordion-body faq-body ar-content">
+                                        يتم تفعيل واستخدام الإسعاف المروحي عندما يمنح الوصول السريع للرعاية الطبية المتقدمة أسبقية وفائدة طبية ملموسة. ويشمل ذلك حالات الإصابات البليغة، الطوارئ الطبية، حوادث المناطق النائية أو البحرية، الحوادث الصناعية، حالات الإصابات الجماعية، والمواقف التي قد يؤدي فيها النقل البري إلى تأخير العلاج النهائي.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div class="accordion-item faq-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed faq-button en-content" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        How is a HEMS mission activated?
+                                    </button>
+                                    <button class="accordion-button collapsed faq-button ar-content" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        كيف يتم تفعيل مهمة الإسعاف المروحي؟
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body faq-body en-content">
+                                        According to the Bluedot HEMS operating model, each mission follows a structured process that includes emergency notification, medical assessment, aviation safety checks, launch approval, and hospital pre-alert before patient arrival. This coordinated approach supports safe and efficient emergency response.
+                                    </div>
+                                    <div class="accordion-body faq-body ar-content">
+                                        وفقاً لنموذج التشغيل في بلودوت، تتبع كل مهمة مساراً منظماً يشمل البلاغ الطارئ، التقييم الطبي للنقالة، فحص سلامة الطيران، الموافقة على الإقلاع، والإخطار المسبق للمستشفى قبل وصول المريض. ويدعم هذا النهج المنسق تقديم استجابة طوارئ آمنة وفعالة.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 4 -->
+                            <div class="accordion-item faq-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed faq-button en-content" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        What medical professionals are onboard a HEMS aircraft?
+                                    </button>
+                                    <button class="accordion-button collapsed faq-button ar-content" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        ما هي الكوادر الطبية المتواجدة على متن طائرة الإسعاف المروحي؟
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body faq-body en-content">
+                                        The medical model described in the HEMS strategy includes a physician and a critical care paramedic on every mission. The team is equipped to provide advanced pre-hospital emergency care before and during transport.
+                                    </div>
+                                    <div class="accordion-body faq-body ar-content">
+                                        يتضمن النموذج الطبي المعتمد وجود طبيب ومسعف رعاية حرجة في كل مهمة. وقد تم تجهيز الفريق لتقديم رعاية طوارئ متقدمة على النقالة الطبية قبل الوصول إلى المستشفى وأثناء عملية النقل.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 5 -->
+                            <div class="accordion-item faq-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed faq-button en-content" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        What types of emergencies can HEMS respond to?
+                                    </button>
+                                    <button class="accordion-button collapsed faq-button ar-content" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        ما هي أنواع الطوارئ التي يمكن للإسعاف المروحي الاستجابة لها؟
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body faq-body en-content">
+                                        HEMS is designed to support a wide range of emergencies, including major trauma, serious medical emergencies, industrial accidents, offshore incidents, maritime emergencies, disaster response, inter-facility critical care transfers, and remote site medical evacuations.
+                                    </div>
+                                    <div class="accordion-body faq-body ar-content">
+                                        تم تصميم الإسعاف المروحي لدعم نطاق واسع من الطوارئ، يشمل الإصابات الجسيمة، الطوارئ الطبية الحادة، الحوادث الصناعية، الحوادث البحرية، طوارئ الملاحة والموانئ، الاستجابة للكوارث، نقل الرعاية الحرجة بين المنشآت الطبية عبر النقالة الطبية، والإخلاء الطبي من المواقع النائية.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 6 -->
+                            <div class="accordion-item faq-item">
+                                <h2 class="accordion-header" id="headingSix">
+                                    <button class="accordion-button collapsed faq-button en-content" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                        Which industries benefit from HEMS?
+                                    </button>
+                                    <button class="accordion-button collapsed faq-button ar-content" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                        ما هي القطاعات والمجالات التي تستفيد من خدمات الإسعاف المروحي؟
+                                    </button>
+                                </h2>
+                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body faq-body en-content">
+                                        The Bluedot HEMS model is designed to support: Oil & Gas, Offshore Energy, Maritime & Ports, Construction & Giga Projects, Government & Public Safety, Industrial & Free Zones. Each sector has unique emergency response requirements, and HEMS provides rapid medical support tailored to these operational environments.
+                                    </div>
+                                    <div class="accordion-body faq-body ar-content">
+                                        تم تصميم نموذج بلودوت لدعم: قطاع النفط والغاز، الطاقة البحرية، القطاع البحري والموانئ، قطاع الإنشاءات والمشاريع العملاقة، القطاع الحكومي والسلامة العامة، والمناطق الصناعية والحرة. حيث يمتلك كل قطاع متطلبات فريدة للاستجابة للطوارئ، ويوفر الإسعاف المروحي دعماً طبياً سريعاً ومخصصاً لهذه البيئات التشغيلية.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 7 -->
+                            <div class="accordion-item faq-item">
+                                <h2 class="accordion-header" id="headingSeven">
+                                    <button class="accordion-button collapsed faq-button en-content" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                        Does HEMS only transport patients?
+                                    </button>
+                                    <button class="accordion-button collapsed faq-button ar-content" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                        هل يقتصر دور الإسعاف المروحي على نقل المرضى فقط؟
+                                    </button>
+                                </h2>
+                                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body faq-body en-content">
+                                        No. The HEMS medical model focuses on bringing advanced medical care directly to the patient. Specialist clinicians begin assessment and treatment at the scene before transport, helping reduce delays in critical care.
+                                    </div>
+                                    <div class="accordion-body faq-body ar-content">
+                                        لا. يركز النموذج الطبي للإسعاف المروحي على إحضار الرعاية الطبية المتقدمة مباشرة إلى المريض؛ حيث يبدأ الأطباء المتخصصون التقييم والعلاج على النقالة الطبية في موقع الحادث قبل النقل، مما يساهم في تقليل أي تأخير في تقديم الرعاية الحرجة.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 8 -->
+                            <div class="accordion-item faq-item">
+                                <h2 class="accordion-header" id="headingEight">
+                                    <button class="accordion-button collapsed faq-button en-content" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                        How does technology support Bluedot HEMS?
+                                    </button>
+                                    <button class="accordion-button collapsed faq-button ar-content" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                        كيف تدعم التكنولوجيا والتقنية خدمات بلودوت للإسعاف المروحي؟
+                                    </button>
+                                </h2>
+                                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body faq-body en-content">
+                                        The Enterprise Capability Brochure describes an integrated emergency response ecosystem using connected medical technologies, operational coordination, and real-time communication between responders, aircraft, medical coordination teams, and receiving hospitals. This improves information sharing and supports medical decision-making throughout the patient journey.
+                                    </div>
+                                    <div class="accordion-body faq-body ar-content">
+                                        تعتمد المنظومة على بيئة استجابة متكاملة للطوارئ تستخدم تقنيات طبية مترابطة، وتنسيقاً تشغيلياً، وتواصلاً فورياً بين فرق الاستجابة، الطائرات، طواقم التنسيق الطبي، والمستشفيات المستقبِلة. ويساهم ذلك في تحسين تبادل المعلومات ودعم اتخاذ القرارات الطبية المتعلقة بحالة المريض طوال الرحلة.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 9 -->
+                            <div class="accordion-item faq-item">
+                                <h2 class="accordion-header" id="headingNine">
+                                    <button class="accordion-button collapsed faq-button en-content" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                        Does Bluedot HEMS support remote and offshore operations?
+                                    </button>
+                                    <button class="accordion-button collapsed faq-button ar-content" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                        هل يدعم إسعاف بلودوت المروحي العمليات في المناطق النائية والبحرية؟
+                                    </button>
+                                </h2>
+                                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body faq-body en-content">
+                                        Yes. The documentation highlights support for offshore energy assets, remote industrial sites, maritime operations, ports, construction projects, and other locations where rapid access to advanced medical care is essential.
+                                    </div>
+                                    <div class="accordion-body faq-body ar-content">
+                                        نعم. يغطي الدعم أصول الطاقة البحرية، المواقع الصناعية النائية، العمليات البحرية، الموانئ، مشاريع الإنشاءات، وغيرها من المواقع التي يُعد فيها الوصول السريع للرعاية الطبية المتقدمة أمراً حيوياً.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 10 -->
+                            <div class="accordion-item faq-item">
+                                <h2 class="accordion-header" id="headingTen">
+                                    <button class="accordion-button collapsed faq-button en-content" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                        How does Bluedot determine whether to launch a helicopter?
+                                    </button>
+                                    <button class="accordion-button collapsed faq-button ar-content" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                        كيف تحدد بلودوت قرار إطلاق واستخدام الطائرة المروحية؟
+                                    </button>
+                                </h2>
+                                <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body faq-body en-content">
+                                        Every mission undergoes both a medical and aviation assessment. The decision considers patient condition, expected medical benefit, weather, landing zone suitability, airspace, operational safety, and other mission requirements before deployment.
+                                    </div>
+                                    <div class="accordion-body faq-body ar-content">
+                                        تخضع كل مهمة لتقييم طبي وجوي مزدوج. ويأخذ القرار بعين الاعتبار حالة المريض على النقالة الطبية، الفائدة الطبية المتوقعة، الأحوال الجوية، ملاءمة موقع الهبوط، المجال الجوي، السلامة التشغيلية، ومتطلبات المهمة الأخرى قبل التحريك.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 11 -->
+                            <div class="accordion-item faq-item">
+                                <h2 class="accordion-header" id="headingEleven">
+                                    <button class="accordion-button collapsed faq-button en-content" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                                        Is HEMS available for inter-facility hospital transfers?
+                                    </button>
+                                    <button class="accordion-button collapsed faq-button ar-content" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                                        هل تتوفر خدمات الإسعاف المروحي للنقل الطبي بين المستشفيات والمنشآت الصحية؟
+                                    </button>
+                                </h2>
+                                <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body faq-body en-content">
+                                        Yes. In addition to emergency scene response, the documentation identifies inter-facility transfers as one of the planned service applications where critically ill patients require rapid transfer between healthcare facilities while maintaining advanced medical care.
+                                    </div>
+                                    <div class="accordion-body faq-body ar-content">
+                                        نعم. بالإضافة إلى الاستجابة لموقع الحادث الطارئ، يُعد النقل بين المنشآت الطبية أحد التطبيقات الأساسية للخدمة، حيث يتطلب المرضى ذوو الحالات الحرجة نقلاً سريعاً عبر النقالة الطبية بين المنشآت الصحية مع الحفاظ على تقديم الرعاية الطبية المتقدمة.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 12 -->
+                            <div class="accordion-item faq-item">
+                                <h2 class="accordion-header" id="headingTwelve">
+                                    <button class="accordion-button collapsed faq-button en-content" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                                        Why choose Bluedot for HEMS?
+                                    </button>
+                                    <button class="accordion-button collapsed faq-button ar-content" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                                        لماذا تختار بلودوت لخدمات الإسعاف المروحي؟
+                                    </button>
+                                </h2>
+                                <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body faq-body en-content">
+                                        Bluedot's HEMS model combines advanced medical care, aviation expertise, integrated operational coordination, and technology-enabled emergency response into a single service. The Enterprise Capability Brochure positions this as a connected emergency medical ecosystem designed to support governments, healthcare providers, and high-risk industries across the GCC.
+                                    </div>
+                                    <div class="accordion-body faq-body ar-content">
+                                        يجمع نموذج بلودوت بين الرعاية الطبية المتقدمة، الخبرة الجوية، التنسيق التشغيلي المتكامل، والاستجابة الطارئة المدعومة بالتكنولوجيا في خدمة واحدة. وتوفر الشركة منظومة طبية طارئة ومترابطة للنقل عبر النقالات الطبية تم تصميمها لدعم الحكومات، مزودي الرعاية الصحية، والقطاعات عالية المخاطر في جميع أنحاء دول مجلس التعاون الخليجي.
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>

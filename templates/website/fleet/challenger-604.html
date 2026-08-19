@@ -1,5 +1,5 @@
 {% extends 'website/layout/base.html' %}
-{% load static %}{% block title %}Challenger 604 Medical Air Ambulance Service in UAE{% endblock %}
+{% load static lang_tags %}{% block title %}Challenger 604 Medical Air Ambulance Service in UAE{% endblock %}
 {% block meta_description %}Experience safe air ambulance service in UAE with Bluedot’s Challenger 604, equipped for ICU care, stretcher support, and long-distance transfers.{% endblock %}
 {% block content %}
 
@@ -14,14 +14,14 @@
     <span class="en-content">
         <a href="{% url 'website:home' %}">Home</a>
         <span class="separator">/</span>
-        <a href="#">Fleet</a>
+        <a href="{% lang_url 'website:fleet_select' %}">Fleet</a>
         <span class="separator">/</span>
         <span class="active">Challenger 604</span>
     </span>
     <span class="ar-content">
         <a href="{% url 'website:home' %}">الرئيسية</a>
         <span class="separator">/</span>
-        <a href="#">الأسطول</a>
+        <a href="{% lang_url 'website:fleet_select' %}">الأسطول</a>
         <span class="separator">/</span>
         <span class="active">تشالنجر 604</span>
     </span>

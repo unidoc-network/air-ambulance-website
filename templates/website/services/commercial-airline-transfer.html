@@ -15,14 +15,14 @@
     <span class="en-content">
         <a href="{% url 'website:home' %}">Home</a>
         <span class="separator">/</span>
-        <a href="#">Services</a>
+        <a href="#" onclick="event.preventDefault(); document.getElementById('headerHamburger').click(); document.querySelector('.has-submenu[data-target=\'servicesMenu\']').click();">Services</a>
         <span class="separator">/</span>
         <span class="active">Commercial Airline Transfer</span>
     </span>
     <span class="ar-content">
         <a href="{% url 'website:home' %}">الرئيسية</a>
         <span class="separator">/</span>
-        <a href="#">الخدمات</a>
+        <a href="#" onclick="event.preventDefault(); document.getElementById('headerHamburger').click(); document.querySelector('.has-submenu[data-target=\'servicesMenu\']').click();">الخدمات</a>
         <span class="separator">/</span>
         <span class="active">النقل عبر الخطوط التجارية</span>
     </span>
@@ -85,8 +85,8 @@
             <div class="container ">
                 <div class="row">
                     <div class="col-md-5">
-                        <h2 class="info-tagline en-content">When commercial airline medical transfer is appropriate</h2>
-                        <h2 class="info-tagline ar-content">متى يكون النقل الطبي عبر الخطوط التجارية خياراً مناسباً؟
+                        <h2 class="info-tagline en-content">What Commercial Stretcher Transfer Means</h2>
+                        <h2 class="info-tagline ar-content">ماذا يعني النقل عبر النقالات الطبية في الرحلات التجارية؟
                         </h2>
 
                     </div>
@@ -95,29 +95,13 @@
                     </div>
                     <div class="col-md-5">
                         <div class="info-description en-content">
-                            <p>Not every patient requires a dedicated air ambulance. Commercial airline medical
-                                transfers are used when patients are medically stable to fly but still need supervision,
-                                equipment, or assistance during travel.</p>
-                            <p>This service is suitable when:</p>
-                            <ul class="custom-list">
-                                <li>Patients are fit to fly following medical assessment</li>
-                                <li>Transfers are planned and non-emergency</li>
-                                <li>Medical monitoring or assistance is required in-flight</li>
-                                <li>Cost-effective alternatives to air ambulance service</li>
-                            </ul>
+                            <p>Commercial stretcher transfer allows medically stable patients to travel on scheduled commercial airlines while remaining in a fully reclined position. It provides an alternative to a dedicated air ambulance when continuous intensive care is not required but travelling in a standard aircraft seat is not medically suitable. Every journey is planned around the patient's condition, airline requirements, and medical needs, ensuring appropriate approvals, equipment, and clinical support are arranged before travel begins.</p>
+                          
                         </div>
 
                         <div class="info-description ar-content">
-                            <p>لا يحتاج كل مريض إلى طائرة إسعاف جوي مخصصة؛ حيث يُعتمد النقل الطبي عبر الخطوط الجوية
-                                التجارية عندما تكون الحالة المستقرة طبياً تسمح لها بالسفر جوّاً، ولكنها لا تزال بحاجة
-                                إلى إشراف، أو معدات، أو مساعدة طبية أثناء الرحلة.</p>
-                            <p></p>
-                            <ul class="custom-list">
-                                <li>يتم تحديد أهلية المرضى للسفر جوّاً بناءً على تقييم طبي دقيق.</li>
-                                <li>يتم تخطيط عمليات النقل مسبقاً وتصنيفها كحالات غير طارئة</li>
-                                <li>تستدعي الحالة توفير مراقبة أو مساعدة طبية على متن الرحلة.</li>
-                                <li>بدائل اقتصادية وذات كفاءة مالية لخدمات الإسعاف الجوي</li>
-                            </ul>
+                      <p>يتيح النقل عبر النقالة الطبية في الرحلات التجارية للمرضى ذوي الحالات المستقرة طبياً السفر على متن رحلات الطيران التجارية المنتظمة مع البقاء في وضع الاستلقاء الكامل. ويعد هذا الخيار بديلاً عن طائرات الإسعاف الجوي المخصصة عندما لا تكون الرعاية المركزة المستمرة مطلوبة، ولكن السفر في مقعد الطائرة العادي غير مناسب من الناحية الطبية. يتم التخطيط لكل رحلة بناءً على حالة المريض، ومتطلبات شركة الطيران، الاحتياجات الطبية، مما يضمن ترتيب الموافقات المناسبة، والمعدات، والدعم السريري قبل بدء السفر.</p>
+                           
                         </div>
                     </div>
                 </div>
@@ -128,20 +112,18 @@
         <section class="coordination-section">
             <div class="container">
                 <div class="coordination-header">
-                    <h2 class="coordination-title en-content">How commercial airline medical transfers <br> are managed
+                    <h2 class="coordination-title en-content">Common Patient Scenarios
                     </h2>
-                    <h2 class="coordination-title ar-content">آلية إدارة النقل الطبي عبر الخطوط الجوية التجارية
+                    <h2 class="coordination-title ar-content">الحالات والسيناريوهات الشائعة للمرضى
                     </h2>
-                    <p class="coordination-subtitle en-content">Commercial airline medical travel depends on preparation
-                        and
-                        coordination. Safety comes from making the right decisions before the journey begins.</p>
-                    <p class="coordination-subtitle ar-content">يعتمد النقل الطبي عبر الخطوط الجوية التجارية على الإعداد
-                        والتنسيق. وتتحقق السلامة من خلال اتخاذ القرارات الصحيحة قبل بدء الرحلة</p>
+                    <p class="coordination-subtitle en-content">Commercial stretcher transfer is often recommended when patients are medically stable but require additional support to travel safely on a scheduled airline.</p>
+                    <p class="coordination-subtitle ar-content">غالباً ما يُوصى بالنقل عبر النقالة الطبية التجارية عندما تكون حالة المريض مستقرة طبياً ولكنه يحتاج إلى دعم إضافي للسفر بأمان على متن طائرة تجارية منتظمة.
+                        </p>
                 </div>
 
                 <div class="row coordination-grid">
                     <!-- Card 1 -->
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <div class="coordination-card">
                             <div class="card-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="148" height="183" viewBox="0 0 148 183"
@@ -165,21 +147,18 @@
                                         stroke="white" stroke-width="4" stroke-miterlimit="10" />
                                 </svg>
                             </div>
-                            <h3 class="card-title en-content">Fit-to-fly assessment</h3>
-                            <h3 class="card-title ar-content">تقييم الأهلية الطبية للطيران</h3>
+                            <h3 class="card-title en-content">Recovery Following Surgery</h3>
+                            <h3 class="card-title ar-content">التعافي بعد العمليات الجراحية</h3>
 
-                            <p class="card-text en-content">Every case starts with a medical review to determine whether
-                                commercial
-                                airline travel is appropriate. The patient’s condition, stability, and care needs are
-                                assessed to define suitability and the level of support required during travel.</p>
+                            <p class="card-text en-content">Patients recovering from major surgical procedures who need to remain in a reclined position throughout the journey while continuing their recovery.</p>
 
-                            <p class="card-text ar-content">تبدأ كل حالة بمراجعة طبية لتحديد ما إذا كان السفر عبر الخطوط
-                                الجوية التجارية مناسباً. حيث يتم تقييم حالة المريض، واستقراره الصحي، واحتياجاته الرعائية
-                                لتحديد مدى ملاءمته ومستوى الدعم المطلوب أثناء السفر.</p>
+                            <p class="card-text ar-content">
+                                المرضى الذين يتعافون من عمليات جراحية كبرى ويحتاجون إلى البقاء في وضع الاستلقاء طوال مسار الرحلة مع مواصلة تعافيهم.
+                   </p>
                         </div>
                     </div>
                     <!-- Card 2 -->
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <div class="coordination-card">
                             <div class="card-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="193" height="159" viewBox="0 0 193 159"
@@ -189,21 +168,15 @@
                                         stroke="white" stroke-width="4" stroke-miterlimit="10" />
                                 </svg>
                             </div>
-                            <h3 class="card-title en-content">Pre-flight coordination</h3>
-                            <h3 class="card-title ar-content">إجراءات التنسيق المسبق قبل الرحلة</h3>
-                            <p class="card-text en-content">Once airline travel is approved, our teams manage the
-                                necessary
-                                arrangements including airline medical clearances, seating or stretcher configurations,
-                                equipment and oxygen approvals, and ground assistance at both departure and arrival
-                                airports.</p>
-                            <p class="card-text ar-content">بعد الموافقة على السفر، يتولى فريقنا تنسيق جميع الترتيبات
-                                اللازمة بما يشمل الموافقات الطبية من شركات الطيران، وتجهيز المقاعد أو النقالات، واعتماد
-                                الأوكسجين والمعدات الطبية، إضافة إلى خدمات المساعدة الأرضية في مطارات المغادرة والوصول.
+                            <h3 class="card-title en-content">Limited Mobility</h3>
+                            <h3 class="card-title ar-content">محدودية الحركة</h3>
+                            <p class="card-text en-content">Patients whose injuries, medical conditions, or physical limitations prevent them from travelling comfortably in a standard aircraft seat.</p>
+                            <p class="card-text ar-content"> المرضى الذين تمنعهم إصاباتهم، أو حالتهم الصحية، أو قيودهم الجسدية من السفر براحة في مقعد الطائرة العادي.
                             </p>
                         </div>
                     </div>
                     <!-- Card 3 -->
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <div class="coordination-card">
                             <div class="card-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="198" height="194" viewBox="0 0 198 194"
@@ -224,17 +197,44 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <h3 class="card-title en-content">Support during the journey</h3>
-                            <h3 class="card-title ar-content">تقديم الدعم والمرافقة الطبية أثناء الرحلة</h3>
+                            <h3 class="card-title en-content">Ongoing Medical Treatment</h3>
+                            <h3 class="card-title ar-content">مواصلة العلاج الطبي</h3>
 
-                            <p class="card-text en-content">Our qualified medical team accompany the patient throughout
-                                the flight,
-                                providing monitoring and assistance. Coordination continues until the patient is safely
-                                handed over at the destination facility or point of care.</p>
+                            <p class="card-text en-content">Patients travelling between countries for specialist treatment, rehabilitation, or follow-up care while remaining medically stable throughout the journey.</p>
 
-                            <p class="card-text ar-content">يرافق فريقنا الطبي المؤهل المريض طوال الرحلة الجوية، لتوفير
-                                المراقبة والمساعدة الطبية. ويستمر التنسيق حتى يتم تسليم المريض إلى المنشأة الطبية
-                                المستقبلة أو الجهة المعنية بالرعاية.</p>
+                            <p class="card-text ar-content"> المرضى الذين يتنقلون بين الدول لتلقي علاج متخصص، أو إعادة تأهيل، أو رعاية متابعة مع الحفاظ على استقرار حالتهم الصحية طوال الرحلة.
+                                </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="coordination-card">
+                            <div class="card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="198" height="194" viewBox="0 0 198 194"
+                                    fill="none">
+                                    <path
+                                        d="M106.45 42.631C117.655 42.631 126.739 33.5355 126.739 22.3155C126.739 11.0956 117.655 2 106.45 2C95.2448 2 86.1611 11.0956 86.1611 22.3155C86.1611 33.5355 95.2448 42.631 106.45 42.631Z"
+                                        stroke="white" stroke-width="4" stroke-miterlimit="10" />
+                                    <path
+                                        d="M63.9756 99.2821V81.1913C63.9756 67.8206 76.8105 56.9814 92.6468 56.9814L106.158 67.3017L120.259 56.9814C136.095 56.9814 148.93 67.8206 148.93 81.1913V99.2821"
+                                        stroke="white" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" />
+                                    <path
+                                        d="M30.9512 191.085L49.5681 171.992C52.7317 168.748 57.0491 166.898 61.5737 166.848L127.817 166.112C130.133 166.085 132.359 165.187 134.045 163.599L193.87 107.219C196.317 104.913 195.669 100.865 192.627 99.444L187.552 97.0704C181.13 94.065 173.573 94.8502 167.908 99.1191L139.367 120.603"
+                                        stroke="white" stroke-width="4" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M2 149.029L34.3576 118.618C34.3576 118.618 60.7529 95.8842 89.9875 118.05H114.445C122.881 118.05 130.259 123.749 132.399 131.921L133.31 135.401C133.941 137.801 132.133 140.152 129.65 140.152L80.8976 140.216"
+                                        stroke="white" stroke-width="4" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <h3 class="card-title en-content">Long-Distance Medical Repatriation</h3>
+                            <h3 class="card-title ar-content">الإعادة الطبية إلى الوطن لمسافات طويلة</h3>
+
+                            <p class="card-text en-content">Patients returning home after treatment abroad who require additional comfort, supervision, or medical support during travel without the need for a dedicated air ambulance.</p>
+
+                            <p class="card-text ar-content"> المرضى العائدون إلى ديارهم بعد تلقي العلاج في الخارج والذين يحتاجون إلى مستوى إضافي من الراحة، أو الإشراف، أو الدعم الطبي أثناء السفر دون الحاجة إلى طائرة إسعاف جوي مخصصة. 
+                                </p>
                         </div>
                     </div>
                 </div>
@@ -246,8 +246,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-5">
-                        <h2 class="info-tagline en-content">Cost-Effective Vs. Air Ambulance</h2>
-                        <h2 class="info-tagline ar-content">الكفاءة المالية في مقابل الإسعاف الجوي</h2>
+                        <h2 class="info-tagline en-content">Choosing Between Commercial Stretcher and Air Ambulance</h2>
+                        <h2 class="info-tagline ar-content">الاختيار بين النقالة الطبية التجارية والإسعاف الجوي</h2>
 
                     </div>
                     <div class="col-md-2">
@@ -255,19 +255,11 @@
                     </div>
                     <div class="col-md-5">
                         <div class="info-description">
-                            <p class="en-content">commercial airline medical transfers can offer a more cost-effective
-                                alternative to air
-                                ambulance services. Because travel takes place on scheduled commercial flights, costs
-                                associated with chartered aircraft, dedicated airport clearances, and exclusive
-                                operational requirements are avoided. Air ambulance services, by contrast, involve fully
-                                chartered aircraft and specialised setup, which results in higher overall costs.</p>
+                            <p class="en-content">The most appropriate transport solution depends on the patient's medical condition rather than the distance being travelled. Commercial stretcher transfers are generally suitable for patients who are clinically stable but unable to remain seated during a flight. Patients requiring intensive care, advanced life support, or continuous critical care monitoring may require a dedicated air ambulance instead. Every case is medically reviewed to determine the safest approach before travel is confirmed.</p>
 
-                            <p class="ar-content">يُعد النقل الطبي التجاري خياراً عالي الكفاءة من حيث التكلفة مقارنة
-                                برحلات الإسعاف الجوي
-                                الخاصة؛ إذ يعتمد هذا السفر على الرحلات التجارية المجدولة، مما يلغي النفقات المتعلقة
-                                باستئجار الطائرات، وتصاريح المطارات الخاصة، والاشتراطات التشغيلية الحصرية. وعلى النقيض
-                                من ذلك، تشتمل خدمات الإسعاف الجوي على استئجار كامل للطائرة وتجهيز طبي متكامل، وهو ما
-                                يرفع من إجمالي التكاليف.</p>
+                            <p class="ar-content"> 
+                               يعتمد حل النقل الأكثر ملاءمة على الحالة الصحية للمريض وليس على المسافة المقطوعة. تُعد عمليات النقل عبر النقالات الطبية التجارية مناسبة بشكل عام للمرضى المستقرين سريرياً ولكنهم غير قادرين على البقاء في وضع الجلوس أثناء الطيران. أما المرضى الذين يحتاجون إلى رعاية مركزة، أو دعم حياة متقدم، أو مراقبة مستمرة للرعاية الحرجة، فقد يتطلب وضعهم استخدام طائرة إسعاف جوي مخصصة. وتخضع كل حالة لمراجعة طبية دقيقة لتحديد النهج الأكثر أماناً قبل تأكيد السفر.
+                                </p>
                         </div>
                     </div>
                 </div>
