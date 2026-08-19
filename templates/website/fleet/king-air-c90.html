@@ -1,5 +1,5 @@
 {% extends 'website/layout/base.html' %}
-{% load static %}{% block title %}Regional Patient Air Ambulance Service in UAE{% endblock %}
+{% load static lang_tags %}{% block title %}Regional Patient Air Ambulance Service in UAE{% endblock %}
 {% block meta_description %}Bluedot’s King Air C90 supports fast air ambulance service in UAE with ICU & stretcher setup for short-range patient transfers.{% endblock %}
 {% block content %}
 
@@ -14,14 +14,14 @@
     <span class="en-content">
         <a href="{% url 'website:home' %}">Home</a>
         <span class="separator">/</span>
-        <a href="#">Fleet</a>
+        <a href="{% lang_url 'website:fleet_select' %}">Fleet</a>
         <span class="separator">/</span>
         <span class="active">King Air C90</span>
     </span>
     <span class="ar-content">
         <a href="{% url 'website:home' %}">الرئيسية</a>
         <span class="separator">/</span>
-        <a href="#">الأسطول</a>
+        <a href="{% lang_url 'website:fleet_select' %}">الأسطول</a>
         <span class="separator">/</span>
         <span class="active">كينغ إير C90</span>
     </span>

@@ -16,14 +16,14 @@ for safe patient travel.{% endblock %}
     <span class="en-content">
         <a href="{% url 'website:home' %}">Home</a>
         <span class="separator">/</span>
-        <a href="#">Services</a>
+        <a href="#" onclick="event.preventDefault(); document.getElementById('headerHamburger').click(); document.querySelector('.has-submenu[data-target=\'servicesMenu\']').click();">Services</a>
         <span class="separator">/</span>
         <span class="active">Medical Escort</span>
     </span>
     <span class="ar-content">
         <a href="{% url 'website:home' %}">الرئيسية</a>
         <span class="separator">/</span>
-        <a href="#">الخدمات</a>
+        <a href="#" onclick="event.preventDefault(); document.getElementById('headerHamburger').click(); document.querySelector('.has-submenu[data-target=\'servicesMenu\']').click();">الخدمات</a>
         <span class="separator">/</span>
         <span class="active">المرافقة الطبية</span>
     </span>
@@ -52,8 +52,8 @@ for safe patient travel.{% endblock %}
         <div class="container ">
           <div class="row">
                     <div class="col-md-4">
-                        <h2 class="info-tagline en-content">When medical escort support is the right option</h2>
-                        <h2 class="info-tagline ar-content">متى تكون المرافقة الطبية هي الخيار المناسب؟</h2>
+                        <h2 class="info-tagline en-content">What Medical Escort Services Involve</h2>
+                        <h2 class="info-tagline ar-content">ماذا تتضمن خدمات المرافق الطبي؟</h2>
 
                     </div>
                     <div class="col-md-2">
@@ -61,23 +61,11 @@ for safe patient travel.{% endblock %}
                     </div>
                     <div class="col-md-6">
                         <div class="info-description en-content">
-                            <p>Many patients are fit to travel on commercial airlines but require medical support,
-                                supervision, or reassurance during the journey.</p>
-                            <p>Medical escort services are designed for patients who can remain seated during travel but
-                                should not fly alone due to their medical condition, stage of recovery, age, or ongoing
-                                treatment needs.</p>
-                            <p>This service enables safe travel on scheduled flights, with professional medical
-                                supervision provided from departure through arrival.</p>
+                            <p>Medical escort services are designed for patients who can travel on scheduled commercial flights but benefit from professional medical supervision throughout their journey. The level of support is determined by the patient's condition and may involve a doctor, nurse, or paramedic accompanying the patient from departure until they safely reach their destination. Throughout the journey, the focus remains on maintaining comfort, responding to medical needs, and ensuring continuity of care while travelling.</p>
                         </div>
 
                         <div class="info-description ar-content">
-                            <p>يتمتع الكثير من المرضى بالقدرة الصحية على السفر جوّاً، لكنهم يظلون بحاجة إلى مساندة طبية،
-                                أو إشراف متخصص، أو دعم معنوي وتوجيهي طوال مسار الرحلة</p>
-                            <p>صُممت خدمات المرافقة الطبية للمرضى الذين يمكنهم البقاء في وضعية الجلوس أثناء السفر، ولكن
-                                لا ينبغي لهم الطيران بمفردهم بسبب حالتهم الطبية، أو مرحلة التعافي، أو العمر، أو احتياجات
-                                العلاج المستمر.</p>
-                            <p>تتيح هذه الخدمة السفر بأمان على الرحلات المجدولة مع إشراف طبي متخصص يرافق المريض من
-                                المغادرة وحتى الوصول</p>
+                            <p>تم تصميم خدمات المرافق الطبي للمرضى القادرين على السفر على متن رحلات الطيران التجارية المنتظمة، ولكنهم يحتاجون إلى إشراف طبي متخصص طوال رحلتهم. يتم تحديد مستوى الدعم بناءً على حالة المريض الصحية، وقد يشمل ذلك مرافقة طبيب، أو ممرض، أو مسعف للمريض منذ لحظة المغادرة وحتى وصوله بأمان إلى وجهته. وطوال الرحلة، يظل التركيز منصباً على الحفاظ على راحة المريض، والاستجابة لاحتياجاته الطبية، وضمان استمرارية الرعاية أثناء السفر.</p>
                         </div>
                     </div>
                 </div>
@@ -88,21 +76,18 @@ for safe patient travel.{% endblock %}
     <section class="coordination-section">
         <div class="container">
             <div class="coordination-header">
- <h2 class="coordination-title en-content">How medical escort support works</h2>
-                    <h2 class="coordination-title ar-content">خطوات ومراحل المرافقة الطبية</h2>
+ <h2 class="coordination-title en-content">Common Patient Scenarios</h2>
+                    <h2 class="coordination-title ar-content">الحالات والسيناريوهات الشائعة للمرضى</h2>
 
-                    <p class="coordination-subtitle en-content">Medical escort services focus on supervision,
-                        monitoring, and
-                        assistance ensuring the journey is safe, comfortable, and medically appropriate.</p>
+                    <p class="coordination-subtitle en-content">Medical escort services are appropriate when patients can travel independently on a commercial airline but should not undertake the journey without professional medical supervision.</p>
 
-                    <p class="coordination-subtitle ar-content">تمحور خدمات المرافقة الطبية حول ركائز الإشراف والمراقبة
-                        والمساندة المستمرة، لضمان إتمام الرحلة الجوية بأعلى معايير السلامة، والراحة، والملائمة الطبية
-                        للحالة</p>
+                    <p class="coordination-subtitle ar-content">تكون خدمات المرافق الطبي مناسبة عندما يكون بمقدور المرضى السفر بشكل مستقل على متن طائرة تجارية، ولكن لا ينبغي لهم القيام بالرحلة دون إشراف طبي متخصص.
+                        </p>
             </div>
 
           <div class="row coordination-grid">
                     <!-- Card 1 -->
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <div class="coordination-card">
                             <div class="card-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="148" height="183" viewBox="0 0 148 183"
@@ -126,21 +111,16 @@ for safe patient travel.{% endblock %}
                                         stroke="white" stroke-width="4" stroke-miterlimit="10" />
                                 </svg>
                             </div>
-                            <h3 class="card-title en-content">It begins with medical review</h3>
-                            <h3 class="card-title ar-content">مرحلة المراجعة الطبية</h3>
+                            <h3 class="card-title en-content">Recovery After Hospitalisation</h3>
+                            <h3 class="card-title ar-content">التعافي بعد الإقامة في المستشفى</h3>
 
-                            <p class="card-text en-content">Before travel, our medical team reviews
-                                the patient’s condition to confirm suitability for escort-based travel. This includes
-                                assessing stability, mobility, medication requirements, and any in-flight
-                                considerations.</p>
+                            <p class="card-text en-content">Patients returning home following surgery or medical treatment who require monitoring and assistance during travel.</p>
 
-                            <p class="card-text ar-content">قبل السفر، تراجع فرقنا الطبية حالة المريض للتأكد من ملاءمتها
-                                للسفر برفقة مرافقة طبية. ويتضمن ذلك تقييم الاستقرار الصحي، والقدرة على الحركة،
-                                والمتطلبات الدوائية، وأي اعتبارات خاصة أثناء الرحلة</p>
+                            <p class="card-text ar-content">المرضى العائدون إلى ديارهم بعد إجراء جراحة أو تلقي علاج طبي ويحتاجون إلى المراقبة والمساعدة أثناء السفر.</p>
                         </div>
                     </div>
                     <!-- Card 2 -->
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <div class="coordination-card">
                             <div class="card-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="193" height="159" viewBox="0 0 193 159"
@@ -150,22 +130,19 @@ for safe patient travel.{% endblock %}
                                         stroke="white" stroke-width="4" stroke-miterlimit="10" />
                                 </svg>
                             </div>
-                            <h3 class="card-title en-content">Then travel is coordinated</h3>
-                            <h3 class="card-title ar-content">تنسيق إجراءات السفر</h3>
+                            <h3 class="card-title en-content">Ongoing Medical Care</h3>
+                            <h3 class="card-title ar-content">الرعاية الطبية المستمرة</h3>
 
-                            <p class="card-text en-content">Once approved, we coordinate travel arrangements, airline
-                                notifications
-                                where required, and any medical equipment or medication needed during the flight.</p>
+                            <p class="card-text en-content">Patients travelling for specialist consultations, rehabilitation, or continuing treatment while requiring clinical supervision throughout the journey.</p>
 
 
-                            <p class="card-text ar-content">بمجرد اعتماد الحالة، يبدأ فريقنا في تنظيم كافة الترتيبات
-                                اللوجستية
-                                للسفر، بما في ذلك التنسيق المسبق مع شركات الطيران، وتأمين المعدات الطبية والاحتياجات
-                                العلاجية المطلوبة طوال فترة الطيران.</p>
+                            <p class="card-text ar-content">المرضى المسافرون لإجراء استشارات طبية متخصصة، أو إعادة تأهيل، أو مواصلة العلاج مع حاجتهم لإشراف سريري طوال الرحلة.
+                            
+                               </p>
                         </div>
                     </div>
                     <!-- Card 3 -->
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <div class="coordination-card">
                             <div class="card-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="198" height="194" viewBox="0 0 198 194"
@@ -186,17 +163,48 @@ for safe patient travel.{% endblock %}
                                         stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <h3 class="card-title en-content">Support throughout the journey</h3>
-                            <p class="card-text en-content">Patients are accompanied by qualified medical professionals
-                                such as
-                                doctors, or paramedics who provide monitoring, assistance, and reassurance throughout
-                                the flight.</p>
+                            <h3 class="card-title en-content">Elderly Travellers</h3>
+                            <p class="card-text en-content">Older adults requiring assistance with mobility, medication management, or reassurance during international travel.</p>
 
-                            <h3 class="card-title ar-content">تقديم الدعم طوال الرحلة</h3>
-                            <p class="card-text ar-content">يرافق المرضى فريق طبي مؤهل من الأطباء أو المسعفين لتقديم
-                                المتابعة والرعاية والدعم طوال الرحلة الجوية.</p>
+                            <h3 class="card-title ar-content">المسافرون من كبار السن</h3>
+                            <p class="card-text ar-content">كبار السن الذين يحتاجون إلى المساعدة في التنقل، أو إدارة الأدوية، أو الطمأنينة أثناء السفر الدولي.
+                                </p>
                         </div>
                     </div>
+
+
+
+                      <div class="col-lg-3">
+                        <div class="coordination-card">
+                            <div class="card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="198" height="194" viewBox="0 0 198 194"
+                                    fill="none">
+                                    <path
+                                        d="M106.45 42.631C117.655 42.631 126.739 33.5355 126.739 22.3155C126.739 11.0956 117.655 2 106.45 2C95.2448 2 86.1611 11.0956 86.1611 22.3155C86.1611 33.5355 95.2448 42.631 106.45 42.631Z"
+                                        stroke="white" stroke-width="4" stroke-miterlimit="10" />
+                                    <path
+                                        d="M63.9756 99.2821V81.1913C63.9756 67.8206 76.8105 56.9814 92.6468 56.9814L106.158 67.3017L120.259 56.9814C136.095 56.9814 148.93 67.8206 148.93 81.1913V99.2821"
+                                        stroke="white" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" />
+                                    <path
+                                        d="M30.9512 191.085L49.5681 171.992C52.7317 168.748 57.0491 166.898 61.5737 166.848L127.817 166.112C130.133 166.085 132.359 165.187 134.045 163.599L193.87 107.219C196.317 104.913 195.669 100.865 192.627 99.444L187.552 97.0704C181.13 94.065 173.573 94.8502 167.908 99.1191L139.367 120.603"
+                                        stroke="white" stroke-width="4" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M2 149.029L34.3576 118.618C34.3576 118.618 60.7529 95.8842 89.9875 118.05H114.445C122.881 118.05 130.259 123.749 132.399 131.921L133.31 135.401C133.941 137.801 132.133 140.152 129.65 140.152L80.8976 140.216"
+                                        stroke="white" stroke-width="4" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <h3 class="card-title en-content">Children Requiring Medical Support</h3>
+                            <p class="card-text en-content">Children travelling for specialist treatment or returning home after care who benefit from dedicated medical supervision throughout the journey.</p>
+
+                            <h3 class="card-title ar-content">الأطفال الذين يحتاجون إلى دعم طبي</h3>
+                            <p class="card-text ar-content">الأطفال المسافرون لتلقي علاج متخصص أو العائدون إلى ديارهم بعد تلقي الرعاية والذين يستفيدون من الإشراف الطبي المخصص طوال الرحلة.
+                                </p>
+                        </div>
+                    </div>
+
+                 
                 </div>
         </div>
     </section>
@@ -208,8 +216,8 @@ for safe patient travel.{% endblock %}
 
                 <div class="row">
                     <div class="col-md-5">
-                        <h2 class="info-tagline en-content">Who medical escort services are for</h2>
-                        <h2 class="info-tagline ar-content">لمن صُممت خدمات المرافقة الطبية؟</h2>
+                        <h2 class="info-tagline en-content">When Medical Escort Is the Right Choice</h2>
+                        <h2 class="info-tagline ar-content">متى يكون المرافق الطبي هو الخيار الصحيح؟</h2>
 
                     </div>
                     <div class="col-md-2">
@@ -218,19 +226,8 @@ for safe patient travel.{% endblock %}
                     <div class="col-md-5">
                         <div class="info-description">
                             <!-- <p>Medical escort services are commonly used for:</p> -->
-                            <ul class="custom-list en-content">
-                                <li>Patients recovering from surgery or illness</li>
-                                <li>Elderly patients requiring supervision during travel</li>
-                                <li>Patients travelling for ongoing treatment or follow-up care</li>
-                                <li>Individuals who should not fly unaccompanied for medical reasons</li>
-                            </ul>
-
-                            <ul class="custom-list ar-content">
-                                <li>حالات الاستشفاء بعد العمليات الجراحية أو الوعكات الصحية الحادة</li>
-                                <li>كبار السن الذين يحتاجون إلى إشراف طبي أثناء السفر</li>
-                                <li>المرضى المسافرون لتلقي علاج مستمر أو رعاية المتابعة</li>
-                                <li>الحالات التي لا يُنصح بسفرها دون مرافقة طبية</li>
-                            </ul>
+                           <p class="en-content">Medical escort services are often recommended for patients recovering from surgery, receiving ongoing treatment, or travelling after illness when reassurance and medical supervision are needed during the journey. Where a patient's condition requires specialised equipment, stretcher positioning, or intensive medical care, alternative transport options such as commercial stretcher transfer or air ambulance services may be more appropriate. Our medical team assesses every case individually before recommending the safest solution.</p>
+                           <p class="ar-content">غالباً ما يُوصى بخدمات المرافق الطبي للمرضى الذين يتعافون من العمليات الجراحية، أو يتلقون علاجاً مستمراً، أو المسافرين بعد التعافي من مرض ما، عندما تكون الطمأنينة والإشراف الطبي مطلوبين أثناء الرحلة. وفي الحالات التي تتطلب فيها حالة المريض معدات متخصصة، أو وضعية الاستلقاء على نقالة، أو رعاية طبية مركزة، تكون خيارات النقل البديلة مثل النقل عبر النقالة الطبية التجارية أو خدمات الإسعاف الجوي هي الأكثر ملاءمة. ويقوم فريقنا الطبي بتقييم كل حالة بشكل فردي قبل التوصية بالحل الأكثر أماناً.</p>
                         </div>
                     </div>
                 </div>
@@ -298,6 +295,230 @@ for safe patient travel.{% endblock %}
     </section>
 
 
+     <!-- ========== FAQ SECTION ========== -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <div class="row">
+                    <!-- Left Content -->
+                    <div class="col-lg-5 mb-5 mb-lg-0">
+                        <span class="faq-subtitle en-content">Frequently Asked Questions</span>
+                        <span class="faq-subtitle ar-content">الأسئلة الشائعة
+                        </span>
+
+                        <h2 class="faq-heading en-content">What else do you<br>need to know?</h2>
+                        <h2 class="faq-heading ar-content">ما الذي تحتاج إلى معرفته أيضاً؟
+                        </h2>
+
+                    </div>
+                    <!-- Right Accordion -->
+                    <div class="col-lg-7">
+                        <div class="accordion faq-accordion" id="faqAccordion">
+
+                            <!-- Item 1 -->
+                            <div class="accordion-item faq-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed faq-button en-content" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
+                                        aria-controls="collapseOne">
+                                      What is a Medical Escort service?
+                                    </button>
+                                    <button class="accordion-button collapsed faq-button ar-content" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
+                                        aria-controls="collapseOne">
+                                    ما هي خدمة المرافق الطبي؟
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body faq-body en-content">
+                                      A Medical Escort service provides professional medical supervision for patients travelling on scheduled commercial airlines. Depending on the patient's medical condition, a qualified doctor, nurse, or paramedic accompanies the patient throughout the journey to provide continuity of care, manage anticipated medical needs, and respond to medical situations within the limits of the onboard environment.
+                                    </div>
+                                    <div class="accordion-body faq-body ar-content">
+                                   توفر خدمة المرافق الطبي إشرافاً طبياً متخصصاً للمرضى المسافرين على متن الرحلات الجوية التجارية المنتظمة. ووفقاً للحالة الصحية للمريض، يرافقه طبيب أو ممرض أو مسعف مؤهل طوال الرحلة لضمان استمرارية الرعاية، والتعامل مع الاحتياجات الطبية المتوقعة، والاستجابة للحالات الطبية ضمن الإمكانات المتاحة أثناء الرحلة الجوية.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="accordion-item faq-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed faq-button en-content" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                        aria-controls="collapseTwo">
+                                     Who is suitable for a Medical Escort service?
+                                    </button>
+                                    <button class="accordion-button collapsed faq-button ar-content" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                        aria-controls="collapseTwo">
+                                       لمن تُناسب خدمة المرافق الطبي؟
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body faq-body en-content">
+                                      Medical Escort services are generally suitable for patients who are medically stable and able to travel on a commercial flight but require professional medical supervision or assistance throughout their journey. Suitability is confirmed through a fitness-to-fly assessment and, where required, medical clearance from the airline before travel.
+                                    </div>
+                                    <div class="accordion-body faq-body ar-content">
+                                      تُعد خدمة المرافق الطبي مناسبة بشكل عام للمرضى المستقرين طبياً والقادرين على السفر على متن الرحلات الجوية التجارية، لكنهم يحتاجون إلى إشراف أو دعم طبي متخصص طوال الرحلة. ويتم تحديد مدى ملاءمة السفر من خلال تقييم اللياقة الطبية للطيران، وعند الحاجة، الحصول على الموافقة الطبية من شركة الطيران قبل السفر.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div class="accordion-item faq-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed faq-button en-content" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                   What healthcare professionals can accompany the patient?
+                                    </button>
+                                    <button class="accordion-button collapsed faq-button ar-content" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        من هم المختصون الطبيون الذين يمكنهم مرافقة المريض؟
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body faq-body en-content">
+                                   The level of medical escort is determined following a pre-transfer medical assessment. Depending on the patient's condition and medical needs, the escort may be a doctor, registered nurse, or paramedic experienced in patient transport and medical care during travel.
+                                    </div>
+                                    <div class="accordion-body faq-body ar-content">
+                                       يتم تحديد مستوى المرافقة الطبية بعد إجراء تقييم طبي قبل النقل. وبناءً على الحالة الصحية واحتياجات المريض، قد يكون المرافق طبيباً، أو ممرضاً مسجلاً، أو مسعفاً يتمتع بخبرة في نقل المرضى وتقديم الرعاية الطبية أثناء السفر.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 4 -->
+                            <div class="accordion-item faq-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed faq-button en-content" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                       How is a Medical Escort different from a Commercial Stretcher Transfer?
+                                    </button>
+                                    <button class="accordion-button collapsed faq-button ar-content" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                     ما الفرق بين خدمة المرافق الطبي وخدمة النقل عبر النقالة الطبية في الرحلات التجارية؟
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body faq-body en-content">
+                                       Medical Escort services are designed for patients who can remain seated during a commercial flight but require professional medical supervision throughout their journey. Commercial Stretcher Transfer is intended for patients who are medically stable but are unable to travel in a seated position and require a stretcher during the flight. These transfers require advance airline approval, and in most cases, a medical escort accompanies the patient throughout the journey.
+                                    </div>
+                                    <div class="accordion-body faq-body ar-content">
+                                      تُخصص خدمة المرافق الطبي للمرضى القادرين على الجلوس أثناء الرحلة الجوية، لكنهم يحتاجون إلى إشراف طبي متخصص طوال الرحلة. أما خدمة النقل عبر النقالة الطبية فهي مخصصة للمرضى المستقرين طبياً الذين لا يستطيعون السفر في وضعية الجلوس ويحتاجون إلى نقالة طبية أثناء الرحلة. وتتطلب هذه الخدمة موافقة مسبقة من شركة الطيران، وفي معظم الحالات يرافق المريض مختص طبي طوال الرحلة.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 5 -->
+                            <div class="accordion-item faq-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed faq-button en-content" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+                                        aria-controls="collapseFive">
+                              When would an Air Ambulance be recommended instead of a Medical Escort?
+                                    </button>
+                                    <button class="accordion-button collapsed faq-button ar-content" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+                                        aria-controls="collapseFive">
+                                   متى يُوصى باستخدام الإسعاف الجوي بدلاً من خدمة المرافق الطبي؟
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body faq-body en-content">
+                                       Patients requiring intensive care, advanced life support, mechanical ventilation, specialised medical equipment, or time-sensitive medical transport may require a dedicated Air Ambulance. Every patient is medically assessed to determine the safest and most appropriate transport solution.
+                                    </div>
+                                    <div class="accordion-body faq-body ar-content">
+                                     قد يحتاج المرضى الذين يتطلبون رعاية مركزة، أو دعماً متقدماً للحياة، أو أجهزة تنفس اصطناعي، أو معدات طبية متخصصة، أو نقلاً طبياً عاجلاً إلى استخدام طائرة إسعاف جوي مخصصة. ويخضع كل مريض لتقييم طبي لتحديد وسيلة النقل الأكثر أماناً وملاءمة لحالته.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 6 -->
+                            <div class="accordion-item faq-item">
+                                <h2 class="accordion-header" id="headingSix">
+                                    <button class="accordion-button collapsed faq-button en-content" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false"
+                                        aria-controls="collapseSix">
+                                   Can Medical Escort services be arranged for international travel?
+                                    </button>
+                                    <button class="accordion-button collapsed faq-button ar-content" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false"
+                                        aria-controls="collapseSix">
+                                   هل يمكن ترتيب خدمة المرافق الطبي للسفر الدولي؟
+                                    </button>
+                                </h2>
+                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body faq-body en-content">
+                                      Yes. Medical Escort services can be arranged for both domestic and international travel, subject to medical assessment, airline requirements, and destination regulations. All services are coordinated under Bluedot's clinical governance and medical direction to ensure consistent standards of patient care.
+                                    </div>
+                                    <div class="accordion-body faq-body ar-content">
+                                نعم، يمكن ترتيب خدمات المرافق الطبي للرحلات المحلية والدولية، وذلك وفقاً للتقييم الطبي، ومتطلبات شركات الطيران، ولوائح دولة الوجهة. وتُدار جميع الخدمات تحت الإشراف الطبي والحوكمة السريرية الخاصة ببلودوت لضمان تقديم رعاية طبية متسقة وعالية الجودة.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 7 -->
+                            <div class="accordion-item faq-item">
+                                <h2 class="accordion-header" id="headingSeven">
+                                    <button class="accordion-button collapsed faq-button en-content" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false"
+                                        aria-controls="collapseSeven">
+                                        How is the most appropriate medical transport solution determined?
+                                    </button>
+                                    <button class="accordion-button collapsed faq-button ar-content" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false"
+                                        aria-controls="collapseSeven">
+                                        كيف يتم تحديد وسيلة النقل الطبي الأنسب؟
+                                    </button>
+                                </h2>
+                                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body faq-body en-content">
+                                        Every patient undergoes an individual medical assessment before travel. Our medical team reviews the patient's medical condition, travel requirements, mobility, oxygen needs, airline requirements, and fitness to fly before recommending the most appropriate transport solution. Where appropriate, we also coordinate with the patient's treating physician to ensure continuity of care throughout the journey.
+                                    </div>
+                                    <div class="accordion-body faq-body ar-content">
+                                        يخضع كل مريض لتقييم طبي فردي قبل السفر، حيث يقوم فريقنا الطبي بمراجعة الحالة الصحية للمريض، ومتطلبات الرحلة، والقدرة على الحركة، والاحتياج إلى الأكسجين، ومتطلبات شركة الطيران، ومدى اللياقة الطبية للطيران قبل التوصية بوسيلة النقل الطبي الأنسب. وعند الحاجة، يتم التنسيق أيضاً مع الطبيب المعالج لضمان استمرارية الرعاية طوال الرحلة.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 8 -->
+                            <div class="accordion-item faq-item">
+                                <h2 class="accordion-header" id="headingEight">
+                                    <button class="accordion-button collapsed faq-button en-content" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false"
+                                        aria-controls="collapseEight">
+                                        Why choose Bluedot Medical Escort Services?
+                                    </button>
+                                    <button class="accordion-button collapsed faq-button ar-content" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false"
+                                        aria-controls="collapseEight">
+                                        لماذا تختار خدمات المرافق الطبي من بلودوت؟
+                                    </button>
+                                </h2>
+                                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body faq-body en-content">
+                                        Bluedot provides medically coordinated travel supported by experienced healthcare professionals, comprehensive clinical assessment, and end-to-end journey management. Every transfer is carefully planned to prioritise patient safety, comfort, and continuity of care throughout every stage of the journey.
+                                    </div>
+                                    <div class="accordion-body faq-body ar-content">
+                                        تقدم بلودوت خدمات المرافق الطبي من خلال تنسيق طبي متكا
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 <section class="pb-50">
             <div class="container">
