@@ -39,10 +39,10 @@
                             {% if post.time_to_read_ar %}&ndash; {{ post.time_to_read_ar }}{% elif post.time_to_read %}&ndash; {{ post.time_to_read }} قراءة{% endif %}
                         </span>
                     </p>
-                    <h3>
+                    <h1>
                         <span class="en-content">{{ post.title }}</span>
                         <span class="ar-content">{{ post.title_ar|default:post.title }}</span>
-                    </h3>
+                    </h1>
                     <div class="mt-4">
                         {% if post.category %}
                         <a href="{% url 'website:blogs' %}?category={{ post.category.slug }}">
