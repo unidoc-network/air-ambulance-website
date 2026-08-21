@@ -106,6 +106,10 @@ class Blogs(BaseModel, ImageCompressMixin):
     tag = models.CharField(max_length=100, null=True, blank=True)  # e.g. "Food Story"
     slug = AutoSlugField(populate_from="title", null=True, blank=True, unique=True)
     sequence = models.IntegerField(default=9999, verbose_name="Sequence Order")
+    
+    # SEO Meta Fields
+    meta_title = models.CharField(max_length=255, null=True, blank=True, verbose_name="Meta Title (EN)")
+    meta_description = models.TextField(null=True, blank=True, verbose_name="Meta Description (EN)")
 
     class Meta:
         verbose_name = "News & Story"

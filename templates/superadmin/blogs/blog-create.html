@@ -92,6 +92,22 @@
                                         <label class="form-label">وقت القراءة (عربي) <small class="text-muted">(اختياري)</small></label>
                                         <input type="text" class="form-control text-end" placeholder="مثال: 5 دقائق قراءة" name="time_to_read_ar" value="{{data.time_to_read_ar}}" dir="rtl">
                                     </div>
+                                    <!-- SEO Fields -->
+                                    <div class="col-12 mt-3">
+                                        <h5 class="mb-3">SEO Meta Details</h5>
+                                    </div>
+
+                                    <!-- Meta Title (EN) -->
+                                    <div class="form-group col-lg-12 col-12">
+                                        <label class="form-label">Meta Title <small class="text-muted">(optional)</small></label>
+                                        <input type="text" class="form-control" placeholder="Enter meta title" name="meta_title" value="{{data.meta_title|default_if_none:''}}">
+                                    </div>
+
+                                    <!-- Meta Description (EN) -->
+                                    <div class="form-group col-lg-12 col-12">
+                                        <label class="form-label">Meta Description <small class="text-muted">(optional)</small></label>
+                                        <textarea class="form-control" rows="3" placeholder="Enter meta description" name="meta_description">{{data.meta_description|default_if_none:''}}</textarea>
+                                    </div>
 
                                 </div>
                             </div>

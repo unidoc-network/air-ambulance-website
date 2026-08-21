@@ -417,6 +417,8 @@ class NewsAdd(LoginRequiredMixin, View):
             data.time_to_read = request.POST.get('time_to_read') or None
             data.time_to_read_ar = request.POST.get('time_to_read_ar') or None
             data.tag = request.POST.get('tag')
+            data.meta_title = request.POST.get('meta_title')
+            data.meta_description = request.POST.get('meta_description')
 
             category_id = request.POST.get('category')
             if category_id:

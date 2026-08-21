@@ -66,6 +66,8 @@ urlpatterns = [
     path('medical-team/dr-mohammed-afsal/', RedirectView.as_view(url='/about/', permanent=True), name='redirect_dr_afsal'),
     path('medical-team/dr-dagemawi-tesefaye/', RedirectView.as_view(url='/about/', permanent=True), name='redirect_dr_dagemawi'),
     path('air-ambulance-abu-dhabi/', RedirectView.as_view(url='/contact/', permanent=True), name='redirect_abudhabi'),
+    path('air-ambulance/Rotary-Wing-Services/', RedirectView.as_view(url='/air-ambulance/helicopter-air-ambulance/', permanent=True), name='redirect_rotary_wing'),
+    path('Rotary-Wing-Services/', RedirectView.as_view(url='/air-ambulance/helicopter-air-ambulance/', permanent=True), name='redirect_rotary_wing_short'),
 ]
 
 handler404 = views.error_404
