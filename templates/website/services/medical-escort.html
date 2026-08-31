@@ -1,7 +1,6 @@
 {% extends 'website/layout/base.html' %}
-{% load static %}{% block title %}Best Medical Escort Services | UAE, Dubai, MENA, Asia | Bluedot{% endblock %}
-{% block meta_description %}Medical escort services across the UAE, MENA and Asia with trained healthcare professionals
-for safe patient travel.{% endblock %}
+{% load static %}{% block title %}{% if LANGUAGE_CODE == 'ar' %}خدمات المرافقة الطبية الدولية | الخليج والوجهات الدولية{% else %}International Medical Escort Services | GCC & Worldwide{% endif %}{% endblock %}
+{% block meta_description %}{% if LANGUAGE_CODE == 'ar' %}تقدم بلو دوت خدمات المرافقة الطبية مع أطباء وممرضين متخصصين لمساندة المرضى أثناء السفر عبر الإمارات والسعودية ودول الخليج والوجهات الدولية.{% else %}Bluedot provides medical escort services with flight nurses and physicians for safe patient travel across UAE, KSA, GCC and worldwide.{% endif %}{% endblock %}
 {% block content %}
 
 <main class="air-ambulance-page">

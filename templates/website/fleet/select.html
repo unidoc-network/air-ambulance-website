@@ -1,7 +1,6 @@
 {% extends 'website/layout/base.html' %}
-{% load static %}{% block title %}Our Medical Fleet | Bluedot Air Ambulance{% endblock %}
-{% block meta_description %}Explore Bluedot's fleet of medically equipped aircraft for air ambulance and patient
-transport services.{% endblock %}
+{% load static %}{% block title %}{% if LANGUAGE_CODE == 'ar' %}أسطول الإسعاف الجوي | طائرات طبية للنقل داخل الخليج ودوليًا{% else %}Air Ambulance Fleet | Medical Jets for GCC & Global{% endif %}{% endblock %}
+{% block meta_description %}{% if LANGUAGE_CODE == 'ar' %}تعرف على أسطول بلو دوت من طائرات الإسعاف الجوي المجهزة للعناية المركزة لنقل المرضى داخل الخليج وإلى الوجهات الدولية.{% else %}Explore Bluedot’s ICU-equipped air ambulance fleet for regional and long-range patient transfers across the GCC and worldwide.{% endif %}{% endblock %}
 {% block content %}
 
 <!-- ========== FLEET BANNER SLIDER ========== -->

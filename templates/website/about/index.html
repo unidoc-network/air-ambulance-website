@@ -1,7 +1,7 @@
 {% extends 'website/layout/base.html' %}
 {% load static %}
-{% block title %}About Us | Air Ambulance | Bluedot{% endblock %}
-{% block meta_description %}About Bluedot Air Ambulance, a medical evacuation and patient transfer service provider based in the UAE.{% endblock %}
+{% block title %}{% if LANGUAGE_CODE == 'ar' %}عن بلو دوت | خبراء النقل الطبي الدولي{% else %}About Bluedot | Global Medical Transport Experts{% endif %}{% endblock %}
+{% block meta_description %}{% if LANGUAGE_CODE == 'ar' %}تعرف على خبرة بلو دوت في خدمات الإسعاف الجوي والنقل الطبي الدولي وتنسيق نقل المرضى بأمان عبر دول الخليج والوجهات الدولية.{% else %}Learn about Bluedot’s air ambulance and international medical transport expertise, supporting safe patient transfers across the GCC and worldwide.{% endif %}{% endblock %}
 {% block content %}
 
 <section class="about-banner">

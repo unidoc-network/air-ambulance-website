@@ -1,6 +1,6 @@
 {% extends 'website/layout/base.html' %}
-{% load static %}{% block title %}Helicopter Medical Transport Service in UAE{% endblock %}
-{% block meta_description %}Bluedot provides rotary wing air ambulance service and helicopter medical transport in UAE for hospital, offshore, industrial, and remote patient transfers.{% endblock %}
+{% load static %}{% block title %}{% if LANGUAGE_CODE == 'ar' %}خدمات الإسعاف الجوي بالمروحيات | بلو دوت{% else %}Helicopter Air Ambulance & Rotary Wing Medical Transport{% endif %}{% endblock %}
+{% block meta_description %}{% if LANGUAGE_CODE == 'ar' %}تقدم بلو دوت خدمات HEMS والإسعاف الجوي بالمروحيات في الإمارات والسعودية لدعم المهام البحرية والحكومية وقطاعات الطاقة والحالات الحرجة.{% else %}Bluedot provides HEMS and helicopter air ambulance services across the UAE and Saudi Arabia for offshore, government, energy and critical missions.{% endif %}{% endblock %}
 {% block content %}
 
 <main class="air-ambulance-page">

@@ -1,6 +1,6 @@
 {% extends 'website/layout/base.html' %}
-{% load static lang_tags %}{% block title %}Regional Patient Air Ambulance Service in UAE{% endblock %}
-{% block meta_description %}Bluedot’s King Air C90 supports fast air ambulance service in UAE with ICU & stretcher setup for short-range patient transfers.{% endblock %}
+{% load static lang_tags %}{% block title %}{% if LANGUAGE_CODE == 'ar' %}طائرة الإسعاف الجوي كينغ إير C90 | رحلات طبية إقليمية{% else %}King Air C90 Air Ambulance | Regional Medical Jet{% endif %}{% endblock %}
+{% block meta_description %}{% if LANGUAGE_CODE == 'ar' %}تعرف على طائرة كينغ إير C90 للرحلات الطبية وتجهيزات المقصورة وقدرتها على نقل المرضى ومدى تشغيلها.{% else %}Explore the King Air C90 air ambulance for regional medical flights, including cabin configuration, patient capability and operational range.{% endif %}{% endblock %}
 {% block content %}
 
 <!-- ========== CHALLENGER HERO BANNER ========== -->

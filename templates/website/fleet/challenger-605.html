@@ -1,6 +1,6 @@
 {% extends 'website/layout/base.html' %}
-{% load static lang_tags %}{% block title %}Challenger 605 Air Ambulance Aircraft | Bluedot{% endblock %}
-{% block meta_description %}Bluedot’s Bombardier Challenger 605 offers ICU & stretcher air ambulance service in UAE for safe long-range patient transport.{% endblock %}
+{% load static lang_tags %}{% block title %}{% if LANGUAGE_CODE == 'ar' %}طائرة الإسعاف الجوي تشالنجر 605 | طائرة طبية بعيدة المدى{% else %}Challenger 605 Air Ambulance | Long-Range Medical Jet{% endif %}{% endblock %}
+{% block meta_description %}{% if LANGUAGE_CODE == 'ar' %}تعرف على طائرة تشالنجر 605 للإسعاف الجوي، وتجهيزات العناية المركزة، وإمكانات المقصورة ونطاق استخدامها في نقل المرضى لمسافات طويلة.{% else %}Explore the Challenger 605 air ambulance, including its ICU configuration, cabin capability and long-range patient transfer use across the GCC and worldwide.{% endif %}{% endblock %}
 {% block content %}
 
 <!-- ========== CHALLENGER HERO BANNER ========== -->

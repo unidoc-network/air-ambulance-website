@@ -1,6 +1,6 @@
 {% extends 'website/layout/base.html' %}
-{% load static %}{% block title %}Air Ambulance Services MENA | Asia | Bluedot{% endblock %}
-{% block meta_description %}24/7 air ambulance service equipped with medical facilities, doctors and support for hospital transfers and repatriation.{% endblock %}
+{% load static %}{% block title %}{% if LANGUAGE_CODE == 'ar' %}خدمات الإسعاف الجوي للحالات الحرجة | الخليج والوجهات الدولية{% else %}Critical Care Air Ambulance Services | GCC & Worldwide{% endif %}{% endblock %}
+{% block meta_description %}{% if LANGUAGE_CODE == 'ar' %}تقدم بلو دوت خدمات الإسعاف الجوي للحالات الحرجة، والنقل الطبي للعناية المركزة، والإخلاء الطبي عبر الإمارات والسعودية ودول الخليج والوجهات الدولية.{% else %}Bluedot provides critical care air ambulance, ICU medical transport and medical evacuation across the UAE, KSA, GCC and worldwide destinations.{% endif %}{% endblock %}
 {% block content %}
 
 <main class="air-ambulance-page">
