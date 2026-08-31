@@ -1,6 +1,6 @@
 {% extends 'website/layout/base.html' %}
-{% load static %}{% block title %}Book For Best Commercial Airline Stretcher Service | Bluedot{% endblock %}
-{% block meta_description %}Commercial airline stretcher services for patients who need medical support during scheduled flight travel.{% endblock %}
+{% load static %}{% block title %}{% if LANGUAGE_CODE == 'ar' %}نقل المرضى عبر الرحلات التجارية والرحلات الطبية{% else %}Commercial Stretcher Transfer & Medical Flights{% endif %}{% endblock %}
+{% block meta_description %}{% if LANGUAGE_CODE == 'ar' %}تنسق بلو دوت نقل المرضى على نقالة طبية عبر الرحلات التجارية، مع الموافقات الطبية لشركات الطيران والإشراف الطبي عبر الخليج والوجهات الدولية.{% else %}Bluedot coordinates commercial stretcher transfer, airline medical approvals and supervised medical flights across the GCC and worldwide.{% endif %}{% endblock %}
 {% block content %}
 
 <main class="air-ambulance-page">

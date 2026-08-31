@@ -1,6 +1,6 @@
 {% extends 'website/layout/base.html' %}
-{% load static %}{% block title %}Careers | Join Bluedot Air Ambulance{% endblock %}
-{% block meta_description %}Explore career opportunities at Bluedot Air Ambulance across medical, aviation and operational teams.{% endblock %}
+{% load static %}{% block title %}{% if LANGUAGE_CODE == 'ar' %}وظائف في الإسعاف الجوي | انضم إلى فريق بلو دوت{% else %}Air Ambulance Careers | Join Bluedot’s Global Team{% endif %}{% endblock %}
+{% block meta_description %}{% if LANGUAGE_CODE == 'ar' %}اكتشف فرص العمل في مجال الإسعاف الجوي لدى بلو دوت ضمن فرق الرعاية الطبية والطيران والعمليات وتنسيق نقل المرضى عبر الخليج والوجهات الدولية.{% else %}Explore air ambulance careers with Bluedot across medical, aviation, operations and patient coordination teams supporting GCC and global missions.{% endif %}{% endblock %}
 {% block content %}
 <link rel="stylesheet" href="{% static 'website/css/roles.css' %}">
 

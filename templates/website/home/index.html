@@ -1,6 +1,6 @@
 {% extends 'website/layout/base.html' %}
-{% load static %}{% block title %}24/7 Air Ambulance Services | Dubai, UAE, Abu Dhabi | Bluedot	{% endblock %}
-{% block meta_description %}Bluedot provides 24/7 air ambulance and medical evacuation services across Dubai, the UAE, MENA, Asia and worldwide.{% endblock %}
+{% load static %}{% block title %}{% if LANGUAGE_CODE == 'ar' %}خدمات الإسعاف الجوي والنقل الطبي | بلو دوت{% else %}Air Ambulance & Medical Transport Services | Bluedot{% endif %}{% endblock %}
+{% block meta_description %}{% if LANGUAGE_CODE == 'ar' %}تقدم بلو دوت خدمات الإسعاف الجوي، والنقل الطبي للحالات الحرجة، والإخلاء الطبي، ونقل المرضى دوليًا عبر دول الخليج وإلى وجهات دولية.{% else %}Bluedot provides premium air ambulance, critical care transport, medical evacuation and international patient transfer across the GCC and worldwide.{% endif %}{% endblock %}
 {% block content %}
 
 <!-- ========== HERO BANNER SLIDER SECTION ========== -->

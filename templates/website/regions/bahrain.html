@@ -1,6 +1,6 @@
 {% extends 'website/layout/base.html' %}
-{% load static %}{% block title %}24/7 Air Ambulance Service | Bahrain | Middle East | ASIA{% endblock %}
-{% block meta_description %}Air ambulance service in Bahrain for medical evacuation, repatriation and safe patient transport.{% endblock %}
+{% load static %}{% block title %}{% if LANGUAGE_CODE == 'ar' %}الإسعاف الجوي في البحرين | الإخلاء الطبي الجوي{% else %}Air Ambulance Bahrain | GCC Medical Evacuation{% endif %}{% endblock %}
+{% block meta_description %}{% if LANGUAGE_CODE == 'ar' %}تنسق بلو دوت خدمات الإسعاف الجوي في البحرين للإخلاء الطبي والإعادة الطبية إلى الوطن ونقل المرضى داخل الخليج وعلى الرحلات الدولية الطويلة.{% else %}Bluedot provides air ambulance coordination in Bahrain for medical evacuation, patient repatriation and GCC or long-distance international transfers.{% endif %}{% endblock %}
 {% block content %}
 
 <main class="air-ambulance-page">

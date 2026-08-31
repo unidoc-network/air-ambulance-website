@@ -1,6 +1,6 @@
 {% extends 'website/layout/base.html' %}
-{% load static lang_tags %}{% block title %}Regional Air Ambulance Service in UAE{% endblock %}
-{% block meta_description %}Bluedot’s Beechcraft King Air B200 supports ICU & stretcher air ambulance service in UAE for rapid regional patient transfers.{% endblock %}
+{% load static lang_tags %}{% block title %}{% if LANGUAGE_CODE == 'ar' %}طائرة الإسعاف الجوي كينغ إير B200 | نقل طبي إقليمي{% else %}King Air B200 Air Ambulance | Regional Medical Jet{% endif %}{% endblock %}
+{% block meta_description %}{% if LANGUAGE_CODE == 'ar' %}تعرف على طائرة كينغ إير B200 للإسعاف الجوي وتجهيزاتها الطبية وإمكانات المقصورة ومدى استخدامها في نقل المرضى إقليميًا.{% else %}Explore the King Air B200 air ambulance for regional patient transfers, including medical configuration, cabin capability and operational range.{% endif %}{% endblock %}
 {% block content %}
 
 <!-- ========== CHALLENGER HERO BANNER ========== -->

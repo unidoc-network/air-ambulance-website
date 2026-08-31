@@ -1,7 +1,6 @@
 {% extends 'website/layout/base.html' %}
-{% load static %}{% block title %}24/7 Air Ambulance Service Oman | Muscat | Get A Quote{% endblock %}
-{% block meta_description %}Air ambulance service in Oman and Muscat with medical evacuation support and patient
-transfer services.{% endblock %}
+{% load static %}{% block title %}{% if LANGUAGE_CODE == 'ar' %}الإسعاف الجوي في عُمان | الإخلاء الطبي الجوي{% else %}Air Ambulance Oman | GCC Medical Evacuation{% endif %}{% endblock %}
+{% block meta_description %}{% if LANGUAGE_CODE == 'ar' %}تنسق بلو دوت خدمات الإسعاف الجوي في عُمان للإخلاء الطبي العاجل، والإعادة الطبية إلى الوطن، ونقل المرضى داخل الخليج وإلى الوجهات الدولية.{% else %}Bluedot provides air ambulance coordination in Oman for urgent medical evacuation, patient repatriation and regional or international medical transfers.{% endif %}{% endblock %}
 {% block content %}
 
 <main class="air-ambulance-page">

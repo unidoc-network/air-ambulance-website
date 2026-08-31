@@ -1,7 +1,6 @@
 {% extends 'website/layout/base.html' %}
-{% load static %}{% block title %}24/7 Air Ambulance Service Saudi Arabia | Jeddah{% endblock %}
-{% block meta_description %}Air ambulance service in Saudi Arabia and Jeddah for medical evacuation and patient
-repatriation.{% endblock %}
+{% load static %}{% block title %}{% if LANGUAGE_CODE == 'ar' %}الإسعاف الجوي في السعودية | الإخلاء الطبي الجوي{% else %}Air Ambulance Saudi Arabia | KSA Medical Evacuation{% endif %}{% endblock %}
+{% block meta_description %}{% if LANGUAGE_CODE == 'ar' %}تنسق بلو دوت خدمات الإسعاف الجوي والإخلاء الطبي في السعودية، بما يشمل نقل المرضى والإعادة الطبية إلى الوطن والرحلات الطبية داخل الخليج ودوليًا.{% else %}Bluedot coordinates air ambulance and medical evacuation in Saudi Arabia, including KSA patient transfers, repatriation and GCC or international transport.{% endif %}{% endblock %}
 {% block content %}
 
 <main class="air-ambulance-page">

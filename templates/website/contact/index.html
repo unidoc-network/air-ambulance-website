@@ -1,6 +1,6 @@
 {% extends 'website/layout/base.html' %}
-{% load static %}{% block title %}Contact Us For Air Ambulance Services | Bluedot{% endblock %}
-{% block meta_description %}Contact Bluedot for air ambulance booking, patient transfer enquiries and emergency medical evacuation support.{% endblock %}
+{% load static %}{% block title %}{% if LANGUAGE_CODE == 'ar' %}تواصل مع بلو دوت | الإسعاف الجوي والنقل الطبي{% else %}Contact Bluedot | Air Ambulance & Medical Transport{% endif %}{% endblock %}
+{% block meta_description %}{% if LANGUAGE_CODE == 'ar' %}تواصل مع بلو دوت للاستفسار عن الإسعاف الجوي، والإخلاء الطبي، ونقل المرضى على نقالة طبية وخدمات النقل الطبي في الإمارات والسعودية ودول الخليج والوجهات الدولية.{% else %}Contact Bluedot for air ambulance, medical evacuation, stretcher transfer and patient transport enquiries across the UAE, KSA, GCC and worldwide.{% endif %}{% endblock %}
 {% block content %}
 
 <!-- ========== CONTACT HERO START ========== -->

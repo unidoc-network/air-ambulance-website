@@ -1,7 +1,7 @@
 {% extends 'website/layout/base.html' %}
 {% load static %}
-{% block title %}Latest News & Insights | Blog | Bluedot{% endblock %}
-{% block meta_description %}Bluedot blog featuring air ambulance news, medical transfer insights, case studies and aviation healthcare updates.{% endblock %}
+{% block title %}{% if LANGUAGE_CODE == 'ar' %}أخبار الإسعاف الجوي ومستجدات النقل الطبي | بلو دوت{% else %}Air Ambulance News & Medical Transport Insights | Bluedot{% endif %}{% endblock %}
+{% block meta_description %}{% if LANGUAGE_CODE == 'ar' %}اكتشف مقالات ومستجدات بلو دوت حول الإسعاف الجوي والإخلاء الطبي ونقل المرضى والنقل الطبي داخل دول الخليج وإلى الوجهات الدولية.{% else %}Read Bluedot insights on air ambulance, medical evacuation, patient transfer, medical transport and healthcare travel across the GCC and worldwide.{% endif %}{% endblock %}
 {% block content %}
 
 <!-- ========== NEWS HERO SECTION ========== -->

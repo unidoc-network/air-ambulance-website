@@ -1,6 +1,6 @@
 {% extends 'website/layout/base.html' %}
-{% load static %}{% block title %}Most Trusted Air Ambulance In Doha, Qatar{% endblock %}
-{% block meta_description %}Air ambulance services in Doha, Qatar for urgent medical evacuation and safe patient transport.{% endblock %}
+{% load static %}{% block title %}{% if LANGUAGE_CODE == 'ar' %}الإسعاف الجوي في قطر | الإخلاء الطبي الجوي{% else %}Air Ambulance Qatar | GCC Medical Evacuation{% endif %}{% endblock %}
+{% block meta_description %}{% if LANGUAGE_CODE == 'ar' %}تنسق بلو دوت خدمات الإسعاف الجوي في قطر للإخلاء الطبي والإعادة الطبية إلى الوطن ونقل المرضى بأمان عبر دول الخليج وإلى الوجهات الدولية.{% else %}Bluedot coordinates air ambulance services in Qatar for medical evacuation, international repatriation and safe patient transfers across the GCC and worldwide.{% endif %}{% endblock %}
 {% block content %}
 
 <main class="air-ambulance-page">
