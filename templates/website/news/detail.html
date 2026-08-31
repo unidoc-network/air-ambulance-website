@@ -2,14 +2,14 @@
 {% load static %}
 {% block title %}
 {% if LANGUAGE_CODE == 'ar' %}
-    {% if post.meta_title %}{{ post.meta_title }}{% elif post.title_ar %}{{ post.title_ar }} | بلودوت للإسعاف الجوي{% else %}{{ post.title }} | Bluedot Air Ambulance{% endif %}
+    {% if post.meta_title_ar %}{{ post.meta_title_ar }}{% elif post.meta_title %}{{ post.meta_title }}{% elif post.title_ar %}{{ post.title_ar }} | بلودوت للإسعاف الجوي{% else %}{{ post.title }} | Bluedot Air Ambulance{% endif %}
 {% else %}
     {% if post.meta_title %}{{ post.meta_title }}{% else %}{{ post.title }} | Bluedot Air Ambulance{% endif %}
 {% endif %}
 {% endblock %}
 {% block meta_description %}
 {% if LANGUAGE_CODE == 'ar' %}
-    {% if post.meta_description %}{{ post.meta_description }}{% elif post.content_ar %}{{ post.content_ar|striptags|truncatechars:160 }}{% else %}اقرأ أحدث أخبار الإسعاف الجوي من بلودوت.{% endif %}
+    {% if post.meta_description_ar %}{{ post.meta_description_ar }}{% elif post.meta_description %}{{ post.meta_description }}{% elif post.content_ar %}{{ post.content_ar|striptags|truncatechars:160 }}{% else %}اقرأ أحدث أخبار الإسعاف الجوي من بلودوت.{% endif %}
 {% else %}
     {% if post.meta_description %}{{ post.meta_description }}{% elif post.content %}{{ post.content|striptags|truncatechars:160 }}{% else %}Read the latest air ambulance news, insights and patient stories from Bluedot.{% endif %}
 {% endif %}

@@ -12,6 +12,7 @@
             <th>DATE</th>
             <th>EN CONTENT</th>
             <th>AR DATA</th>
+            <th>SEO</th>
             <th>STATUS</th>
             <th>ACTION</th>
         </tr>
@@ -55,6 +56,13 @@
                 <td>
                     <a href="javascript:void(0)" class="btn btn-icon" style="background:#1a3d5c;color:#fff;border-radius:6px;width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;" data-bs-toggle="modal" data-bs-target="#blogArModal{{data.id}}" title="View Arabic Data">
                         ع
+                    </a>
+                </td>
+
+                <!-- SEO Details Button -->
+                <td>
+                    <a href="javascript:void(0)" class="btn btn-icon {% if data.meta_title or data.meta_title_ar or data.meta_description or data.meta_description_ar %}btn-success{% else %}btn-outline-secondary{% endif %}" style="border-radius:6px;width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;" data-bs-toggle="modal" data-bs-target="#seoModal{{data.id}}" title="View SEO Meta Details">
+                        <i class="fe fe-search"></i>
                     </a>
                 </td>
 
@@ -134,12 +142,58 @@
                         </div>
                     </div>
 
+                    <!-- SEO Details Modal -->
+                    <div class="modal fade" id="seoModal{{data.id}}" tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-md" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">SEO Meta Details</h5>
+                                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body text-start">
+                                    {% if data.meta_title or data.meta_title_ar or data.meta_description or data.meta_description_ar %}
+                                        <div class="mb-3">
+                                            <label class="fw-bold text-dark d-block">Meta Title (EN):</label>
+                                            <p class="mb-0 text-break">{% if data.meta_title %}{{data.meta_title}}{% else %}<span class="badge bg-secondary-transparent text-muted">No Data</span>{% endif %}</p>
+                                        </div>
+                                        <div class="mb-3" dir="rtl">
+                                            <label class="fw-bold text-dark d-block text-end">عنوان الميتا (عربي):</label>
+                                            <p class="mb-0 text-break text-end">{% if data.meta_title_ar %}{{data.meta_title_ar}}{% else %}<span class="badge bg-secondary-transparent text-muted">No Data</span>{% endif %}</p>
+                                        </div>
+                                        <hr>
+                                        <div class="mb-3">
+                                            <label class="fw-bold text-dark d-block">Meta Description (EN):</label>
+                                            <p class="mb-0 text-break">{% if data.meta_description %}{{data.meta_description}}{% else %}<span class="badge bg-secondary-transparent text-muted">No Data</span>{% endif %}</p>
+                                        </div>
+                                        <div class="mb-3" dir="rtl">
+                                            <label class="fw-bold text-dark d-block text-end">وصف الميتا (عربي):</label>
+                                            <p class="mb-0 text-break text-end">{% if data.meta_description_ar %}{{data.meta_description_ar}}{% else %}<span class="badge bg-secondary-transparent text-muted">No Data</span>{% endif %}</p>
+                                        </div>
+                                    {% else %}
+                                        <div class="text-center py-4">
+                                            <span class="badge bg-danger-transparent fs-14 px-3 py-2">No Data</span>
+                                            <p class="text-muted mt-2 mb-0">No SEO meta title or description added for this article.</p>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="sa-btn sa-btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </td>
             </tr>
             {% endfor %}
         {% else %}
             <tr>
-                <td colspan="9" class="text-center py-5">
+                <td colspan="11" class="text-center py-5">
+                    <i class="fe fe-inbox" style="font-size:2rem;color:#ccc;display:block;margin-bottom:8px;"></i>
+                    <span style="color:#aaa;font-size:0.95rem;">No records found</span>
+                </td>
                     <i class="fe fe-inbox" style="font-size:2rem;color:#ccc;display:block;margin-bottom:8px;"></i>
                     <span style="color:#aaa;font-size:0.95rem;">No records found</span>
                 </td>

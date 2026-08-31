@@ -98,15 +98,27 @@
                                     </div>
 
                                     <!-- Meta Title (EN) -->
-                                    <div class="form-group col-lg-12 col-12">
-                                        <label class="form-label">Meta Title <small class="text-muted">(optional)</small></label>
-                                        <input type="text" class="form-control" placeholder="Enter meta title" name="meta_title" value="{{data.meta_title|default_if_none:''}}">
+                                    <div class="form-group col-lg-6 col-12">
+                                        <label class="form-label">Meta Title (English) <small class="text-muted">(optional)</small></label>
+                                        <input type="text" class="form-control" placeholder="Enter meta title (English)" name="meta_title" value="{{data.meta_title|default_if_none:''}}">
+                                    </div>
+
+                                    <!-- Meta Title (AR) -->
+                                    <div class="form-group col-lg-6 col-12">
+                                        <label class="form-label">عنوان الميتا (عربي) <small class="text-muted">(اختياري)</small></label>
+                                        <input type="text" class="form-control text-end" placeholder="أدخل عنوان الميتا بالعربية" name="meta_title_ar" value="{{data.meta_title_ar|default_if_none:''}}" dir="rtl">
                                     </div>
 
                                     <!-- Meta Description (EN) -->
-                                    <div class="form-group col-lg-12 col-12">
-                                        <label class="form-label">Meta Description <small class="text-muted">(optional)</small></label>
-                                        <textarea class="form-control" rows="3" placeholder="Enter meta description" name="meta_description">{{data.meta_description|default_if_none:''}}</textarea>
+                                    <div class="form-group col-lg-6 col-12">
+                                        <label class="form-label">Meta Description (English) <small class="text-muted">(optional)</small></label>
+                                        <textarea class="form-control" rows="3" placeholder="Enter meta description (English)" name="meta_description">{{data.meta_description|default_if_none:''}}</textarea>
+                                    </div>
+
+                                    <!-- Meta Description (AR) -->
+                                    <div class="form-group col-lg-6 col-12">
+                                        <label class="form-label">وصف الميتا (عربي) <small class="text-muted">(اختياري)</small></label>
+                                        <textarea class="form-control text-end" rows="3" placeholder="أدخل وصف الميتا بالعربية" name="meta_description_ar" dir="rtl">{{data.meta_description_ar|default_if_none:''}}</textarea>
                                     </div>
 
                                 </div>

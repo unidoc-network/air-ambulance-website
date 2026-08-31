@@ -109,7 +109,9 @@ class Blogs(BaseModel, ImageCompressMixin):
     
     # SEO Meta Fields
     meta_title = models.CharField(max_length=255, null=True, blank=True, verbose_name="Meta Title (EN)")
+    meta_title_ar = models.CharField(max_length=255, null=True, blank=True, verbose_name="Meta Title (AR)")
     meta_description = models.TextField(null=True, blank=True, verbose_name="Meta Description (EN)")
+    meta_description_ar = models.TextField(null=True, blank=True, verbose_name="Meta Description (AR)")
 
     class Meta:
         verbose_name = "News & Story"
