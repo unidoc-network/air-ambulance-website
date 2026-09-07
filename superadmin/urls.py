@@ -10,18 +10,6 @@ urlpatterns = [
     path('Dashboard', views.Dashboard.as_view(), name='Dashboard'),
     path('Profile', views.Profile.as_view(), name='Profile'),
     path('Logout', views.Logout.as_view(), name='Logout'),
-    # Popup module removed
-
-
-
-    # Removed Gallery and Testimonial paths
-
-# Category and Menu paths have been removed.
-
-
-
-
-    # Removed Team paths
 
     # Contact Messages
     path('ContactList', views.ContactList.as_view(), name='ContactList'),
@@ -37,8 +25,6 @@ urlpatterns = [
     path('Categories', views.CategoryList.as_view(), name='CategoryList'),
     path('Category-Add', views.CategoryAdd.as_view(), name='CategoryAdd'),
     path('Category-Update/<int:id>', views.CategoryAdd.as_view(), name='CategoryUpdate'),
-
-    # Removed Global Stats paths
 
     # Careers
     path('CareerList', views.CareerList.as_view(), name='CareerList'),

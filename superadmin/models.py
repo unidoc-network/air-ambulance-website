@@ -44,15 +44,6 @@ class BaseModel(models.Model):
     class Meta:
         abstract = True
 
-# Removed Popup, Gallery models
-
-
-# Removed Category, Menu, and Tag models as they are no longer needed for the medical transport theme.
-
-
-# Removed Testimonials model
-
-
 
 class ContactForm(BaseModel):
     """
@@ -128,9 +119,6 @@ class Blogs(BaseModel, ImageCompressMixin):
             old_image = None
 
         super().save(*args, **kwargs)
-
-
-# Removed GlobalStats model
 
 
 class Career(BaseModel):
