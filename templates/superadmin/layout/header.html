@@ -201,6 +201,22 @@
             border: 2px solid #1D9ADD !important;
             box-shadow: 0 2px 8px rgba(29,154,221,0.2) !important;
         }
+
+        /* Profile header - Light mode */
+        .admin-profile-name {
+            color: #1A202C !important;
+        }
+         .admin-profile-arrow {
+            color: #718096 !important;
+        }
+
+        /* Profile header - Dark mode */
+        .dark-mode .admin-profile-name {
+            color: #FFFFFF !important;
+        }
+        .dark-mode .admin-profile-arrow {
+            color: #CBD5E1 !important;
+        }
     </style>
 </head>
 
@@ -244,8 +260,8 @@
                                         <div class="dropdown d-flex profile-1">
                                             <a href="javascript:void(0)" data-bs-toggle="dropdown" class="nav-link leading-none d-flex align-items-center gap-2" style="padding: 4px 8px; border-radius:12px; border: 1px solid #E2E8F0;">
                                                 <img src="{% static 'superadmin/assets/images_ex/user_1.png' %}" alt="Admin" class="avatar profile-user brround cover-image" style="width:34px;height:34px;">
-                                                <span class="d-none d-sm-block" style="font-size:13px;font-weight:600;color:#1A202C;">Admin</span>
-                                                <i class="fe fe-chevron-down" style="font-size:12px;color:#718096;"></i>
+                                                <span class="d-none d-sm-block" style="font-size:13px;font-weight:600;">Admin</span>
+                                                <i class="fe fe-chevron-down" style="font-size:12px;"></i>
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow" style="min-width:200px;">
                                                 <div class="drop-heading" style="background:linear-gradient(135deg,#EBF5FB,#D6EEF9);padding:14px 16px;border-radius:14px 14px 0 0;">
