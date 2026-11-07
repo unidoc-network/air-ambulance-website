@@ -1,0 +1,129 @@
+{% extends 'website/layout/base.html' %}
+{% load static %}
+{% block title %}Ravi Sankar | Leadership | Bluedot{% endblock %}
+{% block meta_description %}Meet Ravi Sankar, Head of Operations – Air Ambulance at Bluedot.{% endblock %}
+{% block content %}
+
+<style>
+        .leader-detail-sec {
+            background-color: #f2f5f8;
+            min-height: calc(100vh - 400px);
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+        }
+
+        .leader-detail-card {
+            text-align: center;
+            width: 100%;
+            padding-top: 120px;
+        }
+
+        .leader-detail-img {
+            width: 250px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            margin: auto;
+        }
+
+        .leader-detail-name {
+            font-size: 45px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: #000;
+            font-family: 'Aeonik';
+            padding-top: 20px;
+        }
+
+        .leader-detail-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #000;
+            margin-bottom: 40px;
+        }
+
+        .leader-detail-bio {
+            max-width: 730px;
+            margin: 0 auto;
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.2;
+            color: #153c5e;
+            font-weight: 400;
+            font-family: 'Aeonik';
+
+        }
+    </style>
+    <section class="leader-detail-sec">
+
+
+        <div class="container">
+<div class="hero-breadcrumb">
+    <span class="en-content">
+        <a href="{% url 'website:home' %}">Home</a>
+        <span class="separator">/</span>
+        <a href="#">Leadership</a>
+        <span class="separator">/</span>
+        <span class="active">Ravi Sankar</span>
+    </span>
+    <span class="ar-content">
+        <a href="{% url 'website:home' %}">الرئيسية</a>
+        <span class="separator">/</span>
+        <a href="#">القيادة</a>
+        <span class="separator">/</span>
+        <span class="active">Ravi Sankar</span>
+    </span>
+</div>
+
+
+            <div class="leader-detail-card">
+                <img src="{% static 'website/images/l10.webp' %}" alt="Ravi Sankar" class="leader-detail-img">
+                <h1 class="leader-detail-name">
+                    <span class="en-content">Ravi Sankar</span>
+                    <span class="ar-content">رافيشانكار</span>
+                </h1>
+
+                <h5 class="leader-detail-title en-content">Business Head – Commercial Flights </h5>
+                <h5 class="leader-detail-title ar-content"> الرحلات الجوية التجارية – رئيس قطاع الأعمال 
+                </h5>
+
+                <div class="leader-detail-bio en-content">
+                    <p>Ravi Sankar is a healthcare professional with over 14 years of experience in healthcare and more than four years specialising in international patient transfers and medical repatriation. As Head of Operations at Bluedot Air Ambulance, he brings expertise in air ambulance operations, commercial flight medical transfers, medical team coordination, cross-border patient transportation, and operational planning. Passionate about patient safety and service excellence, he focuses on delivering efficient, reliable, and cost-effective medical transfer solutions through strong partnerships and operational excellence.</p>
+                </div>
+                <div class="leader-detail-bio ar-content" dir="rtl">
+                    <p>
+                        يمتلك رافي سانكار خبرة تزيد على
+                        <strong>14 عامًا في قطاع الرعاية الصحية</strong>،
+                        منها أكثر من
+                        <strong>4 سنوات في مجال نقل المرضى دوليًا وإعادتهم إلى أوطانهم لاستكمال الرعاية الطبية</strong>.
+
+                        بصفته
+                        <strong>رئيس العمليات في بلو دوت للإسعاف الجوي</strong>،
+                        يتمتع بخبرة متخصصة في إدارة عمليات الإسعاف الجوي،
+                        وتنظيم النقل الطبي على متن الرحلات الجوية التجارية،
+                        وتنسيق عمل الفرق الطبية، ونقل المرضى عبر الحدود،
+                        والتخطيط التشغيلي.
+
+                        ويضع
+                        <strong>سلامة المرضى وجودة الخدمات</strong>
+                        في مقدمة أولوياته، مع التركيز على تقديم حلول نقل طبي
+                        تتسم بالكفاءة والموثوقية والتكلفة المدروسة،
+                        من خلال بناء شراكات قوية والارتقاء بمستوى الأداء التشغيلي.
+                    </p>
+                </div>
+                <!-- <div class="leader-detail-bio ar-content">
+                    <p>
+يمتلك رافي سانكار خبرة تزيد على *14 عامًا في قطاع الرعاية الصحية، منها أكثر من **4 سنوات في مجال نقل المرضى دوليًا وإعادتهم إلى أوطانهم لاستكمال الرعاية الطبية*.
+
+بصفته *رئيس العمليات في بلو دوت للإسعاف الجوي*، يتمتع بخبرة متخصصة في إدارة عمليات الإسعاف الجوي، وتنظيم النقل الطبي على متن الرحلات الجوية التجارية، وتنسيق عمل الفرق الطبية، ونقل المرضى عبر الحدود، والتخطيط التشغيلي.
+
+ويضع *سلامة المرضى وجودة الخدمات* في مقدمة أولوياته، مع التركيز على تقديم حلول نقل طبي تتسم بالكفاءة والموثوقية والتكلفة المدروسة، من خلال بناء شراكات قوية والارتقاء بمستوى الأداء التشغيلي.
+                    </p>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
