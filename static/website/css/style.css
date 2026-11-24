@@ -8591,8 +8591,12 @@ html[dir="rtl"] .hospitals-tabs {
         line-height: 1.1;
     }
 
-    .contact-hero-content {
+    /* .contact-hero-content {
         padding-top: 190px;
+    } */
+
+    .contact-hero-content {
+        padding-top: 0;
     }
 
     .roles-hero {
@@ -10043,4 +10047,159 @@ html[dir="rtl"] .news-card-content {
 .air-ambulance-hero .hero-breadcrumb span.separator,
 .blog-detail .hero-breadcrumb span.separator {
     color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* ==========================================
+   CONTACT PAGE - MOBILE RESPONSIVE FIX
+   Applies only to mobile devices
+========================================== */
+
+@media (max-width: 767px) {
+
+    /* Hero section */
+    .contact-hero {
+        height: auto;
+        min-height: 100svh;
+        display: flex;
+        align-items: flex-end;
+        padding: 120px 0 50px;
+        overflow: hidden;
+    }
+
+    /* Background image */
+    .contact-hero-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .contact-hero-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* Hero content container */
+    .contact-hero > .container {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Remove large desktop spacing */
+    .contact-hero-content {
+        position: relative;
+        max-width: 100%;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 30px;
+    }
+
+    /* Contact Us subtitle */
+    .contact-subtitle {
+        font-size: 22px;
+        line-height: 1.3;
+        margin-bottom: 20px;
+    }
+
+    /* Main description */
+    .contact-title {
+        font-size: 26px;
+        line-height: 1.2;
+        letter-spacing: -0.3px;
+        margin: 0;
+        overflow-wrap: break-word;
+    }
+
+    /* Remove forced desktop line break */
+    .contact-title br {
+        display: none;
+    }
+
+    /* Contact form section */
+    .contact-form-section {
+        position: relative;
+        z-index: 3;
+        padding-bottom: 50px;
+    }
+
+    /* Remove excessive overlap */
+    .contact-form-wrapper {
+        margin-top: -20px;
+        padding: 30px 20px;
+        border-radius: 18px;
+    }
+}
+
+/* Extra-small mobile devices */
+@media (max-width: 375px) {
+
+    .contact-title {
+        font-size: 24px;
+        line-height: 1.25;
+    }
+
+    .contact-subtitle {
+        font-size: 20px;
+    }
+
+    .contact-hero {
+        padding-top: 110px;
+        padding-bottom: 45px;
+    }
+}
+
+
+/* ==========================================
+   CONTACT PAGE - MOBILE BREADCRUMB FIX
+========================================== */
+
+@media (max-width: 767px) {
+
+    /* Breadcrumb positioning */
+    .contact-hero .hero-breadcrumb {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        transform: none;
+
+        margin: 0 0 32px;
+        padding: 0;
+
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        z-index: 2;
+    }
+
+    /* Hero content */
+    .contact-hero .contact-hero-content {
+        position: relative;
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    /* Contact Us subtitle */
+    .contact-hero .contact-subtitle {
+        display: block;
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
+    /* Description */
+    .contact-hero .contact-title {
+        margin: 0;
+        font-size: 26px;
+        line-height: 1.2;
+    }
 }
